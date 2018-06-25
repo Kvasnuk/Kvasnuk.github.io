@@ -1,0 +1,171 @@
+#header-navigation{
+     background-color:#f3f3f3 ;
+ }
+#header-info{
+    width: 100%;
+    position: absolute;
+}
+ .b-header__nav{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     height: 50px;
+     justify-content: space-between;
+ }
+ .b-header__nav_item{
+     color: #626262;
+     font-size: 16px;
+     font-weight: 400;
+     padding: 10px 0;
+ }
+ .b-header__nav_item:hover{
+     color: #4cd964;
+ }
+.b-header-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+ .b-header-info--left,.b-header-info--right{
+    display: flex;
+    align-items: center;
+     width: 50%;
+}
+ .b-header-info--right{
+     justify-content: flex-end;
+ }
+ .site-logo{
+     display: block;
+     width: 135px;
+     height: 70px;
+     margin-right: 25px;
+     background: url(../images/money-logo.png) no-repeat center center;
+ }
+ .site-work-switch{
+     display: block;
+     position: relative;
+     width: 110px;
+     height: 36px;
+     margin-right: 45px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+     border-radius: 10px;
+     background-color: #4cd964;
+ }
+ .site-work-switch:before{
+     content:'';
+     width: 36px;
+     height: 36px;
+     left:-10px;
+     display: block;
+     position:absolute;
+     background-color: #fff;
+     border-radius:50%;
+     border: 1px solid #f2f2f2;
+     box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.1);
+ }
+ .site-work-switch:after{
+     content: "Online";
+     width: 100%;
+     height: 100%;
+     color: #fff;
+     display: block;
+     text-align: center;
+     padding: 7px 0 0 12px;
+     font-size: 16px;
+     font-weight: 700;
+ }
+
+ .site-work-switch.switch-close{
+     background-color: #c9514f;
+ }
+ .site-work-switch.switch-close:before{
+     left:auto;
+     right:-10px;
+ }
+ .site-work-switch.switch-close:after{
+     content: "Offline";
+     padding: 7px 7px 0 0;
+ }
+ .site-language{
+     width: 50px;
+     height: 20px;
+     position: relative;
+     display: block;
+     overflow: hidden;transition:.2s;
+ }
+ .site-language:after{
+     content:'';
+     width: 0;
+     height: 0;
+     border-left: 5px solid transparent;
+     border-right: 5px solid transparent;
+     border-top: 7px solid #fff;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     right: 5px;
+     margin: auto;
+
+ }
+
+ .site-language:hover{
+     height: 45px;
+ }
+ .site-language:hover::after{
+     border-top: 0;
+     border-bottom: 7px solid #fff;
+ }
+ .site-language__item{
+     width: 31px;
+     height: 19px;
+     position: relative;
+     background:green;
+     display: block;
+     margin-bottom: 5px;
+ }
+ .site-language__item--ru{
+     background:url(../images/lang-ru.png)no-repeat center center;
+ }
+ .site-language__item--en{
+     background:url(../images/lang-ru.png)no-repeat center center;
+ }
+
+ .site-enter{
+     color: #ffffff;
+     font-size: 16px;
+     font-weight: 400;
+     padding:5px 10px;
+     margin-right:20px;
+ }
+
+ .site-register{
+     width: 165px;
+     height: 38px;
+     border-radius: 5px;
+     border: 1px solid #ffffff;
+     color: #ffffff;
+     font-size: 16px;
+     font-weight: 400;
+     padding-top:7px;
+     text-align: center;
+ }
+.homepage .site-enter{
+    color: #ffffff;
+}
+.homepage .site-enter:hover{
+    color:  #4cd964;
+}
+.homepage .site-register{
+     border: 1px solid #ffffff;
+     color: #ffffff;
+ }
+.homepage .site-register:hover{
+    border: 1px solid #23cbcf;
+    background-color: #23cbcf;
+    color:#fff;
+ }
+.homepage .site-register:active{
+    border: 1px solid #17adb1;
+    background-color: #17adb1;
+    color:#fff;
+}
