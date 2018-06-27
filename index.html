@@ -59,7 +59,61 @@
                 <h1 class="banner-title">Меняем<span>электронную валюту</span></h1>
             </div>
             <div class="exchange">
-                <div class="exchange-form"></div>
+                <div class="b-exchange">
+                    <div class="b-exchange__main">
+                            <div class="b-exchange__main_part b-exchange__main_part--from">
+                                <div>
+                                    <span id="exchange-ddl-from" class="P24UAH">Приват 24 UAH</span>
+                                    <input type="text" id="exchange-from-input" class="b-exchange__input" value="" placeholder="Введите пожалуйста число!">
+                                </div>
+                                <p>
+                                    <button class="b-exchange__settings b-exchange__settings--reverse js-exchange-reverse"></button>
+                                    <button class="b-exchange__settings b-exchange__settings--full js-exchange-full"></button>
+                                </p>
+
+                                <ul id="exchange-currency-from" class="b-exchange-currency">
+                                    <li class="b-exchange-currency__item js-exchange-currency-from PRUSD" data-alias="PRUSD" data-id="1">PAYEER USD</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from P24UAH" data-alias="P24UAH" data-id="1">Приват 24 UAH</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from BTC" data-alias="BTC" data-id="1">Bitcoin</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from PUMBUAH" data-alias="PUMBUAH" data-id="1">ПУМБ UAH</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from WEXEUSD" data-alias="WEXEUSD" data-id="1">WEX code USD</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from ADVCUSD" data-alias="ADVCUSD" data-id="1">Advanced Cash USD</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from YAMRUB" data-alias="YAMRUB" data-id="1">Яндекс Деньги RUB</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from XRP" data-alias="XRP" data-id="1">Ripple XRP</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from QWRUB" data-alias="QWRUB" data-id="1">QIWI RUB</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-from PMUSD" data-alias="PMUSD" data-id="1">PerfectMoney USD</li>
+                                </ul>
+                            </div>
+                            <div class="b-exchange__main_part b-exchange__main_part--to">
+                                <div>
+                                    <span id="exchange-ddl-to" class="PRUSD">PAYEER USD</span>
+                                    <input type="text" id="exchange-to-input" class="b-exchange__input" value="0.00">
+                                </div>
+                                <ul id="exchange-currency-to" class="b-exchange-currency">
+                                    <li class="b-exchange-currency__item js-exchange-currency-to PRUSD" data-alias="PRUSD" data-id="1">PAYEER USD</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to P24UAH" data-alias="P24UAH" data-id="1">Приват 24 UAH</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to BTC" data-alias="BTC" data-id="1">Bitcoin</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to PUMBUAH" data-alias="PUMBUAH" data-id="1">ПУМБ UAH</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to WEXEUSD" data-alias="WEXEUSD" data-id="1">WEX code USD</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to ADVCUSD" data-alias="ADVCUSD" data-id="1">Advanced Cash USD</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to YAMRUB" data-alias="YAMRUB" data-id="1">Яндекс Деньги RUB</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to XRP" data-alias="XRP" data-id="1">Ripple XRP</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to QWRUB" data-alias="QWRUB" data-id="1">QIWI RUB</li>
+                                    <li class="b-exchange-currency__item js-exchange-currency-to PMUSD" data-alias="PMUSD" data-id="1">PerfectMoney USD</li>
+                                </ul>
+                            </div>
+                </div>
+                    <div class="b-exchange__footer">
+                        <div class="b-exchange__footer--left">
+                            <span>График работы:</span>
+                            <span>7 дней в неделю</span>
+                            <span>с 09:00 до 00:00</span>
+                        </div>
+                        <div class="b-exchange__footer--right">
+                            <span>Курс: 1 USD = 1.0001 USD</span>
+                            <span>Резерв: 7933,18 USD</span>
+                        </div>
+                    </div>
                 <p class="exchange-submit text-center"><button class="btn btn-success js-exchange-submit">Обменять</button></p>
 
             </div>
@@ -173,6 +227,62 @@
         </div>
     </div>
 
+    <div id="news">
+        <div class="container">
+            <p class="news-title">Последние новости</p>
+        </div>
+        <div id="news-slider">
+            <article class="b-article">
+                <a href="#">
+                    <h3 class="b-article__title">Верификация карт Приват24 на сайте money7.co</h3>
+                </a>
+                <p class="b-article__date">27 апр. 2018 г.</p>
+                <p class="b-article__excerpt">Доброго времени суток, Уважаемые клиенты. В связи с возросшим числом мошенников в направлениях связанных с Приват24, мы проводим верификацию клиента и платежной карты. Процедура быстрая, удобная и единоразовая.</p>
+                <a href="#" class="b-article__link"></a>
+            </article>
+            <article class="b-article">
+                <a href="#">
+                    <h3 class="b-article__title">Верификация карт Приват24 на сайте money7.co</h3>
+                </a>
+                <p class="b-article__date">27 апр. 2018 г.</p>
+                <p class="b-article__excerpt">Доброго времени суток, Уважаемые клиенты. В связи с возросшим числом мошенников в направлениях связанных с Приват24, мы проводим верификацию клиента и платежной карты. Процедура быстрая, удобная и единоразовая.</p>
+                <a href="#" class="b-article__link"></a>
+            </article>
+            <article class="b-article">
+                <a href="#">
+                    <h3 class="b-article__title">Верификация карт Приват24 на сайте money7.co</h3>
+                </a>
+                <p class="b-article__date">27 апр. 2018 г.</p>
+                <p class="b-article__excerpt">Доброго времени суток, Уважаемые клиенты. В связи с возросшим числом мошенников в направлениях связанных с Приват24, мы проводим верификацию клиента и платежной карты. Процедура быстрая, удобная и единоразовая.</p>
+                <a href="#" class="b-article__link"></a>
+            </article>
+            <article class="b-article">
+                <a href="#">
+                    <h3 class="b-article__title">Верификация карт Приват24 на сайте money7.co</h3>
+                </a>
+                <p class="b-article__date">27 апр. 2018 г.</p>
+                <p class="b-article__excerpt">Доброго времени суток, Уважаемые клиенты. В связи с возросшим числом мошенников в направлениях связанных с Приват24, мы проводим верификацию клиента и платежной карты. Процедура быстрая, удобная и единоразовая.</p>
+                <a href="#" class="b-article__link"></a>
+            </article>
+            <article class="b-article">
+                <a href="#">
+                    <h3 class="b-article__title">Верификация карт Приват24 на сайте money7.co</h3>
+                </a>
+                <p class="b-article__date">27 апр. 2018 г.</p>
+                <p class="b-article__excerpt">Доброго времени суток, Уважаемые клиенты. В связи с возросшим числом мошенников в направлениях связанных с Приват24, мы проводим верификацию клиента и платежной карты. Процедура быстрая, удобная и единоразовая.</p>
+                <a href="#" class="b-article__link"></a>
+            </article>
+            <article class="b-article">
+                <a href="#">
+                    <h3 class="b-article__title">Верификация карт Приват24 на сайте money7.co</h3>
+                </a>
+                <p class="b-article__date">27 апр. 2018 г.</p>
+                <p class="b-article__excerpt">Доброго времени суток, Уважаемые клиенты. В связи с возросшим числом мошенников в направлениях связанных с Приват24, мы проводим верификацию клиента и платежной карты. Процедура быстрая, удобная и единоразовая.</p>
+                <a href="#" class="b-article__link"></a>
+            </article>
+        </div>
+    </div>
+
 </main>
 
 <footer>
@@ -210,6 +320,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="vendor/slick/js/slick.min.js"></script>
 <script src="dist/js/main.js"></script>
 </body>
 </html>

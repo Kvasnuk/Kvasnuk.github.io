@@ -31,13 +31,13 @@
 }
 .banner-subtitle:after{
     content:'';
-    width: 40px;
+    width: 60px;
     height: 1px;
     background-color: #fff;
     position: absolute;
     top:0;
     bottom: 0;
-    right:-55px;
+    right:-75px;
     margin:auto;
     display: block;
 }
@@ -216,6 +216,7 @@
 #reviews{
     box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
+    margin-bottom: 50px;
 
 }
 .b-reviews{
@@ -233,6 +234,12 @@
     padding: 15px 0 0 0;
     position: relative;
     border-bottom:1px solid #eaeaea;
+}
+.b-reviews__item:last-child,.b-reviews__item:nth-last-child(2){
+    border-bottom:0;
+}
+.b-reserves__item:last-child,.b-reserves__item:nth-last-child(2){
+    border-bottom: 0;
 }
 .b-reviews__item p{clear: both;}
 .b-reviews__item_name{/* Style for "Александр" */
@@ -264,4 +271,97 @@
     display: inline-block;
     padding-top: 13px;
     margin-bottom: 20px;
+}
+
+#news{
+    background-color: #f9fafc;
+    padding-bottom: 80px;
+}
+#news .slick-track{
+    left:-15%;
+}
+#news .slick-slide{
+   outline: none;
+}
+#news .slick-dots{
+    text-align: center;
+}
+#news .slick-dots li{
+   display: inline-block;
+}
+#news .slick-dots li button{
+    background: #4eb149;
+    width: 11px;
+    height: 11px;
+    border: 0;
+    border-radius: 50%;
+    font-size: 0;
+    padding: 0;
+    margin: 0 3px;
+    opacity: 0.2;
+    transition:0.3s;
+    outline: none;
+
+}
+#news .slick-dots li.slick-active button{
+    opacity: 1;
+}
+.news-title{
+    color: #828094;
+    font-size: 35px;
+    font-weight: 400;
+    padding-top: 50px;
+    margin-bottom: 35px;
+    letter-spacing: 2.1px;
+}
+.b-article{
+    width: 35%;
+    max-width: 555px;
+    min-height: 277px;
+    box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    padding: 20px 30px 60px;
+    position: relative;
+    margin:15px;
+}
+.b-article__title{
+    color: #828094;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 70%;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    letter-spacing: 1.08px;
+}
+.b-article__title:hover{
+    color: #4cae50;
+}
+.b-article__date{
+    display: inline-block;
+    border-bottom: 1px solid #4cae50;
+    color: #535353;
+    font-size: 14px;
+    font-weight: 600;
+    padding-right: 15px;
+    margin-bottom: 30px
+}
+.b-article__excerpt{
+    color: #535353;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+}
+.b-article__link{
+    width: 23px;
+    height: 16px;
+    display: inline-block;
+    background: url("../images/icon.svg") no-repeat center left;
+    background-size: 16px 16px;
+    position: absolute;
+    bottom: 30px;
+    background-position-x: 0;
+    transition:0.3s;
+}
+.b-article__link:hover{
+    background-position-x: 7px;
 }

@@ -2,10 +2,164 @@
     padding-top: 50px;
     margin-bottom: 35px;
 }
-.exchange-form{
+.b-exchange{
     width: 800px;
     min-height: 285px;
     margin: 0 auto 25px;
     background-color: #fff;
     display: block;
+    box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    position: relative;
+    padding: 30px;
+}
+.b-exchange__main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.b-exchange__main_part{
+    width: 50%;
+    position: relative;
+}
+.b-exchange__main_part--from>div{
+    padding-right:90px;
+}
+.b-exchange__main_part--from>p{
+    width: 55px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+.b-exchange__footer{
+    width: 100%;
+    display: flex;
+}
+.b-exchange__footer>div{
+    width: 50%;
+    padding: 30px 0;
+}
+.b-exchange__footer span{
+    display: block;
+    color: #909090;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+#exchange-ddl-from,#exchange-ddl-to{
+    padding-left: 40px;
+    padding-right: 15px;
+    position: relative;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#exchange-ddl-from:before,#exchange-ddl-to:before{
+    content:'';
+    width:30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    margin: auto;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+
+}
+
+#exchange-ddl-from:after,#exchange-ddl-to:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    margin: auto;
+
+}
+.PMUSD:before{
+    background-image: url("../images/currency-perfectmoney.png");
+}
+.P24UAH:before{
+    background-image: url("../images/currency-privat24.png");
+}
+.WEXEUSD:before{
+    background-image: url("../images/currency-wex.png");
+}
+.PUMBUAH:before{
+    background-image: url("../images/currency-pumb.png");
+}
+.ADVCUSD:before{
+    background-image: url("../images/currency-advanced.png");
+}
+.BTC:before{
+    background-image: url("../images/currency-bitcoin.png");
+}
+.YAMRUB:before{
+    background-image: url("../images/currency-yandex.png");
+}
+.XRP:before{
+    background-image: url("../images/currency-ripple.png");
+}
+.PRUSD:before{
+    background-image: url("../images/currency-payeer.png");
+}
+.QWRUB:before{
+    background-image: url("../images/currency-qiwi.png");
+}
+
+.b-exchange__input{
+    display: block;
+    margin-top: 10px;
+    outline: none;
+    width:100%;
+    max-width: 280px;
+    color: #4cae50;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    border:0;
+    outline: none;
+}
+.b-exchange__input::placeholder{
+    color: #bb2e23;
+    font-size: 18px;
+    font-weight: 400;
+}
+.b-exchange__settings{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: #f5f1f1;
+    border:0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    transition:0.3s;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: 15px;
+    background-size: 15px;
+
+}
+.b-exchange__settings--reverse{ background-image: url(../images/exchange-arrows.svg);}
+.b-exchange__settings--full{ background-image: url(../images/switch-to-full-screen-button.svg);}
+.b-exchange__settings--full.open{
+    background-color: #2e5fd5;
+    background-image: url(../images/resize-arrows.svg);}
+.b-exchange__settings:hover{
+    background-color: #bdbaba;
+}
+
+
+
+.b-exchange-currency{
+    display: none;
 }
