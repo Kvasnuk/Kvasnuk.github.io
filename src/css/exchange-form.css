@@ -11,32 +11,96 @@
     box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.16);
     border-radius: 5px;
     position: relative;
-    padding: 30px;
 }
 .b-exchange__main{
     display: flex;
     flex-wrap: wrap;
+    background-color: #f8f8f8;
+    padding: 20px 0 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    z-index:4;
+}
+.b-exchange__main:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 20px);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background: #24d0d4;
+    top: -10px;
+    z-index: 2;
+    animation:form-before .3s 1.7s linear forwards;
+}
+.b-exchange__main:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 40px);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background: #4cae50;
+    top: -20px;
+    z-index: 1;
+    animation:form-before .3s 1.5s linear forwards;
+}
+
+@keyframes form-before {
+    0% {height:0;}
+    100% {height:10px;}
+}
+@keyframes form-after {
+    0% {top:0;}
+    100% {top:-20px;}
 }
 .b-exchange__main_part{
     width: 50%;
     position: relative;
 }
+.b-exchange__main_part--from{
+    border-right:1px solid #eaeaea;
+    padding: 10px 15px 30px 30px;
+}
+.b-exchange__main_part--to{
+    border-right:1px solid #eaeaea;
+    padding: 10px 30px 30px;
+}
 .b-exchange__main_part--from>div{
-    padding-right:90px;
+    padding-right:60px;
 }
 .b-exchange__main_part--from>p{
     width: 55px;
     position: absolute;
-    top: 0;
-    right: 30px;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 0;
 }
 .b-exchange__footer{
     width: 100%;
     display: flex;
+    position: relative;
+    z-index: 3;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .b-exchange__footer>div{
     width: 50%;
-    padding: 30px 0;
+    padding: 30px 30px 20px;
+    margin-bottom: 20px;
+}
+.b-exchange__footer--left{
+    border-right:1px solid #eaeaea;
 }
 .b-exchange__footer span{
     display: block;
@@ -70,20 +134,20 @@
 
 }
 
-#exchange-ddl-from:after,#exchange-ddl-to:after{
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 7px solid #000;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0px;
-    margin: auto;
+/*#exchange-ddl-from:after,#exchange-ddl-to:after{*/
+    /*content: "";*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*border-left: 5px solid transparent;*/
+    /*border-right: 5px solid transparent;*/
+    /*border-top: 7px solid #000;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*right: 0px;*/
+    /*margin: auto;*/
 
-}
+/*}*/
 .PMUSD:before{
     background-image: url("../images/currency-perfectmoney.png");
 }
@@ -118,6 +182,7 @@
 .b-exchange__input{
     display: block;
     margin-top: 10px;
+    background: transparent;
     outline: none;
     width:100%;
     max-width: 280px;
@@ -126,13 +191,17 @@
     font-weight: 700;
     letter-spacing: 0.7px;
     border:0;
-    outline: none;
 }
 .b-exchange__input::placeholder{
     color: #bb2e23;
     font-size: 18px;
     font-weight: 400;
+    transition:0.3s;
 }
+.b-exchange__input.error-msg::placeholder{
+   color: #24d0d4;
+}
+
 .b-exchange__settings{
     width: 25px;
     height: 25px;
@@ -151,15 +220,100 @@
 }
 .b-exchange__settings--reverse{ background-image: url(../images/exchange-arrows.svg);}
 .b-exchange__settings--full{ background-image: url(../images/switch-to-full-screen-button.svg);}
-.b-exchange__settings--full.open{
+.b-exchange__settings--full.active{
     background-color: #2e5fd5;
     background-image: url(../images/resize-arrows.svg);}
 .b-exchange__settings:hover{
     background-color: #bdbaba;
 }
-
+@keyframes open-list-from {
+   0% {left:0;}
+   100% {left:-180px;}
+}
+@keyframes open-list-to {
+    0% {right:0;}
+    100% {right:-180px;}
+}
 
 
 .b-exchange-currency{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 185px;
+    height: 302px;
+    z-index: 2;
+    /*box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.16);*/
+    background-color: #ffffff;
+}
+
+
+
+.full-list #exchange-currency-from{
+    position: relative;
+    width: 50%;
+    float: left;
+    border-right: 1px solid #eaeaea;
+    transform:translateX(180px);
+    transition:0.5s;
+}
+.full-list #exchange-currency-to{
+    position: relative;
+    transform:translateX(-180px);
+    width: 50%;
+    float:right;
+    transition:0.5s;
+}
+.full-list .b-exchange-currency__item{
+    height: 30px;
+    border-bottom:1px solid #eaeaea;
+}
+
+
+#exchange-currency-from{
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    animation: open-list-from .5s 2s linear forwards;
+}
+#exchange-currency-to{
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: open-list-to .5s 2s linear forwards;
+}
+.b-exchange-currency__item{
+    padding: 5px 20px 5px 40px;
+    font-size: 13px;
+    cursor:pointer;
+    position: relative;
+}
+#exchange-currency-from .b-exchange-currency__item:first-child{
+    border-top-left-radius: 5px;
+}
+#exchange-currency-from .b-exchange-currency__item:last-child{
+    border-bottom-left-radius: 5px;
+}
+#exchange-currency-to .b-exchange-currency__item:first-child{
+    border-top-right-radius: 5px;
+}
+#exchange-currency-to .b-exchange-currency__item:last-child{
+    border-bottom-right-radius: 5px;
+}
+.b-exchange-currency__item.active,.b-exchange-currency__item:hover{
+    background-color:#bbb6f8;
+}
+.b-exchange-currency__item:before{
+    content:'';
+    position: absolute;
+    display: block;
+    height: 16px;
+    width: 16px;
+    left: 20px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 16px 16px;
+    background-size: 16px 16px;
+    background-position: center center;
 }

@@ -70,10 +70,10 @@
     height: 204px;
     display: block;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background:url(../images/home-banner-man.png) no-repeat bottom center;
     top:-201px;
-    right: 62px;
+    right: 120px;
 }
 
 .b-statistic__item_title{

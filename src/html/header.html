@@ -39,12 +39,45 @@
                     </span>
                 </div>
                 <div class="b-header-info--right">
-                    <a href="#" class="site-enter js-site-enter">Вход</a>
+                    <button type="button" class="site-enter" data-toggle="modal" data-target="#exampleModal">
+                       Вход
+                    </button>
                     <a href="#" class="site-register">Регистрация</a>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form" action="/auth/login" method="post">
+                        <input type="hidden" name="_csrf" value="J2pzdfvm6oQ9rHBfJBq1jLHBwldz6COXKRLhBPGf0pkTLQRMmoqM7gnaJBZHatG7x7mjGiyQbdlGKqVXrs-b4Q=="> <div class="input-group">
+                        <div class="input-item">
+                            <div class="form-group field-loginform-email required has-error">
+                                <input type="text" id="loginform-email" class="form-control" name="LoginForm[email]" placeholder="электронная почта" aria-required="true" aria-invalid="true">
+                            </div> </div>
+                        <div class="input-item">
+                            <div class="form-group field-loginform-password required">
+                                <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" placeholder="пароль" aria-required="true">
+                            </div> <a href="/auth/request-password-reset" class="reset-password">напомнить</a>
+                        </div>
+                    </div>
+                        <div class="error-summary" style="display:none"><ul></ul></div>
+                        <button class="button">Войти</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="site-register">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

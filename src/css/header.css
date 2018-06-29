@@ -136,6 +136,9 @@
      font-weight: 400;
      padding:5px 10px;
      margin-right:20px;
+     background-color: transparent;
+     border:0;
+     border-radius: 0;
  }
 
  .site-register{
@@ -159,12 +162,17 @@
      border: 1px solid #ffffff;
      color: #ffffff;
  }
-.homepage .site-register:hover{
+.homepage .site-register:hover,.modal-footer .site-register{
     border: 1px solid #23cbcf;
     background-color: #23cbcf;
     color:#fff;
  }
 .homepage .site-register:active{
+    border: 1px solid #17adb1;
+    background-color: #17adb1;
+    color:#fff;
+}
+.modal-footer .site-register:hover{
     border: 1px solid #17adb1;
     background-color: #17adb1;
     color:#fff;
