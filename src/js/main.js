@@ -11,7 +11,16 @@ jQuery(document).ready(function($){
     });
 
 
+function checkCurrencyCount(){
+    if($('.js-exchange-currency-from') && $('.js-exchange-currency-from').length > 10){
+          $('#exchange-currency-from').addClass('scroll-items');
+    }
+    if($('.js-exchange-currency-to') && $('.js-exchange-currency-to').length > 10){
+        $('#exchange-currency-to').addClass('scroll-items');
+    }
 
+}
+    checkCurrencyCount();
     function changeListCurrency(self,listClass){
         $(listClass).removeClass('active');
         self.addClass('active');
@@ -73,4 +82,35 @@ var currencyClass = self.data('alias'),
         $(this).toggleClass('active');
         $('.b-exchange').toggleClass('full-list');
     });
+
+
+
+
+    // The function
+    var background_image_parallax = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document),
+            objectTopPosition = parseInt($object.css("top"));
+        $(window).scroll(function(){
+            var from_top = $doc.scrollTop(),
+                objectTop = objectTopPosition +(multiplier * from_top) + 'px';
+            $object.css({"top" : objectTop });
+        });
+    };
+
+    background_image_parallax($(".bg-currency-icon--adv"),0.5);
+    background_image_parallax($(".bg-currency-icon--btc"), 0.65);
+    background_image_parallax($(".bg-currency-icon--qiwi"), 0.3);
+    background_image_parallax($(".bg-currency-icon--yandex"), 0.85);
+    background_image_parallax($(".bg-currency-icon--pm"), 0.35);
+
+
+
+
+
+
+
+
+
 });

@@ -9,6 +9,7 @@
     <title>7money</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i,900&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/css/style.css">
 
@@ -40,7 +41,7 @@
                     </span>
                 </div>
                 <div class="b-header-info--right">
-                    <button type="button" class="site-enter" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="site-enter" data-toggle="modal" data-target="#siteEnter">
                        Вход
                     </button>
                     <a href="#" class="site-register">Регистрация</a>
@@ -49,11 +50,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="siteEnter" tabindex="-1" role="dialog" aria-labelledby="siteEnterLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+                    <h5 class="modal-title" id="siteEnterLabel">Вход</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -146,12 +147,12 @@
                     <div class="b-exchange__footer">
                         <div class="b-exchange__footer--left">
                             <span>График работы:</span>
-                            <span>7 дней в неделю</span>
-                            <span>с 09:00 до 00:00</span>
+                            <span class="b-exchange__footer_icon b-exchange__footer_icon--calendar">7 дней в неделю</span>
+                            <span class="b-exchange__footer_icon b-exchange__footer_icon--clock">с 09:00 до 00:00</span>
                         </div>
                         <div class="b-exchange__footer--right">
-                            <span>Курс: 1 USD = 1.0001 USD</span>
-                            <span>Резерв: 7933,18 USD</span>
+                            <span class="b-exchange__footer_icon b-exchange__footer_icon--retweet">Курс: 1 USD = 1.0001 USD</span>
+                            <span class="b-exchange__footer_icon b-exchange__footer_icon--tag">Резерв: 7933,18 USD</span>
                         </div>
                     </div>
             </div>
@@ -175,96 +176,110 @@
         </div>
     </div>
 </div>
-    <div class="container">
-        <div id="reserves">
-        <div class="block-header block-header__reserves">
-            <span class="block-header__text">Резервы валют</span>
-        </div>
-            <ul class="b-reserves">
-                <li class="b-reserves__item reserve-perfect">
-                    <span class="b-reserves__item_title ">PerfectMoney USD</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-privat">
-                    <span class="b-reserves__item_title ">Приват24 UAH</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-wex">
-                    <span class="b-reserves__item_title ">WEX Code USD</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-pumb">
-                    <span class="b-reserves__item_title ">ПУМБ UAH</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-adv">
-                    <span class="b-reserves__item_title ">Advanced Cash USD</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-bitcoin">
-                    <span class="b-reserves__item_title ">Bitcoin</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>BTC</span></span>
-                </li>
-                <li class="b-reserves__item reserve-yandex">
-                    <span class="b-reserves__item_title ">Яндекс деньги RUB</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-ripple">
-                    <span class="b-reserves__item_title ">Ripple XRP</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-payeer">
-                    <span class="b-reserves__item_title ">PAYEER USD</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-                <li class="b-reserves__item reserve-qiwi">
-                    <span class="b-reserves__item_title ">Qiwi</span>
-                    <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
-                </li>
-            </ul>
-        </div>
-        <div id="reviews">
-            <div class="block-header block-header__reviews">
-                <span class="block-header__text">Последние отзывы</span>
-            </div>
-            <ul class="b-reviews">
-                <li class="b-reviews__item">
-                    <p><span class="b-reviews__item_name">Александр</span>
-                        <span class="b-reviews__item_date">2 дня назад</span>
-                    </p>
-                    <p class="b-reviews__item_text">
-                        Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
-                    </p>
-                </li>
-                <li class="b-reviews__item">
-                    <p><span class="b-reviews__item_name">Александр</span>
-                        <span class="b-reviews__item_date">2 дня назад</span>
-                    </p>
-                    <p class="b-reviews__item_text">
-                        Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
-                    </p>
-                </li>
-                <li class="b-reviews__item">
-                    <p><span class="b-reviews__item_name">Александр</span>
-                        <span class="b-reviews__item_date">2 дня назад</span>
-                    </p>
-                    <p class="b-reviews__item_text">
-                        Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
-                    </p>
-                </li>
-                <li class="b-reviews__item">
-                    <p><span class="b-reviews__item_name">Александр</span>
-                        <span class="b-reviews__item_date">2 дня назад</span>
-                    </p>
-                    <p class="b-reviews__item_text">
-                        Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
-                    </p>
-                </li>
-            </ul>
-            <p class="text-center"><a href="#" class="btn btn-success btn-link all-reviews">Все отзывы (312)</a></p>
 
+
+
+    <figure class="bg-currency-icon bg-currency-icon--adv"></figure>
+    <figure class="bg-currency-icon bg-currency-icon--btc"></figure>
+    <figure class="bg-currency-icon bg-currency-icon--pm"></figure>
+    <figure class="bg-currency-icon bg-currency-icon--qiwi"></figure>
+    <figure class="bg-currency-icon bg-currency-icon--yandex"></figure>
+</div>
+    <div id="reserves-review">
+        <span id="reserves-review__line"></span>
+        <span id="reserves-review__corner"></span>
+        <div class="container">
+            <div id="reserves">
+                <div class="block-header block-header__reserves">
+                    <span class="block-header__text">Резервы валют</span>
+                </div>
+                <ul class="b-reserves">
+                    <li class="b-reserves__item reserve-perfect">
+                        <span class="b-reserves__item_title ">PerfectMoney USD</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-privat">
+                        <span class="b-reserves__item_title ">Приват24 UAH</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-wex">
+                        <span class="b-reserves__item_title ">WEX Code USD</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-pumb">
+                        <span class="b-reserves__item_title ">ПУМБ UAH</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-adv">
+                        <span class="b-reserves__item_title ">Advanced Cash USD</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-bitcoin">
+                        <span class="b-reserves__item_title ">Bitcoin</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>BTC</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-yandex">
+                        <span class="b-reserves__item_title ">Яндекс деньги RUB</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-ripple">
+                        <span class="b-reserves__item_title ">Ripple XRP</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-payeer">
+                        <span class="b-reserves__item_title ">PAYEER USD</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                    <li class="b-reserves__item reserve-qiwi">
+                        <span class="b-reserves__item_title ">Qiwi</span>
+                        <span class="b-reserves__item_count">32 236.15 <span>USD</span></span>
+                    </li>
+                </ul>
+            </div>
+            <div id="reviews">
+                <div class="block-header block-header__reviews">
+                    <span class="block-header__text">Последние отзывы</span>
+                </div>
+                <ul class="b-reviews">
+                    <li class="b-reviews__item">
+                        <p><span class="b-reviews__item_name">Александр</span>
+                            <span class="b-reviews__item_date">2 дня назад</span>
+                        </p>
+                        <p class="b-reviews__item_text">
+                            Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
+                        </p>
+                    </li>
+                    <li class="b-reviews__item">
+                        <p><span class="b-reviews__item_name">Александр</span>
+                            <span class="b-reviews__item_date">2 дня назад</span>
+                        </p>
+                        <p class="b-reviews__item_text">
+                            Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
+                        </p>
+                    </li>
+                    <li class="b-reviews__item">
+                        <p><span class="b-reviews__item_name">Александр</span>
+                            <span class="b-reviews__item_date">2 дня назад</span>
+                        </p>
+                        <p class="b-reviews__item_text">
+                            Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
+                        </p>
+                    </li>
+                    <li class="b-reviews__item">
+                        <p><span class="b-reviews__item_name">Александр</span>
+                            <span class="b-reviews__item_date">2 дня назад</span>
+                        </p>
+                        <p class="b-reviews__item_text">
+                            Все супер. Менял Приват24 на Риппл. Обмен очень быстрый. Обменником доволен
+                        </p>
+                    </li>
+                </ul>
+                <p class="text-center"><a href="#" class="btn btn-success btn-link all-reviews">Все отзывы (312)</a></p>
+
+            </div>
         </div>
     </div>
+
 
     <div id="news">
         <div class="container">
