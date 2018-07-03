@@ -205,6 +205,11 @@
         bottom: 0;
         box-shadow: 0px 8px 19px 2px #545454;
     }
+    .container {
+        max-width: 100%;
+        width: 100% !important;
+
+    }
     .site-enter{
         display: none;
     }
@@ -568,7 +573,5 @@
     }
 }
 @media (min-width: 576px){
-    .container {
-        max-width: 100%;
-    }
+
 }
