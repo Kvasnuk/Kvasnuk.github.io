@@ -7,7 +7,39 @@ jQuery(document).ready(function($){
         arrows:false,
         autoplay: true,
         autoplaySpeed: 5000,
-        infinite:true
+        infinite:true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 639,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                }
+            },
+        ]
     });
 
 
@@ -97,20 +129,17 @@ var currencyClass = self.data('alias'),
                 objectTop = objectTopPosition +(multiplier * from_top) + 'px';
             $object.css({"top" : objectTop });
         });
-    };
 
+
+    };
+$('.mobile-menu__item--menu').click(function(){
+    $(this).toggleClass('open');
+$('#header-navigation').fadeToggle(400);
+});
     background_image_parallax($(".bg-currency-icon--adv"),0.5);
     background_image_parallax($(".bg-currency-icon--btc"), 0.65);
     background_image_parallax($(".bg-currency-icon--qiwi"), 0.3);
     background_image_parallax($(".bg-currency-icon--yandex"), 0.85);
     background_image_parallax($(".bg-currency-icon--pm"), 0.35);
-
-
-
-
-
-
-
-
 
 });
