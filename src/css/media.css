@@ -199,7 +199,7 @@
         justify-content: space-between;
         height: 50px;
         position: fixed;
-        z-index: 999;
+        z-index: 1020;
         width: 100%;
         background: #f4f3f3;
         bottom: 0;
@@ -504,6 +504,7 @@
     #exchange-ddl-from, #exchange-ddl-to {
         font-size: 13px;
         padding-left: 0;
+        display: block;
     }
 
 
