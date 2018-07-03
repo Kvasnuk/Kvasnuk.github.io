@@ -43,7 +43,12 @@ jQuery(document).ready(function($){
         ]
     });
 
-
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
 function checkCurrencyCount(){
     if($('.js-exchange-currency-from') && $('.js-exchange-currency-from').length > 10){
           $('#exchange-currency-from').addClass('scroll-items');
@@ -59,22 +64,40 @@ function checkCurrencyCount(){
         self.addClass('active');
     };
     function getCurrentCurrency(self, part){
-var currencyClass = self.data('alias'),
-    currencyTitle = self.text(),
-    $currencyPart = $('#exchange-ddl-'+ part);
-        $currencyPart.removeClass().addClass(currencyClass);
-        $currencyPart.text(currencyTitle);
+        var currencyClass = self.data('alias'),
+            currencyTitle = self.text(),
+            $currencyPart = $('#exchange-ddl-'+ part);
+            $currencyPart.removeClass().addClass(currencyClass);
+            $currencyPart.text(currencyTitle);
+    }
+    function checkBitcoinActiveClass(){
+        if($('.b-exchange-currency__item[data-alias="BTC"]')){
+            if( $('.b-exchange-currency__item[data-alias="BTC"]').hasClass('active')){
+                $('.b-statistic').addClass('bitcoin-active');
+            }else{
+                $('.b-statistic').removeClass('bitcoin-active');
+            }
+        }
+
+
+    }
+    function checkCurrencyFullSizeCookie(){
+        if(getCookie('fullSizeBtn') === undefined){
+            $('.b-exchange__settings--message').fadeIn();
+        }
     }
 
     $('.js-exchange-currency-from').click(function(){
         var self = $(this);
         changeListCurrency(self,'.js-exchange-currency-from');
         getCurrentCurrency(self, 'from');
+        checkBitcoinActiveClass();
     });
     $('.js-exchange-currency-to').click(function(){
         var self = $(this);
         changeListCurrency(self,'.js-exchange-currency-to');
         getCurrentCurrency(self, 'to');
+        checkBitcoinActiveClass();
     });
     $('.js-exchange-reverse').click(function(e){
         var $fromItem = $('#exchange-ddl-from'),
@@ -114,6 +137,11 @@ var currencyClass = self.data('alias'),
     $( ".js-exchange-full" ).click(function() {
         $(this).toggleClass('active');
         $('.b-exchange').toggleClass('full-list');
+        if(getCookie('fullSizeBtn') === undefined){
+            $('.b-exchange__settings--message').fadeOut();
+            var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
+            document.cookie = "fullSizeBtn=done; path=/; expires=" + date.toUTCString();
+        }
     });
 
 
@@ -137,11 +165,18 @@ $('.mobile-menu__item--menu').click(function(){
     $(this).toggleClass('open');
 $('#header-navigation').fadeToggle(400);
 });
-    background_image_parallax($(".bg-currency-icon--adv"),0.5);
-    background_image_parallax($(".bg-currency-icon--btc"), 0.65);
-    background_image_parallax($(".bg-currency-icon--qiwi"), 0.3);
-    background_image_parallax($(".bg-currency-icon--yandex"), 0.85);
-    background_image_parallax($(".bg-currency-icon--pm"), 0.35);
+    checkBitcoinActiveClass();
+    if($('#home-banner')){
+        background_image_parallax($(".bg-currency-icon--adv"),0.5);
+        background_image_parallax($(".bg-currency-icon--btc"), 0.65);
+        background_image_parallax($(".bg-currency-icon--qiwi"), 0.3);
+        background_image_parallax($(".bg-currency-icon--yandex"), 0.85);
+        background_image_parallax($(".bg-currency-icon--pm"), 0.35);
+    }
+    if($('.b-exchange__settings--full')){
+        checkCurrencyFullSizeCookie();
+    }
+
 
 });
 },{}]},{},[1])

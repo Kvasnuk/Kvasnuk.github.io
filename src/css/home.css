@@ -139,9 +139,17 @@
     z-index: 3;
     opacity: 0;
     background:url(../images/home-banner-man.png) no-repeat bottom center;
-    top:-201px;
+    top:-204px;
     right: 120px;
     animation: statistic-man 0.3s 3s linear forwards;
+}
+.b-statistic.bitcoin-active:before{
+    background:url(../images/bitcoin-man.png) no-repeat bottom center;
+    width: 250px;
+    height: 300px;
+    z-index: 5;
+    top: -300px;
+    right: 158px;
 }
 @keyframes statistic-man {
     0%{opacity: 0; transform: translateY(5px);}

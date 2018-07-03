@@ -96,6 +96,19 @@
         padding: 70px 10px 0;
         font-size: 15px;
     }
+    .b-statistic.bitcoin-active:before {
+        width: 220px;
+        height: 260px;
+        background-size: cover;
+        z-index: 3;
+        top: -260px;
+        right: 80px;
+        /* -webkit-transform: scale(.7); */
+        /* transform: scale(.7); */
+    }
+    .b-exchange__settings--message{
+        display: none !important;
+    }
 }
 @media screen and (max-width: 991px) {
     .b-header__nav_item {
@@ -187,6 +200,14 @@
     }
     .copyright {
         font-size: 13px;
+    }
+    .b-statistic.bitcoin-active:before {
+        width: 200px;
+        height: 235px;
+        background-size: cover;
+        z-index: 3;
+        top: -235px;
+        right: 16px;
     }
 
 }
@@ -452,6 +473,9 @@
     }
     .bg-currency-icon {
         transform: scale(0.5);
+    }
+    .b-statistic.bitcoin-active:before {
+        right: 0;
     }
 }
 @media screen and (max-width: 575px) {
