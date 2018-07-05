@@ -100,7 +100,7 @@
      height: 0;
      border-left: 5px solid transparent;
      border-right: 5px solid transparent;
-     border-top: 7px solid #fff;
+     border-top: 7px solid #ffffff;
      position: absolute;
      top: 0;
      bottom: 0;
@@ -108,14 +108,21 @@
      margin: auto;
 
  }
+.page-template .site-language:after{
+    border-top: 7px solid #000000;
+}
 
  .site-language:hover{
      height: 45px;
  }
  .site-language:hover::after{
      border-top: 0;
-     border-bottom: 7px solid #fff;
+     border-bottom: 7px solid #ffffff;
  }
+.page-template .site-language:hover::after{
+    border-top: 0;
+    border-bottom: 7px solid #000000;
+}
  .site-language__item{
      width: 31px;
      height: 19px;
@@ -153,24 +160,24 @@
      padding-top:7px;
      text-align: center;
  }
-.homepage .site-enter{
+.home-template .site-enter{
     color: #ffffff;
     outline: none;
     -webkit-appearance: none;
 }
-.homepage .site-enter:hover{
+.home-template .site-enter:hover{
     color:  #4cd964;
 }
-.homepage .site-register{
+.home-template .site-register{
      border: 1px solid #ffffff;
      color: #ffffff;
  }
-.homepage .site-register:hover,.modal-footer .site-register{
+.home-template .site-register:hover,.modal-footer .site-register{
     border: 1px solid #23cbcf;
     background-color: #23cbcf;
     color:#fff;
  }
-.homepage .site-register:active{
+.home-template .site-register:active{
     border: 1px solid #17adb1;
     background-color: #17adb1;
     color:#fff;
@@ -181,6 +188,46 @@
     color:#fff;
 }
 
+.is_authorizated .site-register,.is_authorizated .site-enter{
+    display: none;
+}
 .modal-open #header-info{
     margin-left:-8px;
+}
+
+/*header user is logined menu*/
+.b-islogin{
+    display:none;
+}
+.is_authorizated .b-islogin{
+    display:block;
+}
+
+.b-islogin span{
+    color: #c0c0c0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.36px;
+}
+.b-islogin .b-islogin__name{
+    color: #00cfd2;
+    cursor: pointer;
+}
+.b-islogin .b-islogin__menu{
+    background: #437e92;
+    padding: 0;
+    border: 0;
+}
+.b-islogin__menu .dropdown-item {
+    color: #ffffff;
+}
+.b-islogin__menu .dropdown-item:hover {
+    background: #539bb3;
+}
+.b-islogin__menu .dropdown-item:first-child{
+    border-radius:4px 4px 0 0 ;
+}
+.b-islogin__menu .dropdown-item:last-child{
+    border-radius: 0 0 4px 4px;
 }

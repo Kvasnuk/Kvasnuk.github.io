@@ -4,7 +4,7 @@
 #home-banner{
     min-height:900px;
     /*background:url(../images/background.png) no-repeat center center;*/
-    background:url(../images/banner-bg-clear.png) no-repeat center center;
+    background:#07304e url(../images/banner-bg-clear.png) no-repeat center center;
     background-attachment: fixed !important;
     background-size: cover;
     padding-top:100px;

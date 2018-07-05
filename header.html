@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="dist/css/style.css">
 
 </head>
-<body class="homepage">
+<body>
 <header>
     <div id="header-navigation">
         <div class="container">
@@ -40,6 +40,16 @@
                     </span>
                 </div>
                 <div class="b-header-info--right">
+                    <div class="dropdown  b-islogin">
+                        <span class="b-islogin__message"> Вы вошли как:</span>
+                        <span class=" dropdown-toggle b-islogin__name" data-toggle="dropdown">
+                           Vasukov
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-right b-islogin__menu">
+                            <a class="dropdown-item" href="#">Личный кабинет</a>
+                            <a class="dropdown-item" href="#">Выход</a>
+                        </div>
+                    </div>
                     <button type="button" class="site-enter" data-toggle="modal" data-target="#siteEnter">
                        Вход
                     </button>

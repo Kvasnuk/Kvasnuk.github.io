@@ -41,22 +41,31 @@ jQuery(document).ready(function($){
             },
         ]
     });
-
+    function checkHomePage(){
+    var location = window.location.pathname;
+    if('/' === location){
+        $('body').addClass('home-template');
+    }else if(location.indexOf('/profile') === 0){
+        $('body').addClass('page-template is_authorizated');
+    }else{
+        $('body').addClass('page-template');
+    }
+}
     function getCookie(name) {
         var matches = document.cookie.match(new RegExp(
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
-function checkCurrencyCount(){
-    if($('.js-exchange-currency-from') && $('.js-exchange-currency-from').length > 10){
-          $('#exchange-currency-from').addClass('scroll-items');
-    }
-    if($('.js-exchange-currency-to') && $('.js-exchange-currency-to').length > 10){
-        $('#exchange-currency-to').addClass('scroll-items');
-    }
+    function checkCurrencyCount(){
+        if($('.js-exchange-currency-from') && $('.js-exchange-currency-from').length > 10){
+              $('#exchange-currency-from').addClass('scroll-items');
+        }
+        if($('.js-exchange-currency-to') && $('.js-exchange-currency-to').length > 10){
+            $('#exchange-currency-to').addClass('scroll-items');
+        }
 
-}
+    }
     checkCurrencyCount();
     function changeListCurrency(self,listClass){
         $(listClass).removeClass('active');
@@ -86,6 +95,21 @@ function checkCurrencyCount(){
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    checkHomePage();
     $('.js-exchange-currency-from').click(function(){
         var self = $(this);
         changeListCurrency(self,'.js-exchange-currency-from');
@@ -175,6 +199,36 @@ $('#header-navigation').fadeToggle(400);
     if($('.b-exchange__settings--full')){
         checkCurrencyFullSizeCookie();
     }
+
+
+
+
+    /* profile pages */
+if($('#current-time').length > 0){
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('current-time').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+    startTime();
+    }
+
+
 
 
 });
