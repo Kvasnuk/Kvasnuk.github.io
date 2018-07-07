@@ -77,6 +77,9 @@ jQuery(document).ready(function($){
             $currencyPart = $('#exchange-ddl-'+ part);
             $currencyPart.removeClass().addClass(currencyClass);
             $currencyPart.text(currencyTitle);
+            if($('#account-message-'+part.length>0)){
+                changeAccountMessageCurrency( currencyTitle,part);
+            }
     }
     function checkBitcoinActiveClass(){
         if($('.b-exchange-currency__item[data-alias="BTC"]')){
@@ -94,18 +97,17 @@ jQuery(document).ready(function($){
             $('.b-exchange__settings--message').fadeIn();
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
+    function exchangeReverseValue(from, to){
+        var $reverseFrom = $(from),
+            $reverseTo = $(to),
+            $reverseFromValue = $reverseFrom.text(),
+            $reverseToValue = $reverseTo.text();
+        $reverseFrom.text($reverseToValue);
+        $reverseTo.text($reverseFromValue);
+    }
+    function changeAccountMessageCurrency(title, part){
+         $('#account-message-'+ part).text(title);
+    }
 
 
 
@@ -154,8 +156,24 @@ jQuery(document).ready(function($){
             $(".js-exchange-currency-from[data-alias='"+toItemClass+"']").addClass('active');
             $(".js-exchange-currency-to[data-alias='"+fromItemClass+"']").addClass('active');
 
+            if($('.exchange-sum').length > 0){
+                exchangeReverseValue('.exchange-sum-currency--from','.exchange-sum-currency--to');
+                exchangeReverseValue('#account-message-from','#account-message-to');
+
+                    var $fromInput = $('#account-number-from'),
+                        $toInput = $('#account-number-to'),
+                        $fromInputVal = $fromInput.val(),
+                        $toInputVal =   $toInput.val();
+                    if($fromInputVal !== '' || $toInputVal !== ''){
+                        $fromInput.val($toInputVal);
+                        $toInput.val($fromInputVal);
+                    }
+            }
         }
     });
+
+
+
 
     $( ".js-exchange-full" ).click(function() {
         $(this).toggleClass('active');
