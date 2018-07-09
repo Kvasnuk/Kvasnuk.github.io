@@ -56,7 +56,7 @@
     background-image: url(../images/bg-icon-yandex.png);
     width: 392px;
     height: 395px;
-    top: 570px;
+    top: 470px;
     right: 0;
 
 }
@@ -312,40 +312,39 @@
     bottom:0;
     left:0;
     margin: auto;
-    -webkit-background-size: cover !important;
-    background-size: cover !important;
+    background-size: 30px 30px;
 }
 
-.reserve-perfect:before{
-    background-image: url("../images/currency-perfectmoney.png");
-}
-.reserve-privat:before{
-    background-image: url("../images/currency-privat24.png");
-}
-.reserve-wex:before{
-    background-image: url("../images/currency-wex.png");
-}
-.reserve-pumb:before{
-    background-image: url("../images/currency-pumb.png");
-}
-.reserve-adv:before{
-    background-image: url("../images/currency-advanced.png");
-}
-.reserve-bitcoin:before{
-    background-image: url("../images/currency-bitcoin.png");
-}
-.reserve-yandex:before{
-    background-image: url("../images/currency-yandex.png");
-}
-.reserve-ripple:before{
-    background-image: url("../images/currency-ripple.png");
-}
-.reserve-payeer:before{
-    background-image: url("../images/currency-payeer.png");
-}
-.reserve-qiwi:before{
-    background-image: url("../images/currency-qiwi.png");
-}
+/*.reserve-perfect:before{*/
+    /*background-image: url("../images/currency-perfectmoney.png");*/
+/*}*/
+/*.reserve-privat:before{*/
+    /*background-image: url("../images/currency-privat24.png");*/
+/*}*/
+/*.reserve-wex:before{*/
+    /*background-image: url("../images/currency-wex.png");*/
+/*}*/
+/*.reserve-pumb:before{*/
+    /*background-image: url("../images/currency-pumb.png");*/
+/*}*/
+/*.reserve-adv:before{*/
+    /*background-image: url("../images/currency-advanced.png");*/
+/*}*/
+/*.reserve-bitcoin:before{*/
+    /*background-image: url("../images/currency-bitcoin.png");*/
+/*}*/
+/*.reserve-yandex:before{*/
+    /*background-image: url("../images/currency-yandex.png");*/
+/*}*/
+/*.reserve-ripple:before{*/
+    /*background-image: url("../images/currency-ripple.png");*/
+/*}*/
+/*.reserve-payeer:before{*/
+    /*background-image: url("../images/currency-payeer.png");*/
+/*}*/
+/*.reserve-qiwi:before{*/
+    /*background-image: url("../images/currency-qiwi.png");*/
+/*}*/
 
 .b-reserves__item_count{
     float: right;

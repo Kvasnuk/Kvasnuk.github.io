@@ -211,7 +211,7 @@ $('#header-navigation').fadeToggle(400);
         background_image_parallax($(".bg-currency-icon--adv"),0.5);
         background_image_parallax($(".bg-currency-icon--btc"), 0.65);
         background_image_parallax($(".bg-currency-icon--qiwi"), 0.3);
-        background_image_parallax($(".bg-currency-icon--yandex"), 0.85);
+        background_image_parallax($(".bg-currency-icon--yandex"), 0.65);
         background_image_parallax($(".bg-currency-icon--pm"), 0.35);
     }
     if($('.b-exchange__settings--full')){
