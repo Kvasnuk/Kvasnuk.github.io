@@ -1,0 +1,137 @@
+
+@@include('header.html')
+<main class="b-main profile ">
+    <div class="container">
+        <div class="b-profile">
+            <div class="b-profite__part b-profite__part--left">
+                @@include('--profile-sidebar.html')
+            </div>
+            <div class="b-profite__part b-profite__part--right">
+                <div class="b-profite__main">
+                    <div class="b-personal">
+                        <div class="b-personal--left">
+                            <p class="b-profite__part_title history-title"><span>Персональные данные</span></p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-name-last">Фамилия</label>
+                                    <input type="text" id="user-name-last" placeholder="Petrenko">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-name-first">Имя</label>
+                                    <input type="text" id="user-name-first" placeholder="Sergiy">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-parent">Отчество</label>
+                                    <input type="text" id="user-parent" placeholder="Ivanovich">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-phone">Номер телефона <span class="user-phone-field">(Приват 24)</span></label>
+                                    <input type="text" id="user-phone" placeholder="0987654321">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-skype">Skype</label>
+                                    <input type="text" id="user-skype" placeholder="psi-2018">
+                                </span>
+                            </p>
+
+                        </div>
+                        <div class="b-personal--right">
+                            <p class="b-profite__part_title history-title"><span>Личные данные</span></p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-email">Электронная почта</label>
+                                    <input type="text" id="user-email" placeholder="email@mail.com">
+                                </span>
+                            </p>
+                            <p><button class="btn btn-success btn-change-password js-change-password">Изменить пароль</button></p>
+                        </div>
+                    </div>
+
+                    <p class="b-profite__part_title invoice-title"><span>Счета и номера кошельков</span></p>
+                    <ul class="user-invoice">
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-PMUSD" class="user-invoice__item_label PMUSD">PerfectMoney <span>USD</span></label>
+                                    <input type="text" id="user-invoice-PMUSD" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-PRUSD" class="user-invoice__item_label PRUSD">PAYEER <span>USD</span></label>
+                                    <input type="text" id="user-invoice-PRUSD" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-P24UAH" class="user-invoice__item_label P24UAH">Приват 24 <span>UAH</span></label>
+                                    <input type="text" id="user-invoice-P24UAH" placeholder="U123456789">
+                                </span>
+                        </li>
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-BTC" class="user-invoice__item_label BTC">Bitcoin <span>BTC</span></label>
+                                    <input type="text" id="user-invoice-BTC" placeholder="U123456789">
+                                </span>
+                        </li>
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-PUMBUAH" class="user-invoice__item_label PUMBUAH">ПУМБ <span>UAH</span></label>
+                                    <input type="text" id="user-invoice-PUMBUAH" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-ADVCUSD" class="user-invoice__item_label ADVCUSD">Advanced Cash <span>USD</span></label>
+                                    <input type="text" id="user-invoice-ADVCUSD" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-YAMRUB" class="user-invoice__item_label YAMRUB">Яндекс Деньги <span>RUB</span></label>
+                                    <input type="text" id="user-invoice-YAMRUB" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-XRP" class="user-invoice__item_label XRP">Ripple <span>XRP</span></label>
+                                    <input type="text" id="user-invoice-XRP" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-WEXEUSD" class="user-invoice__item_label WEXEUSD">WEX code <span>USD</span></label>
+                                    <input type="text" id="user-invoice-WEXEUSD" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-QWRUB" class="user-invoice__item_label QWRUB">QIWI <span>RUB</span></label>
+                                    <input type="text" id="user-invoice-QWRUB" placeholder="U123456789">
+                                </span>
+                        </li>
+
+                    </ul>
+                    <div class="b-exchange-template--submit">
+                        <button class="btn btn-success js-save-invoice">Сохранить данные</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('footer.html')

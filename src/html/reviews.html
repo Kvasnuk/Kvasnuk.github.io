@@ -1,0 +1,69 @@
+@@include('header.html')
+<main class="b-main reviews-content">
+    <div class="container">
+        <h1 class="page-title page-reviews">Отзывы</h1>
+        <div class="b-reviews-form">
+            <div><p class="b-reviews-form__title">Опубликовать отзыв</p></div>
+            <div>
+                <form action="">
+                   <div class="row">
+                       <div class="col-12 col-md-6">
+                           <p class="b-reviews-form__field">
+                               <label class="b-reviews-form__label" for="review--user-name">Ваше имя</label>
+                               <input type="text" name="review--user-name" id="review--user-name" class="b-reviews-form__input">
+                           </p>
+
+                       </div>
+                       <div class="col-12 col-md-6">
+                           <p class="b-reviews-form__field">
+                               <label class="b-reviews-form__label" for="review--user-email">Ваш e-mail</label>
+                               <input type="text" name="review--user-email" id="review--user-email" class="b-reviews-form__input">
+                           </p>
+                       </div>
+                       <div class="col-12">
+                           <p class="b-reviews-form__field">
+                               <label class="b-reviews-form__label" for="review--user-text">Ваш отзыв</label>
+                               <textarea name="review--user-text" id="review--user-text" class="b-reviews-form__text"></textarea>
+                           </p>
+                       </div>
+                       <div class="col-12">
+                           <button type="submit" class="btn btn-success b-reviews-form__submit js-submit-review">Оставить отзыв</button>
+                       </div>
+                   </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        <div class="bg-white">
+            <div class="container">
+                <div class="review-list">
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.</span>
+                    </p>
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                        </span>
+                    </p>
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.</span>
+                    </p>
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                        </span>
+                    </p>
+                </div>
+                @@include('--pagination.html')
+            </div>
+        </div>
+
+</main>
+@@include('footer.html')

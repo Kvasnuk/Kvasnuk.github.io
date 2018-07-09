@@ -107,10 +107,10 @@
 </header>
 
 <main class="b-main profile ">
-<div class="container">
-    <div class="b-profile">
-        <div class="b-profite__part b-profite__part--left">
-            <div class="b-profile__sidebar">
+    <div class="container">
+        <div class="b-profile">
+            <div class="b-profite__part b-profite__part--left">
+                <div class="b-profile__sidebar">
     <div class="b-profile__sidebar_side--top">
         <p class="b-profite__part_title"><span>Личный кабинет</span></p>
         <ul class="b-profite__menu">
@@ -132,135 +132,134 @@
         <button class="btn btn-danger btn-exit js-account-exit">Выйти</button>
     </div>
 </div>
-        </div>
+            </div>
+            <div class="b-profite__part b-profite__part--right">
+                <div class="b-profite__main">
+                    <div class="b-personal">
+                        <div class="b-personal--left">
+                            <p class="b-profite__part_title history-title"><span>Персональные данные</span></p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-name-last">Фамилия</label>
+                                    <input type="text" id="user-name-last" placeholder="Petrenko">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-name-first">Имя</label>
+                                    <input type="text" id="user-name-first" placeholder="Sergiy">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-parent">Отчество</label>
+                                    <input type="text" id="user-parent" placeholder="Ivanovich">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-phone">Номер телефона <span class="user-phone-field">(Приват 24)</span></label>
+                                    <input type="text" id="user-phone" placeholder="0987654321">
+                                </span>
+                            </p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-skype">Skype</label>
+                                    <input type="text" id="user-skype" placeholder="psi-2018">
+                                </span>
+                            </p>
 
+                        </div>
+                        <div class="b-personal--right">
+                            <p class="b-profite__part_title history-title"><span>Личные данные</span></p>
+                            <p>
+                                <span class="profile-input-field">
+                                    <label for="user-email">Электронная почта</label>
+                                    <input type="text" id="user-email" placeholder="email@mail.com">
+                                </span>
+                            </p>
+                            <p><button class="btn btn-success btn-change-password js-change-password">Изменить пароль</button></p>
+                        </div>
+                    </div>
 
-        <div class="b-profite__part b-profite__part--right">
-            <p class="b-profite__part_title history-title"><span>История операций</span></p>
+                    <p class="b-profite__part_title invoice-title"><span>Счета и номера кошельков</span></p>
+                    <ul class="user-invoice">
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-PMUSD" class="user-invoice__item_label PMUSD">PerfectMoney <span>USD</span></label>
+                                    <input type="text" id="user-invoice-PMUSD" placeholder="U123456789">
+                                </span>
+                        </li>
 
-            <!--Case if  HISTORY IS EMPTY-->
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-PRUSD" class="user-invoice__item_label PRUSD">PAYEER <span>USD</span></label>
+                                    <input type="text" id="user-invoice-PRUSD" placeholder="U123456789">
+                                </span>
+                        </li>
 
-            <!--<p class="b-profite__history-empty alert alert-info">Извините, вы ешё не проводили операции обмена... История пуста!</p>-->
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-P24UAH" class="user-invoice__item_label P24UAH">Приват 24 <span>UAH</span></label>
+                                    <input type="text" id="user-invoice-P24UAH" placeholder="U123456789">
+                                </span>
+                        </li>
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-BTC" class="user-invoice__item_label BTC">Bitcoin <span>BTC</span></label>
+                                    <input type="text" id="user-invoice-BTC" placeholder="U123456789">
+                                </span>
+                        </li>
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-PUMBUAH" class="user-invoice__item_label PUMBUAH">ПУМБ <span>UAH</span></label>
+                                    <input type="text" id="user-invoice-PUMBUAH" placeholder="U123456789">
+                                </span>
+                        </li>
 
-            <!----------------------->
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-ADVCUSD" class="user-invoice__item_label ADVCUSD">Advanced Cash <span>USD</span></label>
+                                    <input type="text" id="user-invoice-ADVCUSD" placeholder="U123456789">
+                                </span>
+                        </li>
 
-            <div class="b-profite__main">
-                <p class="download-history">Вы можете загрузить таблицу в формате
-                    <a href="#">
-                    <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm212-240h-28.8c-4.4 0-8.4 2.4-10.5 6.3-18 33.1-22.2 42.4-28.6 57.7-13.9-29.1-6.9-17.3-28.6-57.7-2.1-3.9-6.2-6.3-10.6-6.3H124c-9.3 0-15 10-10.4 18l46.3 78-46.3 78c-4.7 8 1.1 18 10.4 18h28.9c4.4 0 8.4-2.4 10.5-6.3 21.7-40 23-45 28.6-57.7 14.9 30.2 5.9 15.9 28.6 57.7 2.1 3.9 6.2 6.3 10.6 6.3H260c9.3 0 15-10 10.4-18L224 320c.7-1.1 30.3-50.5 46.3-78 4.7-8-1.1-18-10.3-18z"></path></svg>
-                    .xcl</a>
-                </p>
-                <ul class="history-list b-profile__list-large">
-                    <li class="history-list__item history-list__item_title">
-                        <span class="item-order"> № Заявки</span>
-                        <span  class="item-date">Время и дата</span>
-                        <span class="item-exchange">Перевод</span>
-                        <span  class="item-status">Статус</span>
-                    </li>
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-YAMRUB" class="user-invoice__item_label YAMRUB">Яндекс Деньги <span>RUB</span></label>
+                                    <input type="text" id="user-invoice-YAMRUB" placeholder="U123456789">
+                                </span>
+                        </li>
 
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-XRP" class="user-invoice__item_label XRP">Ripple <span>XRP</span></label>
+                                    <input type="text" id="user-invoice-XRP" placeholder="U123456789">
+                                </span>
+                        </li>
 
-                    <li class="history-list__item">
-                        <span class="item-order">
-                            <span class="item-title">№ Заявки</span>
-                            <span class="item-data">Oc52xQ53187</span>
-                        </span>
-                        <span  class="item-date">
-                            <span class="item-title">Время и дата</span>
-                            <span class="item-data"><b>16:37</b> 14.06.18</span>
-                        </span>
-                        <span class="item-exchange">
-                            <span class="item-title">Перевод</span>
-                            <span class="item-data">
-                                <span class="item-data__from P24UAH">Privat24 (12600.28 UAH)</span>
-                                <span class="item-data__to QWRUB">Qiwi (30000.01 RUB)</span>
-                            </span>
-                        </span>
-                        <span  class="item-status">
-                            <span class="item-title">Статус</span>
-                            <span class="item-data">Успешно
-                             <span class="item-status__preloader js-status-reload"></span>
-                            </span>
-                        </span>
-                    </li>
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-WEXEUSD" class="user-invoice__item_label WEXEUSD">WEX code <span>USD</span></label>
+                                    <input type="text" id="user-invoice-WEXEUSD" placeholder="U123456789">
+                                </span>
+                        </li>
 
-                    <li class="history-list__item status-error">
-                        <span class="item-order">
-                            <span class="item-title">№ Заявки</span>
-                            <span class="item-data">Oc52xQ53187</span>
-                        </span>
-                        <span  class="item-date">
-                            <span class="item-title">Время и дата</span>
-                            <span class="item-data"><b>16:37</b> 14.06.18</span>
-                        </span>
-                        <span class="item-exchange">
-                            <span class="item-title">Перевод</span>
-                            <span class="item-data">
-                                <span class="item-data__from P24UAH">Privat24 (12600.28 UAH)</span>
-                                <span class="item-data__to QWRUB">Qiwi (30000.01 RUB)</span>
-                            </span>
-                        </span>
-                        <span  class="item-status">
-                            <span class="item-title">Статус</span>
-                            <span class="item-data">Ошибка
-                             <span class="item-status__preloader js-status-reload"></span>
-                            </span>
-                        </span>
-                    </li>
+                        <li class="user-invoice__item">
+                             <span class="profile-input-field">
+                                    <label for="user-invoice-QWRUB" class="user-invoice__item_label QWRUB">QIWI <span>RUB</span></label>
+                                    <input type="text" id="user-invoice-QWRUB" placeholder="U123456789">
+                                </span>
+                        </li>
 
-                    <li class="history-list__item">
-                        <span class="item-order">
-                            <span class="item-title">№ Заявки</span>
-                            <span class="item-data">Oc52xQ53187</span>
-                        </span>
-                        <span  class="item-date">
-                            <span class="item-title">Время и дата</span>
-                            <span class="item-data"><b>16:37</b> 14.06.18</span>
-                        </span>
-                        <span class="item-exchange">
-                            <span class="item-title">Перевод</span>
-                            <span class="item-data">
-                                <span class="item-data__from P24UAH">Privat24 (12600.28 UAH)</span>
-                                <span class="item-data__to QWRUB">Qiwi (30000.01 RUB)</span>
-                            </span>
-                        </span>
-                        <span  class="item-status">
-                            <span class="item-title">Статус</span>
-                            <span class="item-data">Успешно
-                             <span class="item-status__preloader js-status-reload"></span>
-                            </span>
-                        </span>
-                    </li>
-
-                    <li class="history-list__item status-error">
-                        <span class="item-order">
-                            <span class="item-title">№ Заявки</span>
-                            <span class="item-data">Oc52xQ53187</span>
-                        </span>
-                        <span  class="item-date">
-                            <span class="item-title">Время и дата</span>
-                            <span class="item-data"><b>16:37</b> 14.06.18</span>
-                        </span>
-                        <span class="item-exchange">
-                            <span class="item-title">Перевод</span>
-                            <span class="item-data">
-                                <span class="item-data__from P24UAH">Privat24 (12600.28 UAH)</span>
-                                <span class="item-data__to QWRUB">Qiwi (30000.01 RUB)</span>
-                            </span>
-                        </span>
-                        <span  class="item-status">
-                            <span class="item-title">Статус</span>
-                            <span class="item-data">Ошибка
-                             <span class="item-status__preloader js-status-reload"></span>
-                            </span>
-                        </span>
-                    </li>
-
-
-                </ul>
+                    </ul>
+                    <div class="b-exchange-template--submit">
+                        <button class="btn btn-success js-save-invoice">Сохранить данные</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </main>
 
 <footer>

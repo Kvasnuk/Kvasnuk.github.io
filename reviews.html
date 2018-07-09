@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -106,17 +105,87 @@
     </div>
 </header>
 
-<main class="b-main ">
+<main class="b-main reviews-content">
     <div class="container">
-        <ul class="all-pages">
-            <li><a href="/">Главная</a></li>
-            <li><a href="/profile-data.html">Счета и персональные данные</a></li>
-            <li><a href="/profile-history.html">История операций</a></li>
-            <li><a href="/profile-templates.html">Шаблоны обменов</a></li>
-            <li><a href="/news.html">НовостиY</a></li>
-            <li><a href="/reviews.html">Отзывы</a></li>
-        </ul>
+        <h1 class="page-title page-reviews">Отзывы</h1>
+        <div class="b-reviews-form">
+            <div><p class="b-reviews-form__title">Опубликовать отзыв</p></div>
+            <div>
+                <form action="">
+                   <div class="row">
+                       <div class="col-12 col-md-6">
+                           <p class="b-reviews-form__field">
+                               <label class="b-reviews-form__label" for="review--user-name">Ваше имя</label>
+                               <input type="text" name="review--user-name" id="review--user-name" class="b-reviews-form__input">
+                           </p>
+
+                       </div>
+                       <div class="col-12 col-md-6">
+                           <p class="b-reviews-form__field">
+                               <label class="b-reviews-form__label" for="review--user-email">Ваш e-mail</label>
+                               <input type="text" name="review--user-email" id="review--user-email" class="b-reviews-form__input">
+                           </p>
+                       </div>
+                       <div class="col-12">
+                           <p class="b-reviews-form__field">
+                               <label class="b-reviews-form__label" for="review--user-text">Ваш отзыв</label>
+                               <textarea name="review--user-text" id="review--user-text" class="b-reviews-form__text"></textarea>
+                           </p>
+                       </div>
+                       <div class="col-12">
+                           <button type="submit" class="btn btn-success b-reviews-form__submit js-submit-review">Оставить отзыв</button>
+                       </div>
+                   </div>
+                </form>
+            </div>
+        </div>
     </div>
+        <div class="bg-white">
+            <div class="container">
+                <div class="review-list">
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.</span>
+                    </p>
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                        </span>
+                    </p>
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.</span>
+                    </p>
+                    <p class="b-review-item">
+                        <span class="b-review-item__author">Алексей <span class="b-review-item__date">9 июня 2018 г.</span></span>
+                        <span class="b-review-item__excerpt">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo maiores qui tempore.
+                        </span>
+                    </p>
+                </div>
+                <div class="b-pagination">
+    <ul class="pagination"><li class="prev"><a href="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"/></svg>
+    </a></li>
+        <li><a href="">1</a></li>
+        <li class="active"><a href="#" data-page="1">2</a></li>
+        <li><a href="#" data-page="2">3</a></li>
+        <li><a href="#" data-page="3">4</a></li>
+        <li><span class="separator">...</span></li>
+        <li><a href="#" data-page="4">5</a></li>
+        <li class="next"><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+        </a>
+        </li>
+    </ul>
+</div>
+
+            </div>
+        </div>
 
 </main>
 

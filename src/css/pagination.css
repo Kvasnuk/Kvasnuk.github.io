@@ -1,0 +1,45 @@
+.b-pagination{
+    padding-top: 10px;
+    display: block;
+    margin: 0 auto 15px;
+    text-align: center;
+    width: max-content;
+}
+
+.reviews-content .b-pagination{
+    margin-bottom: 35px;
+}
+
+.b-pagination .pagination{
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #eaeaea;
+    padding:5px 15px;
+}
+.b-pagination .pagination li{
+    margin:0 4px;
+}
+.b-pagination .pagination a{
+    min-width: 35px;
+    height: 32px;
+    display: block;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #000000;
+    background-image: linear-gradient(to top, #eeeeee 0%, #f7f7f7 100%);
+    color: #3c414e;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 5px;
+
+}
+.b-pagination .pagination a:hover,.b-pagination .pagination li.active a{
+    color:#24d0d4;
+}
+.b-pagination .pagination .prev a,.b-pagination .pagination .next a{
+    padding-top: 7px;
+    min-width: 50px;
+}
+.b-pagination .pagination .prev svg,.b-pagination .pagination .next svg{
+    width: 12px;
+}

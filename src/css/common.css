@@ -174,6 +174,29 @@ button{
 }
 
 
+/*news-page*/
+.page-title{
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+    letter-spacing: 1.7px;
+}
+.news-articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.news-articles .b-article{
+    width: 48%;
+    max-width: 48%;
+    margin: 0 0 40px;
+    transition:0.3s;
+}
+.news-articles .b-article:hover{
+    transform:translateY(-4px);
+    box-shadow: 0 9px 17px 4px rgba(0,0,0,.16);
+}
 
 
 
