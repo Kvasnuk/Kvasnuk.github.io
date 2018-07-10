@@ -1,5 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 jQuery(document).ready(function($){
+
+
     $('#news-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -249,11 +251,28 @@ if($('#current-time').length > 0){
 
 
     $(".upload").upload({
-        action: "file.php",
+        action: "/upload.php",
+        maxSize: 6291456,
         label:"<span>Переместите ваш файл сюда!</span><span>Разрешение .png .jpg</span><span>Максимальный размер: 6 МБ</span>"
+    });
 
+
+if($('flipTimer')){
+    function getCountDowndate(){
+        var date = new Date();
+        date.setMinutes(date.getMinutes() + 20);
+        return date;
+    }
+
+    $('.flipTimer').flipTimer({
+        direction: 'down',
+        date:getCountDowndate(),
+        callback: function() { alert('times up!');
+        }
 
     });
+}
+
 
 });
 },{}]},{},[1])

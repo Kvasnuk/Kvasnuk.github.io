@@ -1,8 +1,10 @@
 .btn-exchange-status{
     margin-top: 30px;
+    font-size:18px;
 }
 .b-application-data{
     margin-bottom: 25px;
+    padding-top: 10px;
 }
 .b-application-data--border{
     border-bottom:1px solid rgba(130, 128, 148, 0.2);
@@ -41,7 +43,10 @@
     font-size: 16px;
     min-width: 200px;
     height: 36px;
-    margin: 0 auto;
+    margin: 20px auto 0;
+}
+.b-instructions{
+    padding-top: 15px;
 }
 .b-instructions__list{
     padding-left: 15px;
@@ -112,4 +117,22 @@
     font-weight: 500;
     margin-bottom: 10px;
     letter-spacing: 0.42px;
+}
+.b-countdown{
+    text-align: center;
+    padding-top: 20px;
+}
+.b-countdown__labels{
+    padding-top: 10px;
+}
+.b-countdown__labels span{
+    display: inline-block;
+    width: 150px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+    color: #656565;
+    background: -webkit-linear-gradient(#4a4a4a,#e6e6e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

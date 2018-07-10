@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+
+
     $('#news-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -248,10 +250,27 @@ if($('#current-time').length > 0){
 
 
     $(".upload").upload({
-        action: "file.php",
+        action: "/upload.php",
+        maxSize: 6291456,
         label:"<span>Переместите ваш файл сюда!</span><span>Разрешение .png .jpg</span><span>Максимальный размер: 6 МБ</span>"
+    });
 
+
+if($('flipTimer')){
+    function getCountDowndate(){
+        var date = new Date();
+        date.setMinutes(date.getMinutes() + 20);
+        return date;
+    }
+
+    $('.flipTimer').flipTimer({
+        direction: 'down',
+        date:getCountDowndate(),
+        callback: function() { alert('times up!');
+        }
 
     });
+}
+
 
 });
