@@ -80,4 +80,5 @@
 }
 .b-reviews-form__submit{
     height: 42px;
+    min-width: 200px;
 }

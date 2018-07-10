@@ -22,7 +22,9 @@ button{
 .main{
     padding-top:100px;
 }
-
+a.btn{
+    padding-top: 10px;
+}
 .btn{
     /* Style for "Button" */
     min-width: 250px;
@@ -147,6 +149,33 @@ button{
     font-size: 14px;
     font-weight: 400;
 }
+
+.page-text{
+    color:#000;
+    font-size:16px;
+}
+.page-text a{
+    color: #3e77aa;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+}
+.page-text a:hover{
+    color:#c9514f;
+}
+.page-text a:active{
+    color:#599ad3;
+}
+.page-text .text-info,.page-text .text-danger{
+    font-weight: 500;
+}
+.page-text .text-info{
+    color: #3e77aa;
+}
+.page-text .text-danger{
+    color: #a94442;
+}
+
 @media (min-width: 1200px){
     .container {
         max-width: 1170px;

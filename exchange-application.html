@@ -1,0 +1,297 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7money</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i,900&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/upload/upload.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+
+</head>
+<body>
+<header>
+    <div id="header-navigation">
+        <div class="container">
+            <nav class="b-header__nav">
+                <a href="#" class="b-header__nav_item b-header__nav_item--active">Обменять</a>
+                <a href="#" class="b-header__nav_item">Новости</a>
+                <a href="#" class="b-header__nav_item">FAQ</a>
+                <a href="#" class="b-header__nav_item">Отзывы</a>
+                <a href="#" class="b-header__nav_item">Партнерам</a>
+                <a href="#" class="b-header__nav_item">Проверить статус</a>
+                <a href="#" class="b-header__nav_item">Как обменять?</a>
+            </nav>
+        </div>
+    </div>
+    <div id="header-info">
+        <div class="container">
+            <div class="b-header-info">
+                <div class="b-header-info--left">
+                    <a href="#" class="site-logo"></a>
+                    <span class="site-work-switch"></span>  <!--add class switch-close and change online to offline -->
+                    <span class="site-language">
+                        <a href="#" class="site-language__item site-language__item--ru current-lang"></a>
+                        <a href="#" class="site-language__item site-language__item--en"></a>
+                    </span>
+                </div>
+                <div class="b-header-info--right">
+                    <div class="dropdown  b-islogin">
+                        <span class="b-islogin__message"> Вы вошли как:</span>
+                        <span class=" dropdown-toggle b-islogin__name" data-toggle="dropdown">
+                           Vasukov
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-right b-islogin__menu">
+                            <a class="dropdown-item" href="#">Личный кабинет</a>
+                            <a class="dropdown-item" href="#">Выход</a>
+                        </div>
+                    </div>
+                    <button type="button" class="site-enter" data-toggle="modal" data-target="#siteEnter">
+                       Вход
+                    </button>
+                    <a href="#" class="site-register">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="siteEnter" tabindex="-1" role="dialog" aria-labelledby="siteEnterLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="siteEnterLabel">Вход</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form" action="/auth/login" method="post">
+                        <input type="hidden" name="_csrf" value="J2pzdfvm6oQ9rHBfJBq1jLHBwldz6COXKRLhBPGf0pkTLQRMmoqM7gnaJBZHatG7x7mjGiyQbdlGKqVXrs-b4Q=="> <div class="input-group">
+                        <div class="input-item">
+                            <div class="form-group field-loginform-email required has-error">
+                                <input type="text" id="loginform-email" class="form-control" name="LoginForm[email]" placeholder="электронная почта" aria-required="true" aria-invalid="true">
+                            </div> </div>
+                        <div class="input-item">
+                            <div class="form-group field-loginform-password required">
+                                <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" placeholder="пароль" aria-required="true">
+                            </div> <a href="/auth/request-password-reset" class="reset-password">напомнить</a>
+                        </div>
+                    </div>
+                        <div class="error-summary" style="display:none"><ul></ul></div>
+                        <button class="button">Войти</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="site-register">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu">
+        <span class="mobile-menu__item mobile-menu__item--exchange">
+        <a href="#">Обменять</a>
+    </span>
+        <span class="mobile-menu__item mobile-menu__item--menu"></span>
+        <span class="mobile-menu__item mobile-menu__item--enter">
+        <button type="button" class="site-enter--mobile " data-toggle="modal" data-target="#siteEnter">
+                       Вход
+                    </button>
+    </span>
+    </div>
+</header>
+
+<main class="b-main profile">
+    <div class="container">
+        <div class="b-profile">
+            <div class="b-profile__header">
+                <p>Заявка на обмен #381117</p>
+            </div>
+            <div class="b-profite__part b-profite__part--left">
+               <div class="b-exchange-sidebar">
+                    <button class="btn btn-alert center btn-exchange-status">Проверить статус заказа</button>
+                    <!--<a  href="#" class="btn btn-alert center btn-exchange-status">Проверить статус заказа</a>-->
+                   <p class="b-profite__part_title"><span>Осталось времени на оплату</span></p>
+                      <div class="time">time</div>
+                   <p class="b-profite__part_title"><span>Данные заявки</span></p>
+                   <div class="b-application-data b-application-data--border">
+                       <p class="b-application-data__item">
+                           <span>Номер заявки:</span>
+                           <span><b>#381117</b></span>
+                       </p>
+                       <p class="b-application-data__item">
+                           <span>Создана:</span>
+                           <span>03.05.18, 21:06</span>
+                       </p>
+                       <p class="b-application-data__item">
+                           <span>По курсу:</span>
+                           <span>2.31851</span>
+
+                       </p>
+                   </div>
+
+                   <div class="b-application-data b-application-data--border">
+                       <p class="b-application-data__item">
+                           <span class="b-application-data__currency P24UAH">Отдаю PRIVAT24:</span>
+                           <span><b>2500 UAH</b></span>
+                       </p>
+                       <p class="b-application-data__item">
+                           <span>С карты:</span>
+                           <span>4149625806379002</span>
+                       </p>
+                       <p class="b-application-data__item">
+                           <span>ФИО:</span>
+                           <span>Никита Васюков</span>
+
+                       </p>
+                   </div>
+                   <div class="b-application-data">
+                       <p class="b-application-data__item">
+                           <span class="b-application-data__currency QWRUB">Получаю QIWI:</span>
+                           <span><b>5796.28 RUB</b></span>
+                       </p>
+                       <p class="b-application-data__item">
+                           <span>На карту:</span>
+                           <span>+380501037198</span>
+                       </p>
+                   </div>
+                   <p class="text-center">
+                       <button class="btn btn-danger cancel-operation">Отменить операцию</button>
+                   </p>
+
+               </div>
+
+
+
+
+            </div>
+
+
+            <div class="b-profite__part b-profite__part--right">
+                <p class="b-profite__part_title"><span>Инструкция «Верификация платежной карты ПриватБанка»</span></p>
+                <div class="b-profite__main">
+                    <div class="b-instructions page-text">
+                        <p class="mb-4">Верификация нужно <span class="text-danger">будет пройти всего 1 раз</span>, все последующие обмены с участием
+                            верифицированой карты, будет осуществляться быстро и без необходимости проверки
+                            карты! <b>Пояснение см. Пункт 15</b></p>
+                        <p><em>Уважаемые клиенты, для подтверждения вашей карты Вам нужно совершить несколько
+                            простых шагов:</em></p>
+
+                        <ol class="mb-4 b-instructions__list">
+                            <li> Нажмите на <a href="" class="text-alert">«Перейти на статус операции»</a></li>
+                            <li>У вас открылся статус Вашей заявки. Вам нужно приложить лицевую сторону карты, с
+                                которой осуществляете платеж к монитору (зазрешается закрыть все цифры кроме
+                                последних 4-х)</li>
+                            <li>Сделать фото вашей карты на фоне «статуса операции» созданной вами заявки. <span class="text-danger" data-toggle="modal" data-target="#exampleModal1">(ПРИМЕР)</span> </li>
+                            <li>Загрузите фото, далее нажмите <span class="text-info"> «Загрузить на проверку» (<b>максимальный размер фото
+                                6 МБ</b>)</span> , либо отправьте на почту <a href="#" class="text-info">hello@7money.co</a>. Внимание, если Вы отправляете на почту
+                                пожалуйста нажмите кнопку <span class="text-info">«Я отправил на почту»</span></li>
+                        </ol>
+                        <p><em>Второй метод для пользователей соверщающих обмен через мобильное устройство:</em></p>
+                        <ol class="b-instructions__list">
+                            <li>Написать на листочке -  <span class="text-info">«Я совершаю обмен на 7money.co Приват24 на PAYEER USD»</span></li>
+                            <li>Приложить к листочку карты с которой вы совершаете платеж (разрешается закрыть все
+                                цифры кроме последних 4-х)</li>
+                            <li>Сделать фото листика с надписью и расположенной рядом карты. <span class="text-danger" data-toggle="modal" data-target="#exampleModal2">(ПРИМЕР)</span></li>
+                            <li>Загрузите фото, далее нажмите кнопку «Загрузить на проверку», либо отправьте на почту
+                                <a href="#" class="text-info"> hello@7money.co </a>. Внимание, если Вы отправляете на почту пожалуйста нажмите кнопку
+                                 <span class="text-info d-block"> «Я отправил на почту»</span></li>
+                        </ol>
+                    </div>
+                    <div class="b-attach-image">
+                        <!-- Use upload lib  -  https://formstone.it/components/upload/-->
+                        <div class="upload"></div>
+                        <div class="b-attach-image__buttons">
+                            <button class="btn btn-success">Загрузить на проверку</button>
+                            <button class="btn btn-success">Я отправил на почту</button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Фото вашей карты на фоне «статуса операции» созданной вами заявки.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="/dist/images/home-banner-man.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Фото листика с надписью и расположенной рядом карты.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="/dist/images/home-banner-man.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+   <div id="partners">
+       <div class="container">
+           <ul class="partners-list">
+               <li><a class="partners-list__item advcash" href="#"></a></li>
+               <li><a class="partners-list__item pumb" href="#"></a></li>
+               <li><a class="partners-list__item payeer" href="#"></a></li>
+               <li><a class="partners-list__item privat" href="#"></a></li>
+               <li><a class="partners-list__item perfect" href="#"></a></li>
+               <li><a class="partners-list__item gooaddy" href="#"></a></li>
+           </ul>
+       </div>
+   </div>
+    <div id="footer-navigation">
+        <div class="container">
+            <div class="footer-navigation__content">
+                <a href="#" class="site-logo"></a>
+                <nav class="b-footer__nav">
+                    <a href="#" class="b-footer__nav_item">Партнеры</a>
+                    <a href="#" class="b-footer__nav_item">Соглашение</a>
+                    <a href="#" class="b-footer__nav_item">Правила</a>
+                    <a href="#" class="b-footer__nav_item">Безопасность</a>
+                    <a href="#" class="b-footer__nav_item best-change"></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">Сервис обмена электронных валют 7money.co ©  2016-2018</p>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="vendor/slick/js/slick.min.js"></script>
+<script src="/vendor/upload/core.js"></script>
+<script src="/vendor/upload/upload.js"></script>
+<script src="dist/js/main.js"></script>
+</body>
+</html>

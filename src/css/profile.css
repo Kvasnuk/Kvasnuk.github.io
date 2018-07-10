@@ -2,6 +2,23 @@
     box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
     display: flex;
+    flex-wrap: wrap;
+}
+.b-profile__header{
+    min-width: 100%;
+    height: 77px;
+    text-align: center;
+    background: #24d0d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.b-profile__header p{
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 1.26px;
 }
 .b-profile__sidebar{
     display: flex;
@@ -146,17 +163,16 @@
 
 .b-profite__part--right{
     padding: 0 20px 30px;
-    min-width: 775px;
-}
-.b-profite__main{
-    opacity: 0;
-    animation:fadein-block 0.4s .3s linear forwards;
+    max-width: 775px;
 }
 @keyframes fadein-block {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-
+.b-profite__main{
+    opacity: 0;
+    animation:fadein-block 0.4s .3s linear forwards;
+}
 
 .download-history{
     padding-top: 6px;

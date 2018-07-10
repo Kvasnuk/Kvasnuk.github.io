@@ -247,6 +247,11 @@ if($('#current-time').length > 0){
     }
 
 
+    $(".upload").upload({
+        action: "file.php",
+        label:"<span>Переместите ваш файл сюда!</span><span>Разрешение .png .jpg</span><span>Максимальный размер: 6 МБ</span>"
 
+
+    });
 
 });
