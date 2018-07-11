@@ -550,6 +550,7 @@
     .b-reserves__item:before {
         width: 25px;
         height: 25px;
+        background-size: 25px 25px;
     }
     .b-reserves__item {
         padding: 15px 0 15px 30px;
