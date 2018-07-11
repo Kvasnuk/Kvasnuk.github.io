@@ -21,9 +21,11 @@ jQuery(document).ready(function($){
                 1000:{
                     items:3,
                     margin:25,
+                    center:true,
                 },
                 1680:{
                     items:4,
+                    center:true,
                 }
             }
         });

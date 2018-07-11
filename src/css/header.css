@@ -134,7 +134,7 @@
      z-index:1;
  }
 .site-language__item.current-lang{
-    z-index:2;
+    z-index:3;
 }
 .site-language:hover .site-language__item.current-lang{
     top:17px;
