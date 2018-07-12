@@ -1,0 +1,253 @@
+@@include('header.html')
+<main class="b-main order-page">
+    <div class="container">
+        <div class="order-alert--top">
+            <div class="b-alert b-alert--info ">
+                <p class="b-alert__title">Обмен в данном направление происходит в полуавтоматическом режиме</p>
+                <p class="b-alert__message">Получение денежных средств по Вашей заявке произойдет в течении 5 минут
+                    после
+                    успешной оплаты.</p>
+            </div>
+        </div>
+        <div class="exchange">
+            <div class="b-exchange__course">
+                <p>Курс: <span class="b-exchange__course--from">1 PerfectMoney USD</span> за
+                    <span class="b-exchange__course--to">1.0001 PAYEER USD</span></p>
+            </div>
+            <div class="b-exchange__maximum">
+                <p>Максимальная сумма получения <b>49.99 USD</b> <a href="#">Не хватает?</a></p>
+            </div>
+
+            <div class="b-exchange">
+
+                <div class="b-exchange__main">
+                    <div class="b-exchange__main_part b-exchange__main_part--from">
+                        <div>
+                            <span id="exchange-ddl-from" class="P24UAH">Приват 24 UAH</span>
+                            <p class="exchange-sum-label">Обменяю:</p>
+                            <p class="exchange-sum">
+                                <input type="number" id="exchange-from-input" class="b-exchange__input" value="50"
+                                       min="0">
+                                <span class="exchange-sum-currency--from">USD</span>
+                            </p>
+                        </div>
+                        <p>
+                            <button class="b-exchange__settings b-exchange__settings--reverse js-exchange-reverse"></button>
+                            <button class="b-exchange__settings b-exchange__settings--full js-exchange-full"></button>
+                            <span class="b-exchange__settings--message">А может так удобнее?</span>
+                        </p>
+
+
+                    </div>
+                    <div class="b-exchange__main_part b-exchange__main_part--to">
+                        <div>
+                            <span id="exchange-ddl-to" class="PRUSD">PAYEER USD</span>
+                            <div>
+                                <p class="exchange-sum-label">На:</p>
+                                <p class="exchange-sum">
+                                    <input type="text" id="exchange-to-input" class="b-exchange__input" value="50.01"
+                                           min="0" readonly>
+                                    <span class="exchange-sum-currency--to">UAH</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <ul id="exchange-currency-from" class="b-exchange-currency">
+                    <li class="b-exchange-currency__item js-exchange-currency-from PRUSD " data-alias="PRUSD"
+                        data-id="1">PAYEER USD
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from P24UAH active" data-alias="P24UAH"
+                        data-id="1">Приват 24 UAH
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from BTC" data-alias="BTC" data-id="1">
+                        Bitcoin
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from PMBBUAH" data-alias="PMBBUAH"
+                        data-id="1">ПУМБ UAH
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from WEXUSD" data-alias="WEXUSD"
+                        data-id="1">WEX code USD
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from ADVCUSD" data-alias="ADVCUSD"
+                        data-id="1">Advanced Cash USD
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from YAMRUB" data-alias="YAMRUB"
+                        data-id="1">Яндекс Деньги RUB
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from XRP" data-alias="XRP" data-id="1">
+                        Ripple XRP
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from QWRUB" data-alias="QWRUB"
+                        data-id="1">QIWI RUB
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-from PMUSD" data-alias="PMUSD"
+                        data-id="1">PerfectMoney USD
+                    </li>
+                </ul>
+
+
+                <ul id="exchange-currency-to" class="b-exchange-currency">
+                    <li class="b-exchange-currency__item js-exchange-currency-to PRUSD active" data-alias="PRUSD"
+                        data-id="1">PAYEER USD
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to P24UAH" data-alias="P24UAH"
+                        data-id="1">Приват 24 UAH
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to BTC" data-alias="BTC" data-id="1">
+                        Bitcoin
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to PMBBUAH" data-alias="PMBBUAH"
+                        data-id="1">ПУМБ UAH
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to WEXUSD" data-alias="WEXUSD"
+                        data-id="1">WEX code USD
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to ADVCUSD" data-alias="ADVCUSD"
+                        data-id="1">Advanced Cash USD
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to YAMRUB" data-alias="YAMRUB"
+                        data-id="1">Яндекс Деньги RUB
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to XRP" data-alias="XRP" data-id="1">
+                        Ripple XRP
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to QWRUB" data-alias="QWRUB" data-id="1">
+                        QIWI RUB
+                    </li>
+                    <li class="b-exchange-currency__item js-exchange-currency-to PMUSD" data-alias="PMUSD" data-id="1">
+                        PerfectMoney USD
+                    </li>
+                </ul>
+
+                <div class="b-exchange__footer">
+                    <div class="b-exchange__footer--left">
+                        <span class="b-exchange-footer_count min-sum-from">Минимальная сумма 50 USD</span>
+                        <span class="b-exchange-footer_count max-sum-from"> </span>
+                        <span class="b-exchange-footer_count commission-sum-from">Комиссия с PerfectMoney USD = 2.00% (1 USD)</span>
+                        <div class="order-inputs">
+                            <p class="order-input">
+                                <span class="profile-input-field">
+                                    <label for="commission-from">С учетом комиссии</label>
+                                    <input type="text" id="commission-from" >
+                                </span>
+                            </p>
+                            <p class="order-input">
+                                <span class="profile-input-field">
+                                    <label for="discount-from">С учетом скидки
+                                            программы лояльности</label>
+                                    <input type="text" id="discount-from" >
+                                </span>
+                            </p>
+                            <p class="order-input">
+                                <span class="profile-input-field input-field-full">
+                                    <label for="account-number-from">Номер счета</label>
+                                    <input type="text" id="account-number-from" >
+                                </span>
+                            </p>
+                            <p class="account-number-container"><span
+                                    class="account-number-message">Номер кошелька <span id="account-message-from">PerfectMoney USD</span></span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="b-exchange__footer--right">
+                        <span class="b-exchange-footer_count min-sum-to">Минимальная сумма 50 USD</span>
+                        <span class="b-exchange-footer_count max-sum-to">Максимальная сумма 49.99 USD</span>
+                        <span class="b-exchange-footer_count commission-sum-to"> Комиссия PAYEER USD = 0.95% (0.48 USD)</span>
+                        <div class="order-inputs">
+                            <p class="order-input">
+                                <span class="profile-input-field">
+                                    <label for="commission-to">С учетом комиссии</label>
+                                    <input type="text" id="commission-to" >
+                                </span>
+                            </p>
+                            <p class="order-input">
+                                <span class="profile-input-field">
+                                    <label for="discount-to">С учетом скидки
+                                            программы лояльности</label>
+                                    <input type="text" id="discount-to" >
+                                </span>
+                            </p>
+                            <p class="order-input">
+                                <span class="profile-input-field input-field-full">
+                                    <label for="account-number-to">Номер счета</label>
+                                    <input type="text" id="account-number-to" >
+                                </span>
+                            </p>
+                            <p class="account-number-container"><span
+                                    class="account-number-message">Номер кошелька <span id="account-message-to">WEX code USD</span></span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-data">
+                <div class="b-alert b-alert--info alert-green yandex-alert">
+                    <p class="b-alert__message">Внимание! Оплата на анонимные кошельки Яндекс. Деньги поступает
+                        <b>«замороженной»</b>, после получения оплаты. Вам нужно будет пройти
+                        идентификацию в системе Яндекс.Деньги. Либо воздержитесь от обмена
+                        на анонимные кошельки. </p>
+                </div>
+                <div class="b-alert b-alert--info privat-alert">
+                    <p class="b-alert__message">Уважаемые клиенты, если в заявке Вы указываете карту ПриватБанка
+                        «Для выплат», то на вашу карту <b>поступит сумма на 0,5% меньше</b>, чем сумма
+                        указанная в заявке.</p>
+                </div>
+
+                <div class="order-data__item">
+                    <p class="b-field-checked">
+                        <input type="checkbox" id="check-PMUSD" class="b-field-checked__input">
+                        <label for="check-PMUSD" class="b-field-checked__label">Мой кошелек PerfectMoney
+                            верифицирован</label>
+                        <span class="order-field-message">Для неверифицированных кошельков комиссия больше на 1.5%</span>
+                    </p>
+                </div>
+                <div class="order-data__item">
+                    <p class="b-field-checked">
+                        <input type="checkbox" id="check-ripple" class="b-field-checked__input">
+                        <label for="check-ripple" class="b-field-checked__label">Я отправляю RIPLE XRP на биржу</label>
+                    </p>
+                    <div class="b-alert-warning">
+                        <p class="b-alert-message">Предупреждение! Если при выводе на биржу не указывать <b>«Destination
+                            tag»</b>,
+                            Ripple может не поступить к Вам на счет</p>
+                    </div>
+                </div>
+                <div class="order-data__item">
+                    <p>
+                                <span class="profile-input-field">
+                                    <label for="order-user-email">Электронная почта</label>
+                                    <input type="text" id="order-user-email">
+                                </span>
+                    </p>
+                    <span class="order-field-message">Для неверифицированных кошельков комиссия больше на 1.5%</span>
+                </div>
+                <div class="order-data__item">
+                    <p>
+                                <span class="profile-input-field">
+                                    <label for="order-user-phone">Номер телефона</label>
+                                    <input type="text" id="order-user-phone">
+                                </span>
+                    </p>
+                </div>
+                <div class="order-data__item">
+                    <p class="b-field-checked">
+                        <input type="checkbox" id="check-agree" class="b-field-checked__input">
+                        <label for="check-agree" class="b-field-checked__label">Я ознакомился и согласен с условиями</label>
+                        <span class="b-field-checked__links"><a href="#">Безопасности</a> и <a href="#">Правилами сайта</a></span>
+                    </p>
+                </div>
+                <div class="order-data__item text-center">
+                    <button class="btn btn-success order-submit-btn js-order-submit">Далее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('footer.html')
