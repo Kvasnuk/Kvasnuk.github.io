@@ -1,0 +1,98 @@
+
+@@include('header.html')
+<main class="b-main profile">
+    <div class="container">
+        <div class="b-profile container-sm">
+            <div class="b-profile__header">
+                <p><b>Проверьте введеные суммы и номера счетов</b></p>
+            </div>
+<div class="b-check-amount">
+<div class="b-check-amount__currency">
+        <div>
+            <span id="exchange-ddl-from" class="P24UAH">Приват 24 UAH</span>
+            <p class="exchange-sum-label">Обменяю:</p>
+            <p class="b-check-amount__value">50 usd</p>
+        </div>
+    <div>
+        <span id="exchange-ddl-to" class="BTC">Bitcoin</span>
+        <p class="exchange-sum-label">На:</p>
+        <p class="b-check-amount__value">50 usd</p>
+    </div>
+    <div>
+
+    </div>
+</div>
+<div class="b-check-amount__accounts">
+    <div>
+        <p class="accounts-number">Заплачу со счёта: <span>U11267719</span></p>
+        <span class="accounts-message">Накопительный бонус 0,02</span>
+        <span class="accounts-message">Кошелёк не верицифирован</span>
+    </div>
+    <div>
+        <p class="accounts-number">Зачислить на этот счёт: <span>U11267719</span></p>
+    </div>
+</div>
+    <div class="b-check-amount__action">
+<p class="amount-action__btns">
+    <button class="btn btn-alert amount-action__back js-check-amount-back">Вернуться обратно</button>
+    <button class="btn btn-success amount-action__submit js-check-amount-submit">Создать заявку на обмен</button>
+</p>
+<p class="amount-action__message">
+    <span class="countdown-message">Время на оплату после создания заявки 20 минут.</span>
+    <span class="course-message">Курс фиксируется только после создания заявки!</span>
+</p>
+</div>
+    <div class="b-check-amount__alerts">
+        <div class="b-alert b-alert--info alert-green">
+            <p class="b-alert__message">Обращаем ваше внимание, что на данной странице курс по Вашей заявке
+                еще не зафиксирован! Данная страница предназначена для проверки
+                реквизитов. Курс фиксируется на странице <b>«Спасибо за заявку»</b>  </p>
+        </div>
+
+        <div class="b-alert b-alert--info circle-icon">
+            <p class="b-alert__title">После нажатия «Создать заявку» будет создана заявка на обмен</p>
+            <p class="b-alert__message">Хотим обратить ваше внимание, резерв заявки закреплен за Вами
+                ровно <b>на 20 минут</b> и оплата должна быть произведена в данный
+                срок. В случае, если оплата будет осуществлена по истечению
+                данного периода времени, то согласно Правила нашего сервиса
+                обмен может быть отменен с возвратом платежа за вычетом всех
+                комисий, либо произведен по курсу на момент проведения оплаты,
+                если курс был изменен.</p>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Фото вашей карты на фоне «статуса операции» созданной вами заявки.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="/dist/images/home-banner-man.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Фото листика с надписью и расположенной рядом карты.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="/dist/images/home-banner-man.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('footer.html')

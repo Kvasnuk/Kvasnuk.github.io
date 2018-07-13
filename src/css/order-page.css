@@ -25,6 +25,9 @@
 .order-page .exchange-sum {
     margin-bottom: 0;
 }
+.order-page .exchange-sum>span {
+    top: 1px;
+}
 .order-page .b-exchange__main_part--from>div {
     padding-right: 0;
 }

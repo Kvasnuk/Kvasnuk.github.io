@@ -37,6 +37,7 @@ a.btn{
     font-family: "Fira Sans";
     font-size: 21px;
     font-weight: 500;
+    padding: 0 25px;
 }
 .btn.btn-success{
     box-shadow: 0 3px 0 #2d7c30;
@@ -95,6 +96,12 @@ a.btn{
 .btn.btn-info:active{
    color:#fff;
     background-color: #17adb1;
+}
+.b-title--h1{
+    color: #000000;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
 }
 .block-header{
     height: 75px;
@@ -202,8 +209,7 @@ margin: auto;
 text-align: center;
 font-size: 21px;
 font-weight: 600;
-    z-index:2;
-
+border-radius: 50%;
 }
 
 
@@ -225,8 +231,15 @@ font-weight: 600;
     line-height: 18px;
 }
 
-
-
+.b-alert--info.circle-icon:before{
+    display: none;}
+.b-alert--info.circle-icon:after{
+    content: "!";
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    background: #9ccde4;
+}
 .b-alert--info.alert-green{
     background-color: #c9dec4;
     border-left:18px solid #80c18f;

@@ -1,0 +1,124 @@
+.b-check-amount{
+    width: 100%;
+}
+.b-check-amount__currency,.b-check-amount__accounts{
+display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.b-check-amount__currency{
+    background: #f8f8f8;
+}
+.b-check-amount__currency>div,.b-check-amount__accounts>div{
+    width: 50%;
+    min-width: 50%;
+}
+.b-check-amount__currency>div>span{
+    cursor: auto;
+}
+.b-check-amount__value{
+    color: #4cae50;
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 0;
+}
+.accounts-number{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+.accounts-number span{
+    color: #24d0d4;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.96px;
+}
+.accounts-message{
+    display:block;
+    color: #000000;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0.28px;
+}
+.amount-action__btns{
+    padding-top: 10px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+.amount-action__btns button{
+    margin:0 20px;
+}
+.amount-action__message{
+    max-width: 500px;
+    margin: 0 auto 35px;
+    padding-left: 50px;
+}
+.amount-action__message>span{
+    display:block;
+    padding-left: 50px;
+    color: #ff0a0a;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.43px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.amount-action__message>span:before{
+    content:'';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    display: block;
+
+}
+.countdown-message:before{
+    background:url(../images/icon-coundown.svg) no-repeat center center;
+    background-size:24px 24px ;
+    left: 5px;
+}
+.course-message:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #ff0a0a;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 0;
+
+}
+
+.course-message:after{
+    content: "!";
+    width: 36px;
+    height: 21px;
+    display: block;
+    position: absolute;
+    color:#fff;
+    top: 0;
+    bottom: 0;
+    left:0;
+    margin: auto;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+    border-radius: 50%;
+}
+.b-check-amount__alerts{
+    padding: 0 40px;
+}
+.b-check-amount__alerts>div{
+    margin-bottom: 30px;
+}
