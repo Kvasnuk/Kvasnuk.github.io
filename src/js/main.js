@@ -57,6 +57,7 @@ jQuery(document).ready(function($){
     function changeListCurrency(self,listClass){
         $(listClass).removeClass('active');
         self.addClass('active');
+
     };
     function getCurrentCurrency(self, part){
         var currencyClass = self.data('alias'),
@@ -95,18 +96,52 @@ jQuery(document).ready(function($){
     function changeAccountMessageCurrency(title, part){
          $('#account-message-'+ part).text(title);
     }
+
+    function disableOpositeActiveItem(listFrom,listTo){
+        if($(listFrom).length > 0){
+          var activeItemAlias =  $(listFrom + ' .active').data('alias');
+              $(listTo + " li").removeClass('currency_disabled');
+              $(listTo + " li[data-alias='"+activeItemAlias+"']").addClass('currency_disabled');
+        }else{
+            return false;
+        }
+    }
+
+        function disableCurrencyItems(){
+            disableOpositeActiveItem('#exchange-currency-from','#exchange-currency-to');
+            disableOpositeActiveItem('#exchange-currency-to','#exchange-currency-from');
+        }
+            disableCurrencyItems();
+
+
+
+
+
+
+
+
     checkHomePage();
-    $('.js-exchange-currency-from').click(function(){
+    $('.js-exchange-currency-from').click(function(e){
         var self = $(this);
+        if(self.hasClass('currency_disabled')){
+            return false;
+        }
         changeListCurrency(self,'.js-exchange-currency-from');
         getCurrentCurrency(self, 'from');
         checkBitcoinActiveClass();
+        disableOpositeActiveItem('#exchange-currency-from','#exchange-currency-to');
+
+
     });
-    $('.js-exchange-currency-to').click(function(){
+    $('.js-exchange-currency-to').click(function(e){
         var self = $(this);
+        if(self.hasClass('currency_disabled')){
+            return false;
+        }
         changeListCurrency(self,'.js-exchange-currency-to');
         getCurrentCurrency(self, 'to');
         checkBitcoinActiveClass();
+        disableOpositeActiveItem('#exchange-currency-to','#exchange-currency-from');
     });
     $('.js-exchange-reverse').click(function(e){
         var $fromItem = $('#exchange-ddl-from'),
@@ -139,6 +174,7 @@ jQuery(document).ready(function($){
             $('.js-exchange-currency-to').removeClass('active');
             $(".js-exchange-currency-from[data-alias='"+toItemClass+"']").addClass('active');
             $(".js-exchange-currency-to[data-alias='"+fromItemClass+"']").addClass('active');
+            disableCurrencyItems();
 
             if($('.exchange-sum').length > 0){
                 exchangeReverseValue('.exchange-sum-currency--from','.exchange-sum-currency--to');

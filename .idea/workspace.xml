@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/css/apply-code.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/css/check-amounts.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/html/apply-code.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/html/check-amounts.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/html/status-page.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/all-pages.html" afterPath="$PROJECT_DIR$/all-pages.html" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" afterPath="$PROJECT_DIR$/dist/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/order-page.html" afterPath="$PROJECT_DIR$/order-page.html" />
-      <change beforePath="$PROJECT_DIR$/src/css/common.css" afterPath="$PROJECT_DIR$/src/css/common.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/order-page.css" afterPath="$PROJECT_DIR$/src/css/order-page.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/profile.css" afterPath="$PROJECT_DIR$/src/css/profile.css" />
-      <change beforePath="$PROJECT_DIR$/src/html/all-pages.html" afterPath="$PROJECT_DIR$/src/html/all-pages.html" />
-      <change beforePath="$PROJECT_DIR$/src/html/order-page.html" afterPath="$PROJECT_DIR$/src/html/order-page.html" />
+      <change beforePath="$PROJECT_DIR$/dist/js/main.js" afterPath="$PROJECT_DIR$/dist/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/src/css/exchange-form.css" afterPath="$PROJECT_DIR$/src/css/exchange-form.css" />
+      <change beforePath="$PROJECT_DIR$/src/html/profile-templates.html" afterPath="$PROJECT_DIR$/src/html/profile-templates.html" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" afterPath="$PROJECT_DIR$/src/js/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,6 +21,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="143" column="84" lean-forward="false" selection-start-line="143" selection-start-column="84" selection-end-line="143" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="check-amounts.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/check-amounts.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all-pages.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="all-pages.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/html/all-pages.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -59,61 +61,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check-amounts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
+      <file leaf-file-name="order-page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/order-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="45" column="53" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="-1278">
+              <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apply-code.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/apply-code.html">
+      <file leaf-file-name="profile-templates.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/html/profile-templates.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="235">
+              <caret line="213" column="83" lean-forward="false" selection-start-line="213" selection-start-column="83" selection-end-line="213" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status-page.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/status-page.html">
+      <file leaf-file-name="exchange-form.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="112" lean-forward="false" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="112" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/profile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exchange-application.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/exchange-application.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2840">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="358" column="24" lean-forward="true" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -146,6 +118,7 @@
       <find>WEXEUSD</find>
       <find>bg-currency-icon--yandex</find>
       <find>btn-exchange-status</find>
+      <find>js-exchange-currency-</find>
     </findStrings>
     <replaceStrings>
       <replace>.home-template</replace>
@@ -183,9 +156,7 @@
         <option value="$PROJECT_DIR$/src/images/chevron-right.svg" />
         <option value="$PROJECT_DIR$/src/html/--pagination.html" />
         <option value="$PROJECT_DIR$/src/css/pagination.css" />
-        <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
         <option value="$PROJECT_DIR$/src/html/profile-data.html" />
-        <option value="$PROJECT_DIR$/src/html/profile-templates.html" />
         <option value="$PROJECT_DIR$/src/html/reviews.html" />
         <option value="$PROJECT_DIR$/src/css/reviews.css" />
         <option value="$PROJECT_DIR$/upload.php" />
@@ -198,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/html/index.html" />
         <option value="$PROJECT_DIR$/src/css/media.css" />
         <option value="$PROJECT_DIR$/src/html/header.html" />
-        <option value="$PROJECT_DIR$/src/js/main.js" />
         <option value="$PROJECT_DIR$/src/css/header.css" />
         <option value="$PROJECT_DIR$/src/html/order-page.html" />
         <option value="$PROJECT_DIR$/src/css/order-page.css" />
@@ -210,6 +180,9 @@
         <option value="$PROJECT_DIR$/src/html/status-page.html" />
         <option value="$PROJECT_DIR$/src/css/apply-code.css" />
         <option value="$PROJECT_DIR$/src/html/all-pages.html" />
+        <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
+        <option value="$PROJECT_DIR$/src/js/main.js" />
+        <option value="$PROJECT_DIR$/src/html/profile-templates.html" />
       </list>
     </option>
   </component>
@@ -282,6 +255,12 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sevenmoney" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -339,22 +318,23 @@
       <workItem from="1531059080697" duration="2007000" />
       <workItem from="1531105725992" duration="4559000" />
       <workItem from="1531160513516" duration="40788000" />
-      <workItem from="1531362736688" duration="19855000" />
+      <workItem from="1531362736688" duration="25057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260307000" />
+    <option name="totallyTimeSpent" value="265509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="52" width="1865" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3212766" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3212766" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18966465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -470,13 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="159" column="8" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -628,30 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/profile-templates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3726">
-          <caret line="207" column="24" lean-forward="false" selection-start-line="200" selection-start-column="28" selection-end-line="207" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/order-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/order-page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -728,6 +677,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="358" column="24" lean-forward="true" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/order-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1278">
+          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="143" column="84" lean-forward="false" selection-start-line="143" selection-start-column="84" selection-end-line="143" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/profile-templates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="213" column="83" lean-forward="false" selection-start-line="213" selection-start-column="83" selection-end-line="213" selection-end-column="83" />
           <folding />
         </state>
       </provider>
