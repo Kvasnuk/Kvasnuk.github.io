@@ -1,0 +1,56 @@
+
+@@include('header.html')
+<main class="b-main profile">
+    <div class="container">
+        <div class="b-profile">
+            <div class="b-profile__header">
+                <p>Заявка на обмен #381117</p>
+            </div>
+            <div class="b-profite__part b-profite__part--left">
+                @@include('--exchange-sidebar.html')
+            </div>
+            <div class="b-profite__part b-profite__part--right">
+
+                <p class="b-profite__part_title"><span>Карта ожидает верификации, обычно это занимает от 1-й до 10 минут</span></p> <!--in case  'cancel verification' you can change text  of  this block or hide it-->
+                <div class="b-profite__main">
+                    <div class="waiting-verification">
+                        <div class="b-alert b-alert--info circle-icon">
+                            <p class="b-alert__title">Внимание!</p>
+                            <p class="b-alert__message">Если вы отправили фото на верификацию по истечению срока
+                                заявки в 20 минут, либо не успеваете оплатить заявку на
+                                оставшиеся время в 20 минут, после одобрения Вашей заявки
+                                вы можете создать заявку заново, повторная верификация не
+                                потребуется, она проводится единоразово для одной карты.</p>
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-success waiting-verification__send js-verification__send">Отправить заново</button>
+                        </p>
+                    </div>
+
+
+
+                    <div class="cancel-verification">
+                        <div class="b-alert b-alert--info alert-red">
+                            <p class="b-alert__title">Верификация карты отменена!</p>
+                            <p class="b-alert__message"> Для решения ситуации обратитесь пожалуйста в online-чат
+                                нашего сервиса</p>
+                        </div>
+                        <div class="cancel-verification__causes">
+                            <p><em>Возможное причины отказа:</em></p>
+                            <ol>
+                                <li>Последние 4-ре цифры карты на фото неразличимы визуально</li>
+                                <li>Фото карты не на фоне «статуса заявки»</li>
+                                <li>Фото карты не на фоне «приложенного в заявке текста» написаного на листочке</li>
+                                <li>Фото от вас не поступило</li>
+                                <li>Другие причины, уточните у оператора онлайна чата</li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('footer.html')

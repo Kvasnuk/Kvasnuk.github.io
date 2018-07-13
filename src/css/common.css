@@ -259,6 +259,28 @@ border-radius: 50%;
 }
 
 
+.b-alert--info.alert-red{
+    background-color: #f2dddd;
+    border-left:18px solid #a94442;
+    color: #a94442;
+}
+.b-alert--info.alert-red:before{
+    border-bottom: 30px solid #a94442;
+}
+.b-alert--info.alert-red:after{
+    color: #c9dec4;
+}
+.b-alert--info.alert-red .b-alert__title{
+    color: #a94442;
+    letter-spacing: 0.96px;
+}
+.alert-red .b-alert__message{
+    color:#a94442;
+}
+
+
+
+
 .b-alert-warning{
     border-radius: 7px;
     background-color: #fdf6e1;
