@@ -1,0 +1,19 @@
+.processing-time{
+    padding: 30px 10px 20px 85px;
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+}
+.processing-time:before{
+   content:'';
+    width: 65px;
+    height: 65px;
+    display: block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    background:url(../images/countdown-lg.svg) no-repeat center center;
+    background-size: 65px 65px;
+}
