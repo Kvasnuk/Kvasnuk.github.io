@@ -325,6 +325,11 @@ border-radius: 50%;
 .page-text .copy{
     color: #3e77aa;
 }
+.page-text .copy input{
+    position: absolute;
+    opacity: 0;
+    z-index:-1;
+}
 .icon-copy{
     width: 14px;
     height: 14px;

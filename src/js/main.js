@@ -285,5 +285,34 @@ if($('flipTimer')){
     });
 }
 
+    $('.icon-copy').hover(function(){
+        var self = $(this);
+        if(self.data('toggle') === undefined) {
+            var curentLang = $('html').attr('lang'),
+                title = self.parent('span').text(),
+                titleLabel = 'Копировать текст - ' + title;
+
+            if (curentLang === 'en-EN') {
+                titleLabel = 'Copy text -' + title;
+            }
+            self.data({'toggle': 'tooltip', 'placement': 'top'});
+            self.attr('title', titleLabel);
+        }
+    });
+
+$('.icon-copy').click(function(){
+    var self = $(this),
+        copyText = self.parent('span').text(),
+        textInput = "<input type='text' value='"+copyText+"'>";
+        self.append(textInput);
+        self.find('input').focus().select();
+        document.execCommand('copy');
+        self.find('input').remove();
+
+
+
+
+});
+
 });
 
