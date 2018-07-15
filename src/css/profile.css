@@ -727,3 +727,90 @@ min-width: 100px;
     padding: 5px 0;
 }
 /*profit report*/
+/*status-page*/
+.b-profile__header.header--error{
+    background-color: #ae4e4c;
+}
+.b-profile__header.header--success{
+    background-color: #4cae50;
+}
+
+
+
+.b-main.status-page {
+    padding: 125px 0 30px;
+}
+.status-page .page-title {
+    margin-bottom: 30px;
+}
+.status-page .alert-container {
+    width: 100%;
+    max-width: 930px;
+    margin:0 auto 30px;
+}
+
+.status-page .b-check-amount__accounts>div{
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    min-width: 100%;
+}
+.status-page .b-check-amount__accounts{
+    position: relative;
+    overflow: hidden;
+    padding-top: 0;
+}
+.status-page .b-check-amount__currency>div {
+    padding-left: 60px;
+
+}
+.status-page-message{
+    padding-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.status-page-message__content{
+    padding-top: 30px;
+}
+.status-page-message__content p{
+    color: #494949;
+}
+.status-page-message__content p>b{
+    font-weight: 500;
+}
+.message-btc-title{
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+}
+.message-btc-link{
+    color: #2e5cc3;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.status-page-message__btc{
+    padding-top:30px;
+    padding-bottom: 0;
+}
+.status-page-message__btc:after{
+    content:'';
+    width:150%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: #eaeaea;
+}
+.message-btc-count{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+}
+.message-btc-count span{
+    font-size: 18px;
+    font-style: italic;
+    color: #24d0d4;
+
+}
+/*status-page*/
