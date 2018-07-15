@@ -309,10 +309,6 @@ $('.icon-copy').click(function(){
         self.find('input').focus().select();
         document.execCommand('copy');
         self.find('input').remove();
-
-
-
-
 });
 
 });
