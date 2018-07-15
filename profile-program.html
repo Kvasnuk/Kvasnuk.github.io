@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ru-RU">
 <head>
@@ -109,27 +108,109 @@
     </div>
 </header>
 
-<main class="b-main ">
+<main class="b-main profile ">
     <div class="container">
-        <ul class="all-pages">
-            <li><a href="/">Главная</a></li>
-            <li><a href="/profile-data.html">Счета и персональные данные</a></li>
-            <li><a href="/profile-history.html">История операций</a></li>
-            <li><a href="/profile-program.html">Партнёрская программа</a></li>
-            <li><a href="/profile-templates.html">Шаблоны обменов</a></li>
-            <li><a href="/order-page.html">Оформление заказа</a></li>
-            <li><a href="/check-amounts.html">проверка реквизитов</a></li>
-            <li><a href="/apply-code.html">Применить код по заявке</a></li>
-            <li><a href="/status-page.html">Проверить статус операции</a></li>
-            <li><a href="/thank-you-page.html">Спасибо за заявку</a></li>
-            <li><a href="/exchange-application.html">Инструкция «Верификация платежной карты ПриватБанка»</a></li>
-            <li><a href="/waiting-verification.html">Ожидание верификации/Отмена верификации</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
-            <li><a href="/news.html">Новости</a></li>
-            <li><a href="/reviews.html">Отзывы</a></li>
+        <div class="b-profile">
+            <div class="b-profite__part b-profite__part--left">
+                <div class="b-profile__sidebar">
+    <div class="b-profile__sidebar_side--top">
+        <p class="b-profite__part_title"><span>Личный кабинет</span></p>
+        <ul class="b-profite__menu">
+            <li><a class="b-profite__menu_item personal-data-item " href="/profile-data.html">Счета и персональные данные</a></li>
+            <li><a class="b-profite__menu_item history-item active" href="/profile-history.html">История операций</a></li>
+            <li><a class="b-profite__menu_item partners-item" href="#">Партнёрская программа</a></li>
+            <li><a class="b-profite__menu_item templates-item" href="/profile-templates.html">Шаблоны обменов</a></li>
         </ul>
+        <p class="b-profite__part_title"><span>Время на сайте</span></p>
+        <p class="b-profite__current-time"><span id="current-time">17:40:18</span></p>
     </div>
+    <div class="b-profile__sidebar_side--bottom">
+        <div class="b-alert b-alert--success b-profile__sidebar_alert">
+            <p class="b-alert__title">Сообщение от администрации</p>
+            <p class="b-alert__message">Excepcidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <p class="b-alert__message">Excepcidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
 
+        </div>
+        <button class="btn btn-danger btn-exit js-account-exit">Выйти</button>
+    </div>
+</div>
+            </div>
+
+
+            <div class="b-profite__part b-profite__part--right b-program">
+                <p class="b-profite__part_title"><span>Партнёрская система</span></p>
+                <div class="b-profite__main page-text">
+                    <div class="b-program-info ">
+                         <p><b>У нас действует партнёрская программа</b></p>
+                         <p class="b-program-info__text">Если пользователь зарегистрируется по вашей реферальной ссылке и совершит обмен, вы
+                             получите вознаграждение. Вознаграждение составляет 25% нашей чистой прибыли. Детальнее
+                             с условиями вы можете ознакомиться в разделе <a href="#">«Партнерская программа»</a></p>
+                        <p class="text-center b-program-info__create">
+                            Вознагражение выводим на счёт Perfect Money.
+                            <span>Минимум 1$</span>
+                            <button class="btn btn-alert">Создать счёт Perfect Money</button>
+                        </p>
+                    </div>
+
+
+
+                    <div class="b-program-code">
+                        <span class="xs">Реферальная ссылка:</span>
+                        <span class="lg">HTML код для добавления на сайт или форум:</span>
+                        <span class="xs bg-gray copy">https://7money.co/?rid=4162 <i class="icon-copy link-xs ic-black"></i></span>
+                        <span class="lg bg-gray copy"><xmp><a href="https://7money.co/?rid=4162">Обмен валют</a></xmp><i class="icon-copy link-lg ic-black"></i></span>
+                        <span class="xs bt-xs"><button class="btn b-program-code__button js-program-code-copy" data-trigger=".link-xs">Копировать</button></span>
+                        <span class="lg bt-lg"><button class="btn b-program-code__button js-program-code-copy" data-trigger=".link-lg">Копировать</button></span>
+                    </div>
+                    <div class="b-program-profit">
+                            <div class="b-program-profit_header">
+                                <div class="profit-header-item profit-procent-block mb-4">
+                                    <span class="profit-procent-num">25%</span>
+                                    <span class="profit-procent-label">ваш процент партнёрской прибыли</span>
+                                </div>
+                                <div class="profit-header-item mb-4">
+                                    <button class="btn btn-alert profit-btn js-profit-btn">Вывести</button>
+                                </div>
+                                <div class="profit-header-item ">
+                                    <p class="mb-2"><b>Текущий баланс: <span>0$</span></b></p>
+                                    <p class="mb-0">Уровень программы лояльности: <span>0</span></p>
+                                </div>
+                                <div class="profit-header-item profit-header-item__exchange">
+                                    <div>
+                                        <p class="mb-2">Обменов: <span>0</span></p>
+                                        <p class="mb-0">Суммарные обмены за все время: <span> 0$</span></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        <div class="b-program-profit_report">
+                            <ul class="profit-report__list">
+                                <li class="profit-report__item profit-report__item_title">
+                                <span class="profit-report__item--profit"><b>Вознаграждения:</b></span>
+                                <span class="profit-report__item--referal"><b>Ваши рефералы:</b></span>
+                                </li>
+                                <li class="profit-report__item">
+                                    <span class="profit-report__item--profit">Нет данных</span>
+                                    <span class="profit-report__item--referal">Нет данных</span>
+                                </li>
+                                <li class="profit-report__item">
+                                    <span class="profit-report__item--profit">300 UAH</span>
+                                    <span class="profit-report__item--referal">https://7money.co/?rid=4162</span>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 </main>
 
 <footer>

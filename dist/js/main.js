@@ -311,6 +311,13 @@ $('.icon-copy').click(function(){
         self.find('input').remove();
 });
 
+$('.js-program-code-copy').click(function(){
+    var curentTrigger = $(this).data('trigger'),
+        copyBtn = $(curentTrigger);
+        copyBtn.trigger('click');
+
+});
+
 });
 
 

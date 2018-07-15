@@ -560,3 +560,170 @@ min-width: 100px;
     background-position: center center;
     background-size: 25px 25px;
 }
+
+
+
+/*profile program*/
+.b-program.b-profite__part--right{
+    padding-bottom: 0;
+}
+
+.b-program-info{
+    padding: 20px;
+    background-color: #d3faeb;
+}
+.b-program-info__text,.b-program-info__text a{
+   font-size:14px;
+    line-height: 18px;
+}
+.b-program-info__create{
+    font-size:14px;
+    line-height: 18px;
+    padding-top:10px;
+}
+.b-program-info__create span{
+    display: block;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+}
+.b-program-info__create .btn.btn-alert{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+
+.b-program-code{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #f8f8f8;
+    margin: 20px 0;
+}
+.b-program-code span{
+    font-size: 14px;
+    min-height: 50px;
+    padding-top: 15px;
+}
+.b-program-code span.bg-gray{
+    background-color: #d7d7c8;
+    font-weight: 500;
+    color:#000;
+}
+.b-program-code .xs{
+    width:40%;
+    min-width: 40%;
+    padding-left: 20px;
+}
+.b-program-code .lg{
+    width:60%;
+    min-width: 60%;
+}
+.b-program-code xmp{
+    display: inline;
+}
+.b-program-code .bt-xs,.b-program-code .bt-lg{
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.b-program-code__button{
+    background: #4cae50;
+    color: #fff;
+    font-size: 14px;
+    width: 160px;
+    min-width: 140px;
+    height: 35px;
+    margin: 2px 0;
+    outline: none;
+    transition:0.3s;
+}
+.b-program-code__button:hover{
+    background: #59c75d;
+    box-shadow:none;
+}
+.b-program-code__button:focus{
+    background: #3e8e41;
+    box-shadow:none;
+    transition:0.1s;
+}
+/*profile program*/
+/*profile profit*/
+.b-program-profit{
+    background: url("../images/program-profit-bg.png") no-repeat center center;
+    background-size:cover ;
+    padding: 20px 20px 30px;
+    width: calc(100% + 40px);
+    transform: translateX(-20px);
+}
+.b-program-profit_header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.b-program-profit_header>div{
+    width: 50%;
+    min-width: 50%;
+}
+.profit-header-item{
+    color:#fff;
+}
+.profit-procent-block{
+    display: flex;
+    align-items: center;
+}
+.profit-procent-num{
+    font-size: 49px;
+    font-weight: 900;
+    letter-spacing: 0.98px;
+    line-height: 50px;
+}
+.profit-procent-label{
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    max-width: 250px;
+    padding-left: 15px;
+    line-height: 26px;
+}
+.btn-alert.profit-btn{
+    min-width: 140px;
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    float: right;
+}
+.profit-header-item__exchange{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+/*profile profit*/
+/*profit report*/
+.profit-report__list{
+    background-color: #fff;
+    padding: 15px 0 0;
+    min-height: 200px;
+}
+.profit-report__item{
+    display: flex;
+    padding: 0 20px;
+    transition:0.3s;
+    border-bottom: 1px solid #f8f8f8;
+}
+.profit-report__item.profit-report__item_title:hover{
+    background:#fff;
+}
+.profit-report__item:hover{
+    background: #f8f8f8;
+}
+.profit-report__item>span{
+   width: 50%;
+   min-width: 50%;
+    padding: 5px 0;
+}
+/*profit report*/
