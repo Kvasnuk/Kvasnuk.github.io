@@ -318,6 +318,62 @@ $('.js-program-code-copy').click(function(){
 
 });
 
+
+
+
+
+
+/*media size functions*/
+function resizeCloseSidebar(){
+    var $profileSidebar = $('.b-profite__part--left');
+    var $sidebarToggleBtn = $('.js-toggle-mobile-sidebar');
+    if (window.matchMedia('(max-width: 1199px)').matches) {
+        if($profileSidebar.length > 0){
+            $sidebarToggleBtn.fadeIn().removeClass('open');
+            $profileSidebar.addClass('close-sidebar');
+        }
+    } else {
+        if($profileSidebar.length > 0){
+            $sidebarToggleBtn.fadeOut();
+            $profileSidebar.removeClass('close-sidebar');
+        }
+    }
+
+}
+
+
+$(window).resize(function(){
+    resizeCloseSidebar();
+    });
+
+    function mediaSize() {
+
+        var $profileSidebar = $('.b-profite__part--left');
+        var $sidebarToggleBtn = $('.js-toggle-mobile-sidebar');
+        if (window.matchMedia('(max-width: 1199px)').matches) {
+           if($profileSidebar.length > 0){
+               $sidebarToggleBtn.addClass('open');
+               $sidebarToggleBtn.fadeIn();
+               $sidebarToggleBtn.click(function(){
+                   $(this).toggleClass('open');
+                   $profileSidebar.toggleClass('close-sidebar');
+               });
+               setTimeout(function(){
+                   $profileSidebar.addClass('close-sidebar');
+                   $sidebarToggleBtn.removeClass('open');
+
+               },1500);
+           }
+
+
+        } else {
+
+        }
+    };
+    mediaSize();
+
+
+
 });
 
 

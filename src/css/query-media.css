@@ -481,12 +481,6 @@
 @media screen and (max-width: 575px) {
 }
 @media screen and (max-width: 480px) {
-    .b-header-info--left{
-        width: 100%;
-    }
-    .b-header-info--right{
-        display:none;
-    }
     .banner-subtitle {
         font-size: 14px;
         font-weight: 400;
@@ -599,4 +593,340 @@
 }
 @media (min-width: 576px){
 
+}
+
+
+
+
+/*profile sidebar*/
+@media screen and (min-width: 1200px){
+    .b-profile__menu_btn{
+        display:none!important;
+    }
+}
+@media screen and (max-width: 1199px){
+.b-profile{
+    position: relative;
+    overflow: hidden;
+}
+    .b-profile  .b-profite__part--left{
+        width: 395px;
+        min-width: 395px;
+        height: 100vh;
+        padding: 0px 35px 30px 20px;
+        position: fixed;
+        z-index: 5;
+        top:0;
+        right: -15px;
+        overflow-y: scroll;
+        transition:0.5s;
+
+    }
+    .b-profile  .b-profite__part--left.close-sidebar{
+       transform:translateX(400px);
+
+    }
+    .btn-exit {
+        margin: 0 auto 30px;
+    }
+    .b-profile__menu_btn{
+        z-index: 20;
+        background: #3ad2d5 url(../images/thin-arrow-pointing-left.svg) no-repeat center center;
+        background-size:30px 30px ;
+        width: 50px;
+        height: 45px;
+        position: fixed;
+        top: 120px;
+        border: 0;
+        border-radius: 4px 0 0 4px;
+        right: 0px;
+        display: none;
+        outline:none !important;
+        cursor: pointer;
+
+    }
+    .b-profile__menu_btn.open{
+        background: #8ae7e9 url(../images/close-white.svg) no-repeat center center;
+        background-size:30px 30px ;
+
+    }
+    .b-profite__part--right {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .b-profile__list-large{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .history-list__item_title{
+        display:none;
+    }
+    .history-list__item:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    .history-list__item{
+        width: 49%;
+        flex-direction: column;
+        margin-bottom:20px;
+        border: 1px solid #e5e4e9;
+        padding: 0;
+        border-radius: 4px;
+    }
+    .history-list__item:not(:first-child):hover {
+        background-color: #f8feff;
+    }
+    .history-list__item span{
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+        min-height: 30px;
+    }
+    .history-list__item span>span{
+        padding-top: 7px;
+        min-height: 35px;
+    }
+    .history-list__item span .item-title{
+        display: block;
+       font-weight:500;
+        background-color: #efefef;
+    }
+    .history-list__item span>span .item-data__from,.history-list__item span>span .item-data__to {
+        position: relative;
+        padding: 7px 15px 0 32px;
+    }
+    .history-list__item span>span .item-data__from:before, .history-list__item span>span .item-data__to:before {
+        top: 7px;
+        left: 10px;
+    }
+    .history-list__item span>span .item-data__from:after {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #000;
+        border-bottom: 0;
+        right: 5px;
+    }
+    .history-list__item span.item-status .item-data {
+        padding-top: 10px;
+    }
+.history-list__item span.item-status .item-status__preloader {
+    position: static;
+    background-color: #d5ecc6;
+    margin-top: 10px;
+    }
+.history-list__item span.item-course .item-data>a>span{
+    padding-bottom: 15px;
+    }
+    .history-list__item span.item-course .item-data>a>span:after{
+        border-top: 5px solid #3e77aa;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 0;
+        right: 0;
+        left: 0;
+         top: auto;
+        bottom: 5px;
+        margin: auto;
+    }
+    .history-list__item span>span.item-send--remove {
+        height: 45px;
+        background: #efdbdb url(../images/delete-icon.svg) no-repeat 50%;
+        background-size: 20px;
+        position: static;
+        border-radius: 0 0 3px 3px;
+        margin-top: 10px;
+    }
+
+}
+@media screen and (max-width: 767px){
+    .b-profile .b-profite__part--left {
+        height: calc(100vh - 50px);
+    }
+    /*profile data*/
+    .b-personal{
+        flex-direction: column;
+    }
+    .b-personal>div{
+        width: 100%;
+        min-width: 100%;
+    }
+    .b-personal--left{
+        padding-right: 0;
+    }
+    .b-personal--right{
+        padding-left: 0;
+    }
+    .btn-change-password {
+        margin: 0 auto;
+    }
+    .user-invoice__item {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .user-invoice__item:nth-child(odd) {
+         padding-right:0;
+    }
+    .user-invoice__item:nth-child(2n) {
+         padding-left: 0;
+    }
+    /*profile program*/
+    .b-program-info {
+        text-align: center;
+    }
+    .b-program-code {
+        flex-direction: column;
+    }
+    .b-program-code .xs,.b-program-code .lg {
+        width: 100%;
+        min-width: 100%;
+        padding: 17px 10px;
+        text-align: center;
+    }
+    .b-program-code .lg {
+       order:2
+    }
+    .b-program-code .bt-xs {
+        border-bottom:1px solid #d7d8c8;
+    }
+}
+@media screen and (max-width: 639px) {
+    .history-list__item {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .b-header-info {
+        flex-direction: column;
+    }
+    .b-header-info--left, .b-header-info--right{
+        width:100%;
+        justify-content: flex-start;
+    }
+    .b-header-info--right{
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+
+
+    /*profile program*/
+    .b-program-profit_header>div {
+        width: 100%;
+        min-width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .profit-procent-label {
+        max-width: 100%;
+    }
+    .btn-alert.profit-btn {
+        float: none;
+    }
+    .profit-header-item.profit-header-item__exchange{
+        padding-top: 10px;
+    }
+    .profit-report__list {
+        padding: 15px 0 1px;
+    }
+    .profit-report__item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .profit-report__item>span {
+        width: 100%;
+        min-width: 100%;
+        padding: 5px 0;
+    }
+    .profit-report__item>span:first-child {
+        background-color: #85b1c4;
+        color: #fff;
+    }
+    .profit-report__item>span:last-child {
+        background-color: #d8ecf6;
+        color: #565656;
+    }
+    /*profile template form*/
+    .b-exchange-template {
+        padding-top: 15px;
+        flex-direction: column;
+    }
+    .b-exchange-template>div {
+        width: 100%;
+        min-width: 100%;
+    }
+    .b-exchange-template>div:first-child {
+        border-right: 0px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+    }
+    .b-exchange-template #exchange-currency-from, .b-exchange-template #exchange-currency-to {
+        max-height: 265px;
+        width: calc(100% - 55px);
+    }
+    .b-exchange-template>div:last-child {
+        padding-left: 0;
+    }
+    .b-exchange-template .exchange-sum>span {
+        font-size: 25px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .b-profite__part--right {
+        padding: 0 10px 30px;
+    }
+    #header-info .b-header-info--right .site-register {
+        display: none;
+    }
+    
+    .b-profile .b-profite__part--left {
+        width: calc(100vw + 15px);
+        min-width: calc(100vw + 15px);
+    }
+    .b-profile .b-profite__part--left.close-sidebar {
+        transform: translateX(500px);
+    }
+    .b-exchange-template .exchange-sum>span {
+        top:0;
+    }
+    .b-exchange-template #exchange-ddl-from,.b-exchange-template #exchange-ddl-to {
+        padding-left: 40px;
+    }
+    .b-exchange-template .dropdown-toggle::after {
+        margin-left: 7px;
+    }
+.b-exchange-template #exchange-ddl-from:before,.b-exchange-template #exchange-ddl-to:before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+}
+    .b-exchange-template .account-number-message {
+        padding: 12px 15px 11px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .profit-procent-num {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .profit-report__item {
+        padding: 0 10px;
+    }
+    .b-program-info__create .btn.btn-alert {
+        min-width: 230px;
+    }
+    .b-program-code span.bg-gray.lg {
+       overflow-x: scroll;
+    }
 }
