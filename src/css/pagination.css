@@ -1,4 +1,5 @@
 .b-pagination{
+    max-width: 100%;
     padding-top: 10px;
     display: block;
     margin: 0 auto 15px;
@@ -15,9 +16,10 @@
     border-radius: 8px;
     background-color: #eaeaea;
     padding:5px 15px;
+    flex-wrap: wrap;
 }
 .b-pagination .pagination li{
-    margin:0 4px;
+    margin:5px 4px;
 }
 .b-pagination .pagination a{
     min-width: 35px;

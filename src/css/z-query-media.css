@@ -741,7 +741,22 @@
         border-radius: 0 0 3px 3px;
         margin-top: 10px;
     }
-
+    .order-page .b-exchange__footer>div {
+        padding: 20px 15px 10px;
+    }
+    .order-page .exchange-sum>span {
+        font-size: 27px;
+    }
+    .order-data{
+        width: 100%;
+    }
+    .b-reviews-form>div:first-child,.b-reviews-form>div:last-child {
+        width: 100%;
+        max-width: 100%;
+    }
+    .b-reviews-form__title{
+        text-align: center;
+    }
 }
 @media screen and (max-width: 767px){
     .b-profile .b-profite__part--left {
@@ -794,8 +809,69 @@
     .b-program-code .bt-xs {
         border-bottom:1px solid #d7d8c8;
     }
+
+    /*alert messages */
+    .b-alert--info {
+         padding: 80px 15px 20px !important;
+         border-left: 10px solid #9ccde4;
+     }
+    .b-alert--info:after, .b-alert--info:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: auto;
+        margin: auto;
+    }
+    .b-alert--info:after{
+        font-size:22px;
+    }
+    .b-alert--info.alert-green {
+        border-left: 10px solid #80c18f;
+    }
+    .b-alert--info.alert-red {
+        border-left: 10px solid #a94442;
+    }
+    .b-alert--info .b-alert__message {
+        font-size: 16px !important;
+        line-height: 18px !important;
+    }
+    .b-alert-warning {
+        border-left: 10px solid #f2e9cd;
+    }
+    .b-alert--info.alert-red:after {
+        color: #f2dddd;
+        font-size: 22px;
+    }
+    .amount-action__btns button {
+        margin: 5px;
+    }
+    .b-title--h1,.status-page h1,.page-title {
+        font-size: 28px;
+    }
+    .status-page .b-check-amount__accounts, .status-page .b-check-amount__currency {
+        padding: 20px 15px;
+    }
+    .status-page .b-check-amount__currency>div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .status-page .b-check-amount__accounts>div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 }
 @media screen and (max-width: 639px) {
+    .b-title--h1, .status-page h1,.page-title{
+        font-size: 24px;
+    }
+    .status-page h1{
+        padding-top: 20px;
+    }
+    .page-title{
+        margin-bottom: 25px;
+    }
     .history-list__item {
         width: 100%;
         margin-bottom: 40px;
@@ -879,16 +955,70 @@
     .b-exchange-template .exchange-sum>span {
         font-size: 25px;
     }
-
+    .b-check-amount__accounts, .b-check-amount__currency {
+        padding: 20px 15px;
+    }
+    .amount-action__message {
+        margin: 0 auto 25px;
+        padding-left: 20px;
+    }
+    .amount-action__message>span {
+        font-size: 14px;
+    }
+    .b-check-amount__alerts {
+        padding: 0 15px;
+    }
+    .status-page .b-check-amount__value {
+        font-size: 24px;
+    }
+    .status-page .message-btc-link {
+        overflow: scroll;
+    }
+    .status-page .message-btc-count span {
+        font-size: 16px;
+        display: block;
+    }
+    .news-articles .b-article {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .b-review-item {
+        flex-direction: column;
+        padding: 0;
+    }
+    .b-review-item__author,.b-review-item__excerpt{
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 15px;
+    }
+    .b-review-item__excerpt{
+        padding: 20px 15px;
+    }
+    .b-review-item__author{
+        order:3;
+        background: #39d1d4;
+        color: #fff;
+        text-align: center;
+    }
 }
 @media screen and (max-width: 480px) {
+    .b-title--h1, .status-page h1,.page-title{
+        font-size: 21px;
+    }
+
+    .status-page h1{
+        padding: 20px 10px 0;
+    }
     .b-profite__part--right {
         padding: 0 10px 30px;
     }
     #header-info .b-header-info--right .site-register {
         display: none;
     }
-    
+    .b-apply-code__body {
+        padding: 20px 15px;
+    }
     .b-profile .b-profite__part--left {
         width: calc(100vw + 15px);
         min-width: calc(100vw + 15px);
@@ -928,5 +1058,151 @@
     }
     .b-program-code span.bg-gray.lg {
        overflow-x: scroll;
+    }
+
+    .b-profile__header p {
+        font-size: 18px;
+    }
+    .b-alert--info {
+        padding: 70px 10px 20px!important;
+    }
+    .fs-upload-target{
+        width: 100%;
+    }
+    .fs-upload-target span:first-child {
+        font-size: 16px;
+    }
+    .b-attach-image__buttons button {
+        margin: 0 0 20px;
+    }
+.btn{
+    min-width: 100%;
+    width: 100%;
+    font-size: 18px;
+}
+.container{
+    padding:0;
+}
+    .b-alert--info .b-alert__title {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .order-page .exchange-sum>span {
+        font-size: 20px;
+    }
+.order-page #exchange-ddl-from,.order-page #exchange-ddl-to {
+    text-align: center;
+    padding-right: 0;
+}
+    .order-page #exchange-ddl-from:before,.order-page #exchange-ddl-to:before {
+        top: -35px;
+    }
+    .order-alert--top {
+        padding: 0 10px;
+    }
+    .order-page .exchange {
+        padding: 20px 5px;
+        margin-bottom: 0;
+    }
+    .order-page .exchange-sum {
+        margin-bottom: 0;
+        padding-right: 45px;
+    }
+    .order-data {
+        padding: 40px 10px 20px;
+    }
+    .order-page .profile-input-field {
+        flex-direction: column;
+    }
+    .order-page .profile-input-field input {
+        width: 100%;
+    }
+    .b-exchange__course p {
+        font-size: 18px;
+    }
+    .b-check-amount__currency {
+        padding: 40px 15px 20px;
+    }
+    .b-check-amount__currency {
+        padding: 40px 15px 20px;
+    }
+    .b-check-amount__currency #exchange-ddl-from:before, .b-check-amount__currency #exchange-ddl-to:before {
+        top: -30px;
+        bottom: 0;
+        left: 0;
+        right: auto;
+        margin: 0 auto;
+    }
+    .b-check-amount__currency .exchange-sum-label {
+        font-size: 16px;
+        padding-top: 10px;
+    }
+    .b-check-amount__currency .b-check-amount__value {
+        font-size: 21px;
+    }
+    .b-check-amount__accounts.accounts-number span{
+        display: block;
+    }
+    .b-check-amount__accounts.accounts-message {
+        font-size: 12px;
+    }
+    .amount-action__btns {
+        padding: 0 15px;
+    }
+    .amount-action__btns button {
+        margin: 0 0 15px;
+    }
+    .processing-time {
+        padding: 90px 10px 20px;
+    }
+    .processing-time:before {
+        content: "";
+        width: 65px;
+        height: 65px;
+        display: block;
+        position: absolute;
+        top: 15px;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: url(../images/countdown-lg.svg) no-repeat 50%;
+        background-size: 65px 65px;
+    }
+    .status-page .alert-container {
+        padding: 0 10px;
+    }
+    .status-page .b-check-amount__currency {
+        padding: 45px 10px 20px;
+    }
+    .status-page .b-check-amount__accounts {
+        padding: 0px 10px 20px;
+    }
+    .b-faq{
+        padding: 0 10px;
+    }
+    .b-faq h5 {
+             font-size: 1.05rem;
+         }
+    .news-articles,.b-pagination{
+        padding: 0 10px;
+    }
+    .b-reviews-form>div:first-child, .b-reviews-form>div:last-child {
+        padding: 0 15px;
+    }
+    .review-list {
+        padding: 25px 15px 20px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .b-exchange-sidebar .b-countdown{
+        position: relative;
+        width: calc(100% + 40px);
+        transform: translateX(-20px);
+    }
+    .b-exchange-sidebar .flipTimer {
+        min-width: 320px;
+        transform: translateX(-2px);
     }
 }
