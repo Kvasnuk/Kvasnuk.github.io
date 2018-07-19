@@ -1,5 +1,50 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 jQuery(document).ready(function($){
+    /*check add cookies for working time message*/
+    function getDayAndTime(){
+        var currentTime = {
+            day: parseInt(moment().tz("Europe/Kiev").format('DD')),
+            time: parseInt(moment().tz("Europe/Kiev").format('HH')),
+        }
+        return currentTime;
+    };
+    function checkWorkingTime(){
+        var currentKievTime = getDayAndTime();
+        if(currentKievTime.time >= 0 && currentKievTime.time < 9 ){
+             $('.site-work-switch').addClass('switch-close');
+        }
+        setTimeout(function(){
+            $('.site-work-switch').addClass('show');
+        });
+    };
+
+    function showSleepingMessage(){
+        var currentKievTime = getDayAndTime(),
+            messageIsClose = getCookie('isClose'),
+            checkDate = getCookie('currentDate');
+        if(currentKievTime.time >= 0 && currentKievTime.time < 9 ){
+            if(messageIsClose === undefined ){
+                $('#work-time-message').fadeIn();
+            }else if(messageIsClose !== undefined && checkDate != currentKievTime.day){
+                $('#work-time-message').fadeIn();
+            }
+        }else{
+            deleteCookie('isClose');
+            deleteCookie('currentDate');
+        }
+    };
+
+    showSleepingMessage();
+    checkWorkingTime();
+$('.js-time-message__close').click(function(){
+    var currentKievTime = getDayAndTime();
+    var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24);
+    document.cookie = "isClose=close; path=/; expires=" + date.toUTCString();
+    document.cookie = "currentDate="+ currentKievTime.day +"; path=/; expires=" + date.toUTCString();
+    $('#work-time-message').fadeOut();
+});
+
+    /*home page slider init*/
     if($('.owl-carousel')){
         $('.owl-carousel').owlCarousel({
             items:4,
@@ -30,6 +75,9 @@ jQuery(document).ready(function($){
             }
         });
     }
+
+
+    /*check page and add template class for body tag*/
     function checkHomePage(){
     var location = window.location.pathname;
     if('/' === location){
@@ -40,12 +88,51 @@ jQuery(document).ready(function($){
         $('body').addClass('page-template');
     }
 }
+
+    /*cookie short functions*/
     function getCookie(name) {
         var matches = document.cookie.match(new RegExp(
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
+    function setCookie(name, value, options) {
+        options = options || {};
+
+        var expires = options.expires;
+
+        if (typeof expires == "number" && expires) {
+            var d = new Date();
+            d.setTime(d.getTime() + expires * 1000);
+            expires = options.expires = d;
+        }
+        if (expires && expires.toUTCString) {
+            options.expires = expires.toUTCString();
+        }
+
+        value = encodeURIComponent(value);
+
+        var updatedCookie = name + "=" + value;
+
+        for (var propName in options) {
+            updatedCookie += "; " + propName;
+            var propValue = options[propName];
+            if (propValue !== true) {
+                updatedCookie += "=" + propValue;
+            }
+        }
+
+        document.cookie = updatedCookie;
+    }
+
+    function deleteCookie(name) {
+        setCookie(name, "", {
+            expires: -1
+        })
+    };
+
+    /*----------------------------*/
+
     function checkCurrencyCount(){
         if($('.js-exchange-currency-from') && $('.js-exchange-currency-from').length > 10){
               $('#exchange-currency-from').addClass('scroll-items');
@@ -113,13 +200,6 @@ jQuery(document).ready(function($){
             disableOpositeActiveItem('#exchange-currency-to','#exchange-currency-from');
         }
             disableCurrencyItems();
-
-
-
-
-
-
-
 
     checkHomePage();
     $('.js-exchange-currency-from').click(function(e){
@@ -371,7 +451,13 @@ $(window).resize(function(){
         }
     };
     mediaSize();
+    $('.js-message-close').click(function(){
+        $(this).parent('div').fadeOut();
+    });
 
+    $('.js-time-message__close').click(function(){
+        $(this).parent('div').fadeOut();
+    });
 
 
 });
