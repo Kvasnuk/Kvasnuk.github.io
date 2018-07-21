@@ -3,13 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.css" afterPath="$PROJECT_DIR$/dist/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/all-pages.html" afterPath="$PROJECT_DIR$/all-pages.html" />
+      <change beforePath="$PROJECT_DIR$/apply-code.html" afterPath="$PROJECT_DIR$/apply-code.html" />
+      <change beforePath="$PROJECT_DIR$/check-amounts.html" afterPath="$PROJECT_DIR$/check-amounts.html" />
+      <change beforePath="$PROJECT_DIR$/exchange-application.html" afterPath="$PROJECT_DIR$/exchange-application.html" />
+      <change beforePath="$PROJECT_DIR$/exchange.html" afterPath="$PROJECT_DIR$/exchange.html" />
+      <change beforePath="$PROJECT_DIR$/faq.html" afterPath="$PROJECT_DIR$/faq.html" />
+      <change beforePath="$PROJECT_DIR$/header.html" afterPath="$PROJECT_DIR$/header.html" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/news.html" afterPath="$PROJECT_DIR$/news.html" />
       <change beforePath="$PROJECT_DIR$/order-page.html" afterPath="$PROJECT_DIR$/order-page.html" />
-      <change beforePath="$PROJECT_DIR$/src/css/exchange-form.css" afterPath="$PROJECT_DIR$/src/css/exchange-form.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/header.css" afterPath="$PROJECT_DIR$/src/css/header.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/order-page.css" afterPath="$PROJECT_DIR$/src/css/order-page.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/z-query-media.css" afterPath="$PROJECT_DIR$/src/css/z-query-media.css" />
-      <change beforePath="$PROJECT_DIR$/src/html/order-page.html" afterPath="$PROJECT_DIR$/src/html/order-page.html" />
+      <change beforePath="$PROJECT_DIR$/profile-data.html" afterPath="$PROJECT_DIR$/profile-data.html" />
+      <change beforePath="$PROJECT_DIR$/profile-history.html" afterPath="$PROJECT_DIR$/profile-history.html" />
+      <change beforePath="$PROJECT_DIR$/profile-program.html" afterPath="$PROJECT_DIR$/profile-program.html" />
+      <change beforePath="$PROJECT_DIR$/profile-templates.html" afterPath="$PROJECT_DIR$/profile-templates.html" />
+      <change beforePath="$PROJECT_DIR$/registration.html" afterPath="$PROJECT_DIR$/registration.html" />
+      <change beforePath="$PROJECT_DIR$/reviews.html" afterPath="$PROJECT_DIR$/reviews.html" />
+      <change beforePath="$PROJECT_DIR$/src/html/header.html" afterPath="$PROJECT_DIR$/src/html/header.html" />
+      <change beforePath="$PROJECT_DIR$/status-page.html" afterPath="$PROJECT_DIR$/status-page.html" />
+      <change beforePath="$PROJECT_DIR$/status-result-page.html" afterPath="$PROJECT_DIR$/status-result-page.html" />
+      <change beforePath="$PROJECT_DIR$/thank-you-page.html" afterPath="$PROJECT_DIR$/thank-you-page.html" />
+      <change beforePath="$PROJECT_DIR$/waiting-verification.html" afterPath="$PROJECT_DIR$/waiting-verification.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exchange-form.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exchange-form.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="348">
@@ -115,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/html/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="108" column="76" lean-forward="false" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="76" />
+            <state relative-caret-position="324">
+              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -164,6 +178,7 @@
       <find>site-work-switch</find>
       <find>b-exchange__maximum</find>
       <find>exampleModalLong</find>
+      <find>.b-exchange-currency</find>
     </findStrings>
     <replaceStrings>
       <replace>.home-template</replace>
@@ -228,12 +243,12 @@
         <option value="$PROJECT_DIR$/src/html/registration.html" />
         <option value="$PROJECT_DIR$/src/html/all-pages.html" />
         <option value="$PROJECT_DIR$/src/css/registration.css" />
-        <option value="$PROJECT_DIR$/src/html/header.html" />
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
         <option value="$PROJECT_DIR$/src/css/header.css" />
         <option value="$PROJECT_DIR$/src/css/order-page.css" />
         <option value="$PROJECT_DIR$/src/html/order-page.html" />
         <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
+        <option value="$PROJECT_DIR$/src/html/header.html" />
       </list>
     </option>
   </component>
@@ -401,12 +416,12 @@
       <workItem from="1531105725992" duration="4559000" />
       <workItem from="1531160513516" duration="40788000" />
       <workItem from="1531362736688" duration="62098000" />
-      <workItem from="1531769947594" duration="63095000" />
+      <workItem from="1531769947594" duration="63877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365645000" />
+    <option name="totallyTimeSpent" value="366427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="52" width="1865" height="1056" extended-state="6" />
@@ -773,14 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="108" column="76" lean-forward="false" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -835,6 +842,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="300" column="20" lean-forward="false" selection-start-line="300" selection-start-column="6" selection-end-line="300" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
         </state>
       </provider>
