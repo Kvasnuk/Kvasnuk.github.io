@@ -180,17 +180,30 @@ a.btn{
 }
 #work-time-message{
     display: none;
-    bottom: 50px;
-    width: 100%;
-    max-width: 900px;
-    position: fixed;
+    top:0;
     left: 0;
-    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
     margin: 0 auto;
-    padding: 35px 35px 15px 75px;
+    padding: 15% 35px 15px 25px;
     z-index: 999;
-    box-shadow: 0px 3px 16px 1px #a94442;
+    background: #1b1b1bd1;
 }
+
+#work-time-message>div{
+    max-width: 900px;
+    margin: 0 auto;
+   box-shadow: 0px 3px 16px 1px #d87270;
+    padding: 30px 30px 20px 75px;
+}
+
+
+
+
+
+
+
 
 .work-time-message__close{
     width: 20px;
