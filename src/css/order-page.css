@@ -118,20 +118,67 @@
     letter-spacing: 0.32px;
     margin-bottom: 0;
 }
-.b-exchange__maximum p a{
+.b-exchange__maximum p span{
     text-decoration: underline;
     color:#fff;
     padding-left: 5px;
+    cursor: pointer;
+}
+.b-exchange__maximum p span:hover{
+    text-decoration: underline;
+    color:#ecebeb;
 }
 
 
 
-
-
-
-
-
-
+#exchange-order-form{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+#exchange-order-form .form-field{
+   padding-bottom: 20px;
+    position: relative;
+}
+#exchange-order-form .form-field label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+#exchange-order-form .form-field input{
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ced5db;
+    border-radius: 3px;
+    padding: 0 10px;
+}
+#exchange-order-form .form-field p{
+    color:#c34240;
+    font-size:13px;
+    position: absolute;
+    z-index: 1;
+    bottom:0;
+    margin-bottom: 0;
+}
+#exchange-order .modal-footer button{
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+}
+#exchange-order .modal-footer button:first-child{
+    background:#39d1d4;
+}
+#exchange-order .modal-footer button:first-child:hover{
+    background:#37c5c7;
+}
+#exchange-order .modal-footer button:last-child{
+    background:#41ab45;
+}
+#exchange-order .modal-footer button:last-child:hover{
+    background:#51cc55;
+}
 
 
 

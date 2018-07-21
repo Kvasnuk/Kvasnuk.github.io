@@ -400,6 +400,9 @@
         display: block;
         margin:0 auto;
     }
+    .home-template .b-header-info--right .site-register {
+        display: none;
+    }
     .site-work-switch {
         width: 40px;
         height: 25px;
