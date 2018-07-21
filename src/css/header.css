@@ -207,7 +207,7 @@
     color:#fff;
 }
 .modal-footer .site-register:hover{
-    border: 1px solid #17adb1;
+    border: 1px solid #61d1d4;
     background-color: #17adb1;
     color:#fff;
 }
@@ -256,4 +256,105 @@
 }
 .b-islogin__menu .dropdown-item:last-child{
     border-radius: 0 0 4px 4px;
+}
+
+
+
+
+/*login form*/
+#siteEnter .modal-content {
+    border: 1px solid rgb(58, 210, 212);
+    box-shadow: 0 0 6px 1px #39d1d4;
+}
+#siteEnter .modal-header{
+    background-color: #39d1d4;
+    color:#fff;
+}
+#siteEnter .modal-header .close span{
+    color: #268183;
+    opacity: 1;
+}
+#siteEnter .modal-footer{
+    border-top: 1px solid #e9ecef;
+    background:#268284;
+    justify-content: center;
+}
+
+.modal-body #login-form .input-group{
+    flex-direction: column;
+    clear: both;
+}
+.modal-body #login-form .input-group a{
+    color: #3ad2d4;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    margin:-10px 0 0px;
+}
+.modal-body #login-form .input-group input{
+    height: 40px;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+.modal-body #login-form .input-group .has-error input{
+    border: 2px solid #ff73718c;
+}
+.modal-body #login-form .input-group .has-success input{
+    border: 2px solid #b8ffba;
+}
+.modal-body #login-form .input-group input:focus{
+    box-shadow: 0px 0px 3px 0px #39d1d4;
+    border: 2px solid #39d1d4 !important;
+    outline: none;
+}.modal-body #login-form .input-group input:focus{
+    box-shadow: 0px 0px 3px 0px #39d1d4;
+    border: 2px solid #39d1d4 !important;
+    outline: none;
+}
+.modal-body #login-form button{
+    width: 165px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid  #54b957;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    background: #54b957;
+    padding-top: 2px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition:.3s;
+}
+.modal-body #login-form button:hover{
+    background: #47a24a;
+}
+.error-summary li{
+    font-size: 13px;
+    color:#c34240;
+}
+
+.b-islogin__name_mobile{
+    width: 100%;
+    height: 50px;
+    background: #127180;
+    position: absolute;
+}
+
+.site-enter--mobile{
+    display:block;
+}
+.b-islogin__name_mobile{
+    display:none;
+}
+.is_authorizated .site-enter--mobile{
+    display: none;
+}
+.is_authorizated .b-islogin__name_mobile{
+    display: block;
+}
+.b-islogin__name_mobile{
+    background:#127180 url('../images/profile-user.svg') no-repeat center center;
+    background-size:30px 30px;
 }

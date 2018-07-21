@@ -210,6 +210,7 @@
         right: 16px;
     }
 
+
 }
 @media screen and (max-width: 767px) {
 
@@ -393,6 +394,11 @@
     }
     .site-register {
         width: 135px;
+    }
+    .page-template .b-header-info--right .site-register {
+        width: 280px;
+        display: block;
+        margin:0 auto;
     }
     .site-work-switch {
         width: 40px;
@@ -861,6 +867,32 @@
         padding-right: 0;
     }
 
+    .b-islogin__menu_mobile{
+        width: 150%;
+        background: #127180;
+        border: 1px solid #3b919e;
+        border-radius: 0;
+        transform: translateX(10px);
+        margin-right: -8px;
+        padding: 0;
+    }
+    .b-islogin__menu_mobile .dropdown-item{
+       color:#fff;
+        padding: 10px 15px;
+    }
+    .b-islogin__menu_mobile .dropdown-item:last-child{
+        border-top: 1px solid #3b919e;
+    }
+    .b-islogin__name_mobile{}
+    .b-islogin__name_mobile:after{
+        display: none;
+    }
+    .is_authorizated .b-header-info--right{
+        display: none;
+    }
+    .is_authorizated .b-main {
+        padding: 110px 0 30px;
+    }
 }
 @media screen and (max-width: 639px) {
     .b-title--h1, .status-page h1,.page-title{
@@ -1006,15 +1038,14 @@
     .b-title--h1, .status-page h1,.page-title{
         font-size: 21px;
     }
-
+    .b-profile__header.registration-title p {
+        font-size: 25px;
+    }
     .status-page h1{
         padding: 20px 10px 0;
     }
     .b-profite__part--right {
         padding: 0 10px 30px;
-    }
-    #header-info .b-header-info--right .site-register {
-        display: none;
     }
     .b-apply-code__body {
         padding: 20px 15px;
@@ -1194,6 +1225,11 @@
     .review-list {
         padding: 25px 15px 20px;
     }
+
+    .b-registration .register-form button{
+        font-size: 18px;
+    }
+
 }
 @media screen and (max-width: 360px) {
     .b-exchange-sidebar .b-countdown{

@@ -1,0 +1,77 @@
+@@include('header.html')
+<main class="b-main profile">
+    <div class="container">
+        <div class="b-profile container-md">
+            <div class="b-profile__header registration-title">
+                <p>Регистрация</p>
+            </div>
+            <div class="b-registration">
+                <div class="register-form">
+                    <form id="form-signup" action="/auth/signup" method="post">
+                        <input type="hidden" name="_csrf" value="Cja3d-8TsgKyJmPskb63sCMtpL9UY3V7RpZ5_zn_KllhYIcu23recMhQDbjo24X5Fxv8izwOBQon3g6GCs9-Pw==">                        <table class="table center">
+                        <tbody><tr>
+                            <td>
+                                <label>
+                                    Имя<br>
+                                    <div class="form-group field-signupform-first_name required has-success">
+
+                                        <input type="text" id="signupform-first_name" class="input big" name="SignupForm[first_name]" autofocus="" aria-required="true" aria-invalid="false">
+
+                                        <p class="help-block help-block-error"></p>
+                                    </div>                                    </label>
+                            </td>
+                        </tr>
+                        <tr style="height: 5px"></tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Электронная почта<br>
+                                    <div class="form-group field-signupform-email required has-error">
+
+                                        <input type="text" id="signupform-email" class="input big" name="SignupForm[email]" aria-required="true" aria-invalid="true">
+
+                                        <p class="help-block help-block-error">Введите ваш адрес электронной почты!</p>
+                                    </div>                                    </label>
+                            </td>
+                        </tr>
+                        <tr style="height: 5px"></tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Пароль<br>
+                                    <div class="form-group field-signupform-password required">
+
+                                        <input type="password" id="signupform-password" class="input big" name="SignupForm[password]" aria-required="true">
+
+                                        <p class="help-block help-block-error"></p>
+                                    </div>                                    </label>
+                            </td>
+                        </tr>
+                        <tr style="height: 5px"></tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Ссылка или ID реферала<br>
+                                    <div class="form-group field-signupform-referred_by">
+
+                                        <input type="text" id="signupform-referred_by" class="input big" name="SignupForm[referred_by]" value="">
+
+                                        <p class="help-block help-block-error"></p>
+                                    </div>                                    </label>
+                            </td>
+                        </tr>
+                        <tr style="height: 20px"></tr>
+                        <tr>
+                            <td>
+                                <button type="submit" class="button" name="signup-button">Зарегистрироваться</button>                                </td>
+                        </tr>
+                        </tbody></table>
+                    </form>                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+@@include('footer.html')

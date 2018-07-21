@@ -74,18 +74,18 @@
                 </div>
                 <div class="modal-body">
                     <form id="login-form" action="/auth/login" method="post">
-                        <input type="hidden" name="_csrf" value="J2pzdfvm6oQ9rHBfJBq1jLHBwldz6COXKRLhBPGf0pkTLQRMmoqM7gnaJBZHatG7x7mjGiyQbdlGKqVXrs-b4Q=="> <div class="input-group">
+                        <input type="hidden" name="_csrf" value="WC_EOQXdmmqQsRjxuWuOiVaurDC4XxpjrKRZBLzz7LpgGqJKM7nzG-jHS6vyW__iAd3gb_cNcQfG0wBry7iVww=="> <div class="input-group">
                         <div class="input-item">
                             <div class="form-group field-loginform-email required has-error">
                                 <input type="text" id="loginform-email" class="form-control" name="LoginForm[email]" placeholder="электронная почта" aria-required="true" aria-invalid="true">
                             </div> </div>
                         <div class="input-item">
-                            <div class="form-group field-loginform-password required">
-                                <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" placeholder="пароль" aria-required="true">
+                            <div class="form-group field-loginform-password required has-success">
+                                <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" placeholder="пароль" aria-required="true" aria-invalid="true">
                             </div> <a href="/auth/request-password-reset" class="reset-password">напомнить</a>
                         </div>
                     </div>
-                        <div class="error-summary" style="display:none"><ul></ul></div>
+                        <div class="error-summary" style=""><ul><li>Введите электронную почту</li><li>Введите пароль</li></ul></div>
                         <button class="button">Войти</button>
                     </form>
                 </div>
@@ -105,6 +105,16 @@
         <button type="button" class="site-enter--mobile " data-toggle="modal" data-target="#siteEnter">
                        Вход
                     </button>
+
+        <div class="dropdown  b-islogin-mobile">
+                        <span class=" dropdown-toggle b-islogin__name_mobile" data-toggle="dropdown"></span>
+                        <div class="dropdown-menu  b-islogin__menu_mobile">
+                            <a class="dropdown-item" href="#">Личный кабинет</a>
+                            <a class="dropdown-item" href="#">Выход</a>
+                        </div>
+                    </div>
+
+
     </span>
     </div>
     <button class="b-profile__menu_btn js-toggle-mobile-sidebar"></button>
