@@ -192,11 +192,11 @@
 .home-template .site-enter:hover,.page-template .site-enter:hover{
     color:  #4cd964;
 }
-.home-template .site-register{
+.home-template.page-template .b-header-info--right .site-register{
      border: 1px solid #ffffff;
      color: #ffffff;
  }
-.home-template .site-register:hover,.modal-footer .site-register,.page-template .b-header-info--right .site-register:hover{
+.home-template.page-template .b-header-info--right .site-register:hover,.modal-footer .site-register,.page-template .b-header-info--right .site-register:hover{
     border: 1px solid #23cbcf;
     background-color: #23cbcf;
     color:#fff;
@@ -358,3 +358,4 @@
     background:#127180 url('../images/profile-user.svg') no-repeat center center;
     background-size:30px 30px;
 }
+

@@ -1,0 +1,65 @@
+.b_partners__item{
+    border: 2px solid #389a9b;
+    border-bottom: 1px solid #389a9b;
+    border-radius: 4px;
+    text-align: center;
+    transition:0.3s;
+}
+.partners h1 {
+    margin-bottom: 25px;
+}
+.b_partners__item:hover{
+    box-shadow: 0px 0px 2px 1px #348d8e;
+}
+.b_partners__item>p{
+    color:#8a8585;
+}
+.b_partners__item .partner__title{
+    color:#000;
+    font-size: 18px;
+    font-weight: 500;
+}
+.partner__img{
+    height: 80px;
+    border-bottom: 1px solid #f4f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.partner__links{
+    display: flex;
+    background: #389a9c;
+
+}
+.partner__links a{
+    height: 45px;
+    color:#fff;
+}
+.partner__link_site{
+    width:65%;
+    min-width:65%;
+    background: #4eb149;
+    font-weight: 600;
+    padding-top: 12px;
+
+}
+.partner__link_site:hover{
+    background: #55bf4f;
+
+}
+.partner__link_comments{
+    width:35%;
+    min-width:35%;
+    background: #389a9c url(../images/chat.svg) no-repeat center center;
+    background-size: 30px 30px;
+
+}
+.partner__link_comments:hover{
+
+    width:35%;
+    min-width:35%;
+    background: #307e80 url(../images/chat.svg) no-repeat center center;
+    background-size: 30px 30px;
+}

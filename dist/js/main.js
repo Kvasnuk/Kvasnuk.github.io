@@ -12,6 +12,7 @@ jQuery(document).ready(function($){
         var currentKievTime = getDayAndTime();
         if(currentKievTime.time >= 0 && currentKievTime.time < 9 ){
              $('.site-work-switch').addClass('switch-close');
+             $('body').addClass('is_closed');
         }
         setTimeout(function(){
             $('.site-work-switch').addClass('show');
