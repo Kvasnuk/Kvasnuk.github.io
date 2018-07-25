@@ -587,6 +587,13 @@
     .partners .container{
         padding: 0 15px;
     }
+    #reviews>p{
+        padding: 0 15px;
+    }
+    .news-title{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 @media (max-width: 359px){
     #exchange-ddl-from, #exchange-ddl-to {

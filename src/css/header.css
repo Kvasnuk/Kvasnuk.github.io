@@ -218,9 +218,9 @@
 .modal-open #header-info{
     margin-left:-8px;
 }
-.page-template.modal-open #header-info{
-    margin-left:0;
-}
+/*.page-template.modal-open #header-info{*/
+    /*margin-left:0;*/
+/*}*/
 /*header user is logined menu*/
 .b-islogin{
     display:none;
