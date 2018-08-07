@@ -338,6 +338,9 @@ border-radius: 50%;
     line-height: 18px;
 }
 
+.b-alert--info .b-alert__message p,.b-alert--info .b-alert__message p span{
+    color: #427892 !important;
+}
 .b-alert--info.circle-icon:before{
     display: none;}
 .b-alert--info.circle-icon:after{
@@ -364,6 +367,9 @@ border-radius: 50%;
 .alert-green .b-alert__message{
     color: #35663b;
 }
+.alert-green  p,.alert-green  p span{
+    color: #35663b !important;
+}
 
 
 .b-alert--info.alert-red{
@@ -381,9 +387,10 @@ border-radius: 50%;
     color: #a94442;
     letter-spacing: 0.96px;
 }
-.alert-red .b-alert__message{
-    color:#a94442;
+.alert-red p,.alert-red p span{
+    color:#a94442 !important;
 }
+
 
 
 

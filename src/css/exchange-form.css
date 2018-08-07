@@ -179,7 +179,7 @@
     background-image: url("../images/currency-qiwi.png");
 }
 
-.b-exchange__input{
+.b-exchange__input, .order-page .b-exchange__input{
     display: block;
     margin-top: 10px;
     background: transparent;

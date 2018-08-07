@@ -1046,6 +1046,20 @@
         color: #fff;
         text-align: center;
     }
+    .order-page .order-inputs {
+        min-height: auto;
+    }
+    .order-page .b-exchange__footer--left {
+        padding-bottom: 27px !important;
+        border-bottom: 3px solid #e6e6e6;
+    }
+    .order-page .b-exchange__footer--right {
+        padding-bottom: 15px !important;
+
+    }
+    .order-page .form-control[readonly] {
+        text-align: center;
+    }
 }
 @media screen and (max-width: 480px) {
     .b-title--h1, .status-page h1,.page-title{
@@ -1242,7 +1256,17 @@
     .b-registration .register-form button{
         font-size: 18px;
     }
-
+.b-reset-pasword{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+    .order-page .b-exchange__input {
+        font-size: 27px;
+    }
+    .order-page .exchange-sum-currency--from, .order-page .exchange-sum-currency--to,.order-page #exchange-sum-currency--from, .order-page #exchange-sum-currency--to  {
+        transform: translateY(-33px);
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 360px) {
     .b-exchange-sidebar .b-countdown{

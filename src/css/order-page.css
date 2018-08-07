@@ -244,7 +244,7 @@
     position: relative;
     padding-left: 30px;
     cursor: pointer;
-    
+
 }
 .b-field-checked__label:before{
     content:'';
@@ -301,4 +301,49 @@
     width: 17px;
     height: 17px;
     left: 4px;
+}
+
+
+
+
+
+
+
+.order-page .b-exchange-currency__item{
+    font-weight: 400;
+}
+/*.order-page .b-exchange__main_part--from, .order-page .b-exchange__main_part--to{*/
+    /*padding-bottom: 10px;*/
+/*}*/
+.order-page .exchange-sum-currency--from,.order-page .exchange-sum-currency--to,.order-page #exchange-sum-currency--from,.order-page #exchange-sum-currency--to{
+    position: absolute;
+    transform: translateY(-55px);
+    font-size: 35px;
+    right: 10px;
+    color: #4cae50;
+}
+.order-input .help-block{
+    font-weight: 400;
+    color: #ab5258;
+}
+.order-page .form-control[readonly] {
+    background-color: #e6e6e6;
+    opacity: 1;
+    color: #797979;
+}
+.order-page .order-inputs {
+    padding-top: 30px;
+    padding-bottom: 170px;
+    position: relative;
+    min-height:290px;
+}
+.order-page .account-number-container {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+.order-page .order-input.buy_target_input {
+    position: absolute;
+    bottom:75px;
+    width: 100%;
 }
