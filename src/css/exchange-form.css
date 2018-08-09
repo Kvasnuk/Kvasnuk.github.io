@@ -334,6 +334,26 @@
 }
 
 
+
+
+
+
+
+
+
+.isVisited .order-page .full-list #exchange-currency-from,.isVisited .order-page .full-list #exchange-currency-to{
+    transform:translateX(0);
+    animation: none;
+    width: 50%;
+}
+.isVisited .order-page  #exchange-currency-from{
+    transform:translateX(-180px);
+    animation: none;
+}
+.isVisited .order-page  #exchange-currency-to{
+    transform:translateX(180px);
+    animation: none;
+}
 #exchange-currency-from{
     left: 0;
     border-top-left-radius: 5px;

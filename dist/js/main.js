@@ -1,6 +1,29 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 jQuery(document).ready(function($){
-    /*check add cookies for working time message*/
+
+   /*exchange form cookies*/
+
+    if(getCookie('fullSizeType') !== undefined && $('.b-exchange').length > 0){
+        $('.b-exchange').addClass('full-list');
+        $('.js-exchange-full').addClass('active');
+    }
+
+    function checkVIsidetExchangePage(){
+        var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24);
+        var exchangePage = window.location.pathname;
+        console.log(exchangePage);
+        if(getCookie('isVisited') !== undefined && exchangePage.indexOf('exchange') >= 0){
+            $('body').addClass('isVisited');
+        }else if(getCookie('isVisited') == undefined && exchangePage.indexOf('exchange') >= 0){
+            document.cookie = "isVisited=isVisited; path=/; expires=" + date.toUTCString();
+        }
+    }
+    checkVIsidetExchangePage();
+
+    /*exchange form cookies*/
+
+
+
     function getDayAndTime(){
         var currentTime = {
             day: parseInt(moment().tz("Europe/Kiev").format('DD')),
@@ -274,14 +297,23 @@ $('.js-time-message__close').click(function(){
         }
     });
     $( ".js-exchange-full" ).click(function() {
+        var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
         $(this).toggleClass('active');
         $('.b-exchange').toggleClass('full-list');
         if(getCookie('fullSizeBtn') === undefined){
             $('.b-exchange__settings--message').fadeOut();
-            var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
             document.cookie = "fullSizeBtn=done; path=/; expires=" + date.toUTCString();
         }
+        if(getCookie('fullSizeType') === undefined){
+            document.cookie = "fullSizeType=full; path=/; expires=" + date.toUTCString();
+        } else {
+            deleteCookie('fullSizeType');
+        }
     });
+
+
+
+
     // The function
     var background_image_parallax = function($object, multiplier){
         multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;

@@ -59,7 +59,9 @@
     .b-exchange__settings--full {
         display: none;
     }
-
+    .isVisited .order-page #exchange-currency-from,.isVisited .order-page #exchange-currency-to {
+        transform: translateX(0);
+    }
     .bg-currency-icon--adv {
         top: 80px;
         left: 13%;
@@ -154,10 +156,10 @@
         font-size:16px;
     }
     .b-exchange__main_part--from {
-        padding: 10px 15px 15px 30px;
+        padding: 10px 15px 40px 30px;
     }
     .b-exchange__main_part--to {
-        padding: 10px 30px 15px;
+        padding: 10px 30px 40px;
     }
     .b-exchange__footer>div {
         padding: 20px 30px 10px;
@@ -522,10 +524,10 @@
         padding-right: 0;
     }
     .b-exchange__main_part--from {
-        padding: 10px 10px 15px;
+        padding: 10px 10px 40px;
     }
     .b-exchange__main_part--to {
-        padding: 10px 10px 15px;
+        padding: 10px 10px 40px;
     }
     .b-exchange__input {
         font-size: 20px;
@@ -1266,6 +1268,9 @@
     .order-page .exchange-sum-currency--from, .order-page .exchange-sum-currency--to,.order-page #exchange-sum-currency--from, .order-page #exchange-sum-currency--to  {
         transform: translateY(-33px);
         font-size: 20px;
+    }
+    .order-data__item .profile-input-field .help-block {
+        text-align: left;
     }
 }
 @media screen and (max-width: 360px) {

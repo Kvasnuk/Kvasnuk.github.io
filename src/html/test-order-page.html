@@ -1,6 +1,6 @@
 
 @@include('header.html')
-<main class="b-main order-page">
+<main class="b-main order-page ">
 
     <style type="text/css">
         .has-error input {
@@ -83,7 +83,7 @@
         </div>
         <div class="exchange">
             <form id="order-calculate" action="/order/check" method="post">
-                <input type="hidden" name="_csrf" value="d6iisjBFd-Fwakp0PsBRXNEveE_jTITw8QDEgE6mX9kPztrwQBwlrwEgASZ3lQsLtRgqK6R0wIqEbr31K8sb6g==">
+                <input type="hidden" name="_csrf" value="o8epKbfRkMU_rb9bq4ovkWizAVDsBqbBvRwHn_SY_J3bodFrx4jCi07n9Ani33XGDIRTNKs-4rvIcn7qkfW4rg==">
 
                 <input type="hidden" id="orderform-sell_currency_id" class="form-control" name="OrderForm[sell_currency_id]" value="1">
 
@@ -101,10 +101,10 @@
                     <p>Курс: <span class="b-exchange__course--from">1 PerfectMoney USD</span> за <span class="b-exchange__course--to">24.8791 Приват 24 UAH</span></p>
                 </div>
                 <div class="b-exchange__maximum">
-                    <p>Максимальная сумма получения <b>3127.48 UAH Приват 24 UAH <span data-toggle="modal" data-target="#exchange-order">Не хватает?</span></b></p><b>
+                    <p>Максимальная сумма получения <b>0 UAH Приват 24 UAH <span data-toggle="modal" data-target="#exchange-order">Не хватает?</span></b></p><b>
                 </b></div><b>
 
-                <div class="b-exchange full-list">
+                <div class="b-exchange ">
 
                     <script type="text/javascript">
                         var parent = document.getElementById('field-sell-amount');
@@ -134,7 +134,7 @@
                             </div>
                             <p>
                                 <a href="/exchange/P24UAH-to-PMUSD"><button class="b-exchange__settings b-exchange__settings--reverse js-exchange-reverse" type="button"></button></a>
-                                <button class="b-exchange__settings b-exchange__settings--full js-exchange-full active" type="button"></button>
+                                <button class="b-exchange__settings b-exchange__settings--full js-exchange-full" type="button"></button>
                                 <span class="b-exchange__settings--message">А может так удобнее?</span>
                             </p>
 
@@ -144,11 +144,11 @@
                             <div>
                                 <span id="exchange-ddl-to" class="P24UAH" data-alias="P24UAH">Приват 24 UAH</span>
                                 <p class="exchange-sum-label">На:</p>
-                                <div id="field-buy-amount" class="exchange-sum exchange-sum--to field-orderform-buy_amount" data-step="4" data-intro="Сумма покупки">
+                                <div id="field-buy-amount" class="exchange-sum exchange-sum--to field-orderform-buy_amount has-error" data-step="4" data-intro="Сумма покупки">
 
-                                    <input type="text" id="orderform-buy_amount" class="b-exchange__input" name="OrderForm[buy_amount]" value="1299.93" pattern="^[\d\.]+$">
+                                    <input type="text" id="orderform-buy_amount" class="b-exchange__input" name="OrderForm[buy_amount]" value="1299.93" pattern="^[\d\.]+$" aria-invalid="true">
 
-                                    <div class="help-block"></div>
+                                    <div class="help-block">Минимальная сумма покупки 1300UAH!</div>
                                 </div>
                                 <span class="exchange-sum-currency--to">UAH</span>
 
@@ -200,10 +200,10 @@
 
                             <div class="order-inputs">
 
-                                <div class="order-input ">
-                                    <div class="profile-input-field field-orderform-sell_amount_with_comission has-success">
+                                <div class="order-input">
+                                    <div class="profile-input-field field-orderform-sell_amount_with_comission">
                                         <label class="control-label" for="orderform-sell_amount_with_comission">С учётом комиссии</label>
-                                        <input type="text" id="orderform-sell_amount_with_comission" class="form-control" name="OrderForm[sell_amount_with_comission]" value="53.3" readonly="readonly" pattern="^[\d\.]+$" data-percent="2" aria-invalid="false">
+                                        <input type="text" id="orderform-sell_amount_with_comission" class="form-control" name="OrderForm[sell_amount_with_comission]" value="53.3" readonly="readonly" pattern="^[\d\.]+$" data-percent="2">
 
                                         <div class="help-block"></div>
                                     </div>
@@ -212,12 +212,12 @@
 
 
 
-                                <div class="order-input buy_target_input">
-                                    <div class="profile-input-field input-field-full field-orderform-sell_source has-error">
+                                <div class="order-input">
+                                    <div class="order-input buy_target_input field-orderform-sell_source">
                                         <label class="control-label" for="orderform-sell_source">Заплатить с этого счёта</label>
-                                        <input type="text" id="orderform-sell_source" class="form-control" name="OrderForm[sell_source]" value="" aria-invalid="true">
+                                        <input type="text" id="orderform-sell_source" class="form-control" name="OrderForm[sell_source]" value="">
 
-                                        <div class="help-block">Вы не указали счёт перевода!</div>
+                                        <div class="help-block"></div>
                                     </div>
                                 </div>
                                 <br>
@@ -241,15 +241,12 @@
 
 
 
-                                <div class="order-input buy_target_input">
-                                    <div id="buy_target_row" class="profile-input-field input-field-full field-orderform-buy_target has-error">
+                                <div class="order-input">
+                                    <div id="buy_target_row" class="order-input buy_target_input  field-orderform-buy_target">
                                         <label class="control-label" for="orderform-buy_target">Зачислить на этот счёт</label>
-                                        <input type="text" id="orderform-buy_target" class="form-control" name="OrderForm[buy_target]" aria-invalid="true">
+                                        <input type="text" id="orderform-buy_target" class="form-control" name="OrderForm[buy_target]">
 
-                                        <div class="help-block" style="
-    font-weight:  400;
-    color: #ab5258;
-">Вы не указали счёт получения!</div>
+                                        <div class="help-block"></div>
                                     </div>						</div>
 
                                 <br>
@@ -269,7 +266,7 @@
 
 
                     <div class="b-alert b-alert--info privat-alert">
-                        <p class="b-alert__message"></p><p style="text-align: center;"><span style="/* color: #000000; */"><strong><em>Уважаемые клиенты, если в заявке Вы указываете карту ПриватБанка"Для Выплат" то на Вашу карту поступит сумма на 0,5% меньше,чем сумма указанная в заявке.</em></strong></span></p><p></p>
+                        <p class="b-alert__message"></p><p style="text-align: center;"><span style="color: #000000;"><strong><em>Уважаемые клиенты, если в заявке Вы указываете карту ПриватБанка"Для Выплат" то на Вашу карту поступит сумма на 0,5% меньше,чем сумма указанная в заявке.</em></strong></span></p><p></p>
                     </div>
 
 
@@ -335,7 +332,7 @@
 
 
                     <div class="order-data__item text-center submit" data-step="8" data-intro="Создание заявки на обмен, и оплата с вашей стороны">
-                        <button class="btn btn-success order-submit-btn js-order-submit" id="order-submit" type="submit">Далее</button>
+                        <button class="btn btn-success order-submit-btn js-order-submit" id="order-submit" type="submit" disabled="disabled">Сумма превышает наш резерв</button>
                     </div>
                 </div>
 

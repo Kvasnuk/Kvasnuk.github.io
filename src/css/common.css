@@ -338,7 +338,7 @@ border-radius: 50%;
     line-height: 18px;
 }
 
-.b-alert--info .b-alert__message p,.b-alert--info .b-alert__message p span{
+.b-alert--info .b-alert__message p,.b-alert--info  p span{
     color: #427892 !important;
 }
 .b-alert--info.circle-icon:before{
@@ -367,7 +367,7 @@ border-radius: 50%;
 .alert-green .b-alert__message{
     color: #35663b;
 }
-.alert-green  p,.alert-green  p span{
+.alert-green  p,.alert-green  p span, .alert-green  p em{
     color: #35663b !important;
 }
 
@@ -387,7 +387,7 @@ border-radius: 50%;
     color: #a94442;
     letter-spacing: 0.96px;
 }
-.alert-red p,.alert-red p span{
+.alert-red p,.alert-red p span, .alert-red p em{
     color:#a94442 !important;
 }
 
