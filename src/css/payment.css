@@ -1,0 +1,91 @@
+.payment-success h1{
+    color:#4fb149;
+    position: relative;
+    padding-top:60px;
+    margin-bottom: 50px;
+}
+.payment-fail  h1{
+    color:#a94442;
+    position: relative;
+    padding-top:60px;
+    margin-bottom: 50px;
+}
+.payment-success h1:before{
+    content:'';
+    width: 50px;
+    height:50px;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    margin:0 auto;
+    background:url("../images/correct-symbol.svg") no-repeat center center;
+    background-size: 50px 50px;
+
+}
+.payment-fail h1:before{
+    content:'';
+    width: 50px;
+    height:50px;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    margin:0 auto;
+    background:url("../images/attention.svg") no-repeat center center;
+    background-size: 50px 50px;
+
+}
+.payment-success img,.payment-fail img {
+    display: none;
+}
+
+.payment-success .text,.payment-fail .text{
+    text-align: center;
+    font-size: 18px;
+}
+.payment-success button,.payment-fail button{
+    min-width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border:0;
+    -webkit-appearance: none;
+    outline: none;
+    transition:0.3s;
+    font-family: "Fira Sans";
+    font-size: 21px;
+    font-weight: 500;
+    padding: 0 25px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.payment-fail button{
+    box-shadow: 0 3px 0 #651c1b;
+    background-color: #a94442;
+    color:#fff;
+}
+.payment-fail button:hover{
+    box-shadow: 0 3px 0 #651c1b;
+    background-color: #c9514f;
+}
+.payment-fail button:active{
+    box-shadow: 0 0 0 #2d7c30;
+    background-color: #c9514f;
+}
+
+.payment-success button{
+    box-shadow: 0 3px 0 #2d7c30;
+    background-color: #4cae50;
+    color:#fff;
+}
+.payment-success button:hover{
+    box-shadow: 0 3px 0 #2d7c30;
+    background-color: #57c65b;
+}
+.payment-success button:active{
+    box-shadow: 0 0 0 #2d7c30;
+    background-color: #57c65b;
+}

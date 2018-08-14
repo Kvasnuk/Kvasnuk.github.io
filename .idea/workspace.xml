@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/css/order-page.css" afterPath="$PROJECT_DIR$/src/css/order-page.css" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" afterPath="$PROJECT_DIR$/dist/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/css/z-query-media.css" afterPath="$PROJECT_DIR$/src/css/z-query-media.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="exchange-new.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/html/exchange-new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+            <state relative-caret-position="414">
+              <caret line="86" column="46" lean-forward="false" selection-start-line="85" selection-start-column="15" selection-end-line="86" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#main#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#b#0;n#form#0;n#div#0;n#div#1;n#div#2;n#main#0;n#!!top" expanded="true" />
@@ -42,21 +43,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order-page.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/css/order-page.css">
+      <file leaf-file-name="exchange-new.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exchange-new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="365" column="23" lean-forward="false" selection-start-line="365" selection-start-column="23" selection-end-line="365" selection-end-column="23" />
+            <state relative-caret-position="-5238">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exchange-application.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/exchange-application.html">
+      <file leaf-file-name="fail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/fail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="24" />
+            <state relative-caret-position="36">
+              <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="z-query-media.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="496" column="28" lean-forward="false" selection-start-line="496" selection-start-column="28" selection-end-line="496" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payment.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/payment.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="success.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/success.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="status-result-page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/status-result-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order-page.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/order-page.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="364" column="15" lean-forward="false" selection-start-line="364" selection-start-column="15" selection-end-line="364" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -73,7 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bg-currency-icon--yandex</find>
       <find>btn-exchange-status</find>
       <find>js-exchange-currency-</find>
       <find>-1</find>
@@ -101,8 +161,9 @@
       <find>b-exchange__course</find>
       <find>form</find>
       <find>&lt;form</find>
-      <find>exchange-currency-from</find>
       <find>order-form</find>
+      <find>exchange-currency-from</find>
+      <find>576</find>
     </findStrings>
     <replaceStrings>
       <replace>.home-template</replace>
@@ -122,9 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/html/reviews.html" />
-        <option value="$PROJECT_DIR$/upload.php" />
-        <option value="$PROJECT_DIR$/footer.html" />
         <option value="$PROJECT_DIR$/src/css/check-amounts.css" />
         <option value="$PROJECT_DIR$/src/html/apply-code.html" />
         <option value="$PROJECT_DIR$/src/html/status-page.html" />
@@ -169,10 +227,13 @@
         <option value="$PROJECT_DIR$/src/css/common.css" />
         <option value="$PROJECT_DIR$/src/html/test-order-page.html" />
         <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
-        <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
         <option value="$PROJECT_DIR$/src/html/exchange-new.html" />
         <option value="$PROJECT_DIR$/src/css/order-page.css" />
+        <option value="$PROJECT_DIR$/src/html/success.html" />
+        <option value="$PROJECT_DIR$/src/html/fail.html" />
+        <option value="$PROJECT_DIR$/src/css/payment.css" />
+        <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
       </list>
     </option>
   </component>
@@ -249,6 +310,12 @@
               <item name="sevenmoney" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sevenmoney" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
@@ -333,12 +400,12 @@
       <workItem from="1532546650315" duration="4098000" />
       <workItem from="1533360303044" duration="406000" />
       <workItem from="1533662810828" duration="17448000" />
-      <workItem from="1534106339332" duration="3470000" />
+      <workItem from="1534106339332" duration="7245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400888000" />
+    <option name="totallyTimeSpent" value="404663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="52" width="1865" height="1056" extended-state="6" />
@@ -407,32 +474,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/css/faq.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/exchange-application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="162" column="23" lean-forward="false" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/waiting-verification.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/icon-coundown.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/images/download.svg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -520,13 +561,6 @@
     <entry file="file://$PROJECT_DIR$/src/images/close-white.svg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/status-result-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
@@ -666,14 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6120">
-          <caret line="340" column="50" lean-forward="false" selection-start-line="340" selection-start-column="50" selection-end-line="340" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/reset-password.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
@@ -702,14 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -726,19 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/exchange-new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#b#0;n#form#0;n#div#0;n#div#1;n#div#2;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#1;n#b#0;n#form#0;n#div#0;n#div#1;n#div#2;n#main#0;n#!!top" expanded="true" />
-            <marker date="1534112176870" expanded="true" signature="8331:8398" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/html/order-page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
@@ -749,8 +754,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/order-page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="365" column="23" lean-forward="false" selection-start-line="365" selection-start-column="23" selection-end-line="365" selection-end-column="23" />
+        <state relative-caret-position="627">
+          <caret line="364" column="15" lean-forward="false" selection-start-line="364" selection-start-column="15" selection-end-line="364" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/exchange-new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="86" column="46" lean-forward="false" selection-start-line="85" selection-start-column="15" selection-end-line="86" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#b#0;n#form#0;n#div#0;n#div#1;n#div#2;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#1;n#b#0;n#form#0;n#div#0;n#div#1;n#div#2;n#main#0;n#!!top" expanded="true" />
+            <marker date="1534112176870" expanded="true" signature="8331:8398" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exchange-new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5238">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/status-result-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/fail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/payment.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="496" column="28" lean-forward="false" selection-start-line="496" selection-start-column="28" selection-end-line="496" selection-end-column="28" />
           <folding />
         </state>
       </provider>
