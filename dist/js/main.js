@@ -1,58 +1,59 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
 
-   /*exchange form cookies*/
+    /*exchange form cookies*/
 
-    if(getCookie('fullSizeType') !== undefined && $('.b-exchange').length > 0){
+    if (getCookie('fullSizeType') !== undefined && $('.b-exchange').length > 0) {
         $('.b-exchange').addClass('full-list');
         $('.js-exchange-full').addClass('active');
+        setOrderPageListsPosition();
     }
 
-    function checkVIsidetExchangePage(){
+    function checkVIsidetExchangePage() {
         var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24);
         var exchangePage = window.location.pathname;
-        console.log(exchangePage);
-        if(getCookie('isVisited') !== undefined && exchangePage.indexOf('exchange') >= 0){
+        if (getCookie('isVisited') !== undefined && exchangePage.indexOf('exchange') >= 0) {
             $('body').addClass('isVisited');
-        }else if(getCookie('isVisited') == undefined && exchangePage.indexOf('exchange') >= 0){
+        } else if (getCookie('isVisited') == undefined && exchangePage.indexOf('exchange') >= 0) {
             document.cookie = "isVisited=isVisited; path=/; expires=" + date.toUTCString();
         }
     }
+
     checkVIsidetExchangePage();
 
     /*exchange form cookies*/
 
 
-
-    function getDayAndTime(){
+    function getDayAndTime() {
         var currentTime = {
             day: parseInt(moment().tz("Europe/Kiev").format('DD')),
             time: parseInt(moment().tz("Europe/Kiev").format('HH')),
         }
         return currentTime;
     };
-    function checkWorkingTime(){
+
+    function checkWorkingTime() {
         var currentKievTime = getDayAndTime();
-        if(currentKievTime.time >= 0 && currentKievTime.time < 9 ){
-             $('.site-work-switch').addClass('switch-close');
-             $('body').addClass('is_closed');
+        if (currentKievTime.time >= 0 && currentKievTime.time < 9) {
+            $('.site-work-switch').addClass('switch-close');
+            $('body').addClass('is_closed');
         }
-        setTimeout(function(){
+        setTimeout(function () {
             $('.site-work-switch').addClass('show');
         });
     };
 
-    function showSleepingMessage(){
+    function showSleepingMessage() {
         var currentKievTime = getDayAndTime(),
             messageIsClose = getCookie('isClose'),
             checkDate = getCookie('currentDate');
-        if(currentKievTime.time >= 0 && currentKievTime.time < 9 ){
-            if(messageIsClose === undefined ){
+        if (currentKievTime.time >= 0 && currentKievTime.time < 9) {
+            if (messageIsClose === undefined) {
                 $('#work-time-message').fadeIn();
-            }else if(messageIsClose !== undefined && checkDate != currentKievTime.day){
+            } else if (messageIsClose !== undefined && checkDate != currentKievTime.day) {
                 $('#work-time-message').fadeIn();
             }
-        }else{
+        } else {
             deleteCookie('isClose');
             deleteCookie('currentDate');
         }
@@ -60,41 +61,41 @@ jQuery(document).ready(function($){
 
     showSleepingMessage();
     checkWorkingTime();
-$('.js-time-message__close').click(function(){
-    var currentKievTime = getDayAndTime();
-    var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24);
-    document.cookie = "isClose=close; path=/; expires=" + date.toUTCString();
-    document.cookie = "currentDate="+ currentKievTime.day +"; path=/; expires=" + date.toUTCString();
-    $('#work-time-message').fadeOut();
-});
+    $('.js-time-message__close').click(function () {
+        var currentKievTime = getDayAndTime();
+        var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24);
+        document.cookie = "isClose=close; path=/; expires=" + date.toUTCString();
+        document.cookie = "currentDate=" + currentKievTime.day + "; path=/; expires=" + date.toUTCString();
+        $('#work-time-message').fadeOut();
+    });
 
     /*home page slider init*/
-    if($('.owl-carousel')){
+    if ($('.owl-carousel')) {
         $('.owl-carousel').owlCarousel({
-            items:4,
-            margin:25,
-            loop:true,
-            center:false,
-            dotsEach:true,
-            autoplay:true,
-            autoplayHoverPause:true,
-            responsive:{
-                0:{
-                    items:1,
-                    margin:15,
+            items: 4,
+            margin: 25,
+            loop: true,
+            center: false,
+            dotsEach: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 15,
                 },
-                600:{
-                    items:2,
-                    center:true,
+                600: {
+                    items: 2,
+                    center: true,
                 },
-                1000:{
-                    items:3,
-                    margin:25,
-                    center:true,
+                1000: {
+                    items: 3,
+                    margin: 25,
+                    center: true,
                 },
-                1680:{
-                    items:4,
-                    center:true,
+                1680: {
+                    items: 4,
+                    center: true,
                 }
             }
         });
@@ -102,16 +103,16 @@ $('.js-time-message__close').click(function(){
 
 
     /*check page and add template class for body tag*/
-    function checkHomePage(){
-    var location = window.location.pathname;
-    if('/' === location){
-        $('body').addClass('home-template');
-    }else if(location.indexOf('/profile') === 0){
-        $('body').addClass('page-template is_authorizated');
-    }else{
-        $('body').addClass('page-template');
+    function checkHomePage() {
+        var location = window.location.pathname;
+        if ('/' === location) {
+            $('body').addClass('home-template');
+        } else if (location.indexOf('/profile') === 0) {
+            $('body').addClass('page-template is_authorizated');
+        } else {
+            $('body').addClass('page-template');
+        }
     }
-}
 
     /*cookie short functions*/
     function getCookie(name) {
@@ -120,6 +121,7 @@ $('.js-time-message__close').click(function(){
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
+
     function setCookie(name, value, options) {
         options = options || {};
 
@@ -157,47 +159,53 @@ $('.js-time-message__close').click(function(){
 
     /*----------------------------*/
 
-    function checkCurrencyCount(){
-        if($('.js-exchange-currency-from') && $('.js-exchange-currency-from').length > 10){
-              $('#exchange-currency-from').addClass('scroll-items');
+    function checkCurrencyCount() {
+        if ($('.js-exchange-currency-from') && $('.js-exchange-currency-from').length > 10) {
+            $('#exchange-currency-from').addClass('scroll-items');
         }
-        if($('.js-exchange-currency-to') && $('.js-exchange-currency-to').length > 10){
+        if ($('.js-exchange-currency-to') && $('.js-exchange-currency-to').length > 10) {
             $('#exchange-currency-to').addClass('scroll-items');
         }
     }
+
     checkCurrencyCount();
-    function changeListCurrency(self,listClass){
+
+    function changeListCurrency(self, listClass) {
         $(listClass).removeClass('active');
         self.addClass('active');
 
     };
-    function getCurrentCurrency(self, part){
+
+    function getCurrentCurrency(self, part) {
         var currencyClass = self.data('alias'),
             currencyTitle = self.text(),
-            $currencyPart = $('#exchange-ddl-'+ part);
-            $currencyPart.removeClass().addClass(currencyClass);
-            $currencyPart.text(currencyTitle);
-            if($('#account-message-'+part.length>0)){
-                changeAccountMessageCurrency( currencyTitle,part);
-            }
+            $currencyPart = $('#exchange-ddl-' + part);
+        $currencyPart.removeClass().addClass(currencyClass);
+        $currencyPart.text(currencyTitle);
+        if ($('#account-message-' + part.length > 0)) {
+            changeAccountMessageCurrency(currencyTitle, part);
+        }
     }
-    function checkBitcoinActiveClass(){
-        if($('.b-exchange-currency__item[data-alias="BTC"]')){
-            if( $('.b-exchange-currency__item[data-alias="BTC"]').hasClass('active')){
+
+    function checkBitcoinActiveClass() {
+        if ($('.b-exchange-currency__item[data-alias="BTC"]')) {
+            if ($('.b-exchange-currency__item[data-alias="BTC"]').hasClass('active')) {
                 $('.b-statistic').addClass('bitcoin-active');
-            }else{
+            } else {
                 $('.b-statistic').removeClass('bitcoin-active');
             }
         }
 
 
     }
-    function checkCurrencyFullSizeCookie(){
-        if(getCookie('fullSizeBtn') === undefined){
+
+    function checkCurrencyFullSizeCookie() {
+        if (getCookie('fullSizeBtn') === undefined) {
             $('.b-exchange__settings--message').fadeIn();
         }
     }
-    function exchangeReverseValue(from, to){
+
+    function exchangeReverseValue(from, to) {
         var $reverseFrom = $(from),
             $reverseTo = $(to),
             $reverseFromValue = $reverseFrom.text(),
@@ -205,203 +213,224 @@ $('.js-time-message__close').click(function(){
         $reverseFrom.text($reverseToValue);
         $reverseTo.text($reverseFromValue);
     }
-    function changeAccountMessageCurrency(title, part){
-         $('#account-message-'+ part).text(title);
+
+    function changeAccountMessageCurrency(title, part) {
+        $('#account-message-' + part).text(title);
     }
 
-    function disableOpositeActiveItem(listFrom,listTo){
-        if($(listFrom).length > 0){
-          var activeItemAlias =  $(listFrom + ' .active').data('alias');
-              $(listTo + " li").removeClass('currency_disabled');
-              $(listTo + " li[data-alias='"+activeItemAlias+"']").addClass('currency_disabled');
-        }else{
+    function disableOpositeActiveItem(listFrom, listTo) {
+        if ($(listFrom).length > 0) {
+            var activeItemAlias = $(listFrom + ' .active').data('alias');
+            $(listTo + " li").removeClass('currency_disabled');
+            $(listTo + " li[data-alias='" + activeItemAlias + "']").addClass('currency_disabled');
+        } else {
             return false;
         }
     }
 
-        function disableCurrencyItems(){
-            disableOpositeActiveItem('#exchange-currency-from','#exchange-currency-to');
-            disableOpositeActiveItem('#exchange-currency-to','#exchange-currency-from');
-        }
-            disableCurrencyItems();
+    function disableCurrencyItems() {
+        disableOpositeActiveItem('#exchange-currency-from', '#exchange-currency-to');
+        disableOpositeActiveItem('#exchange-currency-to', '#exchange-currency-from');
+    }
+
+    disableCurrencyItems();
 
     checkHomePage();
-    $('.js-exchange-currency-from').click(function(e){
+    $('.js-exchange-currency-from').click(function (e) {
         var self = $(this);
-        if(self.hasClass('currency_disabled')){
+        if (self.hasClass('currency_disabled')) {
             return false;
         }
-        changeListCurrency(self,'.js-exchange-currency-from');
+        changeListCurrency(self, '.js-exchange-currency-from');
         getCurrentCurrency(self, 'from');
         checkBitcoinActiveClass();
-        disableOpositeActiveItem('#exchange-currency-from','#exchange-currency-to');
+        disableOpositeActiveItem('#exchange-currency-from', '#exchange-currency-to');
 
 
     });
-    $('.js-exchange-currency-to').click(function(e){
+    $('.js-exchange-currency-to').click(function (e) {
         var self = $(this);
-        if(self.hasClass('currency_disabled')){
+        if (self.hasClass('currency_disabled')) {
             return false;
         }
-        changeListCurrency(self,'.js-exchange-currency-to');
+        changeListCurrency(self, '.js-exchange-currency-to');
         getCurrentCurrency(self, 'to');
         checkBitcoinActiveClass();
-        disableOpositeActiveItem('#exchange-currency-to','#exchange-currency-from');
+        disableOpositeActiveItem('#exchange-currency-to', '#exchange-currency-from');
     });
-    $('.js-exchange-reverse').click(function(e){
+    $('.js-exchange-reverse').click(function (e) {
         var $fromItem = $('#exchange-ddl-from'),
             $toItem = $('#exchange-ddl-to'),
             $fromInput = $('#exchange-from-input'),
             $toInput = $('#exchange-to-input'),
             $fromInputVal = parseInt($fromInput.val()),
-            $toInputVal =   parseInt($toInput.val()),
+            $toInputVal = parseInt($toInput.val()),
 
 
             fromItemTitle = $fromItem.text(),
             toItemTitle = $toItem.text(),
             fromItemClass = $fromItem.attr('class'),
-            toItemClass= $toItem.attr('class');
-        if($fromInput.val() === ''){
-           e.preventDefault();
-           $('#exchange-from-input').addClass('error-msg');
-           setTimeout(function(){
-               $('#exchange-from-input').removeClass('error-msg');
-           },500);
-        }else{
+            toItemClass = $toItem.attr('class');
+        if ($fromInput.val() === '') {
+            e.preventDefault();
+            $('#exchange-from-input').addClass('error-msg');
+            setTimeout(function () {
+                $('#exchange-from-input').removeClass('error-msg');
+            }, 500);
+        } else {
             $fromItem.text(toItemTitle);
             $toItem.text(fromItemTitle);
             $fromInput.val($toInputVal);
-            $toInput.val( $fromInputVal);
+            $toInput.val($fromInputVal);
 
             $fromItem.removeClass().addClass(toItemClass);
             $toItem.removeClass().addClass(fromItemClass);
             $('.js-exchange-currency-from').removeClass('active');
             $('.js-exchange-currency-to').removeClass('active');
-            $(".js-exchange-currency-from[data-alias='"+toItemClass+"']").addClass('active');
-            $(".js-exchange-currency-to[data-alias='"+fromItemClass+"']").addClass('active');
+            $(".js-exchange-currency-from[data-alias='" + toItemClass + "']").addClass('active');
+            $(".js-exchange-currency-to[data-alias='" + fromItemClass + "']").addClass('active');
             disableCurrencyItems();
 
-            if($('.exchange-sum').length > 0){
-                exchangeReverseValue('.exchange-sum-currency--from','.exchange-sum-currency--to');
-                exchangeReverseValue('#account-message-from','#account-message-to');
+            if ($('.exchange-sum').length > 0) {
+                exchangeReverseValue('.exchange-sum-currency--from', '.exchange-sum-currency--to');
+                exchangeReverseValue('#account-message-from', '#account-message-to');
 
-                    var $fromInput = $('#account-number-from'),
-                        $toInput = $('#account-number-to'),
-                        $fromInputVal = $fromInput.val(),
-                        $toInputVal =   $toInput.val();
-                    if($fromInputVal !== '' || $toInputVal !== ''){
-                        $fromInput.val($toInputVal);
-                        $toInput.val($fromInputVal);
-                    }
+                var $fromInput = $('#account-number-from'),
+                    $toInput = $('#account-number-to'),
+                    $fromInputVal = $fromInput.val(),
+                    $toInputVal = $toInput.val();
+                if ($fromInputVal !== '' || $toInputVal !== '') {
+                    $fromInput.val($toInputVal);
+                    $toInput.val($fromInputVal);
+                }
             }
         }
     });
-    $( ".js-exchange-full" ).click(function() {
+    $(".js-exchange-full").click(function () {
         var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
         $(this).toggleClass('active');
         $('.b-exchange').toggleClass('full-list');
-        if(getCookie('fullSizeBtn') === undefined){
+        if (getCookie('fullSizeBtn') === undefined) {
             $('.b-exchange__settings--message').fadeOut();
             document.cookie = "fullSizeBtn=done; path=/; expires=" + date.toUTCString();
         }
-        if(getCookie('fullSizeType') === undefined){
+        if (getCookie('fullSizeType') === undefined) {
             document.cookie = "fullSizeType=full; path=/; expires=" + date.toUTCString();
         } else {
             deleteCookie('fullSizeType');
         }
+        setOrderPageListsPosition();
     });
 
 
+    function setOrderPageListsPosition() {
+        var $lists = $('#exchange-lists');
+        if ($lists.length == 1) {
+            var $listLeft = $('#exchange-currency-from');
+            var $listRight = $('#exchange-currency-to');
+            var $blockLeft = $('#exchange-list-left');
+            var $blockRight = $('#exchange-list-right');
+            if ($lists.hasClass('full-screen')) {
+                $blockLeft.height(0);
+                $blockRight.height(0);
+                $lists.removeClass('full-screen');
+            } else {
+                $blockLeft.height($listLeft.height());
+                $blockRight.height($listRight.height());
+                $lists.addClass('full-screen');
+            }
+        }
+    }
 
 
     // The function
-    var background_image_parallax = function($object, multiplier){
+    var background_image_parallax = function ($object, multiplier) {
         multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
         multiplier = 1 - multiplier;
         var $doc = $(document),
             objectTopPosition = parseInt($object.css("top"));
-        $(window).scroll(function(){
+        $(window).scroll(function () {
             var from_top = $doc.scrollTop(),
-                objectTop = objectTopPosition +(multiplier * from_top) + 'px';
-            $object.css({"top" : objectTop });
+                objectTop = objectTopPosition + (multiplier * from_top) + 'px';
+            $object.css({"top": objectTop});
         });
 
 
     };
-    $('.current-lang').click(function(e){
+    $('.current-lang').click(function (e) {
         e.preventDefault();
     });
-$('.mobile-menu__item--menu').click(function(){
-    $(this).toggleClass('open');
-$('#header-navigation').fadeToggle(400);
-});
+    $('.mobile-menu__item--menu').click(function () {
+        $(this).toggleClass('open');
+        $('#header-navigation').fadeToggle(400);
+    });
     checkBitcoinActiveClass();
-    if($('#home-banner')){
-        background_image_parallax($(".bg-currency-icon--adv"),0.5);
+    if ($('#home-banner')) {
+        background_image_parallax($(".bg-currency-icon--adv"), 0.5);
         background_image_parallax($(".bg-currency-icon--btc"), 0.65);
         background_image_parallax($(".bg-currency-icon--qiwi"), 0.3);
         background_image_parallax($(".bg-currency-icon--yandex"), 0.65);
         background_image_parallax($(".bg-currency-icon--pm"), 0.35);
     }
-    if($('.b-exchange__settings--full')){
+    if ($('.b-exchange__settings--full')) {
         checkCurrencyFullSizeCookie();
     }
 
 
-
-
     /* profile pages */
-if($('#current-time').length > 0){
-    function checkTime(i) {
-        if (i < 10) {
-            i = "0" + i;
+    if ($('#current-time').length > 0) {
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
         }
-        return i;
-    }
 
-    function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        // add a zero in front of numbers<10
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('current-time').innerHTML = h + ":" + m + ":" + s;
-        t = setTimeout(function () {
-            startTime()
-        }, 500);
-    }
-    startTime();
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('current-time').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () {
+                startTime()
+            }, 500);
+        }
+
+        startTime();
     }
 
 
     $(".upload").upload({
         action: "/upload.php",
         maxSize: 6291456,
-        label:"<span>Переместите ваш файл сюда!</span><span>Разрешение .png .jpg</span><span>Максимальный размер: 6 МБ</span>"
+        label: "<span>Переместите ваш файл сюда!</span><span>Разрешение .png .jpg</span><span>Максимальный размер: 6 МБ</span>"
     });
 
 
-if($('flipTimer')){
-    function getCountDowndate(){
-        var date = new Date();
-        date.setMinutes(date.getMinutes() + 20);
-        return date;
-    }
-
-    $('.flipTimer').flipTimer({
-        direction: 'down',
-        date:getCountDowndate(),
-        callback: function() { alert('times up!');
+    if ($('flipTimer')) {
+        function getCountDowndate() {
+            var date = new Date();
+            date.setMinutes(date.getMinutes() + 20);
+            return date;
         }
 
-    });
-}
+        $('.flipTimer').flipTimer({
+            direction: 'down',
+            date: getCountDowndate(),
+            callback: function () {
+                alert('times up!');
+            }
 
-    $('.icon-copy').hover(function(){
+        });
+    }
+
+    $('.icon-copy').hover(function () {
         var self = $(this);
-        if(self.data('toggle') === undefined) {
+        if (self.data('toggle') === undefined) {
             var curentLang = $('html').attr('lang'),
                 title = self.parent('span').text(),
                 titleLabel = 'Копировать текст - ' + title;
@@ -414,69 +443,63 @@ if($('flipTimer')){
         }
     });
 
-$('.icon-copy').click(function(){
-    var self = $(this),
-        copyText = self.parent('span').text(),
-        textInput = "<input type='text' value='"+copyText+"'>";
+    $('.icon-copy').click(function () {
+        var self = $(this),
+            copyText = self.parent('span').text(),
+            textInput = "<input type='text' value='" + copyText + "'>";
         self.append(textInput);
         self.find('input').focus().select();
         document.execCommand('copy');
         self.find('input').remove();
-});
-
-$('.js-program-code-copy').click(function(){
-    var curentTrigger = $(this).data('trigger'),
-        copyBtn = $(curentTrigger);
-        copyBtn.trigger('click');
-
-});
-
-
-
-
-
-
-/*media size functions*/
-function resizeCloseSidebar(){
-    var $profileSidebar = $('.b-profite__part--left');
-    var $sidebarToggleBtn = $('.js-toggle-mobile-sidebar');
-    if (window.matchMedia('(max-width: 1199px)').matches) {
-        if($profileSidebar.length > 0){
-            $sidebarToggleBtn.fadeIn().removeClass('open');
-            $profileSidebar.addClass('close-sidebar');
-        }
-    } else {
-        if($profileSidebar.length > 0){
-            $sidebarToggleBtn.fadeOut();
-            $profileSidebar.removeClass('close-sidebar');
-        }
-    }
-
-}
-
-
-$(window).resize(function(){
-    resizeCloseSidebar();
     });
 
-    function mediaSize() {
+    $('.js-program-code-copy').click(function () {
+        var curentTrigger = $(this).data('trigger'),
+            copyBtn = $(curentTrigger);
+        copyBtn.trigger('click');
 
+    });
+
+
+    /*media size functions*/
+    function resizeCloseSidebar() {
         var $profileSidebar = $('.b-profite__part--left');
         var $sidebarToggleBtn = $('.js-toggle-mobile-sidebar');
         if (window.matchMedia('(max-width: 1199px)').matches) {
-           if($profileSidebar.length > 0){
-               $sidebarToggleBtn.addClass('open');
-               $sidebarToggleBtn.fadeIn();
-               $sidebarToggleBtn.click(function(){
-                   $(this).toggleClass('open');
-                   $profileSidebar.toggleClass('close-sidebar');
-               });
-               setTimeout(function(){
-                   $profileSidebar.addClass('close-sidebar');
-                   $sidebarToggleBtn.removeClass('open');
+            if ($profileSidebar.length > 0) {
+                $sidebarToggleBtn.fadeIn().removeClass('open');
+                $profileSidebar.addClass('close-sidebar');
+            }
+        } else {
+            if ($profileSidebar.length > 0) {
+                $sidebarToggleBtn.fadeOut();
+                $profileSidebar.removeClass('close-sidebar');
+            }
+        }
 
-               },1500);
-           }
+    }
+
+
+    $(window).resize(function () {
+        resizeCloseSidebar();
+    });
+
+    function mediaSize() {
+        var $sidebarToggleBtn = $('.js-toggle-mobile-sidebar');
+        if (window.matchMedia('(max-width: 1199px)').matches) {
+            if ($('body').find('.b-profite__part--left').length > 0) {
+                $sidebarToggleBtn.addClass('open');
+                $sidebarToggleBtn.fadeIn();
+                $sidebarToggleBtn.click(function () {
+                    $(this).toggleClass('open');
+                    $('body').find('.b-profite__part--left').toggleClass('close-sidebar');
+                });
+                setTimeout(function () {
+                    $('body').find('.b-profite__part--left').addClass('close-sidebar');
+                    $sidebarToggleBtn.removeClass('open');
+
+                }, 1500);
+            }
 
 
         } else {
@@ -484,11 +507,11 @@ $(window).resize(function(){
         }
     };
     mediaSize();
-    $('.js-message-close').click(function(){
+    $('.js-message-close').click(function () {
         $(this).parent('div').fadeOut();
     });
 
-    $('.js-time-message__close').click(function(){
+    $('.js-time-message__close').click(function () {
         $(this).parent('div').fadeOut();
     });
 

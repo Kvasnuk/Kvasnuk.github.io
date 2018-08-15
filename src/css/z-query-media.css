@@ -496,6 +496,9 @@
         padding-right: 15px;
         margin-bottom: 15px;
     }
+    .b-exchange-template--submit {
+        padding-top: 10px;
+    }
 }
 @media screen and (max-width: 480px) {
     .banner-subtitle {

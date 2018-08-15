@@ -501,6 +501,20 @@ min-width: 100px;
 .b-personal--right{
     padding-left: 20px;
 }
+.b-personal .profile-input-field,.user-invoice .profile-input-field{
+    flex-direction:column;
+    align-items: flex-start;
+}
+.b-personal .profile-input-field input,.user-invoice .profile-input-field input{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
 .user-phone-field{
     display: block;
 }
@@ -670,6 +684,10 @@ min-width: 100px;
 }
 .profit-header-item{
     color:#fff;
+}
+.b-program-profit_header .profit-header-item button{
+    width: 200px;
+    margin:0 5px 10px;
 }
 .profit-procent-block{
     display: flex;

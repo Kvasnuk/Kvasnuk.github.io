@@ -451,3 +451,47 @@
     width: 20px;
     height: 15px;
 }
+
+
+
+
+/*new order page list*/
+
+.order-page #exchange-lists #exchange-currency-from{
+    left:-16px;
+    top:146px;
+    transform: translate(0);
+    animation: none;
+}
+.order-page #exchange-lists #exchange-currency-to{
+    right:-16px;
+    top:146px;
+    transform: translate(0);
+    animation: none;
+}
+
+#exchange-list-left,#exchange-list-right{
+    width: 50%;
+    float: left;
+    height: 0;
+}
+#exchange-list-right:after{
+    content:'';
+    clear: both;
+}
+.order-page #exchange-lists.full-screen #exchange-currency-from,.order-page #exchange-lists.full-screen #exchange-currency-to{
+    top: 343px;
+    overflow: hidden;
+    z-index: 9;
+    border-radius: 0;
+    width: 400px;
+}
+.order-page #exchange-lists.full-screen #exchange-currency-from {
+    left: 170px;
+}
+.order-page #exchange-lists.full-screen #exchange-currency-to {
+    right: 170px;
+}
+.order-page #exchange-lists.full-screen #exchange-currency-from li,.order-page #exchange-lists.full-screen #exchange-currency-to li{
+    border-radius: 0;
+}
