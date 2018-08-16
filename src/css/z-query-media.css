@@ -111,8 +111,27 @@
     .b-exchange__settings--message{
         display: none !important;
     }
+    #exchange-lists {
+        position: absolute;
+        width: 800px;
+        left: 0;
+        right: 0;
+        margin:0 auto;
+    }
+    .order-page #exchange-lists.full-screen #exchange-currency-from,.order-page #exchange-lists #exchange-currency-from {
+        left: 0;
+        width: 50%;
+    }
+    .order-page #exchange-lists.full-screen #exchange-currency-to,.order-page #exchange-lists #exchange-currency-to {
+        right: 0;
+        width: 50%;
+    }
 }
 @media screen and (max-width: 991px) {
+    #exchange-lists {
+        width: 690px;
+
+    }
     .b-header__nav_item {
         font-size: 15px;
         padding: 7px 7px;
@@ -215,7 +234,12 @@
 
 }
 @media screen and (max-width: 767px) {
-
+    #exchange-lists {
+        width: calc(100% - 30px);
+    }
+    .order-page #exchange-lists.full-screen #exchange-currency-from,.order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists.full-screen #exchange-currency-to,.order-page #exchange-lists #exchange-currency-to {
+        top: 325px;
+    }
     #mobile-menu{
         display: flex;
         flex-direction: row;
@@ -381,6 +405,23 @@
 
 }
 @media screen and (max-width: 639px) {
+    .b-exchange__course--to{
+        display: block;
+    }
+
+    .b-exchange__maximum p span {
+        display: block;
+    }
+
+ .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page #exchange-lists.full-screen #exchange-currency-from, .order-page #exchange-lists.full-screen #exchange-currency-to {
+            top: 380px;
+        }
+
+
+
+
+
+
     .b-header-info {
         padding: 10px 0;
     }
@@ -490,6 +531,30 @@
     }
 }
 @media screen and (max-width: 575px) {
+    .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page #exchange-lists.full-screen #exchange-currency-from, .order-page #exchange-lists.full-screen #exchange-currency-to {
+        top: 380px;
+    }
+    .order-page .b-exchange__input {
+        font-size: 18px;
+    }
+    .order-page .exchange-sum {
+        padding-right: 45px;
+    }
+    .order-page #exchange-sum-currency--from, .order-page #exchange-sum-currency--to, .order-page .exchange-sum-currency--from, .order-page .exchange-sum-currency--to  {
+        position: absolute;
+        transform: translateY(-28px);
+        font-size: 18px;
+        right: 10px;
+        color: #4cae50;
+    }
+
+
+
+
+    .b-exchange__maximum p b {
+        display: block;
+    }
+
     .payment-success h1,.payment-fail  h1{
         font-size: 22px;
         padding-left: 15px;
@@ -501,6 +566,10 @@
     }
 }
 @media screen and (max-width: 480px) {
+    .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page #exchange-lists.full-screen #exchange-currency-from, .order-page #exchange-lists.full-screen #exchange-currency-to {
+        top: 410px;
+    }
+
     .banner-subtitle {
         font-size: 14px;
         font-weight: 400;
@@ -1272,7 +1341,7 @@
     padding-right: 15px;
 }
     .order-page .b-exchange__input {
-        font-size: 27px;
+        font-size: 18px;
     }
     .order-page .exchange-sum-currency--from, .order-page .exchange-sum-currency--to,.order-page #exchange-sum-currency--from, .order-page #exchange-sum-currency--to  {
         transform: translateY(-33px);

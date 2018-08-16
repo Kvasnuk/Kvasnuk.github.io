@@ -7,7 +7,9 @@ jQuery(document).ready(function ($) {
         $('.js-exchange-full').addClass('active');
         setOrderPageListsPosition();
     }
-
+    if (window.matchMedia('(max-width: 1199px)').matches) {
+        setOrderPageListsPosition();
+    }
     function checkVIsidetExchangePage() {
         var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24);
         var exchangePage = window.location.pathname;
@@ -329,6 +331,13 @@ jQuery(document).ready(function ($) {
             var $listRight = $('#exchange-currency-to');
             var $blockLeft = $('#exchange-list-left');
             var $blockRight = $('#exchange-list-right');
+            if (window.matchMedia('(max-width: 1199px)').matches) {
+                $blockLeft.height($listLeft.height());
+                $blockRight.height($listRight.height());
+                $lists.addClass('full-screen');
+                return false;
+            }
+
             if ($lists.hasClass('full-screen')) {
                 $blockLeft.height(0);
                 $blockRight.height(0);
@@ -478,9 +487,11 @@ jQuery(document).ready(function ($) {
 
     }
 
-
     $(window).resize(function () {
         resizeCloseSidebar();
+        if (window.matchMedia('(max-width: 1199px)').matches) {
+            setOrderPageListsPosition();
+        }
     });
 
     function mediaSize() {
