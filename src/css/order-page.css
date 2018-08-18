@@ -87,6 +87,12 @@
     opacity: 0;
     animation:fadeInCourse .5s .5s linear forwards;
 }
+.isVisited .b-exchange__course{
+    transform: translateY(20px);
+    opacity: 1;
+    animation:none;
+}
+
 .b-exchange__course p{
     color: #ffffff;
     font-size: 21px;
@@ -109,6 +115,11 @@
     transform: translateY(10px);
     opacity: 0;
     animation:fadeInMaximum .5s .1s linear forwards;
+}
+.isVisited .b-exchange__maximum{
+    transform: translateY(10px);
+    opacity: 1;
+    animation:none;
 }
 .b-exchange__maximum p{
     color: #ffffff;
@@ -315,6 +326,17 @@
 
 .order-page .b-exchange-currency__item{
     font-weight: 400;
+    position: relative;
+    height: 30px;
+}
+.order-page .b-exchange-currency__item a{
+    color: #001a41;
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    padding-left: 45px;
+    left: 0;
 }
 /*.order-page .b-exchange__main_part--from, .order-page .b-exchange__main_part--to{*/
     /*padding-bottom: 10px;*/

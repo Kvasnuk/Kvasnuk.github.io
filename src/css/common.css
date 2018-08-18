@@ -523,8 +523,20 @@ border-radius: 50%;
 }
 
 
-
-
+.modal-message{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000000c7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 9999;
+}
+.no-scroll{
+    overflow: hidden !important;
+}
 
 
 

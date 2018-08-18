@@ -1,6 +1,22 @@
 jQuery(document).ready(function ($) {
-
     /*exchange form cookies*/
+// function showToastr(){
+//     toastr.options.closeButton = true;
+//     toastr.options.timeOut = 30000;
+//     toastr.info('11Have fun storming the castle!', 'Miracle Max Says');
+// }
+//     showToastr();
+
+
+
+
+
+    $('.modal-message .close').click(function(){
+        $('.modal-message').fadeOut();
+        $('body').removeClass('no-scroll');
+    });
+
+
 
     if (getCookie('fullSizeType') !== undefined && $('.b-exchange').length > 0) {
         $('.b-exchange').addClass('full-list');

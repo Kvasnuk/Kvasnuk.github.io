@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="vendor/counter/css/flipTimer.css">
     <link rel="stylesheet" href="vendor/counter/css/flipTimer.css">
     <link rel="stylesheet" href="vendor/upload/upload.css">
+    <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
-
 </head>
 <body class="page-template">
 <header>
@@ -119,7 +119,7 @@
     <button class="b-profile__menu_btn js-toggle-mobile-sidebar"></button>
 </header>
 
-<main class="b-main order-page">
+<main class="b-main order-page" >
     <div class="container"></div>
     <style type="text/css">
         .has-error input {
@@ -128,7 +128,7 @@
         }
     </style>
 
-    <script type="text/javascript" async="" charset="UTF-8">__jivoConfigOnLoad({"widget_id":"nYOG7mbRoi","site_id":390684,"widget_color":"#4CAF50","widget_font_color":"light","widget_padding":"100","widget_height":"33","widget_orientation":"bottom","widget_mobile_orientation":"right","font_size":"14","font_family":"Arial","font_type":"normal","locale":"ru_RU","show_rate_form":1,"hide_ad":1,"secure":1,"contacts_ask":0,"style_string":"jivo_shadow jivo_rounded_corners jivo_gradient jivo_3d_effect jivo_border jivo_3px_border","chat_mode":0?"online":"offline","geoip":"UA;12;Kiev","botmode":false,"options":1016,"hide_offline":0,"build_number":"1533822826","avatar_url":"\/\/files.jivosite.com","online_widget_label":"\u041d\u0430\u043f\u0438\u0448\u0438\u0442\u0435 \u043d\u0430\u043c, \u043c\u044b \u043e\u043d\u043b\u0430\u0439\u043d!","offline_widget_label":"\u041e\u0442\u043f\u0440\u0430\u0432\u044c\u0442\u0435 \u043d\u0430\u043c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435","offline_form_text":"\u041e\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0441\u0432\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0432 \u044d\u0442\u043e\u0439 \u0444\u043e\u0440\u043c\u0435, \u043c\u044b \u043f\u043e\u043b\u0443\u0447\u0438\u043c \u0435\u0433\u043e \u043d\u0430 e-mail \u0438 \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043e\u0442\u0432\u0435\u0442\u0438\u043c!","bubble_color":"blue","callback_btn_color":"#00BCD4","base_url":"\/\/code.jivosite.com","static_host":"cdn.jivosite.com","comet":{"host":"node371.jivosite.com"},"rules":[{"name":"\u0421\u0431\u043e\u0440 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u043e\u0432 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u043e\u0444\u0444\u043b\u0430\u0439\u043d","enabled":true,"type":"all","conditions":[{"condition":"online","value":false},{"condition":"time_on_page","comparator":"greater","value":10},{"condition":"time_on_site","comparator":"greater","value":20},{"condition":"time_after_close","comparator":"greater","value":300},{"condition":"time_after_invitation","comparator":"greater","value":60}],"commands":[{"command":"open_offline","params":{"title":"\u041e\u0442\u043f\u0440\u0430\u0432\u044c\u0442\u0435 \u043d\u0430\u043c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435","message":"\u041e\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0441\u0432\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0432 \u044d\u0442\u043e\u0439 \u0444\u043e\u0440\u043c\u0435, \u0438 \u043c\u044b \u043f\u043e\u043b\u0443\u0447\u0438\u043c \u0435\u0433\u043e \u043d\u0430 e-mail \u0438 \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043e\u0442\u0432\u0435\u0442\u0438\u043c!"}}]},{"name":"\u0423\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044e\u0449\u0430\u044f \u0444\u0440\u0430\u0437\u0430","enabled":true,"type":"all","conditions":[{"condition":"online","value":true},{"condition":"time_after_first_message","comparator":"greater","value":60}],"commands":[{"command":"system_message","params":{"message":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043f\u043e\u0434\u043e\u0436\u0434\u0438\u0442\u0435. \u0421\u0435\u0439\u0447\u0430\u0441 \u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u044b \u0437\u0430\u043d\u044f\u0442\u044b, \u043d\u043e \u0441\u043a\u043e\u0440\u043e \u043a\u0442\u043e-\u043d\u0438\u0431\u0443\u0434\u044c \u043e\u0441\u0432\u043e\u0431\u043e\u0434\u0438\u0442\u0441\u044f \u0438 \u043e\u0442\u0432\u0435\u0442\u0438\u0442 \u0432\u0430\u043c!"}}]}],"typing_insight":1,"contacts_settings":{"name":{"show":true,"required":false},"email":{"show":true,"required":true},"phone":{"show":true,"required":false}},"new_visitors_insight":1,"vi_host":"chat4-1.jivosite.com","social_responce":1});</script><script type="text/javascript" async="" src="//code.jivosite.com/script/widget/nYOG7mbRoi"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script>
     function up(e, count = 5) {
         if (e.value.indexOf('.') != '-1') {
             e.value = e.value.substring(0, e.value.indexOf('.') + (count + 1));
@@ -136,347 +136,327 @@
     }
 </script>
 
-    <div class="modal fade" id="exchange-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Не хватает?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Если текущая сумма резерва меньше, чем Вам нужно, то оставьте желаемое значение и Ваш электронный адрес и мы сообщим, когда будем иметь нужную сумму.
-                    </p>
-                    <p>
-                        В том случае, если Вы получили уведомление, но до Вашего визита резерв вновь уменьшился, то разместите заявку, пожалуйста, заново.
-                    </p>
-                    <p>Спасибо за выбор нашего сервиса!</p>
-                    <form id="exchange-order-form" action="/order/reserve-notification" method="POST">
-                        <div class="form-field">
-                            <label for="currency-menu">Валюта</label>
-                            <select id="currency-menu" class="custom-select">
-                                <option value="1">PerfectMoney USD</option>
-                                <option value="2">PAYEER USD</option>
-                                <option value="3" selected="">Приват 24 UAH</option>
-                                <option value="4">Bitcoin</option>
-                                <option value="5">ПУМБ UAH</option>
-                                <option value="8">Advanced Cash USD</option>
-                                <option value="9">Яндекс Деньги RUB</option>
-                                <option value="11">QIWI RUB</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label for="user-email">Email</label>
-                            <input type="email" id="user-email" placeholder="example@mail.com">
-                            <!-- <p>Введите email - блок для ошибки</p> -->
-                        </div>
-                        <div class="form-field">
-                            <label for="user-count">Сумма</label>
-                            <input type="email" id="user-count" placeholder="1000.00">
-                            <p></p>
-                        </div>
-                    </form>
-
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" data-dismiss="modal">Отмена</button>
-                    <button type="button" class="js-send-form">Оставить заявку</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <div class="order-alert--top">
             <div class="b-alert b-alert--info circle-icon" data-step="1" data-intro="Прочтите информацию выбранного вами направления обмена">
                 <p class="b-alert__title">Обмен в данном направление происходит в ручном режиме</p>
-                <p class="b-alert__message"></p><p>После подтверждения данных заявки Вы будете перенаправлены на страницу автоматической оплаты платежной системы (мерчант). После подтверждения оплаты на указанный Вами счет будут отправлены денежные средства.</p>
+                <p class="b-alert__message"></p><p>После подтверждения данных заявки Вы будете перенаправлены на страницу автоматической оплаты платежной системы (мерчант). После подтверждения оплаты на указаный Вами счет будут отправлены денежные средства.&nbsp;</p>
                 <p>Если у Вас возникли вопросы, обращайтесь в наш онлайн-чат.</p><p></p>
             </div>
         </div>
         <div class="exchange">
-            <div id="order-form" data-pjax-container="" data-pjax-push-state="" data-pjax-timeout="1000">
+            <div id="orderform-container" data-pjax-container="" data-pjax-push-state="" data-pjax-timeout="1000">
+                <div class="modal fade" id="exchange-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Не хватает?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="exchange-order-form">
+                                    <form id="reserve-notification-form" action="/order/reserve-notification" method="post">
+                                        <input type="hidden" name="_csrf" value="LalXe9hwb9v17kEc5S5tZao5W3zQ4BpQKxmbsYiWHQIbn2dOmkc5t7qACk3cHFU15nMpF53RVwREX9na-eEkVg==">						<p>
+                                        Если текущая сумма резерва меньше, чем Вам нужно, то оставьте желаемое значение и Ваш электронный адрес и мы сообщим, когда будем иметь нужную сумму.
+                                    </p>
+                                        <p>
+                                            В том случае, если Вы получили уведомление, но до Вашего визита резерв вновь уменьшился, то разместите заявку, пожалуйста, заново.
+                                        </p>
+                                        <p>Спасибо за выбор нашего сервиса!</p>						<div class="form-field">
+                                        <label for="currency-menu">Валюта</label>
+                                        <select id="currency-menu" class="custom-select" name="ReserveNotification[currency_id]" data-field="currency_id">
+                                            <option value="1">PerfectMoney USD</option>
+                                            <option value="2">PAYEER USD</option>
+                                            <option value="3">Приват 24 UAH</option>
+                                            <option value="4">Bitcoin</option>
+                                            <option value="5" selected="">ПУМБ UAH</option>
+                                            <option value="8">Advanced Cash USD</option>
+                                            <option value="9">Яндекс Деньги RUB</option>
+                                            <option value="11">QIWI RUB</option>
+                                        </select>
+                                    </div>
+                                        <div class="form-field">
+                                            <label for="user-email">Email</label>
+                                            <input type="email" id="user-email" name="ReserveNotification[email]" placeholder="example@mail.com" data-field="email">
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="user-count">Сумма</label>
+                                            <input type="text" id="user-count" name="ReserveNotification[amount]" placeholder="1000.00" data-field="amount">
+                                        </div>
+                                        <div class="message-box">
 
+                                        </div>
+                                    </form>				</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal">Отмена</button>
+                                <button type="submit" class="js-send-form" id="submit-reserve-notification">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!--добавить блок с id="exchange-lists" со списками валют перед формой -->
-                <div id="exchange-lists">
+                <div id="exchange-lists" class="">
                     <ul id="exchange-currency-from" class="b-exchange-currency" data-step="3" data-intro="Валюта продажи">
-                        <li class="b-exchange-currency__item js-exchange-currency-from PMUSD active" data-alias="PMUSD" data-id="1">PerfectMoney USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from PRUSD " data-alias="PRUSD" data-id="2">PAYEER USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from P24UAH " data-alias="P24UAH" data-id="3">Приват 24 UAH				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from BTC " data-alias="BTC" data-id="4">Bitcoin				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from ADVCUSD " data-alias="ADVCUSD" data-id="8">Advanced Cash USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from YAMRUB " data-alias="YAMRUB" data-id="9">Яндекс Деньги RUB				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from QWRUB " data-alias="QWRUB" data-id="11">QIWI RUB				</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from PMUSD " data-alias="PMUSD" data-id="1"><a href="/exchange/PMUSD-to-PMBBUAH" data-pjax="1">PerfectMoney USD</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from PRUSD active" data-alias="PRUSD" data-id="2"><a href="/exchange/PRUSD-to-PMBBUAH" data-pjax="1">PAYEER USD</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from BTC " data-alias="BTC" data-id="4"><a href="/exchange/BTC-to-PMBBUAH" data-pjax="1">Bitcoin</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from PMBBUAH " data-alias="PMBBUAH" data-id="5"><a href="/exchange/PMBBUAH-to-PRUSD" data-pjax="1">ПУМБ UAH</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from ADVCUSD " data-alias="ADVCUSD" data-id="8"><a href="/exchange/ADVCUSD-to-PMBBUAH" data-pjax="1">Advanced Cash USD</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from YAMRUB " data-alias="YAMRUB" data-id="9"><a href="/exchange/YAMRUB-to-PMBBUAH" data-pjax="1">Яндекс Деньги RUB</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from QWRUB " data-alias="QWRUB" data-id="11"><a href="/exchange/QWRUB-to-PMBBUAH" data-pjax="1">QIWI RUB</a>
+                        </li>
                     </ul>
 
 
                     <ul id="exchange-currency-to" class="b-exchange-currency" data-step="5" data-intro="Валюта покупки">
-                        <li class="b-exchange-currency__item js-exchange-currency-to PMUSD " data-alias="PMUSD" data-id="1">PerfectMoney USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to PRUSD " data-alias="PRUSD" data-id="2">PAYEER USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to P24UAH active" data-alias="P24UAH" data-id="3">Приват 24 UAH				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to BTC " data-alias="BTC" data-id="4">Bitcoin				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to PMBBUAH " data-alias="PMBBUAH" data-id="5">ПУМБ UAH				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to ADVCUSD " data-alias="ADVCUSD" data-id="8">Advanced Cash USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to YAMRUB " data-alias="YAMRUB" data-id="9">Яндекс Деньги RUB				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to QWRUB " data-alias="QWRUB" data-id="11">QIWI RUB				</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to PMUSD " data-alias="PMUSD" data-id="1"><a href="/exchange/PRUSD-to-PMUSD" data-pjax="1">PerfectMoney USD</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to PRUSD " data-alias="PRUSD" data-id="2"><a href="/exchange/PMBBUAH-to-PRUSD" data-pjax="1">PAYEER USD</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to P24UAH " data-alias="P24UAH" data-id="3"><a href="/exchange/PRUSD-to-P24UAH" data-pjax="1">Приват 24 UAH</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to BTC " data-alias="BTC" data-id="4"><a href="/exchange/PRUSD-to-BTC" data-pjax="1">Bitcoin</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to PMBBUAH active" data-alias="PMBBUAH" data-id="5"><a href="/exchange/PRUSD-to-PMBBUAH" data-pjax="1">ПУМБ UAH</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to ADVCUSD " data-alias="ADVCUSD" data-id="8"><a href="/exchange/PRUSD-to-ADVCUSD" data-pjax="1">Advanced Cash USD</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to YAMRUB " data-alias="YAMRUB" data-id="9"><a href="/exchange/PRUSD-to-YAMRUB" data-pjax="1">Яндекс Деньги RUB</a>
+                        </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to QWRUB " data-alias="QWRUB" data-id="11"><a href="/exchange/PRUSD-to-QWRUB" data-pjax="1">QIWI RUB</a>
+                        </li>
                     </ul>
-
-
                 </div>
-
-
 
                 <form id="order-calculate" action="/order/check" method="post">
-                <input type="hidden" name="_csrf" value="FaooqAOQgeMZ-u8gkNb5Cvlj-9KItxxVcNdB_KSbwwlB-lnCYv7UonSdiRmhps94oFuwtOnYaBEnhQCwwM-BUA==">
+                    <input type="hidden" name="_csrf" value="LalXe9hwb9v17kEc5S5tZao5W3zQ4BpQKxmbsYiWHQIbn2dOmkc5t7qACk3cHFU15nMpF53RVwREX9na-eEkVg==">
 
-                <input type="hidden" id="orderform-sell_currency_id" class="form-control" name="OrderForm[sell_currency_id]" value="1">
+                    <input type="hidden" id="orderform-sell_currency_id" class="form-control" name="OrderForm[sell_currency_id]" value="2">
 
-                <input type="hidden" id="orderform-buy_currency_id" class="form-control" name="OrderForm[buy_currency_id]" value="3">
+                    <input type="hidden" id="orderform-buy_currency_id" class="form-control" name="OrderForm[buy_currency_id]" value="5">
 
 
-                <input type="hidden" id="orderform-type" class="form-control" name="OrderForm[type]" value="default">
+                    <input type="hidden" id="orderform-type" class="form-control" name="OrderForm[type]" value="default">
 
-                <input type="hidden" id="orderform-urlcourse" class="form-control" name="OrderForm[urlCourse]" value="/exchange/PMUSD-to-P24UAH">
+                    <input type="hidden" id="orderform-urlcourse" class="form-control" name="OrderForm[urlCourse]" value="/exchange/PRUSD-to-PMBBUAH">
 
-                <input type="hidden" name="form" value="order">
-                <input type="hidden" id="selectCurrency" name="OrderForm[select]" value="sell">
+                    <input type="hidden" name="form" value="order">
+                    <input type="hidden" id="selectCurrency" name="OrderForm[select]" value="sell">
 
-                <div class="b-exchange__course">
-                    <p>Курс: <span class="b-exchange__course--from">1 PerfectMoney USD</span> за <span class="b-exchange__course--to">24.8536 Приват 24 UAH</span></p>
-                </div>
-                <div class="b-exchange__maximum">
-                    <p>Максимальная сумма получения <b>10000 UAH Приват 24 UAH <span data-toggle="modal" data-target="#exchange-order">Не хватает?</span></b></p><b>
-                </b></div><b>
+                    <div class="b-exchange__course">
+                        <p>Курс: <span class="b-exchange__course--from">1 PAYEER USD</span> за <span class="b-exchange__course--to">24.7558 ПУМБ UAH</span></p>
+                    </div>
+                    <div class="b-exchange__maximum">
+                        <p>Максимальная сумма получения <b>0 UAH ПУМБ UAH <span data-toggle="modal" data-target="#exchange-order">Не хватает?</span></b></p><b>
+                    </b></div><b>
 
-                <div class="b-exchange">
+                    <div class="b-exchange full-list">
 
-                    <div class="b-exchange__main">
-                        <div class="b-exchange__main_part b-exchange__main_part--from">
-                            <div>
-                                <span id="exchange-ddl-from" class="PMUSD" data-alias="PMUSD">PerfectMoney USD</span>
-                                <p class="exchange-sum-label">Обменяю:</p>
-                                <div id="field-sell-amount" class="exchange-sum exchange-sum--from field-orderform-sell_amount" data-step="4" data-intro="Сумма покупки">
+                        <div class="b-exchange__main">
+                            <div class="b-exchange__main_part b-exchange__main_part--from">
+                                <div>
+                                    <span id="exchange-ddl-from" class="PRUSD" data-alias="PRUSD">PAYEER USD</span>
+                                    <p class="exchange-sum-label">Обменяю:</p>
+                                    <div id="field-sell-amount" class="exchange-sum exchange-sum--from field-orderform-sell_amount" data-step="4" data-intro="Сумма покупки">
 
-                                    <input type="text" id="orderform-sell_amount" class="b-exchange__input" name="OrderForm[sell_amount]" value="52.31" pattern="^[\d\.]+$">
+                                        <input type="text" id="orderform-sell_amount" class="b-exchange__input" name="OrderForm[sell_amount]" value="52.51" pattern="^[\d\.]+$">
 
-                                    <div class="help-block"></div>
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <span id="exchange-sum-currency--from">USD</span>
+
+                                    <!-- <p class="exchange-sum is-danger" data-step="2" data-intro="Сумма продажи">
+
+            <input type="text" id="exchange-from-input" class="b-exchange__input" name="OrderForm[sell_amount]" value="52.51" min="0">
+                                        <span class="exchange-sum-currency--from">USD</span>
+                                    </p> -->
                                 </div>
-                                <span id="exchange-sum-currency--from">USD</span>
+                                <p>
+                                    <a href="/exchange/PMBBUAH-to-PRUSD"><button class="b-exchange__settings b-exchange__settings--reverse js-exchange-reverse" type="button"></button></a>
+                                    <button class="b-exchange__settings b-exchange__settings--full js-exchange-full active" type="button"></button>
+                                    <span class="b-exchange__settings--message">А может так удобнее?</span>
+                                </p>
 
-                                <!-- <p class="exchange-sum is-danger" data-step="2" data-intro="Сумма продажи">
 
-        <input type="text" id="exchange-from-input" class="b-exchange__input" name="OrderForm[sell_amount]" value="52.31" min="0">
-                                    <span class="exchange-sum-currency--from">USD</span>
-                                </p> -->
                             </div>
-                            <p>
-                                <!-- <a href="/exchange/P24UAH-to-PMUSD"> --><button class="b-exchange__settings b-exchange__settings--reverse js-exchange-reverse" type="button"></button><!-- </a> -->
-                                <button class="b-exchange__settings b-exchange__settings--full js-exchange-full" type="button"></button>
-                                <span class="b-exchange__settings--message">А может так удобнее?</span>
-                            </p>
-
-
-                        </div>
-                        <div class="b-exchange__main_part b-exchange__main_part--to">
-                            <div>
-                                <span id="exchange-ddl-to" class="P24UAH" data-alias="P24UAH">Приват 24 UAH</span>
-                                <p class="exchange-sum-label">На:</p>
-                                <div id="field-buy-amount" class="exchange-sum exchange-sum--to field-orderform-buy_amount" data-step="4" data-intro="Сумма покупки">
-
-                                    <input type="text" id="orderform-buy_amount" class="b-exchange__input" name="OrderForm[buy_amount]" value="1300.09" pattern="^[\d\.]+$">
-
-                                    <div class="help-block"></div>
-                                </div>
-                                <span class="exchange-sum-currency--to">UAH</span>
-
-                                <!-- <div>
+                            <div class="b-exchange__main_part b-exchange__main_part--to">
+                                <div>
+                                    <span id="exchange-ddl-to" class="PMBBUAH" data-alias="PMBBUAH">ПУМБ UAH</span>
                                     <p class="exchange-sum-label">На:</p>
-                                    <p class="exchange-sum" data-step="4" data-intro="Сумма покупки" data-with-commission="1300.09">
+                                    <div id="field-buy-amount" class="exchange-sum exchange-sum--to field-orderform-buy_amount" data-step="4" data-intro="Сумма покупки">
 
-        <input type="text" id="exchange-to-input" class="b-exchange__input" name="OrderForm[buy_amount]" value="1300.09" min="0">
-                                        <span class="exchange-sum-currency--to">UAH</span>
+                                        <input type="text" id="orderform-buy_amount" class="b-exchange__input" name="OrderForm[buy_amount]" value="1299.93" pattern="^[\d\.]+$">
+
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <span class="exchange-sum-currency--to">UAH</span>
+
+                                    <!-- <div>
+                                        <p class="exchange-sum-label">На:</p>
+                                        <p class="exchange-sum" data-step="4" data-intro="Сумма покупки" data-with-commission="1299.93">
+
+            <input type="text" id="exchange-to-input" class="b-exchange__input" name="OrderForm[buy_amount]" value="1299.93" min="0">
+                                            <span class="exchange-sum-currency--to">UAH</span>
+                                        </p>
+                                    </div> -->
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="exchange-list-left" style="height: 0px;"></div>
+                        <div id="exchange-list-right" style="height: 0px;"></div>
+
+                        <div class="b-exchange__footer">
+                            <div class="b-exchange__footer--left">
+                                <span class="b-exchange-footer_count min-sum-from">Минимальная сумма 52.51 USD</span>
+
+                                <span class="b-exchange-footer_count max-sum-from">
+											</span>
+
+                                <span class="b-exchange-footer_count commission-sum-from">
+													Комиссия PAYEER USD = <b id="sell_amount_comission_percent">0.95</b>% (<b id="sell_amount_comission_sum">0.5</b> USD)
+											</span>
+
+                                <div class="order-inputs">
+
+                                    <div class="order-input">
+                                        <div class="profile-input-field field-orderform-sell_amount_with_comission">
+                                            <label class="control-label" for="orderform-sell_amount_with_comission">С учётом комиссии</label>
+                                            <input type="text" id="orderform-sell_amount_with_comission" class="form-control" name="OrderForm[sell_amount_with_comission]" value="53.01" pattern="^[\d\.]+$" data-percent="0.95">
+
+                                            <div class="help-block"></div>
+                                        </div>
+                                    </div>
+                                    <br>
+
+
+
+                                    <div class="order-input">
+                                        <div class="order-input buy_target_input field-orderform-sell_source">
+                                            <label class="control-label" for="orderform-sell_source">Заплатить с этого счёта</label>
+                                            <input type="text" id="orderform-sell_source" class="form-control" name="OrderForm[sell_source]">
+
+                                            <div class="help-block"></div>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <p class="account-number-container">
+                                        <span class="account-number-message">Номер кошелька Payeer USD</span>
                                     </p>
-                                </div> -->
-                            </div>
 
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-                   <!--мне нужны эти 2 блока ниже для того что бы подставлять списки на их позиции они прсто должны быть сдесь пустыми-->
-<div id="exchange-list-left"></div>
-<div id="exchange-list-right"></div>
-
-
-
-
-
-
-
-                    <div class="b-exchange__footer">
-                        <div class="b-exchange__footer--left">
-                            <span class="b-exchange-footer_count min-sum-from">Минимальная сумма 52.31 USD</span>
-
-                            <span class="b-exchange-footer_count max-sum-from">
-											</span>
-
-                            <span class="b-exchange-footer_count commission-sum-from">
-													Комиссия PerfectMoney USD = <b id="sell_amount_comission_percent">2.00</b>% (<b id="sell_amount_comission_sum">1.05</b> USD)
-											</span>
-
-                            <div class="order-inputs">
-
-                                <div class="order-input">
-                                    <div class="profile-input-field field-orderform-sell_amount_with_comission">
-                                        <label class="control-label" for="orderform-sell_amount_with_comission">С учётом комиссии</label>
-                                        <input type="text" id="orderform-sell_amount_with_comission" class="form-control" name="OrderForm[sell_amount_with_comission]" value="53.36" pattern="^[\d\.]+$" data-percent="2">
-
-                                        <div class="help-block"></div>
-                                    </div>
                                 </div>
-                                <br>
-
-
-
-                                <div class="order-input">
-                                    <div class="order-input buy_target_input field-orderform-sell_source">
-                                        <label class="control-label" for="orderform-sell_source">Заплатить с этого счёта</label>
-                                        <input type="text" id="orderform-sell_source" class="form-control" name="OrderForm[sell_source]" value="">
-
-                                        <div class="help-block"></div>
-                                    </div>
-                                </div>
-                                <br>
-
-                                <p class="account-number-container">
-                                    <span class="account-number-message">Номер кошелька Perfect Money USD</span>
-                                </p>
-
                             </div>
-                        </div>
-                        <div class="b-exchange__footer--right">
-                            <span class="b-exchange-footer_count min-sum-to">Минимальная сумма 1300UAH</span>
+                            <div class="b-exchange__footer--right">
+                                <span class="b-exchange-footer_count min-sum-to">Минимальная сумма 1300UAH</span>
 
-                            <span class="b-exchange-footer_count max-sum-to">
-													Максимальная сумма 50000UAH											</span>
-
-                            <span class="b-exchange-footer_count commission-sum-to">
+                                <span class="b-exchange-footer_count max-sum-to">
 											</span>
 
-                            <div class="order-inputs">
+                                <span class="b-exchange-footer_count commission-sum-to">
+											</span>
+
+                                <div class="order-inputs">
 
 
 
-                                <div class="order-input">
-                                    <div id="buy_target_row" class="order-input buy_target_input  field-orderform-buy_target">
-                                        <label class="control-label" for="orderform-buy_target">Зачислить на этот счёт</label>
-                                        <input type="text" id="orderform-buy_target" class="form-control" name="OrderForm[buy_target]">
+                                    <div class="order-input">
+                                        <div id="buy_target_row" class="order-input buy_target_input  field-orderform-buy_target">
+                                            <label class="control-label" for="orderform-buy_target">Зачислить на этот счёт</label>
+                                            <input type="text" id="orderform-buy_target" class="form-control" name="OrderForm[buy_target]">
 
-                                        <div class="help-block"></div>
-                                    </div>						</div>
+                                            <div class="help-block"></div>
+                                        </div>						</div>
 
-                                <br>
+                                    <br>
 
-                                <p class="account-number-container">
-                                    <span class="account-number-message">Номер карты Приват банка</span>
-                                </p>
+                                    <p class="account-number-container">
+                                        <span class="account-number-message">Указывать номер карты ПУМБ или расчетный счет который начинается c цифр 2625........</span>
+                                    </p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="order-data">
-
-
-
-
-                    <div class="b-alert b-alert--info privat-alert">
-                        <p class="b-alert__message"></p><p style="text-align: center;"><span style="color: #000000;"><strong><em>Уважаемые клиенты, если в заявке Вы указываете карту ПриватБанка"Для Выплат" то на Вашу карту поступит сумма на 0,5% меньше,чем сумма указанная в заявке.</em></strong></span></p><p></p>
-                    </div>
-
-
-                    <div class="order-data__item">
-                        <p class="b-field-checked">
-                            <input id="orderform-is_verified" type="checkbox" name="OrderForm[is_verified]" class="b-field-checked__input" value="1">
-                            <label for="orderform-is_verified" class="b-field-checked__label">
-                                Мой кошелёк Perfect Money верифицирован					</label>
-                            <span class="order-field-message">Для неверифицированных кошельков комиссия больше на 1.5%</span>
-                        </p>
-                    </div>
+                    <div class="order-data">
 
 
 
 
 
 
-                    <div class="order-data__item">
-                        <div class="profile-input-field field-orderform-first_name">
-                            <label class="control-label" for="orderform-first_name">Имя держателя карты</label>
-                            <input type="text" id="orderform-first_name" class="form-control" name="OrderForm[first_name]" value="VasylDEV" placeholder="Василий">
-
-                            <div class="help-block"></div>
-                        </div>			</div>
-
-                    <div class="order-data__item">
-                        <div class="profile-input-field field-orderform-last_name">
-                            <label class="control-label" for="orderform-last_name">Фамилия держателя карты</label>
-                            <input type="text" id="orderform-last_name" class="form-control" name="OrderForm[last_name]" value="" placeholder="Петров">
-
-                            <div class="help-block"></div>
-                        </div>			</div>
-
-                    <div class="order-data__item">
-                        <div class="profile-input-field field-orderform-phone">
-                            <label class="control-label" for="orderform-phone">Номер телефона</label>
-                            <input type="tel" id="orderform-phone" class="form-control" name="OrderForm[phone]" value="" placeholder="+380500123456" required="" pattern="+(\d){7,13}">
-
-                            <div class="help-block"></div>
-                        </div>			</div>
 
 
 
-                    <div class="order-data__item">
+
+
+
+                        <div class="order-data__item">
+                            <div class="profile-input-field field-orderform-first_name">
+                                <label class="control-label" for="orderform-first_name">Имя держателя карты</label>
+                                <input type="text" id="orderform-first_name" class="form-control" name="OrderForm[first_name]" value="VasylDEV" placeholder="Василий">
+
+                                <div class="help-block"></div>
+                            </div>			</div>
+
+                        <div class="order-data__item">
+                            <div class="profile-input-field field-orderform-last_name">
+                                <label class="control-label" for="orderform-last_name">Фамилия держателя карты</label>
+                                <input type="text" id="orderform-last_name" class="form-control" name="OrderForm[last_name]" value="" placeholder="Петров">
+
+                                <div class="help-block"></div>
+                            </div>			</div>
+
+                        <div class="order-data__item">
+                            <div class="profile-input-field field-orderform-phone">
+                                <label class="control-label" for="orderform-phone">Номер телефона</label>
+                                <input type="tel" id="orderform-phone" class="form-control" name="OrderForm[phone]" value="" placeholder="+380500123456" required="" pattern="+(\d){7,13}">
+
+                                <div class="help-block"></div>
+                            </div>			</div>
+
+
+
+                        <div class="order-data__item">
 				<span class="profile-input-field field-orderform-email required">
 <label class="control-label" for="orderform-email">Электронная почта</label>
 <input type="text" id="orderform-email" class="form-control" name="OrderForm[email]" value="kvasnuk.vasiliy@gmail.com" placeholder="you@gmail.com" aria-required="true">
 
 <div class="help-block"></div>
 </span>				<span class="order-field-message">Если вы зарегистрированы, вы получите накопительную скидку</span>
-                    </div>
+                        </div>
 
-                    <div class="order-data__item agree" data-step="7" data-intro="Согласие с нашими правилами">
-                        <p class="b-field-checked">
-                            <input type="checkbox" name="OrderForm[agree]" id="orderform-agree" class="b-field-checked__input" value="1">
-                            <label for="orderform-agree" class="b-field-checked__label">
-                                Я ознакомился и согласен с условиями
-                            </label>
-                            <span class="b-field-checked__links">
+                        <div class="order-data__item agree" data-step="7" data-intro="Согласие с нашими правилами">
+                            <p class="b-field-checked">
+                                <input type="checkbox" name="OrderForm[agree]" id="orderform-agree" class="b-field-checked__input" value="1">
+                                <label for="orderform-agree" class="b-field-checked__label">
+                                    Я ознакомился и согласен с условиями
+                                </label>
+                                <span class="b-field-checked__links">
 						<a href="/page/security">Безопасности</a> и <a href="/page/rules">Правилами</a> сайта					</span>
-                        </p>
+                            </p>
+                        </div>
+
+
+                        <div class="order-data__item text-center submit" data-step="8" data-intro="Создание заявки на обмен, и оплата с вашей стороны">
+                            <button class="btn btn-success order-submit-btn js-order-submit" id="order-submit" type="submit" disabled="disabled">Сумма превышает наш резерв</button>
+                        </div>
                     </div>
 
 
-                    <div class="order-data__item text-center submit" data-step="8" data-intro="Создание заявки на обмен, и оплата с вашей стороны">
-                        <button class="btn btn-success order-submit-btn js-order-submit" id="order-submit" type="submit">Далее</button>
-                    </div>
-                </div>
-
-            </b></form></div><b>	</b></div><b>
-    </b></div><b>
-
-
-</b></main>
+                </b></form></div><b>	</b></div><b>
+    </b></div><b>        </b></main>
 
 <footer>
    <div id="partners">
@@ -526,6 +506,7 @@
 <script src="vendor/counter/js/jquery.flipTimer.js"></script>
 <script src="vendor/moment/moment.js"></script>
 <script src="vendor/moment/moment-with-timezone.js"></script>
+<script src="/vendor/toastr/toastr.min.js"></script>
 <script src="/vendor/upload/core.js"></script>
 <script src="/vendor/upload/upload.js"></script>
 <script src="dist/js/main.js"></script>

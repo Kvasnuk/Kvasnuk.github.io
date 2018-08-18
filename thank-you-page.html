@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="vendor/counter/css/flipTimer.css">
     <link rel="stylesheet" href="vendor/counter/css/flipTimer.css">
     <link rel="stylesheet" href="vendor/upload/upload.css">
+    <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
-
 </head>
 <body class="page-template">
 <header>
@@ -236,6 +236,25 @@
             </div>
         </div>
     </div>
+
+
+
+<div class="modal-message">
+    <div class="container">
+        <div class="alert alert-info" id="alert-order-time">
+            <img src="/images/clock.png" alt="Danger. Sleep time" style="display: inline-block; width: 75px; vertical-align: middle; margin-right: 20px" /><div style="display: inline-block; vertical-align: middle">'.$worktimeText[0].'</div><a href="#" class="close big" data-dismiss="alert-time">&times;</a>
+        </div>
+
+        <div id="qiwi-create-alert" class="alert alert-warning alert-dismissible" >
+            <a href="#" class="close" data-dismiss="alert" style="font-size: 30px; font-weight: bold; color: red">&times;</a>
+            {$qiwiCreateAlertText}
+            <small class="pull-right">{$closeWindowViaText}<span class="close_timer">20</span> с</small>
+        </div>
+    </div>
+
+</div>
+
+
 </main>
 
 <footer>
@@ -286,6 +305,7 @@
 <script src="vendor/counter/js/jquery.flipTimer.js"></script>
 <script src="vendor/moment/moment.js"></script>
 <script src="vendor/moment/moment-with-timezone.js"></script>
+<script src="/vendor/toastr/toastr.min.js"></script>
 <script src="/vendor/upload/core.js"></script>
 <script src="/vendor/upload/upload.js"></script>
 <script src="dist/js/main.js"></script>
