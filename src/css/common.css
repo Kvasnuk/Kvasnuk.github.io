@@ -198,6 +198,113 @@ a.btn{
     padding: 30px 30px 20px 75px;
 }
 
+/*noty styles*/
+main #noty_layout__bottomLeft {
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+    max-width: 430px;
+}
+
+main .noty_theme__bootstrap-v4{
+    width: 100%;
+    max-width: 430px;
+    position: relative;
+    padding: 20px 45px 20px 20px;
+    z-index: 9;
+    background-color: #8c8c8c;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border:none !important;
+    border-radius: 0 !important;;
+}
+
+main .noty_theme__bootstrap-v4 .noty_body {
+    padding: 0 !important;
+    color:#fff !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+
+}
+main .noty_theme__bootstrap-v4.noty_type__success{
+   background-color: #40c356;
+
+}
+main .noty_theme__bootstrap-v4.noty_type__warning{
+   background-color: #c3c140;
+
+}
+main .noty_theme__bootstrap-v4.noty_type__error{
+    background-color: #c34240;
+
+}
+
+main .noty_theme__bootstrap-v4.noty_type__alert{
+    background-color: #8c8c8c;
+
+}
+main .noty_theme__bootstrap-v4.noty_type__info, main .noty_theme__bootstrap-v4.noty_type__information {
+    background-color: #4043c3;
+}
+
+
+
+
+
+main .noty_close_button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight:400;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 7px;
+    font-size: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    padding: 4px 0;
+    color: #8c8c8c;
+}
+
+
+
+
+
+main .noty_theme__bootstrap-v4.noty_type__success .noty_close_button{
+    color: #40c356 !important;
+
+}
+main .noty_theme__bootstrap-v4.noty_type__warning .noty_close_button{
+    background-color: #c3c140!important;
+
+}
+main .noty_theme__bootstrap-v4.noty_type__error .noty_close_button{
+   color: #c34240!important;
+
+}
+
+main .noty_theme__bootstrap-v4.noty_type__alert .noty_close_button{
+    color: #8c8c8c!important;
+
+}
+main .noty_theme__bootstrap-v4.noty_type__info .noty_close_button, main .noty_theme__bootstrap-v4.noty_type__information .noty_close_button{
+    color: #4043c3!important;
+}
+
+
+/*noty styles*/
+
+
+
+
+
+
+
+
 
 
 

@@ -342,6 +342,7 @@ jQuery(document).ready(function ($) {
 
     function setOrderPageListsPosition() {
         var $lists = $('#exchange-lists');
+        var $main = $('.b-main.order-page');
         if ($lists.length == 1) {
             var $listLeft = $('#exchange-currency-from');
             var $listRight = $('#exchange-currency-to');
@@ -351,17 +352,20 @@ jQuery(document).ready(function ($) {
                 $blockLeft.height($listLeft.height());
                 $blockRight.height($listRight.height());
                 $lists.addClass('full-screen');
+                $main.addClass('full-screen');
                 return false;
             }
 
-            if ($lists.hasClass('full-screen')) {
+            if ($main.hasClass('full-screen')) {
                 $blockLeft.height(0);
                 $blockRight.height(0);
                 $lists.removeClass('full-screen');
+                $main.removeClass('full-screen');
             } else {
                 $blockLeft.height($listLeft.height());
                 $blockRight.height($listRight.height());
                 $lists.addClass('full-screen');
+                $main.addClass('full-screen');
             }
         }
     }

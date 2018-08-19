@@ -228,6 +228,14 @@
 }
 
 
+.order-page .b-exchange__settings--full.active{
+    background-color: #fff;
+    background-image: url(../images/switch-to-full-screen-button.svg);}
+.order-page.full-screen .b-exchange__settings--full.active,.order-page.full-screen .b-exchange__settings--full{
+    background-color: #2e5fd5;
+    background-image: url(../images/resize-arrows.svg);}
+
+
 
 
 
@@ -479,19 +487,19 @@
     content:'';
     clear: both;
 }
-.order-page #exchange-lists.full-screen #exchange-currency-from,.order-page #exchange-lists.full-screen #exchange-currency-to{
+.order-page.full-screen  #exchange-lists #exchange-currency-from,.order-page.full-screen #exchange-lists #exchange-currency-to{
     top: 343px;
     overflow: hidden;
     z-index: 9;
     border-radius: 0;
     width: 400px;
 }
-.order-page #exchange-lists.full-screen #exchange-currency-from {
+.order-page.full-screen #exchange-lists #exchange-currency-from {
     left: 170px;
 }
-.order-page #exchange-lists.full-screen #exchange-currency-to {
+.order-page.full-screen #exchange-lists #exchange-currency-to {
     right: 170px;
 }
-.order-page #exchange-lists.full-screen #exchange-currency-from li,.order-page #exchange-lists.full-screen #exchange-currency-to li{
+.order-page.full-screen #exchange-lists #exchange-currency-from li,.order-page.full-screen #exchange-lists #exchange-currency-to li{
     border-radius: 0;
 }
