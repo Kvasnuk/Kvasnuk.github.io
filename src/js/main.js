@@ -6,6 +6,22 @@ jQuery(document).ready(function ($) {
 //     toastr.info('11Have fun storming the castle!', 'Miracle Max Says');
 // }
 //     showToastr();
+    if ( $('.b-main.order-page').length > 0) {
+       setExchangeLIstsMinHeight();
+    }
+    function setExchangeLIstsMinHeight(){
+        var blockStyles = '';
+        var blockHeight = 0;
+        var $listLeftHeight = $('#exchange-currency-from').height();
+        var $listRightHeight = $('#exchange-currency-to').height();
+        ($listLeftHeight > $listRightHeight ? blockHeight = $listLeftHeight  : blockHeight = $listRightHeight) ;
+        blockStyles = "<style>.order-page.full-screen #exchange-list-left,.order-page.full-screen #exchange-list-right{ min-height: "+blockHeight +"px;}</style>";
+        $('head').append(blockStyles);
+    }
+
+
+
+
 
 
 
@@ -511,6 +527,9 @@ jQuery(document).ready(function ($) {
         resizeCloseSidebar();
         if (window.matchMedia('(max-width: 1199px)').matches) {
             setOrderPageListsPosition();
+        }
+        if ( $('.b-main.order-page').length > 0) {
+            setExchangeLIstsMinHeight();
         }
     });
 
