@@ -466,13 +466,13 @@
 /*new order page list*/
 
 .order-page #exchange-lists #exchange-currency-from{
-    left:-16px;
+    left:-14px;
     top:146px;
     transform: translate(0);
     animation: none;
 }
 .order-page #exchange-lists #exchange-currency-to{
-    right:-16px;
+    right:-14px;
     top:146px;
     transform: translate(0);
     animation: none;
