@@ -25,7 +25,12 @@
 }
 
 @media screen and (max-width: 1199px) {
-    #exchange-currency-from,.full-list #exchange-currency-from,#exchange-currency-from.scroll-items{
+
+
+
+
+
+    #exchange-currency-from,.home-page.full-screen #exchange-currency-from,#exchange-currency-from.scroll-items{
         position: relative;
         width: 50%;
         float: left;
@@ -37,7 +42,7 @@
         animation:none;
         margin-bottom: 0;
     }
-    #exchange-currency-to,.full-list #exchange-currency-to,#exchange-currency-to.scroll-items{
+    #exchange-currency-to,.home-page.full-screen #exchange-currency-to,#exchange-currency-to.scroll-items{
         position: relative;
         transform:translateX(0px);
         width: 50%;
@@ -483,7 +488,7 @@
         font-size: 14px;
         padding-left: 30px;
     }
-    .b-exchange-currency__item, .full-list .b-exchange-currency__item {
+    .b-exchange-currency__item, .home-page.full-screen .b-exchange-currency__item {
         padding: 12px 5px 5px 30px;
     }
     .b-exchange-currency__item:before {

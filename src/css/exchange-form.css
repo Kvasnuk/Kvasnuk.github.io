@@ -228,10 +228,10 @@
 }
 
 
-.order-page .b-exchange__settings--full.active{
+.order-page .b-exchange__settings--full.active,.home-page .b-exchange__settings--full.active{
     background-color: #fff;
     background-image: url(../images/switch-to-full-screen-button.svg);}
-.order-page.full-screen .b-exchange__settings--full.active,.order-page.full-screen .b-exchange__settings--full{
+.order-page.full-screen .b-exchange__settings--full.active,.order-page.full-screen .b-exchange__settings--full, .home-page.full-screen .b-exchange__settings--full.active,.home-page.full-screen .b-exchange__settings--full{
     background-color: #2e5fd5;
     background-image: url(../images/resize-arrows.svg);}
 
@@ -317,7 +317,7 @@
 }
 
 
-.full-list #exchange-currency-from{
+.home-page.full-screen #exchange-currency-from{
     position: relative;
     width: 50%;
     float: left;
@@ -327,7 +327,7 @@
     overflow-y: auto;
     height: auto;
 }
-.full-list #exchange-currency-to{
+.home-page.full-screen #exchange-currency-to{
     position: relative;
     transform:translateX(-180px);
     width: 50%;
@@ -336,7 +336,7 @@
     overflow-y: auto;
     height: auto;
 }
-.full-list .b-exchange-currency__item{
+.home-page.full-screen .b-exchange-currency__item{
     height: 30px;
     border-bottom:1px solid #eaeaea;
 }
