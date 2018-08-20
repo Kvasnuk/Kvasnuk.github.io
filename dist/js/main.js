@@ -46,17 +46,18 @@ jQuery(document).ready(function ($) {
 
 
     $("main .js-exchange-full").click(function () {
+        var date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
         var fullSizeBtn = getCookie('fullSizeBtn');
         var fullSizeType = getCookie('screenType');
         var $mainPage = $('main');
 
         if (fullSizeBtn == undefined) {
             $('.b-exchange__settings--message').fadeOut();
-            setCookie('fullSizeBtn', "done", 90);
+            document.cookie = "fullSizeBtn=done; path=/; expires=" + date.toUTCString();
         }
 
         if (fullSizeType == undefined) {
-            setCookie('screenType', 'full', 90);
+            document.cookie = "screenType=full; path=/; expires=" + date.toUTCString();
             $mainPage.addClass('full-screen');
 
         } else {
