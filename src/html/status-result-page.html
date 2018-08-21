@@ -17,7 +17,7 @@
         <!--status message container (waiting message)-->
 
         <div class="b-profile container-md">
-            <div class="b-profile__header">
+            <div class="b-profile__header in-progress">
                 <p><b>В обработке (Проверка оплаты)</b>
                 <span class="status-date">Дата заявки:<span>20-08-2018</span></span>
                 </p>
@@ -56,7 +56,7 @@
         <!-- status message container (error message)-->
         <!-- It is similar to first message`s container. I only added 'header--error' class for 'b-profile__header '-->
         <div class="b-profile container-md">
-            <div class="b-profile__header header--error">
+            <div class="b-profile__header failed">
                 <p><b>Ошибочная (Проверка оплаты)</b>
                     <span class="status-date">Дата заявки:<span>20-08-2018</span></span>
                 </p>
@@ -97,7 +97,7 @@
         <!-- status message container (success message)-->
         <!-- It is similar to first message`s container. I only added 'header--success' class for 'b-profile__header', and changed content in <div class='status-page-message'>... -->
         <div class="b-profile container-md">
-            <div class="b-profile__header header--success">
+            <div class="b-profile__header completed">
                 <p><b>Завершено (Оплачено)</b>
                     <span class="status-date">Дата заявки:<span>20-08-2018</span></span>
                 </p>
@@ -139,7 +139,7 @@
         <!-- status message container (success message BTC v1)-->
         <!-- It is similar to first message`s container. I only added 'header--success' class for 'b-profile__header', and changed content in <div class='status-page-message'>... -->
         <div class="b-profile container-md">
-            <div class="b-profile__header header--success">
+            <div class="b-profile__header completed">
                 <p><b>Завершено (Оплачено)</b></p>
             </div>
             <div class="b-check-amount">
@@ -182,7 +182,7 @@
         <!-- status message container (success message BTC v1)-->
         <!-- It is similar to first message`s container. I only added 'header--success' class for 'b-profile__header', and changed content in <div class='status-page-message'>... -->
         <div class="b-profile container-md">
-            <div class="b-profile__header header--success">
+            <div class="b-profile__header completed">
                 <p><b>Завершено (Оплачено)</b></p>
             </div>
             <div class="b-check-amount">
@@ -222,6 +222,48 @@
             </div>
         </div>
         <!--END status message container (success message BTC v2)-->
+
+
+        <div class="b-profile container-md">
+            <div class="b-profile__header new">
+                <p><b>New  (example)</b></p>
+            </div>
+            <div class="b-check-amount">
+                <div class="b-check-amount__currency">
+                    <div>
+                        <span id="exchange-ddl-from" class="BTC">Bitcoin</span>
+                        <p class="exchange-sum-label">Обменяю:</p>
+                        <p class="b-check-amount__value">0.12701 BTC </p>
+                    </div>
+                    <div>
+                        <span id="exchange-ddl-to" class="P24UAH">Приват 24 UAH</span>
+                        <p class="exchange-sum-label">На:</p>
+                        <p class="b-check-amount__value">50 usd</p>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="b-check-amount__accounts">
+                    <div class="status-page-message">
+                        <div class="status-page-message__btc">
+                            <p class="message-btc-count">Выплата поступила в размере: <span>0.155 BTC</span> </p>
+                            <p class="message-btc-count">Подтверждения в сети Bitcoin: <span>1 из 1 требуемого</span></p>
+                            <p class="message-btc-title">Биткоин отправлен на Ваш адрес, Ваш TXID:</p>
+                            <p class="message-btc-link"><span class="copy">ad147890876234762e9418d7a9f469b4148060b60c7ff22a295c762eb9a36a20<i class="icon-copy"></i></span></p>
+                        </div>
+                        <div class="status-page-message__content">
+                            <p class="mb-1">Благодарим за использование нашего сервиса, Ваша заявка завершена!</p>
+                            <p class="mb-1"><b>Уважаемый клиент, если Вам понравилось обслуживание нашего сервиса</b></p>
+                            <p ><b> Вы можете оставить отзыв тут:</b></p>
+                            <a href="/" class="btn btn-link btn-alert">Оставить отзыв</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
             </div>
 
 </main>

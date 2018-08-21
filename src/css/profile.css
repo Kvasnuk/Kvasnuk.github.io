@@ -289,14 +289,26 @@ min-width: 100px;
     position: relative;
 }
 .item-status .item-data{
-    color: #53a762;
+    color: #468cad;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.28px;
 }
-.status-error .item-status .item-data{
-    color: #fb3f4c;
+.new .item-status .item-data{
+    color: #468cad;
 }
+.in-progress .item-status .item-data{
+    color: #24d0d4;
+}
+.failed .item-status .item-data{
+    color: #ae4e4c;
+}
+.completed .item-status .item-data{
+    color: #4cae50;
+}
+/*.status-error .item-status .item-data{*/
+    /*color: #468cad;*/
+/*}*/
 .item-status__preloader{
     width: 30px;
     height: 30px;
@@ -308,8 +320,8 @@ min-width: 100px;
     top: -5px;
     cursor: pointer;
 }
-.status-error .item-status__preloader{
-    display: block;
+.completed .item-status__preloader{
+    display: none;
 }
 
 
@@ -747,10 +759,16 @@ min-width: 100px;
 }
 /*profit report*/
 /*status-page*/
-.b-profile__header.header--error{
+.b-profile__header.new{
+    background: #468cad;
+}
+.b-profile__header.in-progress{
+    background: #24d0d4;
+}
+.b-profile__header.header--error,.b-profile__header.failed{
     background-color: #ae4e4c;
 }
-.b-profile__header.header--success{
+.b-profile__header.header--success,.b-profile__header.completed{
     background-color: #4cae50;
 }
 

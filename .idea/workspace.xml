@@ -4,7 +4,9 @@
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" afterPath="$PROJECT_DIR$/dist/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/profile-history.html" afterPath="$PROJECT_DIR$/profile-history.html" />
       <change beforePath="$PROJECT_DIR$/src/css/profile.css" afterPath="$PROJECT_DIR$/src/css/profile.css" />
+      <change beforePath="$PROJECT_DIR$/src/html/profile-history.html" afterPath="$PROJECT_DIR$/src/html/profile-history.html" />
       <change beforePath="$PROJECT_DIR$/src/html/status-result-page.html" afterPath="$PROJECT_DIR$/src/html/status-result-page.html" />
       <change beforePath="$PROJECT_DIR$/status-result-page.html" afterPath="$PROJECT_DIR$/status-result-page.html" />
     </list>
@@ -19,88 +21,78 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="exchange-new.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/exchange-new.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="58" column="87" lean-forward="false" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="status-result-page.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/status-result-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="102" column="16" lean-forward="false" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exchange-form.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="337" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="z-query-media.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="44" column="48" lean-forward="false" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="105" column="13" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/css/profile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="254" column="26" lean-forward="true" selection-start-line="254" selection-start-column="26" selection-end-line="254" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="exchange-new.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/html/exchange-new.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/js/main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="252">
+                  <caret line="58" column="87" lean-forward="false" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="status-result-page.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/html/status-result-page.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="504">
+                  <caret line="58" column="48" lean-forward="false" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="profile-history.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/html/profile-history.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="419">
+                  <caret line="124" column="60" lean-forward="false" selection-start-line="124" selection-start-column="60" selection-end-line="124" selection-end-column="60" />
+                  <folding>
+                    <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="profile.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/css/profile.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="438">
+                  <caret line="316" column="18" lean-forward="true" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="profile.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/css/profile.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1387">
+                  <caret line="326" column="0" lean-forward="true" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,8 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>full</find>
-      <find>.help-block</find>
       <find>form</find>
       <find>&lt;form</find>
       <find>order-form</find>
@@ -141,6 +131,8 @@
       <find>fullSizeBtn</find>
       <find>header--</find>
       <find>header-error</find>
+      <find>b-profile__header</find>
+      <find>item-status</find>
     </findStrings>
     <replaceStrings>
       <replace>.home-template</replace>
@@ -161,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/html/status-page.html" />
         <option value="$PROJECT_DIR$/src/css/apply-code.css" />
         <option value="$PROJECT_DIR$/src/html/profile-templates.html" />
         <option value="$PROJECT_DIR$/src/html/--exchange-sidebar.html" />
@@ -211,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
         <option value="$PROJECT_DIR$/src/html/status-result-page.html" />
+        <option value="$PROJECT_DIR$/src/html/profile-history.html" />
         <option value="$PROJECT_DIR$/src/css/profile.css" />
       </list>
     </option>
@@ -387,12 +379,12 @@
       <workItem from="1534106339332" duration="12350000" />
       <workItem from="1534297619182" duration="10212000" />
       <workItem from="1534390158495" duration="14575000" />
-      <workItem from="1534694949422" duration="28108000" />
+      <workItem from="1534694949422" duration="30436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="462663000" />
+    <option name="totallyTimeSpent" value="464991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="52" width="1865" height="1056" extended-state="6" />
@@ -454,13 +446,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/html/profile-templates.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -799,16 +784,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/html/status-result-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="102" column="16" lean-forward="false" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
+        <state relative-caret-position="504">
+          <caret line="58" column="48" lean-forward="false" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/profile-history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="124" column="60" lean-forward="false" selection-start-line="124" selection-start-column="60" selection-end-line="124" selection-end-column="60" />
+          <folding>
+            <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="254" column="26" lean-forward="true" selection-start-line="254" selection-start-column="26" selection-end-line="254" selection-end-column="26" />
+        <state relative-caret-position="438">
+          <caret line="316" column="18" lean-forward="true" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
           <folding />
         </state>
       </provider>
