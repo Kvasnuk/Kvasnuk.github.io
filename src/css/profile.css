@@ -252,6 +252,7 @@ min-width: 100px;
 .item-data__from,.item-data__to{
     position: relative;
     padding: 0 10px 0 20px;
+    display: inline-block;
 }
 .item-data__from:before,.item-data__to:before{
    content:'';
@@ -752,6 +753,25 @@ min-width: 100px;
 .b-profile__header.header--success{
     background-color: #4cae50;
 }
+
+.status-date{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color:#f8f8f8;
+}
+
+.status-date span{
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+
+
+
+
+
 
 
 
