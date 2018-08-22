@@ -1353,7 +1353,7 @@
     .b-registration .register-form button{
         font-size: 18px;
     }
-.b-reset-pasword{
+.b-reset-pasword,.site-login{
     padding-left: 15px;
     padding-right: 15px;
 }

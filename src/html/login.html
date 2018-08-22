@@ -1,0 +1,35 @@
+@@include('header.html')
+<main class="b-main  full-screen">
+    <div class="container"></div>            <div class="container min-height site-login">
+    <h1>Вход</h1>
+
+    <p>Пожалуйста, заполните следующие поля для входа:</p>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <form id="login-form" action="/auth/login" method="post">
+                <input type="hidden" name="_csrf" value="emr-c8qAhfHXTU9pPRykFcEPxO-M2KrpG-4RvY3mGQo_JsgyhcHfhbp1NyZ6U_04iUSLtem_xp9hoFXW5tYvZg==">
+                <div class="form-group field-loginform-email required">
+                    <label class="control-label" for="loginform-email">E-mail</label>
+                    <input type="text" id="loginform-email" class="form-control" name="LoginForm[email]" autofocus="" aria-required="true">
+
+                    <p class="help-block help-block-error"></p>
+                </div>
+                <div class="form-group field-loginform-password required">
+                    <label class="control-label" for="loginform-password">Пароль</label>
+                    <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" aria-required="true">
+
+                    <p class="help-block help-block-error"></p>
+                </div>
+                <div style="color:#999;margin:1em 0">
+                    Если вы забыли свой &#8203;&#8203;пароль, то можете его <a href="/auth/request-password-reset">сбросить</a>.
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="button" name="login-button">Войти</button>                </div>
+
+            </form>        </div>
+    </div>
+</div>
+</main>
+@@include('footer.html')

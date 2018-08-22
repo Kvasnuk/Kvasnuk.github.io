@@ -119,6 +119,15 @@
 .templates-item:before{
     background-image: url(../images/exchange-alt.svg);
 }
+.remuneration-item:before{
+    background-image: url(../images/atm.svg);
+}
+.payment-item:before{
+    background-image: url(../images/wallet.svg);
+}
+.password-item:before{
+    background-image: url(../images/lock.svg);
+}
 
 
 .personal-data-item:hover::before,.active.personal-data-item:before{
@@ -132,6 +141,18 @@
 }
 .templates-item:hover::before,.active.templates-item:before{
     background-image: url(../images/exchange-alt-hover.svg);
+}
+
+.remuneration-item:hover::before,.active.remuneration-item:before{
+    background-image: url(../images/atm-hover.svg);
+}
+
+.payment-item:hover::before,.active.payment-item:before{
+    background-image: url(../images/wallet-hover.svg);
+}
+
+.password-item:hover::before,.active.password-item:before{
+    background-image: url(../images/lock-hover.svg);
 }
 
 .b-profite__current-time{
