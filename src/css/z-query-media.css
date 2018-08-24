@@ -1157,6 +1157,9 @@
     .order-page .form-control[readonly] {
         text-align: center;
     }
+    .alert-modal__body{
+        padding: 60px 5% 45px;
+    }
 }
 @media screen and (max-width: 480px) {
     .b-title--h1, .status-page h1,.page-title{

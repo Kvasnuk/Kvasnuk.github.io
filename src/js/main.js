@@ -1,4 +1,75 @@
 jQuery(document).ready(function ($) {
+
+    /* ---- alert modal functional ----*/
+
+    var startTimer ='';
+        var alertsCount = '';
+        var $body = $('body');
+        var closeAlertModal = function(body){
+            clearInterval(startTimer);
+            body.removeClass('no-scroll');
+            body.find('.alert-modal').fadeOut();
+        };
+        $body.find('.js-close-alert-modal').click(
+            function(){
+                closeAlertModal($body);
+            }
+        );
+        $body.find('.alert-modal').click(function(e){
+            if(e.target.className === 'alert-modal' || e.target.className === 'alert-modal__body'){
+                closeAlertModal($body);
+            }
+        });
+        $body.find('.alert-modal__body .close').click(function(e){
+            e.preventDefault();
+
+            if(alertsCount == 1){
+
+                closeAlertModal($body);
+            }else {
+                $(this).parent('div').removeClass('am-item').fadeOut();
+                alertsCount--;
+            }
+        });
+
+        function showAlertModal(time){
+            (time == undefined ? time = 30 : time);
+            var timer = time;
+            var $timerloader = $('.timer-loader');
+            var $timerCount = $('#timer-count');
+            startTimer = setInterval(function() {
+                if(timer === 0){
+                    closeAlertModal($body);
+                    $timerCount.text('');
+                } else {
+                    $timerCount.text(timer);
+                    timer--;
+                }
+            }, 1000);
+            $timerloader.css('animation-duration', timer + 1 +'s');
+            $timerCount.text(timer);
+            $body.addClass('no-scroll');
+            $body.find('.alert-modal').fadeIn();
+            $body.find('.alert-modal__body .container>div').fadeIn().addClass('am-item');
+            alertsCount = $body.find('.alert-modal__body .am-item').length;
+        };
+
+    /* ---- кнопка просто для примера ----*/
+    $('#showMessage').click(function(){
+        showAlertModal(20);
+    });
+
+
+ /* ---- END alert modal functional ----*/
+
+
+
+
+
+
+
+
+
     /*cookie short functions*/
     function getCookie(name) {
         var matches = document.cookie.match(new RegExp(

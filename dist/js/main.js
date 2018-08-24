@@ -1,5 +1,76 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 jQuery(document).ready(function ($) {
+
+    /* ---- alert modal functional ----*/
+
+    var startTimer ='';
+        var alertsCount = '';
+        var $body = $('body');
+        var closeAlertModal = function(body){
+            clearInterval(startTimer);
+            body.removeClass('no-scroll');
+            body.find('.alert-modal').fadeOut();
+        };
+        $body.find('.js-close-alert-modal').click(
+            function(){
+                closeAlertModal($body);
+            }
+        );
+        $body.find('.alert-modal').click(function(e){
+            if(e.target.className === 'alert-modal' || e.target.className === 'alert-modal__body'){
+                closeAlertModal($body);
+            }
+        });
+        $body.find('.alert-modal__body .close').click(function(e){
+            e.preventDefault();
+
+            if(alertsCount == 1){
+
+                closeAlertModal($body);
+            }else {
+                $(this).parent('div').removeClass('am-item').fadeOut();
+                alertsCount--;
+            }
+        });
+
+        function showAlertModal(time){
+            (time == undefined ? time = 30 : time);
+            var timer = time;
+            var $timerloader = $('.timer-loader');
+            var $timerCount = $('#timer-count');
+            startTimer = setInterval(function() {
+                if(timer === 0){
+                    closeAlertModal($body);
+                    $timerCount.text('');
+                } else {
+                    $timerCount.text(timer);
+                    timer--;
+                }
+            }, 1000);
+            $timerloader.css('animation-duration', timer + 1 +'s');
+            $timerCount.text(timer);
+            $body.addClass('no-scroll');
+            $body.find('.alert-modal').fadeIn();
+            $body.find('.alert-modal__body .container>div').fadeIn().addClass('am-item');
+            alertsCount = $body.find('.alert-modal__body .am-item').length;
+        };
+
+    /* ---- кнопка просто для примера ----*/
+    $('#showMessage').click(function(){
+        showAlertModal(20);
+    });
+
+
+ /* ---- END alert modal functional ----*/
+
+
+
+
+
+
+
+
+
     /*cookie short functions*/
     function getCookie(name) {
         var matches = document.cookie.match(new RegExp(
