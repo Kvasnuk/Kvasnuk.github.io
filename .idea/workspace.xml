@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="" />
+    <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/dist/js/main.js" afterPath="$PROJECT_DIR$/dist/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/src/html/thank-you-page.html" afterPath="$PROJECT_DIR$/src/html/thank-you-page.html" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" afterPath="$PROJECT_DIR$/src/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/thank-you-page.html" afterPath="$PROJECT_DIR$/thank-you-page.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,10 +23,11 @@
       <file leaf-file-name="thank-you-page.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/html/thank-you-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="82" column="10" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="82" selection-end-column="10" />
+            <state relative-caret-position="555">
+              <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
               <folding>
-                <marker date="1535099621027" expanded="true" signature="3527:3984" ph="..." />
+                <marker date="1535102523455" expanded="true" signature="3524:3536" ph="..." />
+                <marker date="1535102523455" expanded="true" signature="3601:4058" ph="..." />
               </folding>
             </state>
           </provider>
@@ -29,8 +36,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="27" />
+            <state relative-caret-position="198">
+              <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -166,8 +173,8 @@
         <option value="$PROJECT_DIR$/src/html/login.html" />
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
         <option value="$PROJECT_DIR$/src/css/common.css" />
-        <option value="$PROJECT_DIR$/src/html/thank-you-page.html" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
+        <option value="$PROJECT_DIR$/src/html/thank-you-page.html" />
       </list>
     </option>
   </component>
@@ -310,12 +317,12 @@
       <workItem from="1534297619182" duration="10212000" />
       <workItem from="1534390158495" duration="14575000" />
       <workItem from="1534694949422" duration="36445000" />
-      <workItem from="1535053197991" duration="25824000" />
+      <workItem from="1535053197991" duration="27398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="496824000" />
+    <option name="totallyTimeSpent" value="498398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="52" width="1865" height="1056" extended-state="6" />
@@ -719,18 +726,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="27" />
+        <state relative-caret-position="198">
+          <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/html/thank-you-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="82" column="10" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="82" selection-end-column="10" />
+        <state relative-caret-position="555">
+          <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
           <folding>
-            <marker date="1535099621027" expanded="true" signature="3527:3984" ph="..." />
+            <marker date="1535102523455" expanded="true" signature="3524:3536" ph="..." />
+            <marker date="1535102523455" expanded="true" signature="3601:4058" ph="..." />
           </folding>
         </state>
       </provider>

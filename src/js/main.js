@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
         var closeAlertModal = function(body){
             clearInterval(startTimer);
             body.removeClass('no-scroll');
+            $body.find('.alert-modal__body .container>div').removeClass('am-item');
             body.find('.alert-modal').fadeOut();
         };
         $body.find('.js-close-alert-modal').click(
@@ -32,8 +33,10 @@ jQuery(document).ready(function ($) {
             }
         });
 
-        function showAlertModal(time){
+        function showAlertModal(id,time){
             (time == undefined ? time = 30 : time);
+            var $modal = $('#'+ id);
+            var $modalId = '#'+ id;
             var timer = time;
             var $timerloader = $('.timer-loader');
             var $timerCount = $('#timer-count');
@@ -49,16 +52,20 @@ jQuery(document).ready(function ($) {
             $timerloader.css('animation-duration', timer + 1 +'s');
             $timerCount.text(timer);
             $body.addClass('no-scroll');
-            $body.find('.alert-modal').fadeIn();
-            $body.find('.alert-modal__body .container>div').fadeIn().addClass('am-item');
-            alertsCount = $body.find('.alert-modal__body .am-item').length;
+            $body.find('.alert-modal').fadeOut();
+            $body.find($modal).fadeIn();
+
+            $body.find($modalId + ' .alert-modal__body .container>div').fadeIn().addClass('am-item');
+            alertsCount = $body.find($modalId + ' .alert-modal__body .am-item').length;
         };
 
     /* ---- кнопка просто для примера ----*/
     $('#showMessage').click(function(){
-        showAlertModal(20);
+        showAlertModal('m1',20);
     });
-
+    $('#showMessage2').click(function(){
+        showAlertModal('m2',20);
+    });
 
  /* ---- END alert modal functional ----*/
 

@@ -55,7 +55,7 @@
 
 <!--   --- New alert modal ---     -->
 
-    <div class="alert-modal">
+    <div class="alert-modal" id="m1">
 
         <div class="alert-modal__body">
             <div class="container">   <!-- это оболочка-->
@@ -85,6 +85,39 @@
 <!--   --- End new alert modal ---     -->
 
 
+    <!--   --- New alert modal ---     -->
+
+    <div class="alert-modal" id="m2">
+
+        <div class="alert-modal__body">
+            <div class="container">   <!-- это оболочка-->
+
+                <!-- отдельное сообщение-->
+                <div class="alert alert-info" id="alert-order-time">
+                    <img src="/images/clock.png" alt="Danger. Sleep time"
+                         style="display: inline-block; width: 75px; vertical-align: middle; margin-right: 20px"/>
+                    <div style="display: inline-block; vertical-align: middle">'modal 2'</div>
+                    <a href="#" class="close big" data-dismiss="alert-time">&times;</a>
+                </div>
+
+                <!-- отдельное сообщение-->
+                <div id="qiwi-create-alert" class="alert alert-warning alert-dismissible">
+                    <a href="#" class="close">&times;</a>  <!-- обязательный елемент что бы закрывать только одно сообщение, текущее а не все окно-->
+                    {$qiwiCreateAlertText}
+                    <small class="pull-right">{$closeWindowViaText}<span class="close_timer">20</span> с</small>
+                </div>
+
+
+            </div>
+        </div>
+        <span class="js-close-alert-modal alert-modal__close"></span>
+        <p class="timer-message">Окно закроется через <span id="timer-count"></span>  секунд <span class="timer-loader"></span></p>
+    </div>
+
+    <!--   --- End new alert modal ---     -->
+
+
 <button id="showMessage">Show</button>
+<button id="showMessage2">Show2</button>
 </main>
 @@include('footer.html')
