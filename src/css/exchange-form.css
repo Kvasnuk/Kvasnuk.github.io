@@ -182,11 +182,12 @@
 .b-exchange__input, .order-page .b-exchange__input{
     display: block;
     margin-top: 10px;
-    background: transparent;
     outline: none;
     width:100%;
     max-width: 280px;
     color: #4cae50;
+    background: #0000000d;
+    padding-left: 5px;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 0.7px;
@@ -502,4 +503,7 @@
 }
 .order-page.full-screen #exchange-lists #exchange-currency-from li,.order-page.full-screen #exchange-lists #exchange-currency-to li{
     border-radius: 0;
+}
+.help-block {
+    padding-top: 5px;
 }

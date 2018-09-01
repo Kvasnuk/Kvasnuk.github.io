@@ -1373,6 +1373,10 @@
     .order-page .b-exchange-currency__item a {
         padding-left: 30px;
     }
+    .exchange-submit {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 @media screen and (max-width: 400px) {
 
