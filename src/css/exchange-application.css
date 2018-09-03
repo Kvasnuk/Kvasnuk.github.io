@@ -175,5 +175,9 @@
     padding-left: 15px;
 
 }
+.b-application-data__label{
+    bottom: 10px;
+    font-weight: 500;
+}
 
 /*Cancel verification*/
