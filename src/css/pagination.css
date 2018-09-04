@@ -40,8 +40,20 @@
 }
 .b-pagination .pagination .prev a,.b-pagination .pagination .next a{
     padding-top: 7px;
-    min-width: 50px;
+    min-width: 45px;
 }
 .b-pagination .pagination .prev svg,.b-pagination .pagination .next svg{
     width: 12px;
+}
+.b-pagination .pagination .first svg,.b-pagination .pagination .last svg{
+    width: 12px;
+    height: 12px;
+}
+.b-pagination .pagination .first a,.b-pagination .pagination .last a{
+   min-width: 45px;
+}
+.b-pagination .pagination .first span,.b-pagination .pagination .last span{
+    padding-top: 5px;
+    display: inline-block;
+    color: #b1b1b1;
 }

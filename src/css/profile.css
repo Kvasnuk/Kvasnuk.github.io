@@ -240,7 +240,7 @@
     background-color:#ececec;
 }
 .history-list__item:nth-child(odd){
-    background-color: #fbf8f8;
+    background-color: #e0dfe3;
 }
 .history-list__item.history-list__item_title{
     font-weight: 700;
