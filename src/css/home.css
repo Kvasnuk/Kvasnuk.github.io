@@ -88,6 +88,17 @@
     text-align: center;
     padding-top: 30px;
 }
+.banner-alert {
+    display: none;
+    padding-top: 30px;
+}
+.home-banner-content.has-alert .banner-slogan{
+    display: none;
+}
+.home-banner-content.has-alert .banner-alert{
+    display: block;
+}
+
 .banner-subtitle{
     position: relative;
     color: #ffffff;

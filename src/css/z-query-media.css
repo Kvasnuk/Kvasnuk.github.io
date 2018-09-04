@@ -1373,7 +1373,7 @@
     .order-page .b-exchange-currency__item a {
         padding-left: 30px;
     }
-    .exchange-submit {
+    .exchange-submit,.banner-alert {
         padding-left: 15px;
         padding-right: 15px;
     }
