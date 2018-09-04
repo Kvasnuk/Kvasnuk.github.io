@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/--pagination.html" afterPath="$PROJECT_DIR$/--pagination.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" afterPath="$PROJECT_DIR$/dist/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/news.html" afterPath="$PROJECT_DIR$/news.html" />
-      <change beforePath="$PROJECT_DIR$/reviews.html" afterPath="$PROJECT_DIR$/reviews.html" />
-      <change beforePath="$PROJECT_DIR$/src/css/pagination.css" afterPath="$PROJECT_DIR$/src/css/pagination.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/profile.css" afterPath="$PROJECT_DIR$/src/css/profile.css" />
-      <change beforePath="$PROJECT_DIR$/src/html/--pagination.html" afterPath="$PROJECT_DIR$/src/html/--pagination.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -354,12 +348,12 @@
       <workItem from="1534694949422" duration="36445000" />
       <workItem from="1535053197991" duration="27456000" />
       <workItem from="1535182958285" duration="217000" />
-      <workItem from="1535777254197" duration="9351000" />
+      <workItem from="1535777254197" duration="9565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508024000" />
+    <option name="totallyTimeSpent" value="508238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="52" width="1865" height="1056" extended-state="6" />
