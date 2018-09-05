@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/all-pages.html" afterPath="$PROJECT_DIR$/all-pages.html" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" afterPath="$PROJECT_DIR$/dist/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/css/common.css" afterPath="$PROJECT_DIR$/src/css/common.css" />
+      <change beforePath="$PROJECT_DIR$/src/css/profile.css" afterPath="$PROJECT_DIR$/src/css/profile.css" />
+      <change beforePath="$PROJECT_DIR$/src/css/z-query-media.css" afterPath="$PROJECT_DIR$/src/css/z-query-media.css" />
+      <change beforePath="$PROJECT_DIR$/src/html/all-pages.html" afterPath="$PROJECT_DIR$/src/html/all-pages.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,70 +22,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/index.html">
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="18" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="195">
+              <caret line="502" column="0" lean-forward="true" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="--pagination.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/--pagination.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#svg#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#0;n#span#0;n#li#11;n#ul#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/css/profile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="242" column="29" lean-forward="false" selection-start-line="242" selection-start-column="29" selection-end-line="242" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pagination.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/pagination.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="52" column="19" lean-forward="false" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="double-left-chevron.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/images/double-left-chevron.svg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="double-angle-pointing-to-right.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/images/double-angle-pointing-to-right.svg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="z-query-media.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="z-query-media.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="1375" column="36" lean-forward="false" selection-start-line="1375" selection-start-column="36" selection-end-line="1375" selection-end-column="36" />
+            <state relative-caret-position="311">
+              <caret line="1381" column="30" lean-forward="false" selection-start-line="1381" selection-start-column="30" selection-end-line="1381" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all-pages.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/all-pages.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -97,8 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>console</find>
-      <find>profit</find>
       <find>js-exchange</find>
       <find>js-exchange-full</find>
       <find>480</find>
@@ -127,6 +91,8 @@
       <find>400</find>
       <find>input</find>
       <find>b-e</find>
+      <find>odd</find>
+      <find>.item-data__from:after</find>
     </findStrings>
     <replaceStrings>
       <replace>.home-template</replace>
@@ -157,7 +123,6 @@
         <option value="$PROJECT_DIR$/vendor/moment/moment-with-timezone.js" />
         <option value="$PROJECT_DIR$/vendor/moment/moment.js" />
         <option value="$PROJECT_DIR$/src/html/registration.html" />
-        <option value="$PROJECT_DIR$/src/html/all-pages.html" />
         <option value="$PROJECT_DIR$/src/css/registration.css" />
         <option value="$PROJECT_DIR$/src/css/partnens.css" />
         <option value="$PROJECT_DIR$/src/html/partners.html" />
@@ -185,19 +150,20 @@
         <option value="$PROJECT_DIR$/src/images/lock-hover.svg" />
         <option value="$PROJECT_DIR$/src/css/header.css" />
         <option value="$PROJECT_DIR$/src/html/login.html" />
-        <option value="$PROJECT_DIR$/src/css/common.css" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
         <option value="$PROJECT_DIR$/src/html/thank-you-page.html" />
         <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
         <option value="$PROJECT_DIR$/src/css/exchange-application.css" />
         <option value="$PROJECT_DIR$/src/html/--exchange-sidebar.html" />
         <option value="$PROJECT_DIR$/src/css/home.css" />
-        <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
         <option value="$PROJECT_DIR$/src/html/index.html" />
         <option value="$PROJECT_DIR$/src/images/double-angle-pointing-to-right.svg" />
         <option value="$PROJECT_DIR$/src/css/pagination.css" />
         <option value="$PROJECT_DIR$/src/html/--pagination.html" />
         <option value="$PROJECT_DIR$/src/css/profile.css" />
+        <option value="$PROJECT_DIR$/src/html/all-pages.html" />
+        <option value="$PROJECT_DIR$/src/css/common.css" />
+        <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
       </list>
     </option>
   </component>
@@ -267,7 +233,7 @@
               <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
               <item name="sevenmoney" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
@@ -348,12 +314,12 @@
       <workItem from="1534694949422" duration="36445000" />
       <workItem from="1535053197991" duration="27456000" />
       <workItem from="1535182958285" duration="217000" />
-      <workItem from="1535777254197" duration="9565000" />
+      <workItem from="1535777254197" duration="15561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508238000" />
+    <option name="totallyTimeSpent" value="514234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="52" width="1865" height="1056" extended-state="6" />
@@ -415,13 +381,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/moment/moment-with-timezone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="803" column="23" lean-forward="false" selection-start-line="803" selection-start-column="13" selection-end-line="803" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/partnens.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -641,14 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="550" column="22" lean-forward="false" selection-start-line="550" selection-start-column="17" selection-end-line="550" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -716,14 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="1375" column="36" lean-forward="false" selection-start-line="1375" selection-start-column="36" selection-end-line="1375" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -755,18 +698,42 @@
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#svg#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#span#0;n#li#11;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#svg#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#svg#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#svg#0;n#span#0;n#li#11;n#ul#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="242" column="29" lean-forward="false" selection-start-line="242" selection-start-column="29" selection-end-line="242" selection-end-column="29" />
+        <state relative-caret-position="384">
+          <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="502" column="0" lean-forward="true" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/all-pages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="1381" column="30" lean-forward="false" selection-start-line="1381" selection-start-column="30" selection-end-line="1381" selection-end-column="30" />
           <folding />
         </state>
       </provider>

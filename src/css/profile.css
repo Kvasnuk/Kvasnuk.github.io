@@ -236,12 +236,17 @@
     min-height: 35px;
     transition: 0.3s;
 }
+.history-list__item:not(:first-child){
+    background: #f3f3f3;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 .history-list__item:not(:first-child):hover{
     background-color:#ececec;
 }
-.history-list__item:nth-child(odd){
-    background-color: #e0dfe3;
-}
+/*.history-list__item:nth-child(odd){*/
+    /*background-color: #e0dfe3;*/
+/*}*/
 .history-list__item.history-list__item_title{
     font-weight: 700;
     background-color: #fff;
@@ -273,7 +278,10 @@ min-width: 100px;
 .item-data__from,.item-data__to{
     position: relative;
     padding: 0 10px 0 20px;
-    display: inline-block;
+    display: block;
+}
+.item-data__from{
+    padding-bottom: 10px;
 }
 .item-data__from:before,.item-data__to:before{
    content:'';
@@ -294,15 +302,13 @@ min-width: 100px;
     content: '';
     width: 0;
     height: 0;
-    border-left: 5px solid #000;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #3d6d3d;
+    border-right: 5px solid transparent;
     display: block;
     position: absolute;
-    right: 0;
-    top:0;
-    bottom: 0;
-    margin: auto;
+    bottom: 4px;
+    left: 4px;
 }
 
 .item-status{
