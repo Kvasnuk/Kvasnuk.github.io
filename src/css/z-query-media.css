@@ -419,7 +419,9 @@
     .b-statistic__icon {
         width: 25%;
     }
-
+    .b-header-info--right{
+        display: none;
+    }
 }
 @media screen and (max-width: 639px) {
     .b-exchange__course--to{
@@ -687,7 +689,7 @@
     #reviews>p{
         padding: 0 15px;
     }
-    .news-title, .payment-success,.payment-fail{
+    .news-title, .payment-success,.payment-fail,.b-main.simple-page{
         padding-left: 15px;
         padding-right: 15px;
     }

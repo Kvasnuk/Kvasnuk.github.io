@@ -128,6 +128,9 @@
 .password-item:before{
     background-image: url(../images/lock.svg);
 }
+.entered-item:before{
+    background-image: url(../images/enter.svg);
+}
 
 
 .personal-data-item:hover::before,.active.personal-data-item:before{
@@ -153,6 +156,9 @@
 
 .password-item:hover::before,.active.password-item:before{
     background-image: url(../images/lock-hover.svg);
+}
+.entered-item:hover::before,.active.entered-item:before{
+    background-image: url(../images/enter-hover.svg);
 }
 
 .b-profite__current-time{
