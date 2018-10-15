@@ -19,6 +19,9 @@
     #reserves-review__corner:after {
         border-right: 520px solid #effaff;
     }
+    .review-btn-fixed {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -421,6 +424,10 @@
     }
     .b-header-info--right{
         display: none;
+    }
+
+    .review-btn-fixed {
+        bottom:50px;
     }
 }
 @media screen and (max-width: 639px) {

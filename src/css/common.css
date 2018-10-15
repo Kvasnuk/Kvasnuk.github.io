@@ -781,11 +781,26 @@ border-radius: 50%;
 
 }
 
+.review-btn-fixed {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin:0;
+    text-align: center;
+    padding: 10px;
+    transition:bottom .3s linear;
+}
 
+.review-btn-fixed.hide-btn {
+   bottom:-100px;
+}
 
-
-
-
+.btn-leave-review{
+    line-height: 38px;
+}
 
 
 

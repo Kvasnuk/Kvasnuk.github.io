@@ -620,5 +620,36 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+
+
+    function showStatusReview() {
+        var btnOffset = $('#btn-leave-review').offset();
+        var btnOffsetTop = btnOffset.top;
+        var windowHeight =  $(window).height();
+        function showButton(){
+            if ($(window).scrollTop() + windowHeight >= btnOffsetTop ) {
+                $('.review-btn-fixed').addClass('hide-btn');
+            } else {
+                $('.review-btn-fixed').removeClass('hide-btn');
+            }
+        }
+        showButton();
+        $(window).resize(function() {
+            windowHeight =  $(window).height();
+        });
+        $(window).scroll(function() {
+            showButton();
+
+        });
+
+    }
+
+    if($('#btn-leave-review').length > 0 ) {
+        showStatusReview();
+    }
+
+
+
 });
 

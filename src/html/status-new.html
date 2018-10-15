@@ -1,0 +1,93 @@
+@@include('header.html')
+
+<main class="b-main status-page">
+    <div class="container"></div>
+    <div class="container">
+        <h1 class="page-title text-center">Статус операции OPf2962148</h1>
+        <div class="alert-container">
+        </div>
+
+        <div class="b-profile container-md">
+            <div class="b-profile__header completed">
+                <p>
+                    <b>
+                        Завершена (Оплачено)
+                    </b>
+                    <span class="status-date">
+Дата заявки: <span>
+23 сент. 2018 г. 13:35 </span>
+</span>
+                </p>
+            </div>
+            <div class="b-check-amount">
+                <div class="b-check-amount__currency">
+                    <div>
+                        <span id="exchange-ddl-from" class="BTC">Bitcoin</span>
+                        <p class="exchange-sum-label">Отдаю:</p>
+                        <p class="b-check-amount__value"><strong id="sell_amount">0.1428</strong> BTC</p>
+                    </div>
+                    <div>
+                        <span id="exchange-ddl-to" class="CARDRUB">Visa/MasterCard RUB</span>
+                        <p class="exchange-sum-label">Получаю:</p>
+                        <p class="b-check-amount__value"><strong id="buy_amount">64207.28</strong> RUB</p>
+                    </div>
+                </div>
+                <div class="b-check-amount__accounts">
+                    <div class="status-page-message d-none" id="orderStatus">
+                        <div class="b-alert b-alert--info alert-green mt-4">
+                            <div class="b-alert__message orderStatus-text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-check-amount__accounts " id="bitcoinReceive" style="padding-bottom: 2px">
+                    <div class="status-page-message">
+                        <div class="status-page-message__btc">
+                            <p class="message-btc-count">
+                                Выплата поступила в размере: <span>0.1428 BTC</span>
+                            </p>
+                            <p class="message-btc-count">
+                                Подтверждения в сети Bitcoin: <span>1 из 1 требуемого</span>
+                            </p>
+                            <p class="message-btc-link">
+                                Ваш TXID: <span class="copy" data-clipboard-text="15bce752d97b0561297776bfa2630fea36731032eaa710463339209260957aea">
+<a href="//blockchain.info/tx/15bce752d97b0561297776bfa2630fea36731032eaa710463339209260957aea" target="_blank">
+15bce752d97b0561297776bfa2630fea36731032eaa710463339209260957aea </a>
+<i class="icon-copy"></i>
+</span>
+                            </p>
+                            <p class="text-center">
+                                Обычно выплата производится в течении 5-30 минут после 1-го подтверждения </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-check-amount__accounts d-none" id="bitcoinSend" style="padding-bottom: 2px">
+                    <div class="status-page-message">
+                        <div class="status-page-message__btc">
+                            <p class="message-btc-title">Биткоин отправлен на Ваш адрес, Ваш TXID:</p>
+                            <p class="message-btc-link">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-check-amount__accounts " id="leave-review">
+                    <div class="status-page-message">
+                        <div class="status-page-message__content">
+                            <p class="mb-1" style="font-size: 13px">Благодарим за использование нашего сервиса!</p>
+                            <p class="mb-1" style="font-size: 13px"><b>Уважаемый клиент, если Вам понравилось обслуживание нашего сервиса</b></p>
+                            <p><b style="font-size: 13px">Вы можете оставить отзыв тут:</b></p>
+                            <a id='btn-leave-review' class="btn btn-link btn-alert btn-leave-review" target="_blank" href="//www.bestchange.ru/7money-exchanger.html">Оставить Отзыв</a>
+                            <br />
+                            <br />
+                            <p style="font-size: 13px">либо на нашем сайте: <a href="/reviews">ссылка</a></p> </div>
+                    </div>
+                    <p class="review-btn-fixed">
+                        <a class="btn btn-link btn-alert btn-leave-review" target="_blank" href="//www.bestchange.ru/7money-exchanger.html">Оставить Отзыв</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+@@include('footer.html')
