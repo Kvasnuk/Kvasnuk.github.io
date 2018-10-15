@@ -782,7 +782,7 @@ border-radius: 50%;
 }
 
 .review-btn-fixed {
-    display: none;
+    display: block;
     position: fixed;
     left: 0;
     bottom:0;
@@ -792,6 +792,8 @@ border-radius: 50%;
     text-align: center;
     padding: 10px;
     transition:bottom .3s linear;
+    opacity: 0;
+    animation: showReviewBtn .5s 1.5s linear forwards;
 }
 
 .review-btn-fixed.hide-btn {
@@ -802,6 +804,10 @@ border-radius: 50%;
     line-height: 38px;
 }
 
+@keyframes showReviewBtn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 
 
