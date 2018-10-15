@@ -638,6 +638,8 @@ jQuery(document).ready(function ($) {
         showButton();
         $(window).resize(function() {
             windowHeight =  $(window).height();
+            showButton();
+
         });
         $(window).scroll(function() {
             showButton();
