@@ -651,6 +651,18 @@ jQuery(document).ready(function ($) {
         showStatusReview();
     }
 
+    function updateActiveFilter(el) {
+        el.parent().find('button').removeClass('active');
+        el.addClass('active');
+    }
+
+    $('.js-filter-btn').click(function() {
+        updateActiveFilter($(this));
+        var dataSide = $(this).data('side'),
+            dataGroup = $(this).data('group'),
+            listId = dataSide === 'left' ? 'exchange-currency-from' : 'exchange-currency-to';
+        $('#'+listId).attr('data-filter', dataGroup);
+    });
 
 
 });

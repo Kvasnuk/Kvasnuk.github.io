@@ -303,6 +303,11 @@
         text-align: center;
         margin-bottom: 15px;
     }
+
+    .currency-filter__left, .currency-filter__right {
+        padding: 0 15px;
+    }
+
     footer{
         padding-bottom: 49px;
     }
@@ -555,6 +560,23 @@
     .b-statistic.bitcoin-active:before {
         right: 0;
     }
+
+    .currency-filter__left, .currency-filter__right {
+        width: 50%;
+        padding: 0 15px 20px 16px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .currency-filter__right {
+        justify-content: flex-end;
+    }
+
+    .currency-filter__btn {
+        font-size: 13px;
+        width: 50%;
+        margin-top: -1px;
+        margin-left: -1px;
+    }
 }
 @media screen and (max-width: 575px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
@@ -607,11 +629,15 @@
         padding-top: 75px;
     }
     .b-exchange__main {
-        padding: 40px 0 0;
+        padding: 20px 0 0;
+    }
+    .currency-filter__left,
+    .currency-filter__right {
+        padding: 0 10px 20px 11px;
     }
     .b-exchange__main_part--from>p {
         width: 35px;
-        top: -32px;
+        top: -3px;
         right: -18px;
     }
     .b-exchange__settings--reverse {
@@ -628,10 +654,10 @@
         padding-right: 0;
     }
     .b-exchange__main_part--from {
-        padding: 10px 10px 40px;
+        padding: 40px 10px 40px;
     }
     .b-exchange__main_part--to {
-        padding: 10px 10px 40px;
+        padding: 40px 10px 40px;
     }
     .b-exchange__input {
         font-size: 20px;

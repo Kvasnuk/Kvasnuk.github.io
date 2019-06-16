@@ -1,0 +1,50 @@
+.currency-filter {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.currency-filter__left {
+    border-right: 1px solid #eaeaea;
+}
+.currency-filter__left,
+.currency-filter__right {
+    width: 50%;
+    padding: 0 30px;
+}
+
+.currency-filter__btn {
+    background: transparent;
+    border: 1px solid #2cb6b9;
+    border-radius: 0;
+    font-size: 14px;
+    color: #2cb6b9;
+    transition: .3s;
+    outline: none;
+    box-shadow: none;
+}
+.currency-filter__btn:active,.currency-filter__btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.currency-filter__btn:hover, .currency-filter__btn.active {
+    background: #00cfd2;
+    color: #fff;
+}
+
+.b-exchange-currency[data-filter='usd'] li,
+.b-exchange-currency[data-filter='rub'] li,
+.b-exchange-currency[data-filter='crypt'] li,
+.b-exchange-currency[data-filter='uah'] li
+{
+    display: none;
+}
+.b-exchange-currency[data-filter='usd'] li[data-group='USD'],
+.b-exchange-currency[data-filter='rub'] li[data-group='RUB'],
+.b-exchange-currency[data-filter='crypt'] li[data-group='CRYPT'],
+.b-exchange-currency[data-filter='uah'] li[data-group='UAH']
+{
+    display: block;
+}
+
+

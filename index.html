@@ -137,6 +137,22 @@
             <div class="exchange">
                 <div class="b-exchange full-list">
                     <div class="b-exchange__main">
+                         <div class="currency-filter">
+                             <div class="currency-filter__left">
+                                 <button class="js-filter-btn currency-filter__btn active" data-side="left" data-group="all">ALL</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="left" data-group="crypt">CRYPT</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="left" data-group="usd">USD</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="left" data-group="uah">UAH</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="left" data-group="rub">RUB</button>
+                             </div>
+                             <div class="currency-filter__right">
+                                 <button class="js-filter-btn currency-filter__btn active" data-side="right" data-group="all">ALL</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="right" data-group="crypt">CRYPT</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="right" data-group="usd">USD</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="right" data-group="uah">UAH</button>
+                                 <button class="js-filter-btn currency-filter__btn" data-side="right" data-group="rub">RUB</button>
+                             </div>
+                         </div>
                             <div class="b-exchange__main_part b-exchange__main_part--from">
                                 <div>
                                     <span id="exchange-ddl-from" class="P24UAH">Приват 24 UAH</span>
@@ -163,30 +179,38 @@
 
 
                     <ul id="exchange-currency-from" class="b-exchange-currency">
-                        <li class="b-exchange-currency__item js-exchange-currency-from PRUSD " data-alias="PRUSD" data-id="1">PAYEER USD</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from P24UAH active" data-alias="P24UAH" data-id="1">Приват 24 UAH</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from BTC" data-alias="BTC" data-id="1">Bitcoin</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from PMBBUAH" data-alias="PMBBUAH" data-id="1">ПУМБ UAH</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from WEXUSD" data-alias="WEXUSD" data-id="1">WEX code USD</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from ADVCUSD" data-alias="ADVCUSD" data-id="1">Advanced Cash USD</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from YAMRUB" data-alias="YAMRUB" data-id="1">Яндекс Деньги RUB</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from XRP" data-alias="XRP" data-id="1">Ripple XRP</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from PRUSD " data-alias="PRUSD" data-id="1" data-group="USD">PAYEER USD</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from P24UAH active" data-alias="P24UAH" data-id="1" data-group="UAH">Приват 24 UAH</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from BTC" data-alias="BTC" data-id="1" data-group="CRYPT">Bitcoin</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from PMBBUAH" data-alias="PMBBUAH" data-id="1" data-group="UAH">ПУМБ UAH</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from WEXUSD" data-alias="WEXUSD" data-id="1" data-group="USD">WEX code USD</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from ADVCUSD" data-alias="ADVCUSD" data-id="1" data-group="USD">Advanced Cash USD</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from YAMRUB" data-alias="YAMRUB" data-id="1" data-group="RUB">Яндекс Деньги RUB</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-from XRP" data-alias="XRP" data-id="1" data-group="CRYPT">Ripple XRP</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to SBERRUB " data-alias="SBERRUB" data-id="13" data-group="RUB">
+                            СБЕРБАНК RUB </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to TCSBRUB" data-alias="TCSBRUB" data-id="14" data-group="RUB">
+                            Тинькофф RUB </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to ACRUB" data-alias="ACRUB" data-id="15" data-group="RUB">
+                            АльфаБанк RUB </li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to TBRUB" data-alias="TBRUB" data-id="16" data-group="RUB">
+                            ВТБ24 RUB </li>
                         <!--<li class="b-exchange-currency__item js-exchange-currency-from QWRUB" data-alias="QWRUB" data-id="1">QIWI RUB</li>-->
                         <!--<li class="b-exchange-currency__item js-exchange-currency-from PMUSD" data-alias="PMUSD" data-id="1">PerfectMoney USD</li>-->
                     </ul>
 
 
                     <ul id="exchange-currency-to" class="b-exchange-currency">
-                        <li class="b-exchange-currency__item js-exchange-currency-to PRUSD active" data-alias="PRUSD" data-id="1">PAYEER USD</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to P24UAH" data-alias="P24UAH" data-id="1">Приват 24 UAH</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to BTC" data-alias="BTC" data-id="1">Bitcoin</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to PMBBUAH" data-alias="PMBBUAH" data-id="1">ПУМБ UAH</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to WEXUSD" data-alias="WEXUSD" data-id="1">WEX code USD</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to ADVCUSD" data-alias="ADVCUSD" data-id="1">Advanced Cash USD</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to YAMRUB" data-alias="YAMRUB" data-id="1">Яндекс Деньги RUB</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to XRP" data-alias="XRP" data-id="1">Ripple XRP</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to QWRUB" data-alias="QWRUB" data-id="1">QIWI RUB</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to PMUSD" data-alias="PMUSD" data-id="1">PerfectMoney USD</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to PRUSD active" data-alias="PRUSD" data-id="1" data-group="USD">PAYEER USD</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to P24UAH" data-alias="P24UAH" data-id="1" data-group="UAH">Приват 24 UAH</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to BTC" data-alias="BTC" data-id="1" data-group="CRYPT">Bitcoin</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to PMBBUAH" data-alias="PMBBUAH" data-id="1" data-group="UAH">ПУМБ UAH</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to WEXUSD" data-alias="WEXUSD" data-id="1" data-group="USD">WEX code USD</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to ADVCUSD" data-alias="ADVCUSD" data-id="1" data-group="USD">Advanced Cash USD</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to YAMRUB" data-alias="YAMRUB" data-id="1" data-group="RUB">Яндекс Деньги RUB</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to XRP" data-alias="XRP" data-id="1" data-group="CRYPT">Ripple XRP</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to QWRUB" data-alias="QWRUB" data-id="1" data-group="RUB">QIWI RUB</li>
+                        <li class="b-exchange-currency__item js-exchange-currency-to PMUSD" data-alias="PMUSD" data-id="1" data-group="USD">PerfectMoney USD</li>
                     </ul>
 
                     <div class="b-exchange__footer">

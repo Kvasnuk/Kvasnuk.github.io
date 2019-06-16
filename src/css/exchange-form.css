@@ -178,6 +178,18 @@
 .QWRUB:before{
     background-image: url("../images/currency-qiwi.png");
 }
+.SBERRUB:before{
+    background-image: url("../images/sberbanklogo.jpg");
+}
+.TCSBRUB:before{
+    background-image: url("../images/tenikoff.jpg");
+}
+.ACRUB:before{
+    background-image: url("../images/alfabank.jpg");
+}
+.TBRUB:before{
+    background-image: url("../images/vtb_logo.jpg");
+}
 
 .b-exchange__input, .order-page .b-exchange__input{
     display: block;
