@@ -387,3 +387,116 @@
 #exchange-lists{
     position: relative;
 }
+@keyframes shakeButton {
+    0% {transform:translateY(0);}
+    5% {transform:translateY(-10px);}
+    10% {transform:translateY(0);}
+    15% {transform:translateY(-10px);}
+    19% {transform:translateY(0);}
+    100% {transform:translateY(0);}
+
+}
+
+@keyframes showTitle {
+    0% {transform:translateY(-30px); opacity: 0;}
+    100% {transform:translateY(0); opacity: 1;}
+}
+.order-page-title {
+    position: relative;
+    padding: 10px 45px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-page-title h1 {
+    width: 100%;
+    max-width: 1140px;
+    font-size:28px;
+    text-align: center;
+    color: #00d1d5;
+    display: inline-block;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: showTitle 0.5s linear forwards;
+}
+
+.order-page-title h1 span{
+    color: #00b047;
+}
+
+.order-show-message {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #d7ecf6;
+    border: 1px solid #d7ecf6;
+    color: #427892;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 10px;
+    transition: .3s;
+    z-index: 2;
+}
+
+.order-show-message.animate {
+    animation: shakeButton 5s 1s linear infinite;
+}
+.order-show-message:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.order-show-message:hover {
+    background: #bcd2dc;
+    cursor: pointer;
+}
+
+.b-alert__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #020202cf;
+    z-index: 99;
+    padding: 30px 15px;
+    display: none;
+}
+
+.b-alert__modal>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.close-alert-modal {
+     margin-top: 20px;
+     width: 100px;
+     height: 38px;
+     background: #427892;
+     border: 1px solid #427892;
+     line-height: 1.2;
+     color: #fff;
+     transition: .3s;
+     outline: none;
+ }
+
+.close-alert-modal:hover {
+    background: #4b87a5;
+    border: 1px solid #4b87a5;
+}
+
+.close-alert-modal:focus,
+.close-alert-modal:active
+{
+    box-shadow: none;
+    outline: none;
+}

@@ -146,6 +146,10 @@
         right: 0;
         width: 50%;
     }
+
+    .order-page-title h1 {
+        font-size: 26px;
+    }
 }
 @media screen and (max-width: 991px) {
     #exchange-lists {
@@ -273,6 +277,11 @@
         bottom: 0;
         box-shadow: 0px 8px 19px 2px #545454;
     }
+
+    .order-page-title h1 {
+        font-size: 24px;
+    }
+
     .container {
         max-width: 100%;
         width: 100% !important;
@@ -448,10 +457,9 @@
             top: 380px;
         }
 
-
-
-
-
+    .order-page-title h1 {
+        font-size: 22px;
+    }
 
     .b-header-info {
         padding: 10px 0;
@@ -616,6 +624,17 @@
 @media screen and (max-width: 480px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
         top: 410px;
+    }
+
+    .order-page-title h1 {
+        font-size: 20px;
+    }
+    .order-page-title h1 span{
+        display: block;
+    }
+
+    .order-show-message {
+        right: 10px;
     }
 
     .banner-subtitle {

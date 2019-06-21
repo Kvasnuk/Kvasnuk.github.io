@@ -1,14 +1,29 @@
 @@include('header.html')
 <main class="b-main order-page">
     <div class="container">
-        <div class="order-alert--top">
-            <div class="b-alert b-alert--info circle-icon">
-                <p class="b-alert__title">Обмен в данном направление происходит в полуавтоматическом режиме</p>
-                <p class="b-alert__message">Получение денежных средств по Вашей заявке произойдет в течении 5 минут
-                    после
-                    успешной оплаты.</p>
+        <div class="order-page-title">
+            <h1>Обмен <span>PerfectMoney USD</span> на <span>PAYEER USD</span></h1>
+            <button
+                    class="order-show-message animate js-show-order-message"
+                    type="button"
+                    title="show message"
+            >!</button>
+        </div>
+
+        <div class="b-alert__modal">
+            <div>
+            <div class="order-alert--top">
+                <div class="b-alert b-alert--info circle-icon">
+                    <p class="b-alert__title">Обмен в данном направление происходит в полуавтоматическом режиме</p>
+                    <p class="b-alert__message">Получение денежных средств по Вашей заявке произойдет в течении 5 минут
+                        после
+                        успешной оплаты.</p>
+                </div>
+            </div>
+            <button class="close-alert-modal">OK</button>
             </div>
         </div>
+
         <div class="exchange">
             <div class="b-exchange__course">
                 <p>Курс: <span class="b-exchange__course--from">1 PerfectMoney USD</span> за
