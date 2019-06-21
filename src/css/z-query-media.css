@@ -282,6 +282,10 @@
         font-size: 24px;
     }
 
+    .b-main.order-page {
+        padding: 115px 0 30px;
+    }
+
     .container {
         max-width: 100%;
         width: 100% !important;
@@ -604,8 +608,13 @@
         color: #4cae50;
     }
 
+    .b-main.order-page {
+        padding: 90px 0 30px;
+    }
 
-
+    .b-main.order-page .exchange {
+      padding-top: 5px;
+    }
 
     .b-exchange__maximum p b {
         display: block;
@@ -624,6 +633,10 @@
 @media screen and (max-width: 480px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
         top: 410px;
+    }
+
+    .b-main.order-page {
+        padding: 80px 0 30px;
     }
 
     .order-page-title h1 {

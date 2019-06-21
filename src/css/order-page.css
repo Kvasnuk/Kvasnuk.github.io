@@ -389,9 +389,9 @@
 }
 @keyframes shakeButton {
     0% {transform:translateY(0);}
-    5% {transform:translateY(-10px);}
+    5% {transform:translateY(-3px);}
     10% {transform:translateY(0);}
-    15% {transform:translateY(-10px);}
+    15% {transform:translateY(-3px);}
     19% {transform:translateY(0);}
     100% {transform:translateY(0);}
 
@@ -401,10 +401,15 @@
     0% {transform:translateY(-30px); opacity: 0;}
     100% {transform:translateY(0); opacity: 1;}
 }
+
+.b-main.order-page {
+    padding: 130px 0 30px;
+}
 .order-page-title {
     position: relative;
     padding: 10px 45px 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -416,7 +421,7 @@
     text-align: center;
     color: #00d1d5;
     display: inline-block;
-    margin: 0;
+    margin: 0 0 10px;
     opacity: 0;
     transform: translateY(-30px);
     animation: showTitle 0.5s linear forwards;
@@ -427,25 +432,27 @@
 }
 
 .order-show-message {
-    position: absolute;
-    right: 0;
-    top: 10px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #d7ecf6;
-    border: 1px solid #d7ecf6;
+    position: relative;
+    background: transparent;
+    border: 0;
     color: #427892;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1;
-    margin-left: 10px;
-    transition: .3s;
-    z-index: 2;
 }
 
-.order-show-message.animate {
-    animation: shakeButton 5s 1s linear infinite;
+.order-show-message:before {
+    content: "!";
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bbb6f8;
+    display: inline-block;
+    position: absolute;
+    line-height: 15px;
+    left: -13px;
+    top: 4px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+.order-show-message.animate:before {
+    animation: shakeButton 5s linear infinite;
 }
 .order-show-message:focus {
     outline: none;
@@ -453,7 +460,7 @@
 }
 
 .order-show-message:hover {
-    background: #bcd2dc;
+    color: #37657b;
     cursor: pointer;
 }
 
