@@ -663,6 +663,10 @@ jQuery(document).ready(function ($) {
             dataGroup = $(this).data('group'),
             listId = dataSide === 'left' ? 'exchange-currency-from' : 'exchange-currency-to';
         $('#'+listId).attr('data-filter', dataGroup);
+
+        if ($('.b-main.order-page').length > 0) {
+            setExchangeLIstsMinHeight();
+        }
     });
 
 $('.js-show-order-message').click(function() {

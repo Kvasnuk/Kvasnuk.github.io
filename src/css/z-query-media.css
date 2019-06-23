@@ -262,7 +262,7 @@
         width: calc(100% - 30px);
     }
     .order-page.full-screen #exchange-lists #exchange-currency-from,.order-page #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to,.order-page #exchange-lists #exchange-currency-to {
-        top: 325px;
+        top: 350px;
     }
     #mobile-menu{
         display: flex;
@@ -458,7 +458,7 @@
     }
 
  .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
-            top: 380px;
+            top: 440px;
         }
 
     .order-page-title h1 {
@@ -515,10 +515,10 @@
         padding-left: 30px;
     }
     .b-exchange-currency__item, .home-page.full-screen .b-exchange-currency__item {
-        padding: 12px 5px 5px 30px;
+        padding: 6px 5px 5px 30px;
     }
     .b-exchange-currency__item:before {
-        left: 10px;
+        left: 7px !important;
     }
     .b-exchange__footer {
         flex-wrap: wrap;
@@ -592,7 +592,7 @@
 }
 @media screen and (max-width: 575px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
-        top: 380px;
+        top: 470px;
     }
     .order-page .b-exchange__input {
         font-size: 18px;
@@ -632,7 +632,7 @@
 }
 @media screen and (max-width: 480px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
-        top: 410px;
+        top: 505px;
     }
 
     .b-main.order-page {
@@ -1465,5 +1465,13 @@
     .b-exchange-sidebar .flipTimer {
         min-width: 320px;
         transform: translateX(-2px);
+    }
+
+    .order-page .b-exchange-currency__item a {
+        font-size: 12px;
+    }
+
+    .order-page .b-exchange-currency__item:before {
+        left: 7px;
     }
 }
