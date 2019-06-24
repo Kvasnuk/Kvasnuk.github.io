@@ -154,8 +154,15 @@ jQuery(document).ready(function ($) {
         var $listLeftHeight = $('#exchange-currency-from').height();
         var $listRightHeight = $('#exchange-currency-to').height();
         ($listLeftHeight > $listRightHeight ? blockHeight = $listLeftHeight : blockHeight = $listRightHeight);
-        blockStyles = "<style>.order-page.full-screen #exchange-list-left,.order-page.full-screen #exchange-list-right{ min-height: " + blockHeight + "px;}</style>";
+        blockStyles = "<style>.order-page.full-screen #exchange-list-left,.order-page.full-screen #exchange-list-right{ min-height: " + blockHeight + 25 + "px;}</style>";
         $('head').append(blockStyles);
+
+        setTimeout(function() {
+            if ($('.b-main.order-page').length > 0 && $('.b-main.order-page').hasClass('full-screen') === false) {
+                $listLeftHeight.style('min-height', '0');
+                $listRightHeight.style('min-height', '0');
+            }
+        },500);
     }
 
     // function checkPageForResize(){
@@ -655,7 +662,7 @@ jQuery(document).ready(function ($) {
         el.parent().find('button').removeClass('active');
         el.addClass('active');
     }
-
+/*update filter */
     $('.js-filter-btn').click(function() {
         updateActiveFilter($(this));
         var dataSide = $(this).data('side'),
@@ -667,7 +674,7 @@ jQuery(document).ready(function ($) {
             setExchangeLIstsMinHeight();
         }
     });
-
+    /*update filter */
 $('.js-show-order-message').click(function() {
     $(this).removeClass('animate');
     $('.b-alert__modal').fadeIn();
