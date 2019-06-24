@@ -120,347 +120,573 @@
     <button class="b-profile__menu_btn js-toggle-mobile-sidebar"></button>
 </header>
 
-<main class="b-main order-page ">
-
-    <style type="text/css">
-        .has-error input {
-            border: 1px solid #e76c6c;
-            display: inline-block;
-        }
-    </style>
-
-    <script>
-        function up(e, count = 5) {
-            if (e.value.indexOf('.') != '-1') {
-                e.value = e.value.substring(0, e.value.indexOf('.') + (count + 1));
-            }
-        }
-    </script>
-
-    <div class="modal fade" id="exchange-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Не хватает?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Если текущая сумма резерва меньше, чем Вам нужно, то оставьте желаемое значение и Ваш электронный адрес и мы сообщим, когда будем иметь нужную сумму.
-                    </p>
-                    <p>
-                        В том случае, если Вы получили уведомление, но до Вашего визита резерв вновь уменьшился, то разместите заявку, пожалуйста, заново.
-                    </p>
-                    <p>Спасибо за выбор нашего сервиса!</p>
-                    <form id="exchange-order-form" action="/order/reserve-notification" method="POST">
-                        <div class="form-field">
-                            <label for="currency-menu">Валюта</label>
-                            <select id="currency-menu" class="custom-select">
-                                <option value="1">PerfectMoney USD</option>
-                                <option value="2">PAYEER USD</option>
-                                <option value="3" selected="">Приват 24 UAH</option>
-                                <option value="4">Bitcoin</option>
-                                <option value="5">ПУМБ UAH</option>
-                                <option value="7">WEX code USD</option>
-                                <option value="8">Advanced Cash USD</option>
-                                <option value="9">Яндекс Деньги RUB</option>
-                                <option value="11">QIWI RUB</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label for="user-email">Email</label>
-                            <input type="email" id="user-email" placeholder="example@mail.com">
-                            <!-- <p>Введите email - блок для ошибки</p> -->
-                        </div>
-                        <div class="form-field">
-                            <label for="user-count">Сумма</label>
-                            <input type="email" id="user-count" placeholder="1000.00">
-                            <p></p>
-                        </div>
-                    </form>
-
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" data-dismiss="modal">Отмена</button>
-                    <button type="button" class="js-send-form">Оставить заявку</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+<main class="b-main order-page full-screen">
+    <div class="container"></div>
     <div class="container">
-        <div class="order-alert--top">
-            <div class="b-alert b-alert--info circle-icon" data-step="1" data-intro="Прочтите информацию выбранного вами направления обмена">
-                <p class="b-alert__title">Обмен в данном направление происходит в полуавтоматическом режиме</p>
-                <p class="b-alert__message">Получение денежных средств по Вашей заявке произойдет в течении 5 минут
-                    после
-                    успешной оплаты.</p>
+
+        <div class="modal fade" id="exchange-order" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Не хватает?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="exchange-order-form">
+                            <form id="reserve-notification-form" action="/order/reserve-notification" method="post">
+                                <input type="hidden" name="_csrf" value="CVyB35xK1EiMq3C2FO6zDRGgJ7w1OYaH1Zo4xoxeB-ExJrSpyCecetnaN-NAg9xbdssWzwNp9--Gr06t2i1Liw==">							<p>
+                                Если текущая сумма резерва меньше, чем Вам нужно, то оставьте желаемое значение и Ваш электронный адрес и мы сообщим, когда будем иметь нужную сумму.
+                            </p>
+                                <p>
+                                    В том случае, если Вы получили уведомление, но до Вашего визита резерв вновь уменьшился, то разместите заявку, пожалуйста, заново.
+                                </p>
+                                <p>Спасибо за выбор нашего сервиса!</p>							<div class="form-field">
+                                <label for="currency-menu">Валюта</label>
+                                <select id="currency-menu" class="custom-select" name="ReserveNotification[currency_id]" data-field="currency_id">
+                                    <option value="4" >Bitcoin</option>
+                                    <option value="19" >Litecoin</option>
+                                    <option value="20" >Dash</option>
+                                    <option value="21" >Zcash</option>
+                                    <option value="22" >Bitcoin Cash</option>
+                                    <option value="11" >QIWI RUB</option>
+                                    <option value="9" >Яндекс Деньги RUB</option>
+                                    <option value="23" >Exmo RUB</option>
+                                    <option value="1" >PerfectMoney USD</option>
+                                    <option value="8" >Advanced Cash USD</option>
+                                    <option value="2" selected>PAYEER USD</option>
+                                    <option value="12" >Exmo USD</option>
+                                    <option value="13" >СБЕРБАНК RUB</option>
+                                    <option value="16" >ВТБ24 RUB</option>
+                                    <option value="14" >Тинькофф RUB</option>
+                                    <option value="15" >АльфаБанк RUB</option>
+                                    <option value="18" >Visa/MasterCard RUB</option>
+                                </select>
+                            </div>
+                                <div class="form-field">
+                                    <label for="user-email">Email</label>
+                                    <input type="email" id="user-email" name="ReserveNotification[email]" placeholder="example@mail.com" data-field="email">
+                                </div>
+                                <div class="form-field">
+                                    <label for="user-count">Сумма</label>
+                                    <input type="text" id="user-count" name="ReserveNotification[amount]" placeholder="1000.00" data-field="amount">
+                                </div>
+                                <div class="message-box">
+
+                                </div>
+                            </form>					</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="js-send-form" id="submit-reserve-notification">Оставить заявку</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="exchange">
-            <form id="order-calculate" action="/order/check" method="post">
-                <input type="hidden" name="_csrf" value="o8epKbfRkMU_rb9bq4ovkWizAVDsBqbBvRwHn_SY_J3bodFrx4jCi07n9Ani33XGDIRTNKs-4rvIcn7qkfW4rg==">
-
-                <input type="hidden" id="orderform-sell_currency_id" class="form-control" name="OrderForm[sell_currency_id]" value="1">
-
-                <input type="hidden" id="orderform-buy_currency_id" class="form-control" name="OrderForm[buy_currency_id]" value="3">
 
 
-                <input type="hidden" id="orderform-type" class="form-control" name="OrderForm[type]" value="default">
-
-                <input type="hidden" id="orderform-urlcourse" class="form-control" name="OrderForm[urlCourse]" value="/exchange/PMUSD-to-P24UAH">
-
-                <input type="hidden" name="form" value="order">
-                <input type="hidden" id="selectCurrency" name="OrderForm[select]" value="sell">
-
-                <div class="b-exchange__course">
-                    <p>Курс: <span class="b-exchange__course--from">1 PerfectMoney USD</span> за <span class="b-exchange__course--to">24.8791 Приват 24 UAH</span></p>
+        <div class="exchange animated bounce">
+            <div id="orderform-container" data-pjax-container="" data-pjax-push-state data-pjax-timeout="1000">
+                <div class="order-page-title">
+                    <h1>Обмен <span>PerfectMoney USD</span> на <span>PAYEER USD</span></h1>
+                    <button class="order-show-message js-show-order-message" type="button"
+                            title="Нажмите чтобы развернуть">Инфо о направлении обмена</button>
                 </div>
-                <div class="b-exchange__maximum">
-                    <p>Максимальная сумма получения <b>0 UAH Приват 24 UAH <span data-toggle="modal" data-target="#exchange-order">Не хватает?</span></b></p><b>
-                </b></div><b>
 
-                <div class="b-exchange ">
-
-                    <script type="text/javascript">
-                        var parent = document.getElementById('field-sell-amount');
-                        var element = document.getElementById('exchange-sum-currency--from');
-
-                        parent.appendChild(element);
-                    </script>
-
-                    <div class="b-exchange__main">
-                        <div class="b-exchange__main_part b-exchange__main_part--from">
-                            <div>
-                                <span id="exchange-ddl-from" class="PMUSD" data-alias="PMUSD">PerfectMoney USD</span>
-                                <p class="exchange-sum-label">Обменяю:</p>
-                                <div id="field-sell-amount" class="exchange-sum exchange-sum--from field-orderform-sell_amount" data-step="4" data-intro="Сумма покупки">
-
-                                    <input type="text" id="orderform-sell_amount" class="b-exchange__input" name="OrderForm[sell_amount]" value="52.25" pattern="^[\d\.]+$">
-
-                                    <div class="help-block"></div>
-                                </div>
-                                <span id="exchange-sum-currency--from">USD</span>
-
-                                <!-- <p class="exchange-sum is-danger" data-step="2" data-intro="Сумма продажи">
-
-        <input type="text" id="exchange-from-input" class="b-exchange__input" name="OrderForm[sell_amount]" value="52.25" min="0">
-                                    <span class="exchange-sum-currency--from">USD</span>
-                                </p> -->
+                <div class="b-alert__modal" style="display: none;">
+                    <div>
+                        <div class="order-alert--top">
+                            <div class="b-alert b-alert--info circle-icon" data-step="1"
+                                 data-intro="Прочтите информацию выбранного вами направления обмена">
+                                <p class="b-alert__title">Обмен в данном направление происходит в полуавтоматическом режиме</p>
+                                <p class="b-alert__message"><p>Получение денежных средств по Вашей заявке произойдет в течении 5 минут после успешной оплаты.</p></p>
                             </div>
-                            <p>
-                                <a href="/exchange/P24UAH-to-PMUSD"><button class="b-exchange__settings b-exchange__settings--reverse js-exchange-reverse" type="button"></button></a>
-                                <button class="b-exchange__settings b-exchange__settings--full js-exchange-full" type="button"></button>
-                                <span class="b-exchange__settings--message">А может так удобнее?</span>
-                            </p>
-
-
                         </div>
-                        <div class="b-exchange__main_part b-exchange__main_part--to">
-                            <div>
-                                <span id="exchange-ddl-to" class="P24UAH" data-alias="P24UAH">Приват 24 UAH</span>
-                                <p class="exchange-sum-label">На:</p>
-                                <div id="field-buy-amount" class="exchange-sum exchange-sum--to field-orderform-buy_amount has-error" data-step="4" data-intro="Сумма покупки">
+                        <button class="close-alert-modal">OK</button>
+                    </div>
+                </div>
 
-                                    <input type="text" id="orderform-buy_amount" class="b-exchange__input" name="OrderForm[buy_amount]" value="1299.93" pattern="^[\d\.]+$" aria-invalid="true">
+                <div id="exchange-lists">
+                    <ul
+                            id="exchange-currency-from"
+                            class="b-exchange-currency"
+                            data-step="3"
+                            data-intro="Валюта продажи"
+                            data-filter="usd"
+                    >
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from BTC  "
+                                data-alias="BTC"
+                                data-id="4"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/BTC-to-PRUSD" data-pjax="1" data-group="CRYPT">Bitcoin</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from LTC  "
+                                data-alias="LTC"
+                                data-id="19"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/LTC-to-PRUSD" data-pjax="1" data-group="CRYPT">Litecoin</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from DASH  "
+                                data-alias="DASH"
+                                data-id="20"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/DASH-to-PRUSD" data-pjax="1" data-group="CRYPT">Dash</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from ZEC  "
+                                data-alias="ZEC"
+                                data-id="21"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/ZEC-to-PRUSD" data-pjax="1" data-group="CRYPT">Zcash</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from BCH  "
+                                data-alias="BCH"
+                                data-id="22"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/BCH-to-PRUSD" data-pjax="1" data-group="CRYPT">Bitcoin Cash</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from QWRUB  "
+                                data-alias="QWRUB"
+                                data-id="11"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/QWRUB-to-PRUSD" data-pjax="1" data-group="RUB">QIWI RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from YAMRUB  "
+                                data-alias="YAMRUB"
+                                data-id="9"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/YAMRUB-to-PRUSD" data-pjax="1" data-group="RUB">Яндекс Деньги RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from EXMRUB  "
+                                data-alias="EXMRUB"
+                                data-id="23"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/EXMRUB-to-PRUSD" data-pjax="1" data-group="RUB">Exmo RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from PMUSD active "
+                                data-alias="PMUSD"
+                                data-id="1"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/PMUSD-to-PRUSD" data-pjax="1" data-group="USD">PerfectMoney USD</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from ADVCUSD  "
+                                data-alias="ADVCUSD"
+                                data-id="8"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/ADVCUSD-to-PRUSD" data-pjax="1" data-group="USD">Advanced Cash USD</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from PRUSD  "
+                                data-alias="PRUSD"
+                                data-id="2"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/PRUSD-to-PMUSD" data-pjax="1" data-group="USD">PAYEER USD</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-from EXMUSD  "
+                                data-alias="EXMUSD"
+                                data-id="12"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/EXMUSD-to-PRUSD" data-pjax="1" data-group="USD">Exmo USD</a>
+                        </li>
+                    </ul>
 
-                                    <div class="help-block">Минимальная сумма покупки 1300UAH!</div>
+
+                    <ul
+                            id="exchange-currency-to"
+                            class="b-exchange-currency"
+                            data-step="5"
+                            data-intro="Валюта покупки"
+                            data-filter="usd"
+                    >
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to BTC  "
+                                data-alias="BTC"
+                                data-id="4"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/PMUSD-to-BTC" data-pjax="1" data-group="CRYPT">Bitcoin</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to LTC  "
+                                data-alias="LTC"
+                                data-id="19"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/PMUSD-to-LTC" data-pjax="1" data-group="CRYPT">Litecoin</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to DASH  "
+                                data-alias="DASH"
+                                data-id="20"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/PMUSD-to-DASH" data-pjax="1" data-group="CRYPT">Dash</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to ZEC  "
+                                data-alias="ZEC"
+                                data-id="21"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/PMUSD-to-ZEC" data-pjax="1" data-group="CRYPT">Zcash</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to BCH  "
+                                data-alias="BCH"
+                                data-id="22"
+                                data-group="CRYPT"
+                        >
+                            <a href="/exchange/PMUSD-to-BCH" data-pjax="1" data-group="CRYPT">Bitcoin Cash</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to QWRUB  "
+                                data-alias="QWRUB"
+                                data-id="11"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-QWRUB" data-pjax="1" data-group="RUB">QIWI RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to YAMRUB  "
+                                data-alias="YAMRUB"
+                                data-id="9"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-YAMRUB" data-pjax="1" data-group="RUB">Яндекс Деньги RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to EXMRUB  "
+                                data-alias="EXMRUB"
+                                data-id="23"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-EXMRUB" data-pjax="1" data-group="RUB">Exmo RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to PMUSD  "
+                                data-alias="PMUSD"
+                                data-id="1"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/PRUSD-to-PMUSD" data-pjax="1" data-group="USD">PerfectMoney USD</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to ADVCUSD  "
+                                data-alias="ADVCUSD"
+                                data-id="8"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/PMUSD-to-ADVCUSD" data-pjax="1" data-group="USD">Advanced Cash USD</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to PRUSD active "
+                                data-alias="PRUSD"
+                                data-id="2"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/PMUSD-to-PRUSD" data-pjax="1" data-group="USD">PAYEER USD</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to EXMUSD  "
+                                data-alias="EXMUSD"
+                                data-id="12"
+                                data-group="USD"
+                        >
+                            <a href="/exchange/PMUSD-to-EXMUSD" data-pjax="1" data-group="USD">Exmo USD</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to SBERRUB  "
+                                data-alias="SBERRUB"
+                                data-id="13"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-SBERRUB" data-pjax="1" data-group="RUB">СБЕРБАНК RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to TBRUB  "
+                                data-alias="TBRUB"
+                                data-id="16"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-TBRUB" data-pjax="1" data-group="RUB">ВТБ24 RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to TCSBRUB  "
+                                data-alias="TCSBRUB"
+                                data-id="14"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-TCSBRUB" data-pjax="1" data-group="RUB">Тинькофф RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to ACRUB  "
+                                data-alias="ACRUB"
+                                data-id="15"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-ACRUB" data-pjax="1" data-group="RUB">АльфаБанк RUB</a>
+                        </li>
+                        <li
+                                class="b-exchange-currency__item js-exchange-currency-to CARDRUB  "
+                                data-alias="CARDRUB"
+                                data-id="18"
+                                data-group="RUB"
+                        >
+                            <a href="/exchange/PMUSD-to-CARDRUB" data-pjax="1" data-group="RUB">Visa/MasterCard RUB</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form id="order-calculate" action="/order/check" method="post">
+                    <input type="hidden" name="_csrf" value="CVyB35xK1EiMq3C2FO6zDRGgJ7w1OYaH1Zo4xoxeB-ExJrSpyCecetnaN-NAg9xbdssWzwNp9--Gr06t2i1Liw==">
+
+                    <input type="hidden" id="orderform-sell_currency_id" class="form-control" name="OrderForm[sell_currency_id]" value="1">
+
+                    <input type="hidden" id="orderform-buy_currency_id" class="form-control" name="OrderForm[buy_currency_id]" value="2">
+
+
+                    <input type="hidden" id="orderform-type" class="form-control" name="OrderForm[type]" value="default">
+
+                    <input type="hidden" id="orderform-urlcourse" class="form-control" name="OrderForm[urlCourse]" value="/exchange/PMUSD-to-PRUSD">
+
+                    <input type="hidden" name="form" value="order" />
+                    <input type="hidden" id="selectCurrency" name="OrderForm[select]" value="sell" />
+
+                    <div class="b-exchange__course">
+                        <p>Курс: <span class="b-exchange__course--from">1.0203 PerfectMoney USD</span> за <span class="b-exchange__course--to">1 PAYEER USD</span></p>
+                    </div>
+                    <div class="b-exchange__maximum">
+                        <p>Максимальная сумма получения <b>662.69</b> USD PAYEER USD</strong> <span data-toggle="modal" data-target="#exchange-order">Не хватает?</span></p>
+                    </div>
+
+                    <div class="b-exchange">
+
+                        <div class="b-exchange__main">
+                            <div class="currency-filter">
+                                <div class="currency-filter__left">
+                                    <button class="js-filter-btn currency-filter__btn" data-side="left" data-group="all">ALL
+                                    </button>
+                                    <button class="js-filter-btn currency-filter__btn "
+                                            data-side="left"
+                                            data-group="crypt">CRYPT</button>
+                                    <button class="js-filter-btn currency-filter__btn active"
+                                            data-side="left"
+                                            data-group="usd">USD</button>
+                                    <button class="js-filter-btn currency-filter__btn "
+                                            data-side="left"
+                                            data-group="rub">RUB</button>
                                 </div>
-                                <span class="exchange-sum-currency--to">UAH</span>
+                                <div class="currency-filter__right">
+                                    <button class="js-filter-btn currency-filter__btn" data-side="right" data-group="all">ALL
+                                    </button>
+                                    <button class="js-filter-btn currency-filter__btn "
+                                            data-side="right"
+                                            data-group="crypt">CRYPT</button>
+                                    <button class="js-filter-btn currency-filter__btn active"
+                                            data-side="right"
+                                            data-group="usd">USD</button>
+                                    <button class="js-filter-btn currency-filter__btn "
+                                            data-side="right"
+                                            data-group="rub">RUB</button>
+                                </div>
+                            </div>
+                            <div class="b-exchange__main_part b-exchange__main_part--from">
+                                <div>
+                                    <span id="exchange-ddl-from" class="PMUSD" data-alias="PMUSD">PerfectMoney USD</span>
+                                    <p class="exchange-sum-label">Отдаю:</p>
+                                    <div id="field-sell-amount" class="exchange-sum exchange-sum--from field-orderform-sell_amount has-error" data-step="4" data-intro="Сумма покупки">
 
-                                <!-- <div>
-                                    <p class="exchange-sum-label">На:</p>
-                                    <p class="exchange-sum" data-step="4" data-intro="Сумма покупки" data-with-commission="1299.93">
+                                        <input type="text" id="orderform-sell_amount" class="b-exchange__input" name="OrderForm[sell_amount]" value="50" oninput="replaceAmount(this)" aria-invalid="true">
 
-        <input type="text" id="exchange-to-input" class="b-exchange__input" name="OrderForm[buy_amount]" value="1299.93" min="0">
-                                        <span class="exchange-sum-currency--to">UAH</span>
+                                        <div class="help-block">Минимальная сумма продажи 50USD!</div>
+                                    </div>
+                                    <span id="exchange-sum-currency--from">USD</span>
+
+                                </div>
+                                <p>
+                                    <a href="/exchange/PRUSD-to-PMUSD"><button class="b-exchange__settings b-exchange__settings--reverse js-exchange-reverse" type="button"></button></a>
+                                    <button class="b-exchange__settings b-exchange__settings--full js-exchange-full " type="button"></button>
+                                    <span class="b-exchange__settings--message">А может так удобнее?</span>
+                                </p>
+
+
+                            </div>
+                            <div class="b-exchange__main_part b-exchange__main_part--to">
+                                <div>
+                                    <span id="exchange-ddl-to" class="PRUSD" data-alias="PRUSD">PAYEER USD</span>
+                                    <p class="exchange-sum-label">Получаю:</p>
+                                    <div id="field-buy-amount" class="exchange-sum exchange-sum--to field-orderform-buy_amount" data-step="4" data-intro="Сумма покупки">
+
+                                        <input type="text" id="orderform-buy_amount" class="b-exchange__input" name="OrderForm[buy_amount]" value="49.01" oninput="replaceAmount(this)">
+
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <span class="exchange-sum-currency--to">USD</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="exchange-list-left"></div>
+                        <div id="exchange-list-right"></div>
+
+                        <div class="b-exchange__footer">
+                            <div class="b-exchange__footer--left">
+                                <span class="b-exchange-footer_count min-sum-from">Минимальная сумма <strong>50</strong> USD</span>
+
+                                <span class="b-exchange-footer_count max-sum-from">
+						                            Максимальная сумма <strong>50000</strong> USD                        					</span>
+
+                                <span class="b-exchange-footer_count commission-sum-from">
+						                            Комиссия PerfectMoney USD = <b id="sell_amount_comission_percent">2.00</b>% (<b id="sell_amount_comission_sum">1</b> USD)
+                        					</span>
+
+                                <div class="order-inputs">
+
+                                    <div class="order-input">
+                                        <div class="profile-input-field field-orderform-sell_amount_with_comission">
+                                            <label class="control-label" for="orderform-sell_amount_with_comission">С учётом комиссии</label>
+                                            <input type="text" id="orderform-sell_amount_with_comission" class="form-control" name="OrderForm[sell_amount_with_comission]" value="51" data-percent="2" oninput="replaceAmount(this)">
+
+                                            <div class="help-block"></div>
+                                        </div>
+                                    </div>
+                                    <br />
+
+
+
+                                    <div class="order-input">
+                                        <div class="order-input buy_target_input field-orderform-sell_source">
+                                            <label class="control-label" for="orderform-sell_source">Заплатить с этого счёта</label>
+                                            <input type="text" id="orderform-sell_source" class="form-control" name="OrderForm[sell_source]" value="" placeholder="U012345678">
+
+                                            <div class="help-block"></div>
+                                        </div>
+                                    </div>
+                                    <br />
+
+                                    <p class="account-number-container">
+                                        <span class="account-number-message">Номер кошелька Perfect Money USD</span>
                                     </p>
-                                </div> -->
-                            </div>
 
-                        </div>
-                    </div>
-
-                    <ul id="exchange-currency-from" class="b-exchange-currency" data-step="3" data-intro="Валюта продажи">
-                        <li class="b-exchange-currency__item js-exchange-currency-from PMUSD active" data-alias="PMUSD" data-id="1">PerfectMoney USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from PRUSD" data-alias="PRUSD" data-id="2">PAYEER USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from BTC" data-alias="BTC" data-id="4">Bitcoin				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from WEXUSD" data-alias="WEXUSD" data-id="7">WEX code USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from ADVCUSD" data-alias="ADVCUSD" data-id="8">Advanced Cash USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from YAMRUB" data-alias="YAMRUB" data-id="9">Яндекс Деньги RUB				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-from QWRUB" data-alias="QWRUB" data-id="11">QIWI RUB				</li>
-                    </ul>
-
-
-                    <ul id="exchange-currency-to" class="b-exchange-currency" data-step="5" data-intro="Валюта покупки">
-                        <li class="b-exchange-currency__item js-exchange-currency-to PRUSD" data-alias="PRUSD" data-id="2">PAYEER USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to P24UAH active" data-alias="P24UAH" data-id="3">Приват 24 UAH				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to BTC" data-alias="BTC" data-id="4">Bitcoin				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to PMBBUAH" data-alias="PMBBUAH" data-id="5">ПУМБ UAH				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to WEXUSD" data-alias="WEXUSD" data-id="7">WEX code USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to ADVCUSD" data-alias="ADVCUSD" data-id="8">Advanced Cash USD				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to YAMRUB" data-alias="YAMRUB" data-id="9">Яндекс Деньги RUB				</li>
-                        <li class="b-exchange-currency__item js-exchange-currency-to QWRUB" data-alias="QWRUB" data-id="11">QIWI RUB				</li>
-                    </ul>
-
-                    <div class="b-exchange__footer">
-                        <div class="b-exchange__footer--left">
-                            <span class="b-exchange-footer_count min-sum-from">Минимальная сумма 52.25 USD</span>
-
-                            <span class="b-exchange-footer_count max-sum-from">
-											</span>
-
-                            <span class="b-exchange-footer_count commission-sum-from">
-													Комиссия PerfectMoney USD = 2.00% (<b id="sell_amount_comission_text">1.05</b> USD)
-											</span>
-
-                            <div class="order-inputs">
-
-                                <div class="order-input">
-                                    <div class="profile-input-field field-orderform-sell_amount_with_comission">
-                                        <label class="control-label" for="orderform-sell_amount_with_comission">С учётом комиссии</label>
-                                        <input type="text" id="orderform-sell_amount_with_comission" class="form-control" name="OrderForm[sell_amount_with_comission]" value="53.3" readonly="readonly" pattern="^[\d\.]+$" data-percent="2">
-
-                                        <div class="help-block"></div>
-                                    </div>
                                 </div>
-                                <br>
-
-
-
-                                <div class="order-input">
-                                    <div class="order-input buy_target_input field-orderform-sell_source">
-                                        <label class="control-label" for="orderform-sell_source">Заплатить с этого счёта</label>
-                                        <input type="text" id="orderform-sell_source" class="form-control" name="OrderForm[sell_source]" value="">
-
-                                        <div class="help-block"></div>
-                                    </div>
-                                </div>
-                                <br>
-
-                                <p class="account-number-container">
-                                    <span class="account-number-message">Номер кошелька Perfect Money USD</span>
-                                </p>
-
                             </div>
-                        </div>
-                        <div class="b-exchange__footer--right">
-                            <span class="b-exchange-footer_count min-sum-to">Минимальная сумма 1300UAH</span>
+                            <div class="b-exchange__footer--right">
+                                <span class="b-exchange-footer_count min-sum-to">Минимальная сумма <strong>50</strong> USD</span>
 
-                            <span class="b-exchange-footer_count max-sum-to">
-													Максимальная сумма 50000UAH											</span>
+                                <span class="b-exchange-footer_count max-sum-to">
+						                            Максимальная сумма <strong>662.69</strong> USD                        					</span>
 
-                            <span class="b-exchange-footer_count commission-sum-to">
+                                <span class="b-exchange-footer_count commission-sum-to">
 											</span>
 
-                            <div class="order-inputs">
+
+                                <div class="order-inputs">
 
 
 
-                                <div class="order-input">
-                                    <div id="buy_target_row" class="order-input buy_target_input  field-orderform-buy_target">
-                                        <label class="control-label" for="orderform-buy_target">Зачислить на этот счёт</label>
-                                        <input type="text" id="orderform-buy_target" class="form-control" name="OrderForm[buy_target]">
+                                    <div class="order-input">
+                                        <div id="buy_target_row" class="order-input buy_target_input  field-orderform-buy_target">
+                                            <label class="control-label" for="orderform-buy_target">Зачислить на этот счёт</label>
+                                            <input type="text" id="orderform-buy_target" class="form-control" name="OrderForm[buy_target]" placeholder="P01234567">
 
-                                        <div class="help-block"></div>
-                                    </div>						</div>
+                                            <div class="help-block"></div>
+                                        </div>                        </div>
 
-                                <br>
+                                    <br />
 
-                                <p class="account-number-container">
-                                    <span class="account-number-message">Номер карты Приват банка</span>
-                                </p>
+                                    <p class="account-number-container">
+                                        <span class="account-number-message">Номер кошелька Payeer USD</span>
+                                    </p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="order-data">
-
-
-
-
-                    <div class="b-alert b-alert--info privat-alert">
-                        <p class="b-alert__message"></p><p style="text-align: center;"><span style="color: #000000;"><strong><em>Уважаемые клиенты, если в заявке Вы указываете карту ПриватБанка"Для Выплат" то на Вашу карту поступит сумма на 0,5% меньше,чем сумма указанная в заявке.</em></strong></span></p><p></p>
-                    </div>
-
-
-                    <div class="order-data__item">
-                        <p class="b-field-checked">
-                            <input id="orderform-is_verified" type="checkbox" name="OrderForm[is_verified]" class="b-field-checked__input" value="1">
-                            <label for="orderform-is_verified" class="b-field-checked__label">
-                                Мой кошелёк Perfect Money верифицирован					</label>
-                            <span class="order-field-message">Для неверифицированных кошельков комиссия больше на 1.5%</span>
-                        </p>
-                    </div>
+                    <div class="order-data">
 
 
 
 
 
 
-                    <div class="order-data__item">
-                        <div class="profile-input-field field-orderform-first_name">
-                            <label class="control-label" for="orderform-first_name">Имя держателя карты</label>
-                            <input type="text" id="orderform-first_name" class="form-control" name="OrderForm[first_name]" value="" placeholder="Василий">
 
-                            <div class="help-block"></div>
-                        </div>			</div>
 
-                    <div class="order-data__item">
-                        <div class="profile-input-field field-orderform-last_name">
-                            <label class="control-label" for="orderform-last_name">Фамилия держателя карты</label>
-                            <input type="text" id="orderform-last_name" class="form-control" name="OrderForm[last_name]" value="" placeholder="Петров">
-
-                            <div class="help-block"></div>
-                        </div>			</div>
-
-                    <div class="order-data__item">
-                        <div class="profile-input-field field-orderform-phone">
-                            <label class="control-label" for="orderform-phone">Номер телефона</label>
-                            <input type="tel" id="orderform-phone" class="form-control" name="OrderForm[phone]" value="" placeholder="+380500123456" required="" pattern="+(\d){7,13}">
-
-                            <div class="help-block"></div>
-                        </div>			</div>
+                        <div class="order-data__item">
+                            <p class="b-field-checked">
+                                <input id="orderform-is_verified" type="checkbox" name="OrderForm[is_verified]" class="b-field-checked__input" value="1" data-verified-percent="0.5" data-percent="2.00"  />
+                                <label for="orderform-is_verified" class="b-field-checked__label">
+                                    Мой кошелёк Perfect Money верифицирован                        </label>
+                                <span class="order-field-message">Для неверифицированных кошельков комиссия больше на 1.5%</span>
+                            </p>
+                        </div>
 
 
 
-                    <div class="order-data__item">
-				<span class="profile-input-field field-orderform-email required">
+
+
+
+                        <!-- 			<div class="b-alert b-alert--info">
+                            <p class="b-alert__message"></p>
+                        </div>
+                        <br />
+                        <br />
+                                         -->
+
+                        <div class="order-data__item">
+                <span class="profile-input-field field-orderform-email required">
 <label class="control-label" for="orderform-email">Электронная почта</label>
 <input type="text" id="orderform-email" class="form-control" name="OrderForm[email]" placeholder="you@gmail.com" aria-required="true">
 
 <div class="help-block"></div>
-</span>				<span class="order-field-message">Если вы зарегистрированы, вы получите накопительную скидку</span>
-                    </div>
+</span>                <span class="order-field-message">Если вы зарегистрированы, вы получите накопительную скидку</span>
+                        </div>
 
-                    <div class="order-data__item agree" data-step="7" data-intro="Согласие с нашими правилами">
-                        <p class="b-field-checked">
-                            <input type="checkbox" name="OrderForm[agree]" id="orderform-agree" class="b-field-checked__input" value="1">
-                            <label for="orderform-agree" class="b-field-checked__label">
-                                Я ознакомился и согласен с условиями
-                            </label>
-                            <span class="b-field-checked__links">
+                        <div class="order-data__item agree" data-step="7" data-intro="Согласие с нашими правилами">
+                            <p class="b-field-checked">
+                                <input type="checkbox" name="OrderForm[agree]" id="orderform-agree" class="b-field-checked__input" value="1">
+                                <label for="orderform-agree" class="b-field-checked__label">
+                                    Я ознакомился и согласен с условиями                    </label>
+                                <span class="b-field-checked__links">
 						<a href="/page/security">Безопасности</a> и <a href="/page/rules">Правилами</a> сайта					</span>
-                        </p>
+                            </p>
+                        </div>
+
+
+                        <div class="order-data__item text-center submit" data-step="8" data-intro="Создание заявки на обмен, и оплата с вашей стороны">
+                            <button class="btn btn-success order-submit-btn js-order-submit" id="order-submit" type="submit">Далее</button>
+                        </div>
                     </div>
 
+                </form>
+            </div>    </div>
 
-                    <div class="order-data__item text-center submit" data-step="8" data-intro="Создание заявки на обмен, и оплата с вашей стороны">
-                        <button class="btn btn-success order-submit-btn js-order-submit" id="order-submit" type="submit" disabled="disabled">Сумма превышает наш резерв</button>
-                    </div>
-                </div>
-
-            </b></form></div><b>
-    </b></div><b>
-
-
-</b></main>
+    </div>        </main>
 
 <footer>
    <div id="partners">

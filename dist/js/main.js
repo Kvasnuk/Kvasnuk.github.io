@@ -155,13 +155,13 @@ jQuery(document).ready(function ($) {
         var $listLeftHeight = $('#exchange-currency-from').height();
         var $listRightHeight = $('#exchange-currency-to').height();
         ($listLeftHeight > $listRightHeight ? blockHeight = $listLeftHeight : blockHeight = $listRightHeight);
-        blockStyles = "<style>.order-page.full-screen #exchange-list-left,.order-page.full-screen #exchange-list-right{ min-height: " + blockHeight + 25 + "px;}</style>";
+        blockStyles = "<style>.order-page.full-screen #exchange-list-left,.order-page.full-screen #exchange-list-right{ min-height: " + blockHeight  + "px;}</style>";
         $('head').append(blockStyles);
 
         setTimeout(function() {
             if ($('.b-main.order-page').length > 0 && $('.b-main.order-page').hasClass('full-screen') === false) {
-                $listLeftHeight.style('min-height', '0');
-                $listRightHeight.style('min-height', '0');
+                $('#exchange-currency-from').css('min-height', '0');
+                $('#exchange-currency-to').css('min-height', '0');
             }
         },500);
     }
@@ -676,6 +676,7 @@ jQuery(document).ready(function ($) {
         }
     });
     /*update filter */
+
 $('.js-show-order-message').click(function() {
     $(this).removeClass('animate');
     $('.b-alert__modal').fadeIn();

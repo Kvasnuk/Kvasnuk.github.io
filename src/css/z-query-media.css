@@ -259,7 +259,7 @@
 }
 @media screen and (max-width: 767px) {
     #exchange-lists {
-        width: calc(100% - 30px);
+        width: calc(100% - 10px);
     }
     .order-page.full-screen #exchange-lists #exchange-currency-from,.order-page #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to,.order-page #exchange-lists #exchange-currency-to {
         top: 350px;
@@ -319,6 +319,10 @@
 
     .currency-filter__left, .currency-filter__right {
         padding: 0 15px;
+    }
+
+    .order-page .b-exchange__footer>div {
+        padding: 40px 15px 10px;
     }
 
     footer{
@@ -384,10 +388,10 @@
         font-size: 16px;
     }
     .b-exchange__main_part--from {
-        padding: 10px 15px 15px 20px;
+        padding: 10px 15px 30px 20px;
     }
     .b-exchange__main_part--to {
-        padding: 10px 20px 15px;
+        padding: 10px 20px 30px;
     }
     .block-header {
         height: 65px;
@@ -528,6 +532,9 @@
         padding: 15px;
         margin-bottom: 0;
         background: #f8f8f8;
+    }
+    .b-exchange__footer>div:first-child {
+        margin-top: 40px;
     }
     .b-exchange__footer--right{
         border-bottom-left-radius: 5px;
@@ -787,6 +794,10 @@
 @media screen and (min-width: 1200px){
     .b-profile__menu_btn{
         display:none!important;
+    }
+
+    .order-page #exchange-lists #exchange-currency-to .b-exchange-currency__item:before {
+        left: 20px;
     }
 }
 @media screen and (max-width: 1199px){
@@ -1227,6 +1238,11 @@
     .order-page .form-control[readonly] {
         text-align: center;
     }
+
+    .order-page .exchange-sum .help-block{
+        font-size: 12px;
+    }
+
     .alert-modal__body{
         padding: 60px 5% 45px;
     }
