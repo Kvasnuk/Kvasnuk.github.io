@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/order-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/order-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/order-page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/z-query-media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/z-query-media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/html/order-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/order-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/test-order-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/test-order-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-order-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-order-page.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,10 +23,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/html/order-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="799" column="19" selection-start-line="799" selection-start-column="19" selection-end-line="799" selection-end-column="19" />
+            <state relative-caret-position="357">
+              <caret line="1319" column="43" lean-forward="true" selection-start-line="1319" selection-start-column="43" selection-end-line="1319" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -34,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/order-page.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="381" selection-start-line="381" selection-end-line="384" selection-end-column="1" />
+            <state relative-caret-position="129">
+              <caret line="486" selection-start-line="486" selection-end-line="490" />
             </state>
           </provider>
         </entry>
@@ -51,8 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>header-error</find>
-      <find>b-profile__header</find>
       <find>item-status</find>
       <find>b-application-data__item</find>
       <find>.modal-body #login-form .input-group input</find>
@@ -81,6 +88,8 @@
       <find>min-width:180px</find>
       <find>.b-exchange__main_part--from</find>
       <find>.help-block</find>
+      <find>1199</find>
+      <find>no-scroll</find>
     </findStrings>
     <replaceStrings>
       <replace>.home-template</replace>
@@ -147,11 +156,11 @@
         <option value="$PROJECT_DIR$/src/html/index.html" />
         <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
         <option value="$PROJECT_DIR$/src/css/currency-filter.css" />
-        <option value="$PROJECT_DIR$/src/css/order-page.css" />
         <option value="$PROJECT_DIR$/dist/js/main.js" />
-        <option value="$PROJECT_DIR$/src/js/main.js" />
         <option value="$PROJECT_DIR$/src/html/test-order-page.html" />
         <option value="$PROJECT_DIR$/src/html/order-page.html" />
+        <option value="$PROJECT_DIR$/src/js/main.js" />
+        <option value="$PROJECT_DIR$/src/css/order-page.css" />
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
       </list>
     </option>
@@ -177,24 +186,13 @@
             <path>
               <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
               <item name="sevenmoney" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sevenmoney" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sevenmoney" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
               <item name="sevenmoney" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -282,17 +280,19 @@
       <workItem from="1539592748704" duration="2147000" />
       <workItem from="1560583960581" duration="15653000" />
       <workItem from="1561321742327" duration="2417000" />
-      <workItem from="1561357169890" duration="6728000" />
+      <workItem from="1561357169890" duration="7077000" />
+      <workItem from="1562098075271" duration="1458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="549192000" />
+    <option name="totallyTimeSpent" value="550999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19591261" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19591261" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -305,7 +305,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26904178" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26904178" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -647,29 +647,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="162" column="66" selection-start-line="162" selection-start-column="66" selection-end-line="162" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/order-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/order-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="381" selection-start-line="381" selection-end-line="384" selection-end-column="1" />
+        <state relative-caret-position="162">
+          <caret line="680" column="34" selection-start-line="680" selection-start-column="34" selection-end-line="680" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="799" column="19" selection-start-line="799" selection-start-column="19" selection-end-line="799" selection-end-column="19" />
+        <state relative-caret-position="357">
+          <caret line="1319" column="43" lean-forward="true" selection-start-line="1319" selection-start-column="43" selection-end-line="1319" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/order-page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="486" selection-start-line="486" selection-end-line="490" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/order-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
         </state>
       </provider>
     </entry>

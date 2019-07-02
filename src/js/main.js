@@ -679,11 +679,9 @@ jQuery(document).ready(function ($) {
 $('.js-show-order-message').click(function() {
     $(this).removeClass('animate');
     $('.b-alert__modal').fadeIn();
-    $('body').addClass('no-scroll');
 });
 $('.close-alert-modal').click(function() {
     $('.b-alert__modal').fadeOut();
-    $('body').removeClass('no-scroll');
 });
 
 

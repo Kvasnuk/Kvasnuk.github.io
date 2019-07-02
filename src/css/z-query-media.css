@@ -1012,6 +1012,12 @@
          padding: 80px 15px 20px !important;
          border-left: 10px solid #9ccde4;
      }
+
+    .b-alert__modal .b-alert--info {
+        padding: 80px 15px 75px !important;
+    }
+
+
     .b-alert--info:after, .b-alert--info:before {
         position: absolute;
         left: 0;
@@ -1309,6 +1315,9 @@
     }
     .b-alert--info {
         padding: 70px 10px 20px!important;
+    }
+    .b-alert__modal .b-alert--info {
+        padding: 70px 10px 75px !important;
     }
     .fs-upload-target{
         width: 100%;

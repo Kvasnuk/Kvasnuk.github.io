@@ -465,12 +465,12 @@
 }
 
 .b-alert__modal{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #020202cf;
+    background: transparent;
     z-index: 99;
     padding: 30px 15px;
     display: none;
@@ -478,14 +478,19 @@
 
 .b-alert__modal>div {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
 }
 
+.b-alert__modal .b-alert--info {
+    padding: 30px 30px 75px 75px;
+    box-shadow: 0 6px 17px 2px #7f9dab;
+}
+
 .close-alert-modal {
-     margin-top: 20px;
+     margin-top: -60px;
      width: 100px;
      height: 38px;
      background: #427892;
@@ -494,6 +499,7 @@
      color: #fff;
      transition: .3s;
      outline: none;
+    z-index: 2;
  }
 
 .close-alert-modal:hover {
