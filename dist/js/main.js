@@ -538,8 +538,28 @@ jQuery(document).ready(function ($) {
         });
     }
 
+   function getUpdatedAmount() {
+       $.ajax({
+           method: "GET",
+           url: "https://jsonplaceholder.typicode.com/posts",  // change URL
+           dataType: 'json',
+       })
+           .done(function( data ) {
+               var sellAmount = data.sell_amount,
+                   buyAmount = data.buy_amount,
+                   sellCurrencySymbol = data.sellCurrency.symbol,
+                   buyCurrencySymbol = data.buyCurrency.symbol;
+
+               $('.check-amount--from').text(sellAmount + ' ' + sellCurrencySymbol);
+               $('.check-amount--to').text(buyAmount + ' ' + buyCurrencySymbol);
+           });
+
+   }
+
     function countdown() {
         var timer, days, hours, minutes, seconds;
+        var $minutesCount = $('#minutes');
+        var $secondsCount = $('#seconds');
 
        var dateEnd = new Date();
         dateEnd.setMinutes(dateEnd.getMinutes() + 3);
@@ -552,7 +572,7 @@ jQuery(document).ready(function ($) {
         timer = setInterval(calculate, 1000);
         function calculate() {
             var dateStart = new Date();
-            var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000)
+            var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000);
 
             if ( timeRemaining >= 0 ) {
                 days    = parseInt(timeRemaining / 86400);
@@ -562,26 +582,23 @@ jQuery(document).ready(function ($) {
                 minutes = parseInt(timeRemaining / 60);
                 timeRemaining   = (timeRemaining % 60);
                 seconds = parseInt(timeRemaining);
-
-                // document.getElementById("days").innerHTML    = parseInt(days, 10);
-                // document.getElementById("hours").innerHTML   = ("0" + hours).slice(-2);
-                document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
-                document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
+                
+                $minutesCount.text(("0" + minutes).slice(-2));
+                $secondsCount.text(("0" + seconds).slice(-2));
             } else {
-                console.log('time!!!');
-                $('.timer-message').show();
                 clearInterval(timer);
                 countdown();
+                getUpdatedAmount();
             }
         }
-        $('.countdown-container .countdown').addClass('animate');
-
-        function display(days, hours, minutes, seconds) {}
     }
 
-
-
+if ($('.countdown-container').length === 1) {
     countdown();
+}
+
+
+
 
     $('.icon-copy').hover(function () {
         var self = $(this);
