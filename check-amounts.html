@@ -142,12 +142,31 @@
         <div>
             <span id="exchange-ddl-from" class="P24UAH">Приват 24 UAH</span>
             <p class="exchange-sum-label">Обменяю:</p>
-            <p class="b-check-amount__value check-amount--from">50 usd</p>
+            <div class="b-check-amount__container">
+                <p class="b-check-amount__value update-amount-from">50.32 usd</p>
+                <span class="edit-field-data js-edit-data" data-field="update-amount-from"></span>
+                <div id="update-amount-from" class="update-data-field">
+                    <input type="number" name="sale" min="50" max="79">
+                    <button class="js-amount-submit">ok</button>
+                    <span class="update-data-msg"></span>
+                </div>
+            </div>
+
+
+
         </div>
     <div>
         <span id="exchange-ddl-to" class="BTC">Bitcoin</span>
         <p class="exchange-sum-label">На:</p>
-        <p class="b-check-amount__value check-amount--to">50 usd</p>
+        <div class="b-check-amount__container">
+            <p class="b-check-amount__value update-amount-to">57.32 usd</p>
+            <span class="edit-field-data js-edit-data" data-field="update-amount-to"></span>
+            <div id="update-amount-to" class="update-data-field">
+                <input type="number" name="sale" min="50" max="79">
+                <button class="js-amount-submit">ok</button>
+                <span class="update-data-msg"></span>
+            </div>
+        </div>
     </div>
     <div>
 
@@ -155,12 +174,26 @@
 </div>
 <div class="b-check-amount__accounts">
     <div>
-        <p class="accounts-number">Заплачу со счёта: <span>U11267719</span></p>
+        <p class="accounts-number">Заплачу со счёта: <span class="accounts-number--from update-number-from">U11267745</span>
+            <span class="edit-field-data js-edit-data" data-field="update-number-from"></span>
+        </p>
         <span class="accounts-message">Накопительный бонус 0,02</span>
         <span class="accounts-message">Кошелёк не верицифирован</span>
+        <div id="update-number-from" class="update-data-field">
+            <input type="text" name="sale" min="50" max="79">
+            <button class="js-amount-submit">ok</button>
+            <span class="update-data-msg"></span>
+        </div>
     </div>
     <div>
-        <p class="accounts-number">Зачислить на этот счёт: <span>U11267719</span></p>
+        <p class="accounts-number">Зачислить на этот счёт: <span class="accounts-number--to update-number-to">U11267719</span>
+            <span class="edit-field-data js-edit-data" data-field="update-number-to"></span>
+        </p>
+        <div id="update-number-to" class="update-data-field">
+            <input type="text" name="sale" min="50" max="79">
+            <button class="js-amount-submit">ok</button>
+            <span class="update-data-msg"></span>
+        </div>
     </div>
 </div>
     <div class="b-check-amount__action">

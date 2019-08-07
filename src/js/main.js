@@ -593,8 +593,43 @@ jQuery(document).ready(function ($) {
     }
 
 if ($('.countdown-container').length === 1) {
-    countdown();
+   countdown();
 }
+
+
+/*--------START --- check amount update data --------*/
+    function transformFieldValue(value, dataType) {
+
+         if(dataType === 'update-amount-from' || dataType === 'update-amount-to') {
+            return +value.split(' ')[0];
+         }
+         return value;
+    }
+
+
+  $('.js-edit-data').click(function(e) {
+         var $btn = $(this),
+             dataField = $btn.data('field'),
+             $fieldContainer =   $('#'+ dataField),
+             inputValue = $('.' + dataField).text(),
+             transformedData = transformFieldValue(inputValue, dataField);
+
+             $('.b-check-amount').addClass('updating-data');
+             $fieldContainer.addClass('isActive');
+             $fieldContainer.find('input').val(transformedData).focus();
+             
+  });
+
+
+  $('.js-amount-submit').click(function(e) {
+      $(this).parent('.update-data-field').removeClass('isActive');
+         $('.b-check-amount').removeClass('updating-data');
+  });
+
+
+
+
+/*--------END --- check amount update data --------*/
 
 
 
