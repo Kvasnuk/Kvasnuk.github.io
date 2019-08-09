@@ -594,11 +594,46 @@ jQuery(document).ready(function ($) {
     }
 
 if ($('.countdown-container').length === 1) {
-   countdown();
+   //countdown();
 }
+
+/*---------------json test---------*/
+
+    //    {"min_sell_amount":50,
+    //     "min_buy_amount":50,
+    //     "isBackExchange":1,"actionBackExchange":"\/exchange\/PRUSD-to-PMUSD",
+    //     "sell_currency_id":1,"sellCurrency":{"id":1,"code":"PMUSD","name_ru":"PerfectMoney USD","name_en":"PerfectMoney USD","symbol":"USD"},
+    //     "buyCurrency":{"id":2,"code":"PRUSD","name_ru":"PAYEER USD","name_en":"PAYEER USD","symbol":"USD"},
+    //     "buy_currency_id":2,
+    // "sell_amount":60,
+    //     "sell_amount_with_comission":61.2,
+    //     "sell_amount_with_discount":0,
+    //     "sell_comission":2,
+    //     "sell_percent":"2.00",
+    //     "buy_percent":"0.00",
+    //     "sell_amount_comission":1.2,
+    //     "discount":0,
+    // "buy_amount":58.35,
+    //     "buy_amount_with_comission":58.35,
+    //     "buy_amount_with_discount":0,
+    //     "buy_amount_comission":0,
+    // "course":{"sell":"1.0282","buy":"1.0000"},
+    // "reserve":104.55,
+    //     "sellCurrencies":{"4":{"code":"BTC"},
+    //     "19":{"code":"LTC"},
+    //     }
+    // }
+/*---------------json test---------*/
 
 
 /*--------START --- check amount update data --------*/
+
+
+
+
+
+
+
     function transformFieldValue(value, dataType) {
 
          if(dataType === 'update-amount-from' || dataType === 'update-amount-to') {
@@ -612,8 +647,12 @@ if ($('.countdown-container').length === 1) {
          var $btn = $(this),
              dataField = $btn.data('field'),
              $fieldContainer =   $('#'+ dataField),
-             inputValue = $('.' + dataField).text(),
+             $fieldInput =   $('#'+ dataField + ' input'),
+             $field = $('.' + dataField),
+             inputValue = $field.text(),
              transformedData = transformFieldValue(inputValue, dataField);
+             $fieldInput.attr('data-value', transformedData);
+
 
              $('.b-check-amount').addClass('updating-data');
              $fieldContainer.addClass('isActive');
@@ -622,9 +661,120 @@ if ($('.countdown-container').length === 1) {
   });
 
 
+    function updateAmountData (inputParentId) {
+        var $checkAmountContainer = $('.b-check-amount'),
+            $fieldMsg = $('#' + inputParentId + ' .update-data-msg'),
+           $inputContainer = $('#' + inputParentId),
+           $input = $('#' + inputParentId + ' input'),
+           dataMin = +$input.attr('min'),
+           dataMax = +$input.attr('max'),
+           dataValue = +$input.val(),
+           data = {};
+           inputParentId === 'update-amount-from' ?
+            data = {'sell_amount' : dataValue} :
+            data = {'buy_amount' : dataValue};
+
+        if(dataValue >= dataMin && dataValue <= dataMax) {
+            $fieldMsg.removeClass('error');
+            $.ajax({
+                type: "POST",
+                url: "https://jsonplaceholder.typicode.com/posts",  // change URL
+                dataType: 'json',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(data),
+                success: function(response) {
+                    if(response.message === '' ){
+                        $fieldMsg.removeClass('error');
+                        $('.'+ inputParentId).text(dataValue);
+                        $inputContainer.removeClass('isActive');
+                        $checkAmountContainer.removeClass('updating-data');
+                    } else {
+                        $fieldMsg.addClass('error');
+                    }
+                },
+                error: function(error) {
+                    $fieldMsg.text(error).addClass('error');
+                }
+            });
+
+        } else {
+            $fieldMsg.addClass('error');
+
+        }
+
+    }
+
+    function updateNumberData(inputParentId) {
+        var $checkAmountContainer = $('.b-check-amount'),
+            $fieldMsg = $('#' + inputParentId + ' .update-data-msg'),
+            $inputContainer = $('#' + inputParentId),
+            $input = $('#' + inputParentId + ' input'),
+            dataValue = $input.val(),
+            data = {};
+            inputParentId === 'update-number-from' ?
+                data = {'numberFrom' : dataValue} :
+                data = {'numberTo' : dataValue};
+        $('.'+ inputParentId).text(dataValue);
+        $inputContainer.removeClass('isActive');
+        $checkAmountContainer.removeClass('updating-data');
+            $.ajax({
+            type: "POST",
+            url: "https://jsonplaceholder.typicode.com/posts",  // change URL
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            success: function(response) {
+                if(response.message === '' ){
+                    $fieldMsg.text('').removeClass('error');
+                    $('.'+ inputParentId).text(dataValue);
+                    $inputContainer.removeClass('isActive');
+                    $checkAmountContainer.removeClass('updating-data');
+                } else {
+                    $fieldMsg.text(response.message).addClass('error');
+                }
+            },
+            error: function(error) {
+                $fieldMsg.text(error).addClass('error');
+            }
+        });
+
+
+    }
+
+
   $('.js-amount-submit').click(function(e) {
-      $(this).parent('.update-data-field').removeClass('isActive');
-         $('.b-check-amount').removeClass('updating-data');
+
+    var $checkAmountContainer = $('.b-check-amount'),
+        currentId = $(this).parent('div').attr('id'),
+        currentInput = $(this).parent('div').find('input');
+
+    if(currentInput.attr('data-value') === currentInput.val()){
+        $(this).parent('.update-data-field').removeClass('isActive');
+        $checkAmountContainer.removeClass('updating-data');
+    } else {
+        switch (currentId) {
+            case 'update-amount-from':
+                updateAmountData(currentId);
+                break;
+
+            case 'update-amount-to':
+                updateAmountData(currentId);
+                break;
+
+            case 'update-number-from':
+                  updateNumberData(currentId);
+                  break;
+             case 'update-number-to':
+                  updateNumberData(currentId);
+                  break;
+            default:
+                $(this).parent('.update-data-field').removeClass('isActive');
+                $checkAmountContainer.removeClass('updating-data');
+        }
+
+
+
+    }
   });
 
 

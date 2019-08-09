@@ -233,7 +233,11 @@ display: flex;
 .update-data-msg {
     display: block;
     width: 100%;
-    color: #b11212;
+    color: #a2a2a2;
     font-size: 14px;
     font-weight: 300;
+}
+
+.update-data-msg.error{
+    color: #b11212;
 }

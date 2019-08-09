@@ -26,9 +26,19 @@
                 <p class="b-check-amount__value update-amount-from">50.32 usd</p>
                 <span class="edit-field-data js-edit-data" data-field="update-amount-from"></span>
                 <div id="update-amount-from" class="update-data-field">
-                    <input type="number" name="sale" min="50" max="79">
+                    <input
+                            type="number"
+                            name="amount-from"
+                            min="50"
+                            max="79"
+                    >
                     <button class="js-amount-submit">ok</button>
-                    <span class="update-data-msg"></span>
+                    <span class="update-data-msg">
+                        min value
+                        <span id="update-amount-from-min">50</span>
+                        max-value
+                        <span id="update-amount-from-max">70</span>
+                    </span>
                 </div>
             </div>
 
@@ -42,9 +52,18 @@
             <p class="b-check-amount__value update-amount-to">57.32 usd</p>
             <span class="edit-field-data js-edit-data" data-field="update-amount-to"></span>
             <div id="update-amount-to" class="update-data-field">
-                <input type="number" name="sale" min="50" max="79">
+                <input
+                        type="number"
+                        name="amount-to"
+                        min="50"
+                        max="79">
                 <button class="js-amount-submit">ok</button>
-                <span class="update-data-msg"></span>
+                <span class="update-data-msg">
+                    min value
+                        <span id="update-amount-to-min">50</span>
+                        max-value
+                        <span id="update-amount-to-max">70</span>
+                </span>
             </div>
         </div>
     </div>
@@ -60,7 +79,10 @@
         <span class="accounts-message">Накопительный бонус 0,02</span>
         <span class="accounts-message">Кошелёк не верицифирован</span>
         <div id="update-number-from" class="update-data-field">
-            <input type="text" name="sale" min="50" max="79">
+            <input
+                    type="text"
+                    name="number-from"
+            >
             <button class="js-amount-submit">ok</button>
             <span class="update-data-msg"></span>
         </div>
@@ -70,7 +92,10 @@
             <span class="edit-field-data js-edit-data" data-field="update-number-to"></span>
         </p>
         <div id="update-number-to" class="update-data-field">
-            <input type="text" name="sale" min="50" max="79">
+            <input
+                    type="text"
+                    name="number-to"
+            >
             <button class="js-amount-submit">ok</button>
             <span class="update-data-msg"></span>
         </div>
