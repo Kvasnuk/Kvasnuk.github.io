@@ -596,6 +596,10 @@
         margin-top: -1px;
         margin-left: -1px;
     }
+
+    .countdown-container {
+        padding: 16px 15px 0;
+    }
 }
 @media screen and (max-width: 575px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {

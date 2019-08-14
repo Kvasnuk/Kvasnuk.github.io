@@ -548,53 +548,57 @@ jQuery(document).ready(function ($) {
                var sellAmount = data.sell_amount,
                    buyAmount = data.buy_amount,
                    sellCurrencySymbol = data.sellCurrency.symbol,
-                   buyCurrencySymbol = data.buyCurrency.symbol;
+                   buyCurrencySymbol = data.buyCurrency.symbol,
+                   course = data.course.sell;
 
                $('.check-amount--from').text(sellAmount + ' ' + sellCurrencySymbol);
                $('.check-amount--to').text(buyAmount + ' ' + buyCurrencySymbol);
+               $('#course').text(course);
            });
 
    }
 
-    function countdown() {
-        var timer, days, hours, minutes, seconds;
-        var $minutesCount = $('#minutes');
-        var $secondsCount = $('#seconds');
+    /*----------  timer fn -----*/
 
-       var dateEnd = new Date();
-        dateEnd.setMinutes(dateEnd.getMinutes() + 3);
-        dateEnd = dateEnd.getTime();
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
 
-        if ( isNaN(dateEnd) ) {
-            return;
-        }
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
 
-        timer = setInterval(calculate, 1000);
-        function calculate() {
-            var dateStart = new Date();
-            var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000);
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-            if ( timeRemaining >= 0 ) {
-                days    = parseInt(timeRemaining / 86400);
-                timeRemaining   = (timeRemaining % 86400);
-                hours   = parseInt(timeRemaining / 3600);
-                timeRemaining   = (timeRemaining % 3600);
-                minutes = parseInt(timeRemaining / 60);
-                timeRemaining   = (timeRemaining % 60);
-                seconds = parseInt(timeRemaining);
-                
-                $minutesCount.text(("0" + minutes).slice(-2));
-                $secondsCount.text(("0" + seconds).slice(-2));
-            } else {
-                clearInterval(timer);
-                countdown();
-                getUpdatedAmount();
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+                //getUpdatedAmount()     <-- update course-->
+                var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
+                initializeClock('clockdiv', deadline);
             }
         }
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
     }
 
 if ($('.countdown-container').length === 1) {
-   //countdown();
+    var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
+    initializeClock('clockdiv', deadline);
 }
 
 /*---------------json test---------*/
