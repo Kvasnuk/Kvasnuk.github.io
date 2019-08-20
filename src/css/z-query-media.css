@@ -600,6 +600,31 @@
     .countdown-container {
         padding: 16px 15px 0;
     }
+
+    .b-check-amount__value {
+        font-size: 27px;
+    }
+
+    .accounts-number--from, .accounts-number--to {
+        width: calc(100% - 50px);
+    }
+    .edit-field-data {
+        width: 17px;
+        height: 19px;
+        background-size: 17px 19px;
+        transform: translateY(-12px);
+    }
+
+    .update-data-field input {
+        width: calc(100% - 50px);
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .update-data-field button {
+        width: 45px;
+        height: 38px;
+    }
 }
 @media screen and (max-width: 575px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
@@ -770,6 +795,16 @@
     .news-title, .payment-success,.payment-fail,.b-main.simple-page{
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .update-data-field input {
+        height: 35px;
+        font-size: 15px;
+    }
+    .update-data-field button {
+        height: 35px;
+    }
+    .update-data-msg {
+        font-size: 12px;
     }
 }
 @media (max-width: 359px){
@@ -1380,6 +1415,9 @@
     }
     .b-check-amount__currency {
         padding: 40px 15px 20px;
+    }
+    .updating-data .b-check-amount__currency {
+        padding: 40px 15px 30px;
     }
     .b-check-amount__currency {
         padding: 40px 15px 20px;
