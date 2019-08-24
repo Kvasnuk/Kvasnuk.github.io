@@ -6,6 +6,9 @@
   justify-content: space-between;
   padding: 20px 40px;
 }
+.updating-data .b-check-amount__currency{
+    padding: 20px 40px;
+}
 .b-check-amount__currency{
     background: #f8f8f8;
     overflow: hidden;

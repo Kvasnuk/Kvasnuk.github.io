@@ -546,10 +546,6 @@ jQuery(document).ready(function ($) {
           $toAmountInput = $('#update-amount-to input');
       $('.update-amount-from').text(res.sell.value +' '+ res.sell.currency);
       $('.update-amount-to').text(res.buy.value +' '+ res.buy.currency);
-      $('#update-amount-from-min').text(res.sell.min);
-      $('#update-amount-from-max').text(res.sell.max);
-      $('#update-amount-to-min').text(res.buy.min);
-      $('#update-amount-to-max').text(res.buy.max);
       $fromAmountInput.attr({'min': res.sell.min, max: res.sell.max});
       $toAmountInput.attr({'min': res.buy.min, max: res.buy.max});
     }
@@ -637,7 +633,7 @@ if ($('.countdown-container').length === 1) {
     }
 
 
-  $('.js-edit-data').click(function(e) {
+  $('.js-edit-data').click(function() {
          var $btn = $(this),
              dataField = $btn.data('field'),
              $fieldContainer =   $('#'+ dataField),
@@ -653,7 +649,6 @@ if ($('.countdown-container').length === 1) {
              
   });
 
-
     function updateAmountData (inputParentId) {
         var $checkAmountContainer = $('.b-check-amount'),
             $fieldMsg = $('#' + inputParentId + ' .update-data-msg'),
@@ -668,7 +663,7 @@ if ($('.countdown-container').length === 1) {
             data = {'buy_amount' : dataValue};
 
         if(dataValue >= dataMin && dataValue <= dataMax) {
-            $fieldMsg.removeClass('error');
+            $fieldMsg.text('').removeClass('error');
             $.ajax({
                 type: "POST",
                 url: "https://jsonplaceholder.typicode.com/posts",  // change URL
@@ -676,7 +671,6 @@ if ($('.countdown-container').length === 1) {
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify(data),
                 success: function(data) {
-                    if(data){
                         var response = {
                             //updatedCourse: 35,     //data.course.sell
                             sell: {
@@ -692,14 +686,11 @@ if ($('.countdown-container').length === 1) {
                                 max: 150,        //data.buy_max
                             },
                         };
-                        $fieldMsg.removeClass('error');
                         setUpdatedAmount(response);
                         //$('.'+ inputParentId).text(dataValue);
                         $inputContainer.removeClass('isActive');
                         $checkAmountContainer.removeClass('updating-data');
-                    } else {
-                        $fieldMsg.addClass('error');
-                    }
+
                 },
                 error: function(error) {
                     $fieldMsg.text(error).addClass('error');
@@ -707,10 +698,18 @@ if ($('.countdown-container').length === 1) {
             });
 
         } else {
-            $fieldMsg.addClass('error');
+            var message,
+                typeAmount = inputParentId === 'update-amount-from' ? 'sell' : 'buy';
 
+            if(!dataValue) {
+                message = getErrorMessage(typeAmount,'amount_required');
+            } else if(dataValue < dataMin) {
+                message = getErrorMessage(typeAmount,'min_amount', dataMin);
+            } else if(dataValue > dataMax){
+                message = getErrorMessage(typeAmount,'max_amount', dataMax);
+            }
+            $fieldMsg.text(message).addClass('error');
         }
-
     }
 
     function updateInvoiceData(inputParentId) {
@@ -718,32 +717,76 @@ if ($('.countdown-container').length === 1) {
             $fieldMsg = $('#' + inputParentId + ' .update-data-msg'),
             $inputContainer = $('#' + inputParentId),
             $input = $('#' + inputParentId + ' input'),
-            dataValue = $input.val(),
-            data = {};
-            inputParentId === 'update-number-from' ?
-                data = {'numberFrom' : dataValue} :
-                data = {'numberTo' : dataValue};
-            $.ajax({
-            type: "POST",
-            url: "https://jsonplaceholder.typicode.com/posts",  // change URL
-            dataType: 'json',
-            contentType: "application/json; charset=utf-8",
-            data: JSON.stringify(data),
-            success: function(response) {
-                if(response.message === '' ){
-                    $fieldMsg.text('').removeClass('error');
-                    $('.'+ inputParentId).text(dataValue);
-                    $inputContainer.removeClass('isActive');
-                    $checkAmountContainer.removeClass('updating-data');
-                } else {
-                    $fieldMsg.text(response.message).addClass('error');
-                }
-            },
-            error: function(error) {
-                $fieldMsg.text(error).addClass('error');
+            dataValue = $input.val();
+            if(dataValue) {
+               var data = {};
+                inputParentId === 'update-number-from' ?
+                    data = {'numberFrom' : dataValue} :
+                    data = {'numberTo' : dataValue};
+                $.ajax({
+                    type: "POST",
+                    url: "https://jsonplaceholder.typicode.com/posts",  // change URL
+                    dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(data),
+                    success: function(response) {
+                        if(response.message === '' ){
+                            $fieldMsg.text('').removeClass('error');
+                            $('.'+ inputParentId).text(dataValue);
+                            $inputContainer.removeClass('isActive');
+                            $checkAmountContainer.removeClass('updating-data');
+                        } else {
+                            $fieldMsg.text(response.message).addClass('error');
+                        }
+                    },
+                    error: function(error) {
+                        $fieldMsg.text(error).addClass('error');
+                    }
+                });
+            } else {
+                var typeAmount = inputParentId === 'update-number-from' ? 'sell' : 'buy';
+                    message = getErrorMessage(typeAmount,'source_required');
+                $fieldMsg.text(message).addClass('error');
             }
-        });
-    }
+
+    };
+
+    function getErrorMessage(amountType, errorType, value) {
+        var val = value ? ' ' + value + '!' : '!';
+        var lang = $('#lang').attr('data-lang') || 'en';
+        var errors = {
+            ru: {
+                sell:{
+                    'amount_required':'Укажите сумму перевода',
+                    'min_amount' :'Минимальная сумма продажи', //val
+                    'max_amount': 'Максимальная сумма продажи', // val
+                    'source_required' : 'Вы не указали счёт перевода',
+                },
+                buy: {
+                    'amount_required':'Укажите сумму получения',
+                    'min_amount':'Минимальная сумма покупки', //val
+                    'max_amount': 'Максимальная сумма покупки', // val
+                    'source_required' : 'Вы не указали счёт получения',
+                },
+            },
+            en: {
+                sell: {
+                    'amount_required':'Specify the amount of transfer',
+                    'min_amount' :'The minimum amount of sales', //val
+                    'max_amount': 'The maximum amount of sales', //val
+                    'source_required' : 'You have not specified the account transfer',
+                },
+                buy: {
+                    'amount_required':'Enter the amount of produce',
+                    'min_amount':'The minimum purchase amount', //val
+                    'max_amount': 'The maximum purchase amount', //val
+                    'source_required' : 'You did not obtain the account',
+                },
+            },
+        };
+
+        return errors[lang][amountType][errorType] + val;
+    };
 
 
   $('.js-amount-submit').click(function() {

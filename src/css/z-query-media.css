@@ -1226,6 +1226,9 @@
     .b-check-amount__accounts, .b-check-amount__currency {
         padding: 20px 15px;
     }
+    .updating-data .b-check-amount__currency{
+        padding: 20px 15px 25px;
+    }
     .amount-action__message {
         margin: 0 auto 25px;
         padding-left: 20px;
@@ -1417,7 +1420,7 @@
         padding: 40px 15px 20px;
     }
     .updating-data .b-check-amount__currency {
-        padding: 40px 15px 30px;
+        padding: 40px 15px;
     }
     .b-check-amount__currency {
         padding: 40px 15px 20px;
