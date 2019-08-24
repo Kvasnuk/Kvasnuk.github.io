@@ -536,24 +536,49 @@ jQuery(document).ready(function ($) {
 
         });
     }
+    function setUpdatedCourse(res) {
+      $('#course').text(res.updatedCourse);
+    }
+    function setUpdatedAmount(res) {
+      var $fromAmountInput = $('#update-amount-from input'),
+          $toAmountInput = $('#update-amount-to input');
+      $('.update-amount-from').text(res.sell.value +' '+ res.sell.currency);
+      $('.update-amount-to').text(res.buy.value +' '+ res.buy.currency);
+      $('#update-amount-from-min').text(res.sell.min);
+      $('#update-amount-from-max').text(res.sell.max);
+      $('#update-amount-to-min').text(res.buy.min);
+      $('#update-amount-to-max').text(res.buy.max);
+      $fromAmountInput.attr({'min': res.sell.min, max: res.sell.max});
+      $toAmountInput.attr({'min': res.buy.min, max: res.buy.max});
+    }
 
-   function getUpdatedAmount() {
+   function getUpdatedCourseAndAmount() {
        $.ajax({
            method: "GET",
            url: "https://jsonplaceholder.typicode.com/posts",  // change URL
            dataType: 'json',
        })
            .done(function( data ) {
-               var sellAmount = data.sell_amount,
-                   buyAmount = data.buy_amount,
-                   sellCurrencySymbol = data.sellCurrency.symbol,
-                   buyCurrencySymbol = data.buyCurrency.symbol,
-                   course = data.course.sell;
-
-               $('.check-amount--from').text(sellAmount + ' ' + sellCurrencySymbol);
-               $('.check-amount--to').text(buyAmount + ' ' + buyCurrencySymbol);
-               $('#course').text(course);
+               var response = {
+                   updatedCourse: 35,     //data.course.sell
+                   sell: {
+                       currency: 'USD',  //data.sellCurrency.symbol
+                       value: 89,         //data.sell_amount
+                       min: 50,          //data.sell_min
+                       max: 120,         //data.sell_max
+                   },
+                   buy: {
+                       currency: 'EUR', //data.buyCurrency.symbol
+                       value: 91,       //data.buy_amount
+                       min: 60,         //data.buy_min
+                       max: 150,        //data.buy_max
+                   },
+               };
+               setUpdatedCourse(response);
+               setUpdatedAmount(response);
            });
+
+
 
    }
 
@@ -586,8 +611,9 @@ jQuery(document).ready(function ($) {
 
             if (t.total <= 0) {
                 clearInterval(timeinterval);
-                //getUpdatedAmount()     <-- update course-->
-                var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
+                getUpdatedCourseAndAmount();
+               // var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
+                var deadline = new Date(Date.parse(new Date()) + 10 * 1000);
                 initializeClock('clockdiv', deadline);
             }
         }
@@ -596,7 +622,8 @@ jQuery(document).ready(function ($) {
     }
 
 if ($('.countdown-container').length === 1) {
-    var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
+    //var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
+    var deadline = new Date(Date.parse(new Date()) + 10 * 1000);
     initializeClock('clockdiv', deadline);
 }
 
@@ -630,12 +657,6 @@ if ($('.countdown-container').length === 1) {
 
 
 /*--------START --- check amount update data --------*/
-
-
-
-
-
-
 
     function transformFieldValue(value, dataType) {
 
@@ -685,10 +706,26 @@ if ($('.countdown-container').length === 1) {
                 dataType: 'json',
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify(data),
-                success: function(response) {
-                    if(response.message === '' ){
+                success: function(data) {
+                    if(data){
+                        var response = {
+                            //updatedCourse: 35,     //data.course.sell
+                            sell: {
+                                currency: 'USD',  //data.sellCurrency.symbol
+                                value: 89,         //data.sell_amount
+                                min: 50,          //data.sell_min
+                                max: 120,         //data.sell_max
+                            },
+                            buy: {
+                                currency: 'EUR', //data.buyCurrency.symbol
+                                value: 91,       //data.buy_amount
+                                min: 60,         //data.buy_min
+                                max: 150,        //data.buy_max
+                            },
+                        };
                         $fieldMsg.removeClass('error');
-                        $('.'+ inputParentId).text(dataValue);
+                        setUpdatedAmount(response);
+                        //$('.'+ inputParentId).text(dataValue);
                         $inputContainer.removeClass('isActive');
                         $checkAmountContainer.removeClass('updating-data');
                     } else {
@@ -707,7 +744,7 @@ if ($('.countdown-container').length === 1) {
 
     }
 
-    function updateNumberData(inputParentId) {
+    function updateInvoiceData(inputParentId) {
         var $checkAmountContainer = $('.b-check-amount'),
             $fieldMsg = $('#' + inputParentId + ' .update-data-msg'),
             $inputContainer = $('#' + inputParentId),
@@ -740,8 +777,6 @@ if ($('.countdown-container').length === 1) {
                 $fieldMsg.text(error).addClass('error');
             }
         });
-
-
     }
 
 
@@ -765,24 +800,17 @@ if ($('.countdown-container').length === 1) {
                 break;
 
             case 'update-number-from':
-                  updateNumberData(currentId);
+                  updateInvoiceData(currentId);
                   break;
              case 'update-number-to':
-                  updateNumberData(currentId);
+                  updateInvoiceData(currentId);
                   break;
             default:
                 $(this).parent('.update-data-field').removeClass('isActive');
                 $checkAmountContainer.removeClass('updating-data');
         }
-
-
-
     }
   });
-
-
-
-
 /*--------END --- check amount update data --------*/
 
 
