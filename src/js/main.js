@@ -620,7 +620,8 @@ jQuery(document).ready(function ($) {
     }
 
 if ($('.countdown-container').length === 1) {
-    var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
+    var dataDiff = $('.timer').attr('data-diff');
+    var deadline = new Date(Date.parse(new Date()) + dataDiff * 1000);
     initializeClock('clockdiv', deadline);
 }
 
@@ -782,7 +783,7 @@ if ($('.countdown-container').length === 1) {
 /*--------END --- check amount update data --------*/
 /*------END Order check page--------*/
 
-
+// 5168 4000 3245 5490   5168 0944 5645 3455
     $('.icon-copy').hover(function () {
         var self = $(this);
         if (self.data('toggle') === undefined) {

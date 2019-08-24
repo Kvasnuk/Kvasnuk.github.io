@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="" />
+    <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/check-amounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/check-amounts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,11 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4742">
-              <caret line="812" column="5" selection-start-line="812" selection-start-column="5" selection-end-line="812" selection-end-column="5" />
-              <folding>
-                <element signature="e#20450#20478#0" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="623" column="26" selection-start-line="623" selection-start-column="26" selection-end-line="623" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -28,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1361">
-              <caret line="76" column="87" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="87" />
+            <state relative-caret-position="230">
+              <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -162,8 +164,8 @@
         <option value="$PROJECT_DIR$/src/html/waiting-verification.html" />
         <option value="$PROJECT_DIR$/src/images/edit.svg" />
         <option value="$PROJECT_DIR$/src/css/check-amounts.css" />
-        <option value="$PROJECT_DIR$/src/html/check-amounts.html" />
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
+        <option value="$PROJECT_DIR$/src/html/check-amounts.html" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
       </list>
     </option>
@@ -299,12 +301,12 @@
       <workItem from="1565331053698" duration="12464000" />
       <workItem from="1566243323714" duration="115000" />
       <workItem from="1566281399532" duration="1051000" />
-      <workItem from="1566627583609" duration="5386000" />
+      <workItem from="1566627583609" duration="6865000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="591004000" />
+    <option name="totallyTimeSpent" value="592483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -323,7 +325,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.18181819" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18181819" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -647,18 +649,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1361">
-          <caret line="76" column="87" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="87" />
+        <state relative-caret-position="230">
+          <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4742">
-          <caret line="812" column="5" selection-start-line="812" selection-start-column="5" selection-end-line="812" selection-end-column="5" />
-          <folding>
-            <element signature="e#20450#20478#0" />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="623" column="26" selection-start-line="623" selection-start-column="26" selection-end-line="623" selection-end-column="26" />
         </state>
       </provider>
     </entry>
