@@ -537,6 +537,8 @@ jQuery(document).ready(function ($) {
 
         });
     }
+    /*------Start Order check page--------*/
+
     function setUpdatedCourse(res) {
       $('#course').text(res.updatedCourse);
     }
@@ -578,9 +580,6 @@ jQuery(document).ready(function ($) {
                setUpdatedCourse(response);
                setUpdatedAmount(response);
            });
-
-
-
    }
 
     /*----------  timer fn -----*/
@@ -613,8 +612,7 @@ jQuery(document).ready(function ($) {
             if (t.total <= 0) {
                 clearInterval(timeinterval);
                 getUpdatedCourseAndAmount();
-               // var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
-                var deadline = new Date(Date.parse(new Date()) + 10 * 1000);
+                var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
                 initializeClock('clockdiv', deadline);
             }
         }
@@ -623,38 +621,9 @@ jQuery(document).ready(function ($) {
     }
 
 if ($('.countdown-container').length === 1) {
-    //var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
-    var deadline = new Date(Date.parse(new Date()) + 10 * 1000);
+    var deadline = new Date(Date.parse(new Date()) + 3 * 60 * 1000);
     initializeClock('clockdiv', deadline);
 }
-
-/*---------------json test---------*/
-
-    //    {"min_sell_amount":50,
-    //     "min_buy_amount":50,
-    //     "isBackExchange":1,"actionBackExchange":"\/exchange\/PRUSD-to-PMUSD",
-    //     "sell_currency_id":1,"sellCurrency":{"id":1,"code":"PMUSD","name_ru":"PerfectMoney USD","name_en":"PerfectMoney USD","symbol":"USD"},
-    //     "buyCurrency":{"id":2,"code":"PRUSD","name_ru":"PAYEER USD","name_en":"PAYEER USD","symbol":"USD"},
-    //     "buy_currency_id":2,
-    // "sell_amount":60,
-    //     "sell_amount_with_comission":61.2,
-    //     "sell_amount_with_discount":0,
-    //     "sell_comission":2,
-    //     "sell_percent":"2.00",
-    //     "buy_percent":"0.00",
-    //     "sell_amount_comission":1.2,
-    //     "discount":0,
-    // "buy_amount":58.35,
-    //     "buy_amount_with_comission":58.35,
-    //     "buy_amount_with_discount":0,
-    //     "buy_amount_comission":0,
-    // "course":{"sell":"1.0282","buy":"1.0000"},
-    // "reserve":104.55,
-    //     "sellCurrencies":{"4":{"code":"BTC"},
-    //     "19":{"code":"LTC"},
-    //     }
-    // }
-/*---------------json test---------*/
 
 
 /*--------START --- check amount update data --------*/
@@ -677,7 +646,6 @@ if ($('.countdown-container').length === 1) {
              inputValue = $field.text(),
              transformedData = transformFieldValue(inputValue, dataField);
              $fieldInput.attr('data-value', transformedData);
-
 
              $('.b-check-amount').addClass('updating-data');
              $fieldContainer.addClass('isActive');
@@ -781,7 +749,7 @@ if ($('.countdown-container').length === 1) {
     }
 
 
-  $('.js-amount-submit').click(function(e) {
+  $('.js-amount-submit').click(function() {
 
     var $checkAmountContainer = $('.b-check-amount'),
         currentId = $(this).parent('div').attr('id'),
@@ -813,8 +781,7 @@ if ($('.countdown-container').length === 1) {
     }
   });
 /*--------END --- check amount update data --------*/
-
-
+/*------END Order check page--------*/
 
 
     $('.icon-copy').hover(function () {
