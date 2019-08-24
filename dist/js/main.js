@@ -724,9 +724,6 @@ if ($('.countdown-container').length === 1) {
             inputParentId === 'update-number-from' ?
                 data = {'numberFrom' : dataValue} :
                 data = {'numberTo' : dataValue};
-        $('.'+ inputParentId).text(dataValue);
-        $inputContainer.removeClass('isActive');
-        $checkAmountContainer.removeClass('updating-data');
             $.ajax({
             type: "POST",
             url: "https://jsonplaceholder.typicode.com/posts",  // change URL

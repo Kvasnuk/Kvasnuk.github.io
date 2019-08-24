@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/check-amounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/check-amounts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/check-amounts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/check-amounts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="623" column="26" selection-start-line="623" selection-start-column="26" selection-end-line="623" selection-end-column="26" />
+            <state relative-caret-position="190">
+              <caret line="724" column="48" lean-forward="true" selection-start-line="724" selection-start-column="48" selection-end-line="724" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -31,16 +30,16 @@
         <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/check-amounts.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4554">
-              <caret line="198" column="1" selection-start-line="193" selection-end-line="198" selection-end-column="1" />
+            <state relative-caret-position="608">
+              <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -163,10 +162,10 @@
         <option value="$PROJECT_DIR$/src/html/--exchange-sidebar.html" />
         <option value="$PROJECT_DIR$/src/html/waiting-verification.html" />
         <option value="$PROJECT_DIR$/src/images/edit.svg" />
-        <option value="$PROJECT_DIR$/src/css/check-amounts.css" />
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
         <option value="$PROJECT_DIR$/src/html/check-amounts.html" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
+        <option value="$PROJECT_DIR$/src/css/check-amounts.css" />
       </list>
     </option>
   </component>
@@ -301,16 +300,15 @@
       <workItem from="1565331053698" duration="12464000" />
       <workItem from="1566243323714" duration="115000" />
       <workItem from="1566281399532" duration="1051000" />
-      <workItem from="1566627583609" duration="6865000" />
+      <workItem from="1566627583609" duration="8233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="592483000" />
+    <option name="totallyTimeSpent" value="593851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1952079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -633,13 +631,6 @@
     <entry file="file://$PROJECT_DIR$/src/images/edit.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/check-amounts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4554">
-          <caret line="198" column="1" selection-start-line="193" selection-end-line="198" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -650,14 +641,21 @@
     <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="623" column="26" selection-start-line="623" selection-start-column="26" selection-end-line="623" selection-end-column="26" />
+        <state relative-caret-position="190">
+          <caret line="724" column="48" lean-forward="true" selection-start-line="724" selection-start-column="48" selection-end-line="724" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/check-amounts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
         </state>
       </provider>
     </entry>

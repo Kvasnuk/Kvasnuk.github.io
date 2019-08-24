@@ -2,9 +2,9 @@
     width: 100%;
 }
 .b-check-amount__currency,.b-check-amount__accounts{
-display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
 }
 .b-check-amount__currency{
     background: #f8f8f8;
@@ -41,7 +41,6 @@ display: flex;
     font-size: 16px;
     font-weight: 600;
     padding-left: 5px;
-    text-transform: uppercase;
     letter-spacing: 0.96px;
 }
 .accounts-message{
