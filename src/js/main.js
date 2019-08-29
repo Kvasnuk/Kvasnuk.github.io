@@ -645,6 +645,7 @@ if ($('.countdown-container').length === 1) {
 
              $('.b-check-amount').addClass('updating-data');
              $fieldContainer.addClass('isActive');
+             $('.amount-action__submit').attr('disabled', true);
              $fieldContainer.find('input').val(transformedData).focus();
              
   });
@@ -690,6 +691,7 @@ if ($('.countdown-container').length === 1) {
                         //$('.'+ inputParentId).text(dataValue);
                         $inputContainer.removeClass('isActive');
                         $checkAmountContainer.removeClass('updating-data');
+                        $('.amount-action__submit').attr('disabled', false);
 
                 },
                 error: function(error) {
@@ -735,6 +737,7 @@ if ($('.countdown-container').length === 1) {
                             $('.'+ inputParentId).text(dataValue);
                             $inputContainer.removeClass('isActive');
                             $checkAmountContainer.removeClass('updating-data');
+                            $('.amount-action__submit').attr('disabled', false);
                         } else {
                             $fieldMsg.text(response.message).addClass('error');
                         }
@@ -798,6 +801,7 @@ if ($('.countdown-container').length === 1) {
     if(currentInput.attr('data-value') === currentInput.val()){
         $(this).parent('.update-data-field').removeClass('isActive');
         $checkAmountContainer.removeClass('updating-data');
+        $('.amount-action__submit').attr('disabled', false);
     } else {
         switch (currentId) {
             case 'update-amount-from':
@@ -817,13 +821,13 @@ if ($('.countdown-container').length === 1) {
             default:
                 $(this).parent('.update-data-field').removeClass('isActive');
                 $checkAmountContainer.removeClass('updating-data');
+                $('.amount-action__submit').attr('disabled', false);
         }
     }
   });
 /*--------END --- check amount update data --------*/
 /*------END Order check page--------*/
 
-// 5168 4000 3245 5490   5168 0944 5645 3455
     $('.icon-copy').hover(function () {
         var self = $(this);
         if (self.data('toggle') === undefined) {

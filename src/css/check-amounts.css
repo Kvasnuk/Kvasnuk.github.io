@@ -93,6 +93,9 @@
     z-index: 3;
     padding-top: 20px;
 }
+.amount-action__submit:disabled {
+    cursor: not-allowed;
+}
 .countdown-message:before{
     background:url(../images/icon-coundown.svg) no-repeat center center;
     background-size:24px 24px ;
