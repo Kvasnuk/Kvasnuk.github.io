@@ -40,7 +40,7 @@
     align-items: flex-end;
 }
 .accounts-number span{
-    color: #24d0d4;
+    color: #4cae50;
     font-size: 16px;
     font-weight: 600;
     padding-left: 5px;
@@ -260,3 +260,28 @@
 .update-data-msg.error{
     color: #b11212;
 }
+
+/* add discount section*/
+.b-check-discount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 15px 0 0;
+}
+.b-check-discount__to {
+    width: 50%;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .28px;
+}
+.b-check-discount__to span {
+    display: inline-block;
+    background: #fff;
+    padding: 5px 10px;
+    color: #4cae50;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+/* add discount section*/

@@ -543,11 +543,16 @@ jQuery(document).ready(function ($) {
     }
     function setUpdatedAmount(res) {
       var $fromAmountInput = $('#update-amount-from input'),
-          $toAmountInput = $('#update-amount-to input');
+          $toAmountInput = $('#update-amount-to input'),
+          $buyWithDiscount = $('#discount-to');
       $('.update-amount-from').text(res.sell.value +' '+ res.sell.currency);
       $('.update-amount-to').text(res.buy.value +' '+ res.buy.currency);
       $fromAmountInput.attr({'min': res.sell.min, max: res.sell.max});
       $toAmountInput.attr({'min': res.buy.min, max: res.buy.max});
+
+      if($buyWithDiscount.length === 1) {
+          $buyWithDiscount.text(res.buy.discount);
+      }
     }
 
    function getUpdatedCourseAndAmount() {
@@ -570,6 +575,7 @@ jQuery(document).ready(function ($) {
                        value: 91,       //data.buy_amount
                        min: 60,         //data.buy_min
                        max: 150,        //data.buy_max
+                       discount: 345.56,
                    },
                };
                setUpdatedCourse(response);
@@ -647,8 +653,40 @@ if ($('.countdown-container').length === 1) {
              $fieldContainer.addClass('isActive');
              $('.amount-action__submit').attr('disabled', true);
              $fieldContainer.find('input').val(transformedData).focus();
-             
-  });
+
+  })
+
+
+
+    function checkOppositeCurrencyBalance(parentId, value) {
+        var currencyCourse = +$('#course').text();
+        var parentIdOpposite = parentId === 'update-amount-from' ? 'update-amount-to' : 'update-amount-from',
+        $input = $('#' + parentIdOpposite + ' input'),
+        dataMin = +$input.attr('min'),
+        dataMax = +$input.attr('max');
+        var oppositeCurrencyValue = parentIdOpposite === 'update-amount-from' ?
+            value * currencyCourse :
+            value / currencyCourse;
+        if (oppositeCurrencyValue > dataMax) {
+            return {
+                status: false,
+                messageType: 'over_max',
+            }
+        }
+        if (oppositeCurrencyValue < dataMin) {
+            return {
+                status: false,
+                messageType: 'less_min',
+            }
+        }
+
+        return {
+            status: true,
+            messageType: 'success',
+        };
+    }
+
+
 
     function updateAmountData (inputParentId) {
         var $checkAmountContainer = $('.b-check-amount'),
@@ -658,12 +696,13 @@ if ($('.countdown-container').length === 1) {
            dataMin = +$input.attr('min'),
            dataMax = +$input.attr('max'),
            dataValue = +$input.val(),
+           oppositeCurrencyBalance = checkOppositeCurrencyBalance(inputParentId, dataValue),
            data = {};
            inputParentId === 'update-amount-from' ?
             data = {'sell_amount' : dataValue} :
             data = {'buy_amount' : dataValue};
 
-        if(dataValue >= dataMin && dataValue <= dataMax) {
+        if(dataValue >= dataMin && dataValue <= dataMax && oppositeCurrencyBalance.status) {
             $fieldMsg.text('').removeClass('error');
             $.ajax({
                 type: "POST",
@@ -685,6 +724,7 @@ if ($('.countdown-container').length === 1) {
                                 value: 91,       //data.buy_amount
                                 min: 60,         //data.buy_min
                                 max: 150,        //data.buy_max
+                                discount: 333,
                             },
                         };
                         setUpdatedAmount(response);
@@ -709,6 +749,9 @@ if ($('.countdown-container').length === 1) {
                 message = getErrorMessage(typeAmount,'min_amount', dataMin);
             } else if(dataValue > dataMax){
                 message = getErrorMessage(typeAmount,'max_amount', dataMax);
+            } else if(!oppositeCurrencyBalance.status) {
+                const errorStatus = oppositeCurrencyBalance.messageType;
+                message = getErrorMessage(typeAmount, errorStatus);
             }
             $fieldMsg.text(message).addClass('error');
         }
@@ -764,12 +807,16 @@ if ($('.countdown-container').length === 1) {
                     'min_amount' :'Минимальная сумма продажи', //val
                     'max_amount': 'Максимальная сумма продажи', // val
                     'source_required' : 'Вы не указали счёт перевода',
+                    'over_max' : 'over max ru',
+                    'less_min': 'less min ru',
                 },
                 buy: {
                     'amount_required':'Укажите сумму получения',
                     'min_amount':'Минимальная сумма покупки', //val
                     'max_amount': 'Максимальная сумма покупки', // val
                     'source_required' : 'Вы не указали счёт получения',
+                    'over_max' : 'over max ru',
+                    'less_min': 'less min ru',
                 },
             },
             en: {
@@ -778,12 +825,16 @@ if ($('.countdown-container').length === 1) {
                     'min_amount' :'The minimum amount of sales', //val
                     'max_amount': 'The maximum amount of sales', //val
                     'source_required' : 'You have not specified the account transfer',
+                    'over_max' : 'over max sell en',
+                    'less_min': 'less min sell en',
                 },
                 buy: {
                     'amount_required':'Enter the amount of produce',
                     'min_amount':'The minimum purchase amount', //val
                     'max_amount': 'The maximum purchase amount', //val
                     'source_required' : 'You did not obtain the account',
+                    'over_max' : 'over max buy en',
+                    'less_min': 'less min buy en',
                 },
             },
         };
@@ -825,6 +876,9 @@ if ($('.countdown-container').length === 1) {
         }
     }
   });
+
+
+
 /*--------END --- check amount update data --------*/
 /*------END Order check page--------*/
 
