@@ -545,15 +545,19 @@ jQuery(document).ready(function ($) {
     function setUpdatedAmount(res) {
       var $fromAmountInput = $('#update-amount-from input'),
           $toAmountInput = $('#update-amount-to input'),
-          $buyWithDiscount = $('#discount-to');
+          $buyWithDiscountValue = $('#discount-to'),
+          $buyWithDiscount = $('#discount-to__count');
       $('.update-amount-from').text(res.sell.value +' '+ res.sell.currency);
       $('.update-amount-to').text(res.buy.value +' '+ res.buy.currency);
       $fromAmountInput.attr({'min': res.sell.min, max: res.sell.max});
       $toAmountInput.attr({'min': res.buy.min, max: res.buy.max});
 
-      if($buyWithDiscount.length === 1) {
-          $buyWithDiscount.text(res.buy.discount);
+      if($buyWithDiscountValue.length === 1) {
+          $buyWithDiscountValue.text(res.buy.discountValue);
       }
+        if($buyWithDiscount.length === 1) {
+            $buyWithDiscount.text(res.buy.discount);
+        }
     }
 
    function getUpdatedCourseAndAmount() {
@@ -576,7 +580,8 @@ jQuery(document).ready(function ($) {
                        value: 91,       //data.buy_amount
                        min: 60,         //data.buy_min
                        max: 150,        //data.buy_max
-                       discount: 345.56,
+                       discountValue: 345.56,
+                       discount: 11.3,
                    },
                };
                setUpdatedCourse(response);
@@ -725,7 +730,8 @@ if ($('.countdown-container').length === 1) {
                                 value: 91,       //data.buy_amount
                                 min: 60,         //data.buy_min
                                 max: 150,        //data.buy_max
-                                discount: 333,
+                                discountValue: 345.56,
+                                discount: 11.33,
                             },
                         };
                         setUpdatedAmount(response);
