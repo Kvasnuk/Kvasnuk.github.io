@@ -628,6 +628,10 @@
     .b-check-discount>div:first-child {
         padding-left: 15px;
     }
+    .b-exchange-currency__item,
+    .full-list .b-exchange-currency__item {
+        padding: 12px 5px 5px 30px;
+    }
 }
 @media screen and (max-width: 575px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {

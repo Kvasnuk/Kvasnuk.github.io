@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check-amounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/check-amounts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/check-amounts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/check-amounts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/z-query-media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/z-query-media.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/check-amounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/check-amounts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/exchange-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/exchange-form.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,11 +17,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-35">
               <caret line="737" column="48" lean-forward="true" selection-start-line="737" selection-start-column="48" selection-end-line="737" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/apply-code.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-720">
+              <caret line="418" column="26" selection-start-line="418" selection-end-line="418" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -68,7 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>min</find>
       <find>.b-exchange-currency__item:before</find>
       <find>set</find>
       <find>setExchangeLIstsMinHeight</find>
@@ -96,8 +118,9 @@
       <find>updating-data</find>
       <find>amount-action__</find>
       <find>conso</find>
-      <find>js-exchange-full</find>
       <find>639</find>
+      <find>js-exchange-full</find>
+      <find>.b-exchange-currency__item</find>
     </findStrings>
     <replaceStrings>
       <replace>.home-template</replace>
@@ -157,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/html/status-new.html" />
         <option value="$PROJECT_DIR$/src/css/common.css" />
         <option value="$PROJECT_DIR$/src/html/index.html" />
-        <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
         <option value="$PROJECT_DIR$/src/css/currency-filter.css" />
         <option value="$PROJECT_DIR$/dist/js/main.js" />
         <option value="$PROJECT_DIR$/src/html/test-order-page.html" />
@@ -170,6 +192,7 @@
         <option value="$PROJECT_DIR$/src/css/check-amounts.css" />
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
+        <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
       </list>
     </option>
   </component>
@@ -203,12 +226,6 @@
               <item name="sevenmoney" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sevenmoney" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sevenmoney" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,18 +325,18 @@
       <workItem from="1566281399532" duration="1051000" />
       <workItem from="1566627583609" duration="14340000" />
       <workItem from="1567097847465" duration="915000" />
-      <workItem from="1567624994716" duration="11810000" />
+      <workItem from="1567624994716" duration="12617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="612683000" />
+    <option name="totallyTimeSpent" value="613490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10782241" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2473573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -332,7 +349,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2063882" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2063882" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -367,13 +384,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc" />
     <entry file="file://$PROJECT_DIR$/src/html/exchange-new.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -450,13 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="90" column="14" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/pagination.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
@@ -528,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18285">
           <caret line="795" column="54" selection-start-line="795" selection-start-column="54" selection-end-line="795" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -665,6 +661,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-35">
           <caret line="737" column="48" lean-forward="true" selection-start-line="737" selection-start-column="48" selection-end-line="737" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/apply-code.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/exchange-form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="418" column="26" selection-start-line="418" selection-end-line="418" selection-end-column="26" />
         </state>
       </provider>
     </entry>
