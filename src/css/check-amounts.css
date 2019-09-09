@@ -274,7 +274,9 @@
 .b-check-discount>div {
     width: 50%;
 }
-
+.b-check-discount>div:first-child {
+    padding-left: 40px;
+}
 .b-check-discount__to,
 .b-check-discount__to--count {
     width: 100%;

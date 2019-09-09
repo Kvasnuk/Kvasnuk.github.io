@@ -544,6 +544,8 @@ jQuery(document).ready(function ($) {
     function setUpdatedAmount(res) {
       var $fromAmountInput = $('#update-amount-from input'),
           $toAmountInput = $('#update-amount-to input'),
+          $sellWithDiscountValue = $('#discount-from'),
+          $sellWithDiscount = $('#discount-from__count'),
           $buyWithDiscountValue = $('#discount-to'),
           $buyWithDiscount = $('#discount-to__count');
       $('.update-amount-from').text(res.sell.value +' '+ res.sell.currency);
@@ -551,12 +553,19 @@ jQuery(document).ready(function ($) {
       $fromAmountInput.attr({'min': res.sell.min, max: res.sell.max});
       $toAmountInput.attr({'min': res.buy.min, max: res.buy.max});
 
+        if($sellWithDiscountValue.length === 1) {
+            $sellWithDiscountValue.text(res.sell.discountValue);
+        }
+        if($sellWithDiscount.length === 1) {
+            $sellWithDiscount.text(res.sell.discount);
+        }
+
       if($buyWithDiscountValue.length === 1) {
           $buyWithDiscountValue.text(res.buy.discountValue);
       }
-        if($buyWithDiscount.length === 1) {
-            $buyWithDiscount.text(res.buy.discount);
-        }
+      if($buyWithDiscount.length === 1) {
+        $buyWithDiscount.text(res.buy.discount);
+      }
     }
 
    function getUpdatedCourseAndAmount() {
@@ -573,6 +582,8 @@ jQuery(document).ready(function ($) {
                        value: 89,         //data.sell_amount
                        min: 50,          //data.sell_min
                        max: 120,         //data.sell_max
+                       discountValue: 123.56,
+                       discount: 14.93,
                    },
                    buy: {
                        currency: 'EUR', //data.buyCurrency.symbol
@@ -723,6 +734,8 @@ if ($('.countdown-container').length === 1) {
                                 value: 89,         //data.sell_amount
                                 min: 50,          //data.sell_min
                                 max: 120,         //data.sell_max
+                                discountValue: 183.56,
+                                discount: 24.13,
                             },
                             buy: {
                                 currency: 'EUR', //data.buyCurrency.symbol
