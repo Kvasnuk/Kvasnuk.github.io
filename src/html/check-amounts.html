@@ -65,21 +65,15 @@
 
 <!--    discount section-->
 
-    <div class="b-check-discount">
-        <div>
-        <!-- insert html for discount-->
-            <div class="b-check-discount__to--count" >Скидка: <span id="discount-from__count">22.4</span></div>
-            <div class="b-check-discount__to" >C учетом скидки: <span id="discount-from">122.45</span></div>
-        <!--  insert html for discount-->
-        </div>
-        <div>
-        <!-- insert html for discount-->
-            <div class="b-check-discount__to--count" >Скидка: <span id="discount-to__count">22.4</span></div>
-            <div class="b-check-discount__to" >C учетом скидки: <span id="discount-to">122.45</span></div>
-        <!-- insert html for discount-->
-        </div>
-    </div>
+<div class="b-discount buy"> <!-- add class <?= $type ?> -->
+    <div class="b-discount__wrapper">
 
+        <!-- change id in depending on $type  sell-discount-amount or buy-discount-amount   -->
+        <div class="b-discount__amount">Скидка: <span id="buy-discount-amount">22.4</span></div>
+        <!-- change id in depending on $type  sell-discount-include or buy-discount-include   -->
+        <div class="b-discount__include">C учетом скидки: <span id="buy-discount-include">122.4</span></div>
+    </div>
+</div>
 <!--    discount section-->
 
 <div class="b-check-amount__accounts">

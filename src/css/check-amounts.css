@@ -262,31 +262,36 @@
 }
 
 /* add discount section*/
-.b-check-discount {
+.b-discount {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
     padding: 0 0 15px;
     background-color: #f8f8f8;
     margin-bottom: 10px;
-
 }
-.b-check-discount>div {
+
+.b-discount.buy {
+    justify-content: flex-end;
+}
+
+.b-discount__wrapper {
     width: 50%;
 }
-.b-check-discount>div:first-child {
-    padding-left: 40px;
+.b-discount.sell .b-discount__wrapper {
+    padding:0 10px 0 40px;
 }
-.b-check-discount__to,
-.b-check-discount__to--count {
+
+.b-discount__amount,
+.b-discount__include {
     width: 100%;
     color: #000;
     font-size: 14px;
+    line-height: 20px;
     font-weight: 500;
     letter-spacing: .28px;
 }
-.b-check-discount__to span,
-.b-check-discount__to--count span {
+.b-discount__amount span,
+.b-discount__include span {
     display: inline-block;
     background: #f8f8f8;
     padding: 5px 10px;

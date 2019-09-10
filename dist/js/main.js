@@ -545,27 +545,27 @@ jQuery(document).ready(function ($) {
     function setUpdatedAmount(res) {
       var $fromAmountInput = $('#update-amount-from input'),
           $toAmountInput = $('#update-amount-to input'),
-          $sellWithDiscountValue = $('#discount-from'),
-          $sellWithDiscount = $('#discount-from__count'),
-          $buyWithDiscountValue = $('#discount-to'),
-          $buyWithDiscount = $('#discount-to__count');
+          $sellDiscountInclude = $('#sell-discount-include'),
+          $sellDiscountAmount = $('#sell-discount-amount'),
+          $buyDiscountInclude = $('#buy-discount-include'),
+          $buyDiscountAmount = $('#buy-discount-amount');
       $('.update-amount-from').text(res.sell.value +' '+ res.sell.currency);
       $('.update-amount-to').text(res.buy.value +' '+ res.buy.currency);
       $fromAmountInput.attr({'min': res.sell.min, max: res.sell.max});
       $toAmountInput.attr({'min': res.buy.min, max: res.buy.max});
 
-        if($sellWithDiscountValue.length === 1) {
-            $sellWithDiscountValue.text(res.sell.discountValue);
+        if($sellDiscountInclude.length === 1) {
+            $sellDiscountInclude.text(res.sell.discountInclude);
         }
-        if($sellWithDiscount.length === 1) {
-            $sellWithDiscount.text(res.sell.discount);
+        if($sellDiscountAmount.length === 1) {
+            $sellDiscountAmount.text(res.sell.discountAmount);
         }
 
-      if($buyWithDiscountValue.length === 1) {
-          $buyWithDiscountValue.text(res.buy.discountValue);
+      if($buyDiscountInclude.length === 1) {
+          $buyDiscountInclude.text(res.buy.discountInclude);
       }
-      if($buyWithDiscount.length === 1) {
-        $buyWithDiscount.text(res.buy.discount);
+      if($buyDiscountAmount.length === 1) {
+          $buyDiscountAmount.text(res.buy.discountAmount);
       }
     }
 
@@ -583,16 +583,16 @@ jQuery(document).ready(function ($) {
                        value: 89,         //data.sell_amount
                        min: 50,          //data.sell_min
                        max: 120,         //data.sell_max
-                       discountValue: 123.56,
-                       discount: 14.93,
+                       discountInclude: 123.56,
+                       discountAmount: 14.93,
                    },
                    buy: {
                        currency: 'EUR', //data.buyCurrency.symbol
                        value: 91,       //data.buy_amount
                        min: 60,         //data.buy_min
                        max: 150,        //data.buy_max
-                       discountValue: 345.56,
-                       discount: 11.3,
+                       discountInclude: 345.56,
+                       discountAmount: 11.3,
                    },
                };
                setUpdatedCourse(response);
@@ -735,16 +735,16 @@ if ($('.countdown-container').length === 1) {
                                 value: 89,         //data.sell_amount
                                 min: 50,          //data.sell_min
                                 max: 120,         //data.sell_max
-                                discountValue: 183.56,
-                                discount: 24.13,
+                                discountInclude: 333.56,
+                                discountAmount: 15.93,
                             },
                             buy: {
                                 currency: 'EUR', //data.buyCurrency.symbol
                                 value: 91,       //data.buy_amount
                                 min: 60,         //data.buy_min
                                 max: 150,        //data.buy_max
-                                discountValue: 345.56,
-                                discount: 11.33,
+                                discountInclude: 323.56,
+                                discountAmount: 11.93,
                             },
                         };
                         setUpdatedAmount(response);
