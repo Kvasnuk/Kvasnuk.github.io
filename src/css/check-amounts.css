@@ -1,11 +1,24 @@
 .b-check-amount{
     width: 100%;
 }
-.b-check-amount__currency,.b-check-amount__accounts{
+.b-check-amount__currency,
+.b-check-amount__accounts{
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
 }
+.b-check-amount__currency{
+    padding: 20px 40px 0;
+}
+.b-check-amount__currency #exchange-ddl-from,
+.b-check-amount__currency #exchange-ddl-to {
+    font-weight: 500;
+}
+.b-check-amount__accounts{
+    padding: 15px 40px 15px;
+    background:#f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 .updating-data .b-check-amount__currency{
     padding: 20px 40px;
 }
@@ -38,20 +51,22 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    margin-bottom: 5px;
 }
 .accounts-number span{
     color: #4cae50;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     padding-left: 5px;
     letter-spacing: 0.96px;
+    line-height: 1.2;
 }
 .accounts-message{
     display:block;
     color: #000000;
     font-size: 14px;
     font-style: italic;
-    letter-spacing: 0.28px;
+    line-height: 16px;
 }
 .amount-action__btns{
     padding-top: 10px;
@@ -265,9 +280,9 @@
 .b-discount {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 15px;
+    padding: 15px 0 15px;
     background-color: #f8f8f8;
-    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .b-discount.buy {
@@ -281,8 +296,7 @@
     padding:0 10px 0 40px;
 }
 
-.b-discount__amount,
-.b-discount__include {
+.b-discount__wrapper>div {
     width: 100%;
     color: #000;
     font-size: 14px;
@@ -290,14 +304,107 @@
     font-weight: 500;
     letter-spacing: .28px;
 }
-.b-discount__amount span,
-.b-discount__include span {
+.b-discount__wrapper>div span {
     display: inline-block;
     background: #f8f8f8;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 0;
     color: #4cae50;
     font-weight: 600;
-    letter-spacing: 1px;
-    font-size: 22px;
+    font-size: 20px;
 }
 /* add discount section*/
+
+.b-check-amount__currency {
+    border-bottom: 1px solid #e0e0e0;
+}
+.b-check-amount__sum {
+    padding-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.b-check-amount__sum span{
+    color: #4cae50;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.b-amount__editable-data {
+    padding: 20px 0;
+    background: #f8f8f8;
+    text-align: center;
+}
+.b-amount__edit-btn {
+    position: relative;
+    border: 1px solid #6595bf;
+    background: #6595bf;
+    padding: 13px 55px 13px 35px;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+.b-amount__edit-btn:hover {
+    border: 1px solid #557fa5;
+    background: #557fa5;
+}
+
+.b-amount__edit-btn:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background:url(../images/pencil-edit-button.svg) no-repeat center center;
+    background-size: 20px 20px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+.b-amount__modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 8, 0.87);
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    overflow: scroll;
+}
+.b-amount__form-wrap {
+    padding: 0 40px;
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto;
+}
+.b-amount__form-wrap>p {
+    text-align: right;
+    padding-top: 15px;
+}
+.b-amount__form-save {
+    border: 1px solid #6595bf;
+    background: #6595bf;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.b-amount__form-save:hover {
+    border: 1px solid #557fa5;
+    background: #557fa5;
+}
+.b-amount__form-save:focus,
+.b-amount__edit-btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+.b-amount__form-content {
+    height: 1500px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+}
