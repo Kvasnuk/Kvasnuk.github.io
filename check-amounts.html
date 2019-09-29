@@ -238,9 +238,152 @@
 <!--dynamic form modal window-->
             <div id="amount-form-modal" class="b-amount__modal">
                 <div class="b-amount__form-wrap">
-                    <p><button class="b-amount__form-save js-amount-form-save">Сохранить</button></p>
+                    <p><button class="b-amount__form-save js-amount-form-back">Назад</button></p>
                     <div class="b-amount__form-content">
-                    <!-- here will be a dynamic form -->
+                    <!-- dynamic form -->
+                        <form id="order-calculate" action="/order/check" method="post">
+                            <input type="hidden" name="_csrf" value="9v7WTrbqnXYfLe_mkXHxqY2Obw-wekNNg7PfjD_TODOCrbo-3ZLJGSgYlpfLOcjGvNkoOoU3dR726e7JTZ5qZQ==">
+                            <input type="hidden" id="orderform-sell_currency_id" class="form-control" name="OrderForm[sell_currency_id]" value="1">
+                            <input type="hidden" id="orderform-buy_currency_id" class="form-control" name="OrderForm[buy_currency_id]" value="3">
+                            <input type="hidden" id="orderform-type" class="form-control" name="OrderForm[type]" value="default">
+                            <input type="hidden" id="orderform-urlcourse" class="form-control" name="OrderForm[urlCourse]" value="/exchange/PMUSD-to-P24UAH">
+                            <input type="hidden" name="form" value="order">
+                            <input type="hidden" id="selectCurrency" name="OrderForm[select]" value="sell">
+                            <div class="b-exchange">
+                                <div class="b-exchange__main">
+                                    <div class="b-exchange__main_part b-exchange__main_part--from">
+                                        <div>
+                                            <span id="exchange-ddl-from--modal" class="PMUSD" data-alias="PMUSD">PerfectMoney USD</span>
+                                            <p class="exchange-sum-label">Отдаю:</p>
+                                            <div id="field-sell-amount" class="exchange-sum exchange-sum--from field-orderform-sell_amount" data-step="4" data-intro="Сумма покупки">
+                                                <input type="text" id="orderform-sell_amount" class="b-exchange__input" name="OrderForm[sell_amount]" value="86.61" oninput="replaceAmount(this)">
+                                                <div class="help-block"></div>
+                                            </div>
+                                            <span id="exchange-sum-currency--from">USD</span>
+                                        </div>
+                                    </div>
+                                    <div class="b-exchange__main_part b-exchange__main_part--to">
+                                        <div>
+                                            <span id="exchange-ddl-to--modal" class="P24UAH" data-alias="P24UAH">Приват 24 UAH</span>
+                                            <p class="exchange-sum-label">Получаю:</p>
+                                            <div id="field-buy-amount" class="exchange-sum exchange-sum--to field-orderform-buy_amount" data-step="4" data-intro="Сумма покупки">
+                                                <input type="text" id="orderform-buy_amount" class="b-exchange__input" name="OrderForm[buy_amount]" value="2000.09" oninput="replaceAmount(this)">
+                                                <div class="help-block"></div>
+                                            </div>
+                                            <span id="exchange-sum-currency--to">UAH</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-exchange__footer">
+                                    <div class="b-exchange__footer--left">
+                                        <span class="b-exchange-footer_count min-sum-from">
+                                            Минимальная сумма <strong>86.61</strong> USD</span>
+                                        <span class="b-exchange-footer_count max-sum-from">
+                                                Максимальная сумма <strong>50000</strong> USD
+                                        </span>
+                                        <span class="b-exchange-footer_count commission-sum-from">
+                                        Комиссия PerfectMoney USD = <b id="sell_amount_comission_percent">2.00</b>% (<b id="sell_amount_comission_sum">1.73</b> USD)
+                                            </span>
+                                        <div class="order-inputs">
+                                            <div class="order-input">
+                                                <div class="profile-input-field field-orderform-sell_amount_with_comission">
+                                                    <label class="control-label" for="orderform-sell_amount_with_comission">С учётом комиссии</label>
+                                                    <input type="text" id="orderform-sell_amount_with_comission" class="form-control" name="OrderForm[sell_amount_with_comission]" value="88.34" data-percent="2" oninput="replaceAmount(this)">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="order-input">
+                                                <div class="order-input buy_target_input field-orderform-sell_source">
+                                                    <label class="control-label" for="orderform-sell_source">Заплатить с этого счёта</label>
+                                                    <input type="text" id="orderform-sell_source" class="form-control" name="OrderForm[sell_source]" value="" placeholder="U012345678">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <p class="account-number-container">
+                                                <span class="account-number-message">Номер кошелька Perfect Money USD</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="b-exchange__footer--right">
+                                        <span class="b-exchange-footer_count min-sum-to">Минимальная сумма <strong>2000</strong> UAH</span>
+                                        <span class="b-exchange-footer_count max-sum-to">
+                                                Максимальная сумма <strong>76289.86</strong> UAH </span>
+                                        <span class="b-exchange-footer_count commission-sum-to">
+                                                </span>
+                                        <div class="order-inputs">
+                                            <div class="order-input">
+                                                <div id="buy_target_row" class="order-input buy_target_input  field-orderform-buy_target">
+                                                    <label class="control-label" for="orderform-buy_target">Зачислить на эту карту</label>
+                                                    <input type="text" id="orderform-buy_target" class="form-control" name="OrderForm[buy_target]" placeholder="5168 0001 2345 6789">
+                                                    <div class="help-block"></div>
+                                                </div> </div>
+                                            <br>
+                                            <p class="account-number-container">
+                                                <span class="account-number-message">Номер карты Приват банка</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-data">
+                                <div class="b-alert b-alert--info privat-alert">
+                                    <p class="b-alert__message"></p><p style="text-align: center;"><span style="color: #000000;"><strong><em>Уважаемые клиенты, если в заявке Вы указываете карту ПриватБанка"Для Выплат" то на Вашу карту поступит сумма на 0,5% меньше,чем сумма указанная в заявке.</em></strong></span></p><p></p>
+                                </div>
+                                <div class="b-alert b-alert--info">
+                                    <p class="b-alert__message">Внимание, перевод осуществляется межбанковским переводом и может быть зачислен в срок от нескольких секунд до 5 рабочих дней! Повлиять на скорость перевода или отозвать его после совершения платежа мы не можем. Если данные технологические условия для вас неприемлемы, то можете отказаться от проведения обмена.</p>
+                                </div>
+                                <br>
+                                <div class="order-data__item">
+                                    <p class="b-field-checked">
+                                        <input id="orderform-is_verified" type="checkbox" name="OrderForm[is_verified]" class="b-field-checked__input" value="1" data-verified-percent="0.5" data-percent="2.00">
+                                        <label for="orderform-is_verified" class="b-field-checked__label">
+                                            Мой кошелёк Perfect Money верифицирован </label>
+                                        <span class="order-field-message">Для неверифицированных кошельков комиссия больше на 1.5%</span>
+                                    </p>
+                                </div>
+                                <div class="order-data__item">
+                                    <div class="profile-input-field field-orderform-first_name">
+                                        <label class="control-label" for="orderform-first_name">Имя держателя карты</label>
+                                        <input type="text" id="orderform-first_name" class="form-control" name="OrderForm[first_name]" value="" placeholder="Василий">
+                                        <div class="help-block"></div>
+                                    </div> </div>
+                                <div class="order-data__item">
+                                    <div class="profile-input-field field-orderform-last_name">
+                                        <label class="control-label" for="orderform-last_name">Фамилия держателя карты</label>
+                                        <input type="text" id="orderform-last_name" class="form-control" name="OrderForm[last_name]" value="" placeholder="Петров">
+                                        <div class="help-block"></div>
+                                    </div> </div>
+                                <div class="order-data__item">
+                                    <div class="profile-input-field field-orderform-phone">
+                                        <label class="control-label" for="orderform-phone">Номер телефона</label>
+                                        <input type="tel" id="orderform-phone" class="form-control" name="OrderForm[phone]" value="" placeholder="+380500123456" required="" pattern="+(\d){7,13}">
+                                        <div class="help-block"></div>
+                                    </div> </div>
+                                <div class="order-data__item">
+                                    <span class="profile-input-field field-orderform-email required">
+                                    <label class="control-label" for="orderform-email">Электронная почта</label>
+                                    <input type="text" id="orderform-email" class="form-control" name="OrderForm[email]" placeholder="you@gmail.com" aria-required="true">
+                                    <div class="help-block"></div>
+                                    </span> <span class="order-field-message">Если вы зарегистрированы, вы получите накопительную скидку</span>
+                                </div>
+                                <div class="order-data__item agree" data-step="7" data-intro="Согласие с нашими правилами">
+                                    <p class="b-field-checked">
+                                        <input type="checkbox" name="OrderForm[agree]" id="orderform-agree" class="b-field-checked__input" value="1">
+                                        <label for="orderform-agree" class="b-field-checked__label">
+                                            Я ознакомился и согласен с условиями </label>
+                                        <span class="b-field-checked__links">
+                                        <a href="/page/security">Безопасности</a> и <a href="/page/rules">Правилами</a> сайта </span>
+                                    </p>
+                                </div>
+                                <div class="order-data__item text-center submit" data-step="8" data-intro="Создание заявки на обмен, и оплата с вашей стороны">
+                                    <button class="btn btn-success order-submit-btn js-order-submit" id="order-submit" type="submit">Далее</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    <!-- dynamic form -->
                     </div>
                     <p><button class="b-amount__form-save js-amount-form-save">Сохранить</button></p>
                 </div>

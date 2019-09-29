@@ -1057,32 +1057,32 @@ $('.close-alert-modal').click(function() {
         $toAccountNumber.text(res.accounts.buy);
 
         if($sellDiscountInclude.length === 1) {
-            $sellDiscountInclude.text(res.sell.discountInclude);
+            $sellDiscountInclude.text(res.sell.discountInclude +' '+ res.sell.currency);
         }
         if($sellDiscountAmount.length === 1) {
-            $sellDiscountAmount.text(res.sell.discountAmount);
+            $sellDiscountAmount.text(res.sell.discountAmount +' '+ res.sell.currency);
         }
 
         if($buyDiscountInclude.length === 1) {
-            $buyDiscountInclude.text(res.buy.discountInclude);
+            $buyDiscountInclude.text(res.buy.discountInclude +' '+ res.buy.currency);
         }
         if($buyDiscountAmount.length === 1) {
-            $buyDiscountAmount.text(res.buy.discountAmount);
+            $buyDiscountAmount.text(res.buy.discountAmount +' '+ res.buy.currency);
         }
 
 
         if($sellCommissionInclude.length === 1) {
-            $sellCommissionInclude.text(res.sell.commissionInclude);
+            $sellCommissionInclude.text(res.sell.commissionInclude +' '+ res.sell.currency);
         }
         if($sellCommissionAmount.length === 1) {
-            $sellCommissionAmount.text(res.sell.commissionAmount);
+            $sellCommissionAmount.text(res.sell.commissionAmount +' '+ res.sell.currency);
         }
 
         if($buyCommissionInclude.length === 1) {
-            $buyCommissionInclude.text(res.buy.commissionInclude);
+            $buyCommissionInclude.text(res.buy.commissionInclude +' '+ res.buy.currency);
         }
         if($buyCommissionAmount.length === 1) {
-            $buyCommissionAmount.text(res.buy.commissionAmount);
+            $buyCommissionAmount.text(res.buy.commissionAmount +' '+ res.buy.currency);
         }
     }
 
@@ -1174,6 +1174,9 @@ $('.js-amount-edit-data').click(function() {
 $('.js-amount-form-save').click(function() {
     getUpdatedAmount();
 });
+$('.js-amount-form-back').click(function() {
+    $('#amount-form-modal').fadeOut();
+    });
     /* ---  END check amounts page  -> new design  ----*/
 });
 

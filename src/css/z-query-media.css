@@ -451,6 +451,15 @@
     .review-btn-fixed {
         bottom:50px;
     }
+
+    /*--check amount modal form--*/
+    .b-amount__form-wrap {
+        padding: 0 10px 50px;
+    }
+    .b-amount__form-wrap>p {
+        padding: 15px 0 0;
+    }
+    /*--check amount modal form--*/
 }
 @media screen and (max-width: 639px) {
     .b-exchange__course--to{
@@ -632,6 +641,13 @@
     .full-list .b-exchange-currency__item {
         padding: 12px 5px 5px 30px;
     }
+
+    /*--check amount modal form--*/
+    .b-amount__form-content .b-exchange__footer>div:first-child {
+        margin-top: 0;
+        border-top: 1px solid #eaeaea;
+    }
+    /*--check amount modal form--*/
 }
 @media screen and (max-width: 575px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
@@ -683,6 +699,19 @@
         display: block;
         line-height: 20px;
     }
+
+    /*--check amount modal form--*/
+    .b-amount__form-content .exchange-sum--from,
+    .b-amount__form-content .exchange-sum--to {
+        padding-right: 50px;
+    }
+
+    .b-amount__form-content #exchange-sum-currency--from, .b-amount__form-content #exchange-sum-currency--to {
+        transform: translateY(-45px);
+        font-size: 24px;
+        font-weight: 500;
+    }
+    /*--check amount modal form--*/
 }
 @media screen and (max-width: 480px) {
     .order-page #exchange-lists #exchange-currency-from, .order-page #exchange-lists #exchange-currency-to, .order-page.full-screen #exchange-lists #exchange-currency-from, .order-page.full-screen #exchange-lists #exchange-currency-to {
@@ -824,6 +853,51 @@
     .update-data-msg {
         font-size: 12px;
     }
+
+
+    .b-check-amount__sum {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .b-check-amount__sum span {
+        font-size: 16px;
+    }
+    .b-discount {
+        padding: 10px 0 0;
+    }
+    .b-discount__wrapper>div span {
+        font-size: 16px;
+    }
+    /*--check amount modal form--*/
+    .b-amount__form-content .b-exchange__main {
+        padding: 0;
+    }
+    .b-amount__form-content .b-exchange__main_part--from,
+    .b-amount__form-content .b-exchange__main_part--to {
+        padding: 40px 10px 15px;
+    }
+
+    #exchange-ddl-from--modal,
+    #exchange-ddl-to--modal {
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 55px;
+        font-size: 14px;
+    }
+    .b-amount__form-content .exchange-sum-label {
+        padding-top: 15px;
+    }
+    .b-amount__form-content #exchange-sum-currency--from,
+    .b-amount__form-content #exchange-sum-currency--to {
+        transform: translateY(-35px);
+        font-size: 18px;
+    }
+    .b-amount__form-content .exchange-sum--from,
+    .b-amount__form-content .exchange-sum--to {
+        padding-right: 40px;
+    }
+    /*--check amount modal form--*/
 }
 @media (max-width: 359px){
     #exchange-ddl-from, #exchange-ddl-to {

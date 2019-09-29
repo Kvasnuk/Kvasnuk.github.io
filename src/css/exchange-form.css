@@ -110,7 +110,11 @@
     line-height: 27px;
 }
 
-#exchange-ddl-from,#exchange-ddl-to{
+#exchange-ddl-from,
+#exchange-ddl-to,
+#exchange-ddl-from--modal,
+#exchange-ddl-to--modal
+{
     padding-left: 40px;
     padding-right: 15px;
     position: relative;
@@ -119,7 +123,12 @@
     font-weight: 400;
     cursor: pointer;
 }
-#exchange-ddl-from:before,#exchange-ddl-to:before{
+#exchange-ddl-from:before,
+#exchange-ddl-to:before,
+#exchange-ddl-from--modal:before,
+#exchange-ddl-to--modal:before
+
+{
     content:'';
     width:30px;
     height: 30px;

@@ -367,7 +367,7 @@
     display: none;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 8, 0.87);
+    background: #fff;
     width: 100%;
     height: 100vh;
     z-index: 999;
@@ -380,8 +380,12 @@
     margin: 0 auto;
 }
 .b-amount__form-wrap>p {
+    padding: 15px 25px 0;
+}
+.b-amount__form-wrap>p:last-child {
     text-align: right;
-    padding-top: 15px;
+    padding-top: 0;
+    margin-bottom: 30px;
 }
 .b-amount__form-save {
     border: 1px solid #6595bf;
@@ -404,7 +408,39 @@
     outline: none;
 }
 .b-amount__form-content {
-    height: 1500px;
+    height: auto;
     border: 1px solid #fff;
     margin: 0 auto;
 }
+
+/*-------- modal form content -------*/
+.b-amount__form-content .b-exchange__course,
+.b-amount__form-content .b-exchange__maximum,
+.b-amount__form-content .currency-filter,
+.b-amount__form-content .b-exchange__settings,
+.b-amount__form-content .b-exchange__settings--message,
+.b-amount__form-content .b-exchange__main:before,
+.b-amount__form-content .b-exchange__main:after,
+.b-amount__form-content #exchange-list-left,
+.b-amount__form-content #exchange-list-right {
+    display: none;
+}
+
+.b-amount__form-content .b-exchange__main_part--from>div {
+    padding-right: 0;
+}
+
+.b-amount__form-content .exchange-sum--from,
+.b-amount__form-content .exchange-sum--to {
+    margin-bottom: 0;
+}
+.b-amount__form-content #exchange-sum-currency--from,
+.b-amount__form-content #exchange-sum-currency--to {
+    position: absolute;
+    transform: translateY(-60px);
+    font-size: 35px;
+    right: 10px;
+    color: #4cae50;
+}
+
+/*-------- modal form content -------*/
