@@ -1172,12 +1172,16 @@ $('.close-alert-modal').click(function() {
 $('.js-amount-edit-data').click(function() {
     $('#amount-form-modal').fadeIn();
 });
-$('.js-amount-form-save').click(function() {
-    getUpdatedAmount();
-});
+
 $('.js-amount-form-back').click(function() {
     $('#amount-form-modal').fadeOut();
     });
+
+/*-- if form in modal window is valid  use fn getUpdatedAmount() to close window and update data --*/
+    $('.js-amount-form-save').click(function() {
+        getUpdatedAmount();
+    });
+
     /* ---  END check amounts page  -> new design  ----*/
 });
 

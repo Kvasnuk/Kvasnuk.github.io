@@ -382,11 +382,7 @@
 .b-amount__form-wrap>p {
     padding: 15px 25px 0;
 }
-.b-amount__form-wrap>p:last-child {
-    text-align: right;
-    padding-top: 0;
-    margin-bottom: 30px;
-}
+
 .b-amount__form-save {
     border: 1px solid #6595bf;
     background: #6595bf;

@@ -4,11 +4,7 @@
     <list default="true" id="aec278e5-807c-4ad4-b7f8-fd91dc72c9e0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/check-amounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/check-amounts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/check-amounts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/check-amounts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/exchange-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/exchange-form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/z-query-media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/z-query-media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/html/check-amounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/check-amounts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
     </list>
@@ -23,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="1066" column="83" selection-start-line="1066" selection-start-column="83" selection-end-line="1066" selection-end-column="83" />
+            <state relative-caret-position="264">
+              <caret line="1178" column="99" selection-start-line="1178" selection-start-column="99" selection-end-line="1178" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -35,12 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="146" column="76" selection-start-line="146" selection-start-column="76" selection-end-line="146" selection-end-column="76" />
-              <folding>
-                <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="243">
+              <caret line="237" column="103" selection-start-line="237" selection-start-column="103" selection-end-line="237" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -63,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="858" column="24" selection-start-line="858" selection-start-column="24" selection-end-line="858" selection-end-column="24" />
+            <state relative-caret-position="547">
+              <caret line="868" column="35" selection-start-line="868" selection-start-column="35" selection-end-line="868" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -180,11 +172,11 @@
         <option value="$PROJECT_DIR$/src/html/waiting-verification.html" />
         <option value="$PROJECT_DIR$/src/images/edit.svg" />
         <option value="$PROJECT_DIR$/src/images/pencil-edit-button.svg" />
-        <option value="$PROJECT_DIR$/src/js/main.js" />
-        <option value="$PROJECT_DIR$/src/html/check-amounts.html" />
         <option value="$PROJECT_DIR$/src/css/exchange-form.css" />
         <option value="$PROJECT_DIR$/src/css/check-amounts.css" />
         <option value="$PROJECT_DIR$/src/css/z-query-media.css" />
+        <option value="$PROJECT_DIR$/src/html/check-amounts.html" />
+        <option value="$PROJECT_DIR$/src/js/main.js" />
       </list>
     </option>
   </component>
@@ -323,18 +315,18 @@
       <workItem from="1567097847465" duration="915000" />
       <workItem from="1567624994716" duration="13488000" />
       <workItem from="1568143419988" duration="15140000" />
-      <workItem from="1569780007427" duration="4720000" />
+      <workItem from="1569780007427" duration="6180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="634221000" />
+    <option name="totallyTimeSpent" value="635681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2184637" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2184637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -347,7 +339,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2063882" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2063882" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -650,24 +642,6 @@
     <entry file="file://$PROJECT_DIR$/src/images/pencil-edit-button.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="1066" column="83" selection-start-line="1066" selection-start-column="83" selection-end-line="1066" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="146" column="76" selection-start-line="146" selection-start-column="76" selection-end-line="146" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/check-amounts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -684,8 +658,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/z-query-media.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="858" column="24" selection-start-line="858" selection-start-column="24" selection-end-line="858" selection-end-column="24" />
+        <state relative-caret-position="547">
+          <caret line="868" column="35" selection-start-line="868" selection-start-column="35" selection-end-line="868" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/check-amounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="237" column="103" selection-start-line="237" selection-start-column="103" selection-end-line="237" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="1178" column="99" selection-start-line="1178" selection-start-column="99" selection-end-line="1178" selection-end-column="99" />
         </state>
       </provider>
     </entry>
